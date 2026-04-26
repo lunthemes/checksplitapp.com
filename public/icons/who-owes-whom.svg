@@ -1,8 +1,41 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="18" fill="url(#g)"/>
-  <circle cx="25" cy="25" r="6" stroke="white" stroke-width="3"/>
-  <circle cx="41" cy="27" r="5" stroke="white" stroke-width="3"/>
-  <path d="M16 45c2.3-7 14.5-7 18 0M33 45c1.8-5.5 10.5-5.8 14 0" stroke="white" stroke-width="3" stroke-linecap="round"/>
-  <path d="M24 35h18M38 31l4 4-4 4" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <defs><linearGradient id="g" x1="7" y1="7" x2="57" y2="57"><stop stop-color="#FFB238"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+<svg width="1248" height="1248" viewBox="0 0 1248 1248" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(624 624) rotate(90) scale(760 760)">
+      <stop offset="0" stop-color="#FFC44A"/>
+      <stop offset="0.62" stop-color="#FFB132"/>
+      <stop offset="1" stop-color="#FFA51F"/>
+    </radialGradient>
+
+    <marker id="arrowHead" markerWidth="18" markerHeight="18" refX="13" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 2L13 9L2 16" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <g id="personIcon" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-44" r="54"/>
+      <path d="M-116 124V92C-116 48 -80 12 -36 12H36C80 12 116 48 116 92V124H-116Z"/>
+    </g>
+  </defs>
+
+  <rect x="46" y="16" width="1156" height="1200" rx="300" fill="url(#bgGlow)"/>
+
+  <!-- Symmetric outer circular-flow arrows, shifted slightly downward equally -->
+  <g stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- from left side of top user to left side of bottom-left user -->
+    <path d="M491.1 221.0 A430 430 0 0 0 203.4 719.4" marker-end="url(#arrowHead)"/>
+    <!-- from below bottom-left user to below bottom-right user -->
+    <path d="M336.3 973.6 A430 430 0 0 0 911.7 973.6" marker-end="url(#arrowHead)"/>
+    <!-- from right side of bottom-right user to right side of top user -->
+    <path d="M1044.6 719.4 A430 430 0 0 0 756.9 221.0" marker-end="url(#arrowHead)"/>
+  </g>
+
+  <!-- Center dollar sign -->
+  <g stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M624 501V825"/>
+    <path d="M688 555C663 532 627 521 593 527C561 533 541 554 538 583C534 620 561 641 621 656C681 671 710 692 708 729C706 768 671 795 624 799C586 802 549 790 521 765"/>
+  </g>
+
+  <!-- Symmetric users -->
+  <use href="#personIcon" transform="translate(624 250)"/>
+  <use href="#personIcon" transform="translate(361 752)"/>
+  <use href="#personIcon" transform="translate(887 752)"/>
 </svg>
