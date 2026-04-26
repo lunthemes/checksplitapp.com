@@ -1,0 +1,88 @@
+---
+interface Theme {
+  section: string;
+  pill: string;
+  check: string;
+}
+
+interface Props {
+  step: string;
+  label: string;
+  body: string;
+  items: readonly string[] | string[];
+  image: { src: string; alt: string };
+  reverse: boolean;
+  theme: Theme;
+}
+
+const { step, label, body, items, image, reverse, theme } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:items-stretch md:gap-14 lg:gap-16"
+>
+  <div
+    class:list={[
+      "order-1 flex w-full min-h-0 justify-center md:items-stretch",
+      { "md:order-1": !reverse, "md:order-2": reverse },
+    ]}
+  >
+    <div class="self-end w-full max-w-full pt-2 sm:pt-3 md:pt-0">
+      <div
+        class="mx-auto w-full max-w-[min(100%,17.5rem)] [filter:drop-shadow(0_16px_36px_rgba(15,23,42,0.14))] sm:max-w-[20rem] md:max-w-[22rem] md:translate-y-3 lg:max-w-[24rem] lg:translate-y-4"
+      >
+        <div
+          class="relative aspect-[9/11.4] w-full overflow-hidden"
+        >
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="absolute left-0 top-0 h-full w-full object-cover object-top"
+            width="640"
+            height="1280"
+            loading="lazy"
+            decoding="async"
+            sizes="(min-width: 1024px) 24rem, (min-width: 768px) 22rem, 18rem"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class:list={[
+      "order-2 self-start",
+      { "md:order-2": !reverse, "md:order-1": reverse },
+    ]}
+  >
+    <span
+      class:list={[
+        "inline-flex rounded-full px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider",
+        theme.pill,
+      ]}
+    >
+      Step {step}
+    </span>
+    <h3
+      class="mt-3 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:mt-4 sm:text-3xl"
+    >
+      {label}
+    </h3>
+    <p class="mt-3 max-w-prose text-base text-slate-600 sm:mt-4 sm:text-lg">
+      {body}
+    </p>
+    <ul class="mt-6 space-y-3.5 sm:mt-7">
+      {items.map((it) => (
+        <li class="flex gap-3.5 text-base leading-snug text-slate-800 sm:text-lg">
+          <span
+            class:list={[
+              "mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm font-bold leading-none",
+              theme.check,
+            ]}
+            aria-hidden="true"
+          >✓</span>
+          {it}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

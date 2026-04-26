@@ -1,0 +1,18 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import FaqItem from "./FaqItem.astro";
+import { faqItems } from "../data/landing";
+---
+
+<section id="faq" class="py-20 md:py-24" aria-label="FAQ">
+  <div class="mx-auto max-w-4xl px-4 md:px-6">
+    <SectionHeader
+      title="Frequently asked questions"
+    />
+    <div class="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2">
+      {faqItems.map((item) => (
+        <FaqItem question={item.q} answer={item.a} />
+      ))}
+    </div>
+  </div>
+</section>

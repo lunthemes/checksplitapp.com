@@ -1,0 +1,6 @@
+<svg width="178" height="40" viewBox="0 0 178 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="12" fill="url(#g)"/>
+  <path d="M12 21.2 18.2 27 29 14" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="27" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#102044">CheqSplit</text>
+  <defs><linearGradient id="g" x1="5" y1="4" x2="36" y2="37"><stop stop-color="#4D8BFF"/><stop offset="1" stop-color="#B44CFF"/></linearGradient></defs>
+</svg>

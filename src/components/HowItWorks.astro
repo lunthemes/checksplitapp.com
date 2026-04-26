@@ -1,0 +1,32 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import StepRow from "./StepRow.astro";
+import { howSteps } from "../data/landing";
+---
+
+<section id="how" class="pt-20 md:pt-28" aria-label="How it works">
+  <div class="mx-auto max-w-6xl px-4 pb-4 md:px-6">
+    <SectionHeader
+      title="How it works"
+      subtitle="Five clear steps from trip to a clean report everyone can trust."
+    />
+  </div>
+  {howSteps.map((s, i) => {
+    const reverse = i % 2 === 1;
+    return (
+      <div class:list={["w-full", s.theme.section, i === 0 && "pt-2"]}>
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-5 sm:py-14 md:px-6 md:py-16 lg:py-20">
+          <StepRow
+            step={s.step}
+            label={s.label}
+            body={s.body}
+            image={s.image}
+            items={[...s.items]}
+            theme={s.theme}
+            reverse={reverse}
+          />
+        </div>
+      </div>
+    );
+  })}
+</section>

@@ -1,0 +1,109 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import StoreBadges from "./StoreBadges.astro";
+import { heroPhoneScreens } from "../data/screens";
+
+const HERO_BG = "/backgrounds/home-hero.png";
+
+const heroPhones = [
+  {
+    src: heroPhoneScreens[0],
+    alt: "CheqSplit home with trips",
+    wrap: [
+      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
+      "[transform:rotateY(19deg)]",
+      "max-sm:[transform:rotateY(12deg)]",
+      "-mr-1 sm:-mr-2 md:-mr-3",
+    ],
+  },
+  {
+    src: heroPhoneScreens[1],
+    alt: "CheqSplit expenses overview",
+    wrap: [
+      "relative z-30 -mx-2.5 w-[28%] min-w-[80px] max-w-[145px] scale-[1.04] sm:-mx-4 sm:max-w-[170px] sm:scale-[1.07] md:max-w-[200px]",
+    ],
+  },
+  {
+    src: heroPhoneScreens[2],
+    alt: "CheqSplit live split",
+    wrap: [
+      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
+      "[transform:rotateY(-19deg)]",
+      "max-sm:[transform:rotateY(-12deg)]",
+      "-ml-1 sm:-ml-2 md:-ml-3",
+    ],
+  },
+] as const;
+---
+
+<section class="relative w-full overflow-hidden">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10"
+    aria-hidden="true"
+  >
+    <img
+      src={HERO_BG}
+      alt=""
+      class="h-full w-full object-cover object-center"
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/20 to-white/25"
+    aria-hidden="true"
+  />
+  <div
+    class="relative z-0 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2 md:px-6 md:py-24"
+  >
+  <div>
+    <SectionHeader
+      as="h1"
+      align="left"
+      title="Split receipts and group expenses without awkward math."
+    />
+    <p class="mt-4 text-lg text-slate-600">
+      CheqSplit makes it effortless to split bills, track shared expenses, and see who
+      owes what—so everyone stays happy.
+    </p>
+    <div class="mt-8" id="download">
+      <StoreBadges variant="hero" />
+    </div>
+    <div class="mt-8 flex flex-wrap items-center gap-2 text-sm text-slate-600">
+      <span class="text-amber-500" aria-hidden="true">★★★★★</span>
+      <span>Trusted by thousands of smart spenders</span>
+      <span class="text-slate-400" aria-hidden="true">·</span>
+      <span class="font-medium text-slate-800">4.8/5</span>
+      <span>from 2,000+ reviews</span>
+    </div>
+  </div>
+  <div
+    class="relative flex min-h-[300px] items-center justify-center overflow-visible md:min-h-[400px]"
+  >
+    <div
+      class="flex w-full max-w-lg [perspective:1100px] [perspective-origin:50%_100%] items-end justify-center px-1 pt-4 sm:max-w-2xl sm:px-2"
+    >
+      <div
+        class="flex w-full max-w-[min(100%,420px)] items-end [transform-style:preserve-3d] sm:max-w-[min(100%,480px)] md:max-w-[min(100%,520px)]"
+      >
+        {heroPhones.map((h) => (
+          <div class:list={["transform-gpu will-change-transform", ...h.wrap]}>
+            <img
+              src={h.src}
+              alt={h.alt}
+              class="h-auto w-full max-w-full select-none object-contain [filter:drop-shadow(0_18px_40px_rgba(15,23,42,0.28))]"
+              width="360"
+              height="780"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

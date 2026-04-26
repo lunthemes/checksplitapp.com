@@ -1,0 +1,91 @@
+---
+import StoreBadges from "./StoreBadges.astro";
+import { ctaPhoneScreen } from "../data/screens";
+---
+
+<section
+  class="px-4 py-5 md:px-6"
+  aria-label="Download CheqSplit"
+>
+  <div
+    class="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl shadow-[0_20px_50px_-12px_rgba(37,99,235,0.4)] ring-1 ring-white/20"
+  >
+    <div class="relative min-h-0">
+      <img
+        src="/backgrounds/cta-gradient.png"
+        alt=""
+        class="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+        width="1920"
+        height="800"
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <div
+        class="relative z-10 p-5 sm:p-6 md:px-9 md:py-8 lg:px-10 lg:py-9"
+      >
+        <div
+          class="relative z-20 w-full text-center md:max-w-[50%] md:pr-4 md:text-left"
+        >
+          <h2
+            class="text-balance text-2xl font-bold leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.2)] sm:text-3xl md:text-[1.9rem] lg:text-[2.1rem] lg:leading-tight"
+          >
+            Ready to split smarter?
+          </h2>
+          <p
+            class="mx-auto mt-3 max-w-md text-pretty text-base text-white/92 md:mx-0 md:mt-3.5 md:text-lg"
+          >
+            Join thousands of groups who split expenses without the stress.
+          </p>
+          <div class="mt-5 flex flex-wrap justify-center gap-2 sm:mt-6 md:justify-start">
+            <StoreBadges variant="cta" />
+          </div>
+        </div>
+        <div
+          class="mt-4 h-40 overflow-hidden sm:mt-5 sm:h-44 md:mt-0 md:hidden"
+        >
+          <div
+            class="mx-auto flex h-full max-w-[10.5rem] items-end justify-center"
+          >
+            <div
+              class="h-[120%] w-full origin-top [transform:perspective(800px)_translateY(0)_rotateX(4deg)_rotateY(6deg)_rotateZ(-4deg)]"
+            >
+              <img
+                src={ctaPhoneScreen}
+                alt="CheqSplit pe iPhone"
+                class="h-full w-full object-contain object-top [filter:drop-shadow(0_16px_32px_rgba(0,0,0,0.4))]"
+                width="640"
+                height="1280"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none hidden min-h-0 overflow-hidden md:absolute md:bottom-0 md:right-0 md:top-0 md:z-0 md:block md:w-1/2"
+        >
+          <div
+            class="flex h-full w-full min-h-0 items-end justify-end pr-2 sm:pr-3 lg:pr-6"
+            aria-hidden="true"
+          >
+            <div
+              class="mb-0 w-[14.5rem] max-w-[min(16rem,38vw)] origin-bottom sm:w-[16rem] [transform:perspective(1000px)_translate3d(0,-1%,-6px)_rotateX(5deg)_rotateY(20deg)_rotateZ(-3deg)] [transform-style:preserve-3d] md:w-[17.5rem] lg:mb-1 lg:w-[18.5rem] xl:translate-y-0.5"
+            >
+              <div
+                class="max-h-[min(25rem,58dvh)] w-full overflow-hidden sm:max-h-[min(27rem,52dvh)] md:max-h-[min(28rem,48dvh)] lg:max-h-[min(30rem,45dvh)]"
+              >
+                <img
+                  src={ctaPhoneScreen}
+                  alt=""
+                  class="block h-auto w-full object-contain object-top [filter:drop-shadow(0_25px_50px_rgba(0,0,0,0.5))]"
+                  width="640"
+                  height="1280"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

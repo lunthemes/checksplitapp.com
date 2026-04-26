@@ -1,0 +1,28 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
+  >
+    <Logo variant="header" />
+    <nav
+      class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex"
+      aria-label="Primary"
+    >
+      <a href="#features" class="hover:text-brand-600">Features</a>
+      <a href="#how" class="hover:text-brand-600">How it works</a>
+      <a href="#use-cases" class="hover:text-brand-600">Use cases</a>
+      <a href="#faq" class="hover:text-brand-600">FAQ</a>
+    </nav>
+    <a
+      href="#download"
+      class="rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
+    >
+      Download app
+    </a>
+  </div>
+</header>

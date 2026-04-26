@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  desc: string;
+  iconSrc: string;
+  iconAlt: string;
+  iconBg: string;
+}
+
+const { title, desc, iconSrc, iconAlt, iconBg } = Astro.props;
+---
+
+<article
+  class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-100"
+>
+  <div
+    class:list={["mb-3 flex h-12 w-12 items-center justify-center rounded-xl", iconBg]}
+  >
+    <img
+      src={iconSrc}
+      alt={iconAlt}
+      class="h-9 w-9 object-contain"
+      width="36"
+      height="36"
+      loading="lazy"
+    />
+  </div>
+  <h2 class="font-semibold text-slate-900">{title}</h2>
+  <p class="mt-1 text-sm text-slate-600">{desc}</p>
+</article>

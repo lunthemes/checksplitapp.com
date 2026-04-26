@@ -1,0 +1,39 @@
+---
+import { site } from "../data/landing";
+
+export interface Props {
+  /** Header: icon + text mai proeminent. Footer: puțin mai discret. */
+  variant?: "header" | "footer";
+}
+
+const { variant = "header" } = Astro.props;
+---
+
+<a
+  href="/"
+  class="inline-flex items-center gap-2.5"
+  aria-label={`${site.name} home`}
+>
+  <img
+    src={site.logoIcon}
+    alt=""
+    width="40"
+    height="40"
+    class:list={[
+      "shrink-0 object-contain",
+      variant === "header" && "h-9 w-9 sm:h-10 sm:w-10",
+      variant === "footer" && "h-8 w-8",
+    ]}
+    loading={variant === "header" ? "eager" : "lazy"}
+    decoding="async"
+  />
+  <span
+    class:list={[
+      "text-slate-900",
+      variant === "header" && "text-lg font-extrabold tracking-tight sm:text-xl",
+      variant === "footer" && "text-base font-extrabold tracking-tight",
+    ]}
+  >
+    {site.name}
+  </span>
+</a>
