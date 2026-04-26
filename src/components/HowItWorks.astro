@@ -14,8 +14,16 @@ import { howSteps } from "../data/landing";
   {howSteps.map((s, i) => {
     const reverse = i % 2 === 1;
     return (
-      <div class:list={["w-full", s.theme.section, i === 0 && "pt-2"]}>
-        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-5 sm:py-14 md:px-6 md:py-16 lg:py-20">
+      <div class:list={["w-full", s.theme.section]}>
+        <div
+          class:list={[
+            "mx-auto max-w-6xl px-4 sm:px-5 md:px-6",
+            "pt-12 sm:pt-14 md:pt-16 lg:pt-20",
+            i === howSteps.length - 1
+              ? "pb-16 md:pb-20"
+              : "pb-0",
+          ]}
+        >
           <StepRow
             step={s.step}
             label={s.label}

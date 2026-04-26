@@ -10,6 +10,8 @@ const SCREENS = {
   allExpenses: "all-expenses.png",
   whoOwes: "who-owes.png",
   pdfReport: "pdf-report.png",
+  /** Ilustrație CTA (telefon deja compus / înclinat în asset). */
+  cta: "CTA.png",
 } as const;
 
 export function screenUrl(name: string): string {
@@ -22,8 +24,8 @@ export const heroPhoneScreens: readonly [string, string, string] = [
   screenUrl(SCREENS.liveSplit),
 ];
 
-/** Secțiunea CTA: ecranul cu listă de trips. */
-export const ctaPhoneScreen = screenUrl(SCREENS.homeTrip);
+/** Secțiunea CTA: ilustrație pre-rendat (fără transformări CSS). */
+export const ctaPhoneScreen = screenUrl(SCREENS.cta);
 
 /** Step 1 … 5 (aceeași ordine ca în `howSteps` din `landing.ts`). */
 export const howStepScreens = [

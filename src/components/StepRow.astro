@@ -16,6 +16,11 @@ interface Props {
 }
 
 const { step, label, body, items, image, reverse, theme } = Astro.props;
+/** Step 1: lățime mărită incremental (total +25px peste baza 22.8/26.4/28.8/31.2 rem). */
+const phoneSize =
+  step === "1"
+    ? "max-w-[min(100%,calc(22.8rem+25px))] sm:max-w-[calc(26.4rem+25px)] md:max-w-[calc(28.8rem+25px)] lg:max-w-[calc(31.2rem+25px)]"
+    : "max-w-[min(100%,17.5rem)] sm:max-w-[20rem] md:max-w-[22rem] lg:max-w-[24rem]";
 ---
 
 <div
@@ -27,22 +32,33 @@ const { step, label, body, items, image, reverse, theme } = Astro.props;
       { "md:order-1": !reverse, "md:order-2": reverse },
     ]}
   >
-    <div class="self-end w-full max-w-full pt-2 sm:pt-3 md:pt-0">
+    <div class="self-end w-full max-w-full">
       <div
-        class="mx-auto w-full max-w-[min(100%,17.5rem)] [filter:drop-shadow(0_16px_36px_rgba(15,23,42,0.14))] sm:max-w-[20rem] md:max-w-[22rem] md:translate-y-3 lg:max-w-[24rem] lg:translate-y-4"
+        class:list={[
+          "mx-auto w-full [filter:drop-shadow(0_16px_36px_rgba(15,23,42,0.14))]",
+          phoneSize,
+        ]}
       >
         <div
-          class="relative aspect-[9/11.4] w-full overflow-hidden"
+          class:list={[
+            "relative w-full overflow-hidden [aspect-ratio:9/11.4]",
+            step === "1" &&
+              "max-h-[calc(17.5rem*11.4/9)] sm:max-h-[calc(20rem*11.4/9)] md:max-h-[calc(22rem*11.4/9)] lg:max-h-[calc(24rem*11.4/9)]",
+          ]}
         >
           <img
             src={image.src}
             alt={image.alt}
-            class="absolute left-0 top-0 h-full w-full object-cover object-top"
+            class="absolute left-0 top-0 h-[120%] w-full object-cover object-top"
             width="640"
             height="1280"
             loading="lazy"
             decoding="async"
-            sizes="(min-width: 1024px) 24rem, (min-width: 768px) 22rem, 18rem"
+            sizes={
+              step === "1"
+                ? "(min-width: 1024px) calc(31.2rem + 25px), (min-width: 768px) calc(28.8rem + 25px), calc(22.8rem + 25px)"
+                : "(min-width: 1024px) 24rem, (min-width: 768px) 22rem, 18rem"
+            }
           />
         </div>
       </div>

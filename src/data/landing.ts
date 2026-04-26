@@ -146,13 +146,6 @@ export const useCases = [
   },
 ] as const;
 
-export const stats = [
-  { n: "25K+", t: "Happy users" },
-  { n: "1M+", t: "Expenses split" },
-  { n: "150+", t: "Countries" },
-  { n: "4.8/5", t: "App Store & Play Store" },
-] as const;
-
 export const faqItems: { q: string; a: string }[] = [
   { q: "Is CheqSplit free to use?", a: "Placeholder — replace with your product answer." },
   { q: "Can I use it offline?", a: "Placeholder — replace with your product answer." },
