@@ -1,12 +1,39 @@
 ---
 import "../styles/global.css";
+import {
+  getFaqPageJsonLd,
+  siteUrl,
+  softwareApplicationJsonLd,
+} from "../data/structured-data";
 
 interface Props {
   title: string;
   description?: string;
+  /** Open Graph & social card description (can differ from meta description) */
+  ogDescription?: string;
+  /** Twitter card description */
+  twitterDescription?: string;
+  /** Absolute canonical URL, usually with trailing slash */
+  canonicalUrl?: string;
+  /** Open Graph & Twitter image (absolute URL) */
+  ogImageUrl?: string;
+  /** LCP/hero: background image path to preload (e.g. /backgrounds/home-hero.png) */
+  preloadHeroImage?: string;
 }
 
-const { title, description = "Split receipts and group expenses without awkward math." } = Astro.props;
+const {
+  title,
+  description = "CheqSplit helps you scan receipts, split bills by item, track group expenses, and see who owes whom. Perfect for trips, restaurants, roommates, families, and shared shopping.",
+  ogDescription = "Scan receipts, split bills by item, track group expenses, and instantly see who owes whom. Perfect for trips, restaurants, roommates, and families.",
+  twitterDescription = "The easy way to split receipts and shared expenses without awkward math.",
+  canonicalUrl = siteUrl + "/",
+  ogImageUrl = "https://cheqsplitapp.com/og-image.png",
+  preloadHeroImage,
+} = Astro.props;
+
+const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImageUrl, siteUrl + "/").href;
+const softwareLd = JSON.stringify(softwareApplicationJsonLd);
+const faqLd = JSON.stringify(getFaqPageJsonLd());
 ---
 
 <!doctype html>
@@ -16,13 +43,36 @@ const { title, description = "Split receipts and group expenses without awkward 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={twitterDescription} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    {preloadHeroImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadHeroImage}
+        fetchpriority="high"
+      />
+    )}
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script is:inline type="application/ld+json" set:html={softwareLd} />
+    <script is:inline type="application/ld+json" set:html={faqLd} />
   </head>
   <body class="min-h-dvh font-sans antialiased text-slate-900 bg-white">
     <slot />

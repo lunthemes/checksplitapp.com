@@ -3,25 +3,25 @@ import { howStepScreens } from "./screens";
 export const featureItems = [
   {
     title: "Scan bills instantly",
-    desc: "From receipt to line items in seconds.",
+    desc: "Use receipt scanning to capture items, prices, taxes, and totals in seconds.",
     icon: "/icons/scan-bill.svg",
     iconBg: "bg-blue-100",
   },
   {
     title: "Split by item",
-    desc: "Assign who ordered what, fairly.",
+    desc: "Assign each receipt item to the right people instead of guessing equal shares.",
     icon: "/icons/split-item.svg",
     iconBg: "bg-purple-100",
   },
   {
     title: "Track everything",
-    desc: "Categories, trips, and history in one place.",
+    desc: "Keep restaurant bills, groceries, trip costs, and shared expenses in one place.",
     icon: "/icons/track-expenses.svg",
     iconBg: "bg-emerald-100",
   },
   {
     title: "See who owes whom",
-    desc: "Clear balances, zero spreadsheets.",
+    desc: "CheqSplit calculates balances automatically, so everyone knows what to pay.",
     icon: "/icons/who-owes-whom.svg",
     iconBg: "bg-orange-100",
   },
@@ -61,7 +61,10 @@ export const howSteps = [
     step: "1",
     label: "Create trips in seconds",
     body: "Name your trip, invite friends, and you’re set—no setup rabbit holes.",
-    image: { src: howStepScreens[0], alt: "CheqSplit: create a trip" },
+    image: {
+      src: howStepScreens[0],
+      alt: "CheqSplit group trip expense tracker screen",
+    },
     items: [
       "Fast trip creation",
       "Invites in a tap",
@@ -71,9 +74,12 @@ export const howSteps = [
   },
   {
     step: "2",
-    label: "Split by item, not guesswork",
+    label: "Split expenses by item",
     body: "Itemized bills: assign each line to the right people so the math is obvious.",
-    image: { src: howStepScreens[1], alt: "CheqSplit: split the bill by item" },
+    image: {
+      src: howStepScreens[1],
+      alt: "CheqSplit receipt scanner screen for splitting bills",
+    },
     items: [
       "Line-item splits",
       "Shared items & splits",
@@ -83,9 +89,12 @@ export const howSteps = [
   },
   {
     step: "3",
-    label: "Track every expense in one place",
+    label: "Track every shared expense",
     body: "Categorize spending and keep the full picture in one running total.",
-    image: { src: howStepScreens[2], alt: "CheqSplit: group expenses" },
+    image: {
+      src: howStepScreens[2],
+      alt: "CheqSplit mobile app screen showing shared expenses",
+    },
     items: [
       "Smart categories",
       "Receipts & notes",
@@ -95,9 +104,12 @@ export const howSteps = [
   },
   {
     step: "4",
-    label: "See who owes whom instantly",
+    label: "Settle balances instantly",
     body: "Settle up with balances that update as people pay—no more chasing.",
-    image: { src: howStepScreens[3], alt: "CheqSplit: who owes whom" },
+    image: {
+      src: howStepScreens[3],
+      alt: "CheqSplit balance summary showing who owes whom",
+    },
     items: [
       "Net balances",
       "Payment reminders (optional)",
@@ -109,7 +121,10 @@ export const howSteps = [
     step: "5",
     label: "Share clean trip reports",
     body: "Pie charts, totals, and who paid what—ready to send or review later.",
-    image: { src: howStepScreens[4], alt: "CheqSplit: trip report" },
+    image: {
+      src: howStepScreens[4],
+      alt: "CheqSplit trip report with expense summary",
+    },
     items: [
       "Visual summaries",
       "Share as link or image",
@@ -121,10 +136,10 @@ export const howSteps = [
 
 export const useCases = [
   {
-    title: "Roommates",
-    desc: "Split rent, utilities, and house supplies.",
-    icon: "/icons/roommates.svg",
-    ring: "ring-rose-200 bg-rose-50",
+    title: "Restaurants",
+    desc: "Itemize the check, split by dish, and settle fairly.",
+    icon: "/icons/split-item.svg",
+    ring: "ring-orange-200 bg-orange-50",
   },
   {
     title: "Group trips",
@@ -147,12 +162,30 @@ export const useCases = [
 ] as const;
 
 export const faqItems: { q: string; a: string }[] = [
-  { q: "Is CheqSplit free to use?", a: "Placeholder — replace with your product answer." },
-  { q: "Can I use it offline?", a: "Placeholder — replace with your product answer." },
-  { q: "Does it work in multiple currencies?", a: "Placeholder — replace with your product answer." },
-  { q: "How do I invite people to a trip?", a: "Placeholder — replace with your product answer." },
-  { q: "Is my data private?", a: "Placeholder — replace with your product answer." },
-  { q: "How do I export a trip report?", a: "Placeholder — replace with your product answer." },
+  {
+    q: "What is CheqSplit?",
+    a: "CheqSplit is a bill splitting and group expense tracking app that helps you scan receipts, split items, track shared costs, and see who owes whom.",
+  },
+  {
+    q: "Can I split a receipt by item?",
+    a: "Yes. CheqSplit lets you assign individual receipt items to specific people, so everyone pays only for what they had.",
+  },
+  {
+    q: "Is CheqSplit good for group trips?",
+    a: "Yes. You can create a trip, add shared expenses, invite participants, attach receipts, and generate a final report showing who owes whom.",
+  },
+  {
+    q: "Can I use CheqSplit for restaurants?",
+    a: "Yes. CheqSplit is useful for restaurant bills, cafés, bars, groceries, shopping, vacations, and any situation where several people share expenses.",
+  },
+  {
+    q: "Does CheqSplit work offline?",
+    a: "You can manage some data locally, but sharing trips and syncing with other participants requires internet access.",
+  },
+  {
+    q: "How do I invite people to a trip?",
+    a: "Create a trip in CheqSplit, add expenses, then share the trip link with friends so they can join and see the shared balance.",
+  },
 ];
 
 export const site = {

@@ -3,11 +3,12 @@ interface Props {
   title: string;
   desc: string;
   iconSrc: string;
-  iconAlt: string;
+  /** Small decorative icons: prefer empty for screen readers. */
+  iconAlt?: string;
   ring: string;
 }
 
-const { title, desc, iconSrc, iconAlt, ring } = Astro.props;
+const { title, desc, iconSrc, iconAlt = "", ring } = Astro.props;
 ---
 
 <article
