@@ -2,22 +2,22 @@ import type { Dictionary } from "../types";
 
 export const tr: Dictionary = {
   meta: {
-    title: "CheqSplit: masrafları paylaş, fiş tara, grup faturalarını izle",
+    title: "CheqSplit: masrafları bölüş, fişleri tara, ortak harcamaları takip et",
     description:
-      "CheqSplit masrafları paylaşmaya, fişleri taramaya, paylaşılan faturaları takip etmeye ve yemekten, seyahatten, alışverişten veya grup planlarından sonra kimin kime ne borçlu olduğunu göstermeye yardımcı olur.",
+      "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak harcamaları izlemenize ve yemekten, seyahatten, alışverişten veya grup planlarından sonra kimin kime ne kadar borçlu olduğunu net göstermenize yardımcı olur.",
     ogDescription:
-      "Adil böl: fiş taraması, kalemler, hesap. Restoran, geziler, ev arkadaşları, arkadaş grupları.",
+      "Adil paylaş: fiş taraması, kalemler, net bakiyeler. Restoran, geziler, ev arkadaşları, arkadaş grupları.",
     twitterDescription:
-      "Tablo ve tıkanıklık olmadan ortak giderler ve fatura çözümü.",
+      "Ortak giderleri tablo, hesap kâğıdı ve sınırsız mesaj telaşı olmadan bölüştürmek için pratik yol.",
     softwareDescription:
-      "CheqSplit masrafları paylaşmaya, fiş taramaya, ortak harcamaları ve borç alacak tablosunu göstermeye yardımcı olur: yemek, gezi veya gruplar.",
+      "CheqSplit, masrafları bölüşmeye, fişleri taramaya, ortak harcamaları takip etmeye ve kimin kime ne kadar borçlu olduğunu net görmeye yardımcı olur: yemek, grup seyahatleri, alışveriş, günlük planlar.",
   },
   nav: { features: "Özellikler", how: "Nasıl çalışır", useCases: "Kullanım alanları", faq: "S.S.S." },
   header: { download: "Uygulamayı indir" },
   hero: {
     title:
       "Giderleri paylaş, fişi tara, grupta kimin kime ne borçlu olduğunu anında gör",
-    body: "CheqSplit, masrafları bölüştürmek, fişleri taramak, paylaşılan giderler ve net bakiyeleri görmek isteyen ekiplere: restoran, yol, market, ekip hâli.",
+    body: "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak giderleri izlemenize ve kimin kime ne kadar borçlu olduğunu anında görmenize yardımcı olur: restoranda, yolculukta, market alışverişinde, grup içinde.",
     alts: [
       "CheqSplit gezi ekranı",
       "CheqSplit uygulaması: ortak harcama",
@@ -27,10 +27,10 @@ export const tr: Dictionary = {
   features: {
     title: "Neden CheqSplit?",
     items: [
-      { title: "Hemen fişte", desc: "Taramayla: kalem, vergi, toplam anında." },
-      { title: "Kalem kalem böl", desc: "Her satır doğru insana, kör köran yarım değil." },
+      { title: "Hemen fişi kaydet", desc: "Taramayla: kalem, vergi, toplam anında, elle yazma derdi yok." },
+      { title: "Kalem kalem böl", desc: "Her satır doğru kişiye; körü körüne yarı yarıya değil, gerçek tüketime göre." },
       { title: "Her şey bir yerde", desc: "Restoran, pazar, turlar, tüm bütçe aynı akışta." },
-      { title: "Kim kime", desc: "Bakiyeleri uygulama halleder, herkes ne ödeyeceğini bilir." },
+      { title: "Kimin kime ne kadar borçlu", desc: "Bakiyeleri uygulama hesaplar, herkes ne ödeyeceğini bilir." },
     ],
   },
   how: {
@@ -46,7 +46,7 @@ export const tr: Dictionary = {
       },
       {
         label: "Kaleme göre böl",
-        body: "Detaylı fatura, satırlar doğru kişide, toplar eşit.",
+        body: "Ayrıntılı fiş: her satır doğru kişide, toplam uyuşur, sürpriz yok.",
         imageAlt: "CheqSplit: fiş taraması",
         bullets: ["Satıra böl", "Ortak tabak, bahşiş, harç", "Açık"],
       },
@@ -54,35 +54,35 @@ export const tr: Dictionary = {
         label: "Paylaşılan tüm gideri izle",
         body: "Kategori ve not, tek bir zaman hattı.",
         imageAlt: "CheqSplit: paylaşılan gider",
-        bullets: ["Kategoriler", "Fiş not", "Takıma tek bant"],
+        bullets: ["Kategoriler", "Fiş notu", "Grubun tüm gideri tek akışta"],
       },
       {
         label: "Bakiyeyi hızlı kapa",
         body: "Her ödeme ile güncellenen hesap, daha az telaşlı sohbet.",
         imageAlt: "CheqSplit: bakiyeler",
-        bullets: ["Net", "Opsiyon hatırlatıcı", "Özet dışa al"],
+        bullets: ["Net bakiye özeti", "Opsiyon hatırlatıcı", "Özeti dışa al"],
       },
       {
         label: "Temiz rapor paylaş",
-        body: "Grafi, toplamlar, kim nerede, gönderin veya sonra açın.",
+        body: "Grafik, toplamlar, kimin nereye ne ödediği: paylaşın veya sonra tekrar açın.",
         imageAlt: "CheqSplit: gezi raporu",
-        bullets: ["Görüntüle", "Bağlantı veya görüntü", "Gizliliğe dikkat"],
+        bullets: ["Özet görünüm", "Bağlantı veya görsel paylaşım", "Gizliliğe özen"],
       },
     ],
   },
   useCases: {
     title: "Her türlü paylaşılan gider",
-    intro: "Birden çok cüzdan: akşam, turla, aile, CheqSplit buna. Taramak, eşleştir, indirim, ücret, açık kapanış.",
+    intro: "Birkaç kişi aynı harcamayı paylaştığında—akşam yemeği, hafta sonu gezisi, aile alışverişi—CheqSplit her şeyi toparlar. Fişi tarar, satırları eşleştirirsin, indirim ve ücretleri eklersin, sonunda net bir kapanış alırsın.",
     items: [
       { title: "Restoran", desc: "Kalemler, adil böl, ödeyebilir gibi." },
-      { title: "Grup gezileri", desc: "Uçuş, oda, yemek, tek pencere." },
+      { title: "Grup seyahatleri", desc: "Uçuş, oda, yemek, tek pencere." },
       { title: "Aile", desc: "Sepet, gün, evin masrafı." },
       { title: "Ortak alışveriş", desc: "Hediye, toplu, arkadaş proje." },
     ],
   },
   cta: {
-    title: "Daha zekâlı bölmek mi?",
-    body: "Binler ekip, hesap kavgasız.",
+    title: "Giderleri daha net bölüştürmek ister misiniz?",
+    body: "Binlerce grup, CheqSplit ile hesap kavgası olmadan hallediyor.",
     sectionAria: "CheqSplit indir",
     imgAlt: "CheqSplit açılış, hesap böl",
     badgeAlts: { appStore: "App Store’da al", play: "Google Play’de al" },
@@ -91,18 +91,18 @@ export const tr: Dictionary = {
     groupAria: "İndir",
   },
   faq: {
-    title: "Sıkça sorular",
+    title: "Sıkça sorulan sorular",
     items: [
-      { q: "CheqSplit ne?", a: "Bölüşülmüş hesap: fiş, satır, bakımlı borç-hesabı, kim kime." },
-      { q: "Kalemle mi bölüyor?", a: "Evet, satırla kişi, tüketene göre." },
-      { q: "Grup tatili olur mu?", a: "Gezi, gider, insan, fiş, nihayet rapor." },
-      { q: "Resto için?", a: "Cafe, pazar, kaçamak, çoğu cüzdan aynı yerdeyse uyar." },
-      { q: "Oflayn?", a: "Kısım yerel, fakat tura katılım eşi internet ister." },
-      { q: "Kimseyi nasıl dave ederim?", a: "Gezi, harcamalar, bağ, katıl, bakayım bakiyeyi." },
+      { q: "CheqSplit nedir?", a: "Ortak masraf ve hesap uygulaması: fiş taraması, satırları kişilere atama, kimin kime ne kadar borçlu olduğunu tek ekranda görmek." },
+      { q: "Fişi satır satır bölebiliyor musunuz?", a: "Evet. Her kalemi tüketene göre ayrı ayrı paylaşabilirsiniz." },
+      { q: "Arkadaşlarla tatile uygun mu?", a: "Evet. Gezi açar, gider eklersiniz, kişileri ve fişleri eklersiniz; sonda anlaşılır bir rapor alırsınız." },
+      { q: "Sadece restoran için mi?", a: "Hayır. Kafe, market, gezi, ortak alışveriş, birkaç kişinin aynı kasadan ödediği her senaryo için uygundur." },
+      { q: "Çevrimdışı çalışıyor mu?", a: "Bazı veriler cihazda kalabilir, ancak geziyi paylaşmak ve grup ile senkron kalmak için internet gerekir." },
+      { q: "Birini geziye nasıl davet ederim?", a: "Bir gezi oluşturun, harcamaları girin, davet bağlantısını paylaşın; katılan aynı bakiyeleri sizinle birlikte görür." },
     ],
   },
   footer: {
-    tagline: "Grupta pay en kolay, adil, net.",
+    tagline: "Grupta masrafları paylaşmak: kolay, adil, net.",
     product: "Ürün",
     company: "Şirket",
     legal: "Yasal",

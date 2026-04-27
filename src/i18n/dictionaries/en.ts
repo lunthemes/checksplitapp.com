@@ -4,13 +4,13 @@ export const en: Dictionary = {
   meta: {
     title: "CheqSplit: Split Expenses, Scan Receipts & Track Group Bills",
     description:
-      "CheqSplit helps you split expenses, scan receipts, track shared bills, and see who owes whom after restaurants, trips, groceries, or group activities.",
+      "Split expenses, scan receipts, and track shared bills. CheqSplit shows who owes whom after restaurants, trips, groceries, and any group plan—without spreadsheet chaos.",
     ogDescription:
-      "Split expenses fairly: scan receipts, track shared bills, and see who owes whom. Great for restaurants, trips, roommates, and group activities.",
+      "Split expenses fairly: scan receipts, track shared expenses, and see who owes whom. Made for restaurants, group trips, roommates, and everyday shared costs.",
     twitterDescription:
-      "The easy way to split expenses and shared bills without awkward math or spreadsheets.",
+      "Split expenses and shared bills without awkward math, screenshots, or spreadsheets—CheqSplit does the work.",
     softwareDescription:
-      "CheqSplit helps you split expenses, scan receipts, track shared bills, and see who owes whom after restaurants, trips, or group activities.",
+      "CheqSplit helps you split expenses, scan receipts, track shared bills, and see who owes whom for restaurants, trips, groceries, and group activities.",
   },
   nav: {
     features: "Features",
@@ -18,105 +18,104 @@ export const en: Dictionary = {
     useCases: "Use cases",
     faq: "FAQ",
   },
-  header: { download: "Download app" },
+  header: { download: "Get the app" },
   hero: {
-    title: "Split Expenses, Scan Receipts, and Track Group Bills",
-    body: "CheqSplit helps you split expenses, scan receipts, track shared bills, and see who owes whom after restaurants, trips, groceries, or group activities.",
+    title: "Split expenses, scan receipts, track shared bills",
+    body: "Split expenses, scan receipts, and track what the group spent—so you always see who owes whom after dinner out, a trip, groceries, or a shared night in.",
     alts: [
-      "CheqSplit group trip expense tracker screen",
-      "CheqSplit mobile app screen showing shared expenses",
-      "CheqSplit live bill split and receipt line items",
+      "CheqSplit: group trip and shared expenses",
+      "CheqSplit mobile app showing shared expenses",
+      "CheqSplit: itemized bill split and receipt lines",
     ],
   },
   features: {
-    title: "Why use CheqSplit?",
+    title: "Why CheqSplit?",
     items: [
       {
-        title: "Scan bills instantly",
-        desc: "Use receipt scanning to capture items, prices, taxes, and totals in seconds.",
+        title: "Scan receipts fast",
+        desc: "Scan a receipt to pull in line items, taxes, and totals in seconds—no retyping.",
       },
       {
-        title: "Split by item",
-        desc: "Assign each receipt item to the right people instead of guessing equal shares.",
+        title: "Split by line item",
+        desc: "Assign each line to the right people instead of splitting everything down the middle.",
       },
       {
-        title: "Track everything",
-        desc: "Keep restaurant bills, groceries, trip costs, and shared expenses in one place.",
+        title: "Keep group spending in one place",
+        desc: "Restaurant tabs, trip costs, groceries, and other shared expenses live on one timeline.",
       },
       {
         title: "See who owes whom",
-        desc: "CheqSplit calculates balances automatically, so everyone knows what to pay.",
+        desc: "Balances update automatically so everyone knows what to settle and when.",
       },
     ],
   },
   how: {
-    title: "How CheqSplit Works",
-    subtitle: "Five clear steps from trip to a clean report everyone can trust.",
+    title: "How CheqSplit works",
+    subtitle: "Five clear steps from a new trip to a report everyone can trust.",
     stepPill: (n) => `Step ${n}`,
     steps: [
       {
-        label: "Create trips in seconds",
-        body: "Name your trip, invite friends, and you’re set—no setup rabbit holes.",
-        imageAlt: "CheqSplit group trip expense tracker screen",
+        label: "Start a trip in seconds",
+        body: "Name the trip, invite the group, and you’re in—no endless settings.",
+        imageAlt: "CheqSplit: group trip and shared expenses",
         bullets: [
-          "Fast trip creation",
-          "Invites in a tap",
-          "Works for dinners or vacations",
+          "Set up a trip in moments",
+          "One-tap invites",
+          "Works for dinners, weekends away, and more",
         ],
       },
       {
-        label: "Split expenses by item",
-        body: "Itemized bills: assign each line to the right people so the math is obvious.",
-        imageAlt: "CheqSplit receipt scanner screen for splitting bills",
-        bullets: ["Line-item splits", "Shared items & splits", "Tips and fees handled"],
+        label: "Split shared expenses by item",
+        body: "Line by line, assign the bill to the people who actually ordered it.",
+        imageAlt: "CheqSplit: scan a receipt to split a bill by item",
+        bullets: ["Per-line splits", "Shared plates & custom splits", "Tips and fees included"],
       },
       {
         label: "Track every shared expense",
-        body: "Categorize spending and keep the full picture in one running total.",
-        imageAlt: "CheqSplit mobile app screen showing shared expenses",
-        bullets: ["Smart categories", "Receipts & notes", "One timeline for the group"],
+        body: "Categorize spending, attach notes, and keep a single running view for the group.",
+        imageAlt: "CheqSplit: mobile screen with shared group expenses",
+        bullets: ["Helpful categories", "Receipts & notes", "One timeline for the group"],
       },
       {
-        label: "Settle balances instantly",
-        body: "Settle up with balances that update as people pay—no more chasing.",
-        imageAlt: "CheqSplit balance summary showing who owes whom",
+        label: "Settle up with live balances",
+        body: "Balances change as people pay, so you spend less time chasing in the group chat.",
+        imageAlt: "CheqSplit: balance summary showing who owes whom",
         bullets: [
-          "Net balances",
-          "Payment reminders (optional)",
-          "Exportable summaries",
+          "Net balances for each person",
+          "Optional nudges",
+          "Export-friendly summaries",
         ],
       },
       {
-        label: "Share clean trip reports",
-        body: "Pie charts, totals, and who paid what—ready to send or review later.",
-        imageAlt: "CheqSplit trip report with expense summary",
-        bullets: ["Visual summaries", "Share as link or image", "Private by default"],
+        label: "Share a clean trip report",
+        body: "Charts, totals, and who paid what—ready to send or look back on later.",
+        imageAlt: "CheqSplit: trip report with expense summary",
+        bullets: ["Simple visuals", "Share a link or image", "Private by design"],
       },
     ],
   },
   useCases: {
-    title: "Perfect for Any Shared Expense",
+    title: "Built for real shared spending",
     intro:
-      "Whenever you need to split expenses with others—dining out, travel, or groceries—CheqSplit is built for real life: restaurant bills, group trips, roommate groceries, family purchases, and shopping with friends. Instead of calculating manually, you can scan receipts, assign items, add fees or discounts, and get a clear settlement summary.",
+      "Whenever you split expenses with others, CheqSplit fits: restaurant checks, group trips, groceries with roommates, family costs, and shopping with friends. Scan the receipt, assign what each person had, add fees or discounts, and get a clear settlement you can all agree on—no back-of-napkin math.",
     items: [
       {
         title: "Restaurants",
-        desc: "Itemize the check, split by dish, and settle fairly.",
+        desc: "Itemize the check, split by dish, and close the tab fairly.",
       },
-      { title: "Group trips", desc: "Flights, hotels, and meals in one place." },
-      { title: "Families", desc: "Groceries, events, and household bills." },
+      { title: "Group trips", desc: "Flights, rooms, and meals in one running total." },
+      { title: "Home & family", desc: "Groceries, events, and day-to-day household costs." },
       {
         title: "Shared shopping",
-        desc: "Gifts, bulk buys, and projects with friends.",
+        desc: "Gifts, bulk runs, and projects you split with friends.",
       },
     ],
   },
   cta: {
-    title: "Ready to split smarter?",
-    body: "Join thousands of groups who split expenses without the stress.",
+    title: "Ready to split expenses without the stress?",
+    body: "Get CheqSplit and make shared bills and group expenses easier for everyone.",
     sectionAria: "Download CheqSplit",
-    imgAlt:
-      "CheqSplit mobile app home screen for splitting bills and shared expenses",
+    imgAlt: "CheqSplit home: split shared bills and track group expenses",
     badgeAlts: {
       appStore: "Download on the App Store",
       play: "Get it on Google Play",
@@ -126,36 +125,36 @@ export const en: Dictionary = {
     groupAria: "Download the app",
   },
   faq: {
-    title: "Frequently Asked Questions",
+    title: "Frequently asked questions",
     items: [
       {
         q: "What is CheqSplit?",
-        a: "CheqSplit is a bill splitting and group expense tracking app that helps you scan receipts, split items, track shared costs, and see who owes whom.",
+        a: "CheqSplit is a bill-splitting and group expense app. Scan receipts, split line items, track shared costs, and see who owes whom in one place.",
       },
       {
-        q: "Can I split a receipt by item?",
-        a: "Yes. CheqSplit lets you assign individual receipt items to specific people, so everyone pays only for what they had.",
+        q: "Can I split a receipt by line item?",
+        a: "Yes. Assign each line to specific people so everyone pays for what they actually ordered or used.",
       },
       {
         q: "Is CheqSplit good for group trips?",
-        a: "Yes. You can create a trip, add shared expenses, invite participants, attach receipts, and generate a final report showing who owes whom.",
+        a: "Yes. Create a trip, add shared expenses, invite your group, attach receipts, and export a final summary with who owes whom.",
       },
       {
-        q: "Can I use CheqSplit for restaurants?",
-        a: "Yes. CheqSplit is useful for restaurant bills, cafés, bars, groceries, shopping, vacations, and any situation where several people share expenses.",
+        q: "Can I use CheqSplit for restaurants and grocery runs?",
+        a: "Yes. It works for restaurant bills, cafés, food shopping, and any situation where a few people are splitting the cost.",
       },
       {
         q: "Does CheqSplit work offline?",
-        a: "You can manage some data locally, but sharing trips and syncing with other participants requires internet access.",
+        a: "You can do a lot on your phone locally, but sharing a trip and syncing with others needs an internet connection.",
       },
       {
         q: "How do I invite people to a trip?",
-        a: "Create a trip in CheqSplit, add expenses, then share the trip link with friends so they can join and see the shared balance.",
+        a: "Start a trip in CheqSplit, add expenses, then share the trip link. When people join, they can see the shared balance and their part.",
       },
     ],
   },
   footer: {
-    tagline: "The easier way to split group expenses—fair, fast, and clear.",
+    tagline: "Split group expenses fairly, quickly, and without the guesswork.",
     product: "Product",
     company: "Company",
     legal: "Legal",

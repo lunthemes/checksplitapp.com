@@ -2,15 +2,15 @@ import type { Dictionary } from "../types";
 
 export const de: Dictionary = {
   meta: {
-    title: "CheqSplit: Kosten teilen, Belege scannen & Gruppenkosten im Blick",
+    title: "CheqSplit: Ausgaben teilen, Belege scannen, Gruppenkosten im Blick",
     description:
-      "CheqSplit hilft dir, Kosten fair zu teilen, Belege zu scannen, gemeinsame Rechnungen zu verfolgen und sofort zu sehen, wer wem was schuldet – nach dem Restaurant, auf Reisen, beim Einkaufen oder bei Gruppenaktivitäten.",
+      "Teile Ausgaben, scanne Kassenzettel, behalte geteilte Kosten im Blick und sieh schnell, wer wem wie viel schuldet – im Restaurant, auf Reisen, beim Einkauf oder in der Gruppe.",
     ogDescription:
-      "Kosten fair teilen: Belege scannen, geteilte Rechnungen im Blick behalten, wer wem was schuldet. Ideal für Restaurants, Reisen, WGs und Gruppen.",
+      "Ausgaben fair aufteilen: Belege scannen, gemeinsame Kosten verfolgen, Saldo kennen. Für Restaurants, Gruppenreisen, Wohngemeinschaft und Familie.",
     twitterDescription:
-      "Einfach gemeinsame Kosten und geteilte Rechnungen teilen – ohne knifflige Rechnerei und Tabellen.",
+      "Gemeinsame Kosten teilen, ohne Taschenrechner, Excel und endlose Chats – CheqSplit rechnet mit.",
     softwareDescription:
-      "CheqSplit hilft dir, Kosten zu teilen, Belege zu scannen, gemeinsame Kosten zu verfolgen und zu sehen, wer wem was schuldet – im Restaurant, auf Reisen oder bei Gruppenaktivitäten.",
+      "CheqSplit hilft dir, Ausgaben zu teilen, Belege zu scannen, geteilte Kosten zu verfolgen und zu sehen, wer wem wie viel schuldet – im Alltag, auf Reisen und in Gruppen.",
   },
   nav: {
     features: "Funktionen",
@@ -20,118 +20,116 @@ export const de: Dictionary = {
   },
   header: { download: "App herunterladen" },
   hero: {
-    title:
-      "Gemeinsame Kosten teilen, Belege scannen und sofort sehen, wer wem was schuldet",
-    body: "CheqSplit hilft dir, Kosten zu teilen, Belege zu scannen, gemeinsame Kosten im Blick zu behalten und schnell zu sehen, wer wem was schuldet – nach dem Restaurant, auf Reisen, beim Einkauf oder in der Gruppe.",
+    title: "Ausgaben teilen, Belege scannen, Saldo kennen",
+    body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe.",
     alts: [
-      "CheqSplit-Gruppenreise-Übersicht",
-      "CheqSplit-Handyansicht: geteilte Ausgaben",
-      "CheqSplit: Rechnungssplit und Kassenbon-Zeilen",
+      "CheqSplit: Gruppenreise, gemeinsame Ausgaben",
+      "CheqSplit-App: geteilte Ausgaben im Überblick",
+      "CheqSplit: Rechnung splitten, Kassenbon-Zeilen",
     ],
   },
   features: {
     title: "Warum CheqSplit?",
     items: [
       {
-        title: "Rechnungen sofort erfassen",
-        desc: "Scannen Sie Kassenbelege und erfassen Artikel, Preise, Steuern und Summen in Sekunden.",
+        title: "Belege in Sekunden erfassen",
+        desc: "Scanne den Kassenzettel: Positionen, Steuern, Summe – ohne alles abzutippen.",
       },
       {
-        title: "Pro Art teilen",
-        desc: "Weisen Sie jede Position der richtigen Person zu, statt grob alles zu halbieren.",
+        title: "Pro Zeile teilen",
+        desc: "Weise jede Position der Person zu, die wirklich bestellt hat – statt alles pauschal zu teilen.",
       },
       {
         title: "Alles an einem Ort",
-        desc: "Restaurant, Einkürfe, Reisekosten und weitere geteilte Ausgaben sammeln Sie an einem Fleck.",
+        desc: "Restaurant, Wochenende, Einkauf, gemeinsame Kosten – alles in einer Zeitleiste.",
       },
       {
-        title: "Klar, wer wem was schuldet",
-        desc: "CheqSplit rechnet Salden automatisch – jeder sieht, was fällig ist.",
+        title: "Wer schuldet wem",
+        desc: "CheqSplit hält die Salden aktuell, damit klar ist, wer wem was zahlt.",
       },
     ],
   },
   how: {
-    title: "So arbeitet CheqSplit",
-    subtitle: "Fünf klare Schritte – von der Reise bis zu einem verständlichen Report, dem alle vertrauen.",
+    title: "So funktioniert CheqSplit",
+    subtitle: "Fünf Schritte – von der Reiseidee zu einem verständlichen Report, dem alle trauen.",
     stepPill: (n) => `Schritt ${n}`,
     steps: [
       {
-        label: "Reise in Sekunden anlegen",
-        body: "Nennen, Freunde einladen, fertig – ohne endloses Einrichten.",
-        imageAlt: "CheqSplit: Gruppenreise-Übersicht",
+        label: "Reise in Sekunden starten",
+        body: "Namen vergeben, Freund:innen einladen – und schon bist du drin, ohne endlos in den Einstellungen zu hängen.",
+        imageAlt: "CheqSplit: Gruppenreise, Übersicht",
         bullets: [
-          "Schnell angelegt",
-          "Einladung in einem Schritt",
-          "Für Abendessen und Urlaub",
+          "In wenigen Momenten eingerichtet",
+          "Einladungen ohne Umwege",
+          "Für Essen, Kurztrip, längerer Urlaub",
         ],
       },
       {
-        label: "Kosten per Position teilen",
-        body: "Position für Position: Jede Zeile landet bei den richtigen Personen, die Rechnerei ist klar.",
-        imageAlt: "CheqSplit: Kassenbon-Scanner",
+        label: "Ausgabe für Ausgabe aufteilen",
+        body: "Position für Position: Jede Zeile deinem Kreis so zuordnen, wie ihr es bestellt habt.",
+        imageAlt: "CheqSplit: Kassenbon-Scanner, Aufteilung",
         bullets: [
-          "Geteilte Positionen",
-          "Geteilt gegessen, geteilt",
-          "Trinkgeld und Gebühren",
+          "Zeilenweises Splitten",
+          "Geteilte Gerichte, Trinkgeld, Servicegebühren",
+          "Klare Rechnung für jede Person",
         ],
       },
       {
-        label: "Jede geteilte Ausgabe führen",
-        body: "Kategorien nutzen – das vollständige Bild an einer Zeitleiste.",
-        imageAlt: "CheqSplit-Handy: geteilte Ausgaben",
+        label: "Gemeinsame Kosten sammeln",
+        body: "Kategorien, Notizen, ein laufendes Gesamtbild, das alle in der Gruppe sehen.",
+        imageAlt: "CheqSplit: Handy, geteilte Gruppenausgaben",
         bullets: [
           "Sinnvolle Kategorien",
-          "Belege & Notizen",
-          "Eine Timeline für die Gruppe",
+          "Belegfotos & Notizen",
+          "Eine Zeitleiste für euch",
         ],
       },
       {
-        label: "Sofort ausbalancieren",
-        body: "Salden, die mit jeder Zahlung aktuell bleiben – kein dauerndes Dranbleiben.",
-        imageAlt: "CheqSplit: Saldonübersicht",
+        label: "Saldo mitlaufen lassen",
+        body: "Wer überweist oder bar zahlt, siehst du am Saldo – weniger Nachtelefonate und „Hast du schon…?“.",
+        imageAlt: "CheqSplit: Salden, wer wem was schuldet",
         bullets: [
-          "Netto-Salden",
-          "Erinnerung (optional)",
-          "Zusammenfassungen exportieren",
+          "Netto-Salden pro Person",
+          "Optional: freundliche Erinnerungen",
+          "Zusammenfassungen fürs Weiterreichen",
         ],
       },
       {
-        label: "Saubere Reise-Reports teilen",
-        body: "Diagramme, Summen, wer wann gezahlt hat – zum Weitergeben oder Späteranschauen.",
-        imageAlt: "CheqSplit Reisebericht",
+        label: "Sauberen Reise-Report teilen",
+        body: "Summen, wer was gezahlt hat, ein paar visuelle Hervorhebungen – zum Weiterleiten oder später Nachschauen.",
+        imageAlt: "CheqSplit: Reise-Report, Ausgaben",
         bullets: [
-          "Bilder & Übersichten",
+          "Klarer Überblick",
           "Link oder Bild",
-          "Datenschutz beachtet",
+          "Datenschutz ernst genommen",
         ],
       },
     ],
   },
   useCases: {
-    title: "Für jede geteilte Ausgabe geeignet",
+    title: "Für jede Situation mit geteilten Kosten",
     intro:
-      "Sobald mehrere Menschen kosten teilen – Essen gehen, reisen, einkaufen: CheqSplit spiegelt den Alltag. Restaurant, Gruppenreise, Wohngemeinschaft, Familieneinkauf, Einkäufe mit Freunden. Statt manuell: Beleg scannen, Artikel zuweisen, Rabatte & Gebühren, klare Abrechnung.",
+      "Sobald ihr als Gruppe einkauft, esst, verreist, CheqSplit passt dazu. Du scannst, ordnest zu, berücksichtigst Rabatt und Gebühren, und bekommst am Ende eine klare Abrechnung, ohne in Tabellenkalkulationen zu grübeln.",
     items: [
       {
-        title: "Restaurants",
-        desc: "Karte prüfen, pro Gericht teilen, fair abrechnen.",
+        title: "Gastronomie",
+        desc: "Jede Position, wer was bestellt hat, fairer Abschluss für alle.",
       },
-      { title: "Gruppenreisen", desc: "Flüge, Hotel und Verpflegung in einer App." },
-      { title: "Familie", desc: "Einkauf, Veranstaltungen, laufende Kosten." },
+      { title: "Gruppenreisen", desc: "Flug, Zimmer, Verpflegung, ein gemeinsamer Blick fürs Budget." },
+      { title: "Wohnen & Familie", desc: "Einkauf, Alltag, alles, was getragen, aber klar abgerechnet werden soll." },
       {
-        title: "Gemeinsam einkaufen",
-        desc: "Geschenke, Sammelbestellungen, Projekte mit Freunden.",
+        title: "Einkäufe zu mehreren",
+        desc: "Geschenke, Sammelbestellungen, Projekte, bei denen ihr die Kosten teilt.",
       },
     ],
   },
   cta: {
-    title: "Bereit für smarteres Teilen?",
-    body: "Tausende Gruppen teilen so schon Kosten – ohne Streit um den Taschenrechner.",
+    title: "Bereit, Ausgaben entspannter zu teilen?",
+    body: "CheqSplit sorgt dafür, dass eure Gruppe schnell weiß, wer wem was schuldet – ganz ohne Zettelwirtschaft.",
     sectionAria: "CheqSplit herunterladen",
-    imgAlt:
-      "CheqSplit Start: Rechnung und geteilte Ausgaben",
+    imgAlt: "CheqSplit Start, Rechnung teilen, Ausgaben verfolgen",
     badgeAlts: {
-      appStore: "Im App Store laden",
+      appStore: "Im App Store herunterladen",
       play: "Bei Google Play",
     },
     playSoon: "Bald",
@@ -143,45 +141,45 @@ export const de: Dictionary = {
     items: [
       {
         q: "Was ist CheqSplit?",
-        a: "CheqSplit teilt Kassenbons und sammelt Gruppenausgaben: Beleg scannen, pro Zeile teilen, Kosten verfolgen, Saldo wer schuldet wem.",
+        a: "Eine App, mit der du Kosten teilst, Kassenzettel scannst, alle Ausgaben der Gruppe im Blick behältst und auf einen Blick siehst, wer wem was schuldet – sauber, nachvollziehbar, Zeile für Zeile.",
       },
       {
-        q: "Kann ich einen Beleg artikelgenau teilen?",
-        a: "Ja. Jede Position weisen Sie Personen zu – jeder zahlt nur, was er verbraucht hat.",
+        q: "Kann ich einen Kassenbon tatsächlich pro Artikel teilen?",
+        a: "Ja. Du weist jede Zeile der richtigen Person zu – jeder zahlt nur, was wirklich zu seiner Bestellung gehört.",
       },
       {
-        q: "Eignet sich die App für Reisen in der Gruppe?",
-        a: "Ja. Reise anlegen, Ausgaben, Teilnehmer, Belege, abschließender Bericht inkl. Saldo.",
+        q: "Eignet sich die App für Gruppenreisen?",
+        a: "Ja. Du legst eine Reise an, trägst geteilte Ausgaben ein, hängst Belegfotos daran und bekommst am Ende einen klaren Überblick, wer wem wie viel schuldet.",
       },
       {
-        q: "Auch fürs Restaurant geeignet?",
-        a: "Ja. Restaurants, Cafés, Einkäufe, Reisen – überall, wo geteilte Kosten anfallen.",
+        q: "Kann ich CheqSplit auch für Restaurant und Wocheneinkauf nutzen?",
+        a: "Immer, wenn zu zweit, dritt, viert bezahlt wird. Restaurant, Kaffee, Einkaufsliste, alles, was an einem Strang hängt.",
       },
       {
-        q: "Geht es offline?",
-        a: "Teilweise lokal, aber teilen und synchronisieren mit anderen braucht Internet.",
+        q: "Gibt's das auch offline?",
+        a: "Manches kannst du lokal auf dem Handy führen, doch geteilte Reisen und Synchronisierung mit deinen Leuten laufen online.",
       },
       {
         q: "Wie lade ich jemanden ein?",
-        a: "Reise in CheqSplit anlegen, Ausgaben eintragen, Link zur Reise teilen, damit andere beitreten und die Balance sehen.",
+        a: "In CheqSplit Reise anlegen, Ausgaben nachtragen, Reise-Link teilen – wer einsteigt, sieht dieselben Salden wie du.",
       },
     ],
   },
   footer: {
-    tagline: "Gruppenkosten einfacher teilen – fair, schnell, klar.",
+    tagline: "Gruppenkosten leichter teilen: fair, klar, ohne doppelte Mathe-Runden.",
     product: "Produkt",
     company: "Unternehmen",
     legal: "Rechtliches",
     about: "Über uns",
     contact: "Kontakt",
     privacy: "Datenschutz",
-    terms: "Nutzung",
+    terms: "Nutzungsbedingungen",
     rights: "Alle Rechte vorbehalten.",
   },
   a11y: {
     keyFeatures: "Hauptfunktionen",
     primaryNav: "Hauptnavigation",
     howSection: "Ablauf",
-    logoHome: "CheqSplit Startseite",
+    logoHome: "Zur Startseite CheqSplit",
   },
 };
