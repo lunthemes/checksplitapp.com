@@ -20,7 +20,9 @@ const { t, items } = Astro.props;
     <SectionHeader
       title={t.faq.title}
     />
-    <div class="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2">
+    <div
+      class="mt-10 grid grid-cols-1 items-start gap-3 md:grid-cols-2"
+    >
       {items.map((item) => (
         <FaqItem question={item.q} answer={item.a} />
       ))}

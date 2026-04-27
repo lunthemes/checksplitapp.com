@@ -17,27 +17,27 @@ const heroPhones = [
     src: heroPhoneScreens[0],
     alt: t.hero.alts[0],
     wrap: [
-      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
+      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[200px] lg:max-w-[230px]",
       "[transform:rotateY(19deg)]",
       "max-sm:[transform:rotateY(12deg)]",
-      "-mr-1 sm:-mr-2 md:-mr-3",
+      "-mr-1 sm:-mr-2 md:-mr-3.5 lg:-mr-4",
     ],
   },
   {
     src: heroPhoneScreens[1],
     alt: t.hero.alts[1],
     wrap: [
-      "relative z-30 -mx-2.5 w-[28%] min-w-[80px] max-w-[145px] scale-[1.04] sm:-mx-4 sm:max-w-[170px] sm:scale-[1.07] md:max-w-[200px]",
+      "relative z-30 -mx-2.5 w-[28%] min-w-[80px] max-w-[145px] scale-[1.04] sm:-mx-4 sm:max-w-[170px] sm:scale-[1.07] md:-mx-5 md:max-w-[225px] md:scale-[1.08] lg:-mx-6 lg:max-w-[255px] lg:scale-[1.1]",
     ],
   },
   {
     src: heroPhoneScreens[2],
     alt: t.hero.alts[2],
     wrap: [
-      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
+      "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[200px] lg:max-w-[230px]",
       "[transform:rotateY(-19deg)]",
       "max-sm:[transform:rotateY(-12deg)]",
-      "-ml-1 sm:-ml-2 md:-ml-3",
+      "-ml-1 sm:-ml-2 md:-ml-3.5 lg:-ml-4",
     ],
   },
 ] as const;
@@ -87,13 +87,13 @@ const heroPhones = [
     </div>
   </div>
   <div
-    class="relative flex min-h-[300px] items-center justify-center overflow-visible md:min-h-[400px]"
+    class="relative flex min-h-[397px] w-full items-center justify-center overflow-visible md:min-h-[582px] lg:min-h-[635px]"
   >
     <div
-      class="flex w-full max-w-lg [perspective:1100px] [perspective-origin:50%_100%] items-end justify-center px-1 pt-4 sm:max-w-2xl sm:px-2"
+      class="flex w-full max-w-lg [perspective:1100px] [perspective-origin:50%_100%] items-end justify-center px-1 pt-4 sm:max-w-2xl sm:px-2 md:max-w-3xl md:px-3 lg:max-w-[56rem] lg:px-4"
     >
       <div
-        class="flex w-full max-w-[min(100%,420px)] items-end [transform-style:preserve-3d] sm:max-w-[min(100%,480px)] md:max-w-[min(100%,520px)]"
+        class="flex w-full max-w-[min(100%,420px)] origin-bottom scale-[1.3225] items-end justify-center [transform-style:preserve-3d] sm:max-w-[min(100%,480px)] md:max-w-[min(100%,600px)] lg:max-w-[min(100%,680px)]"
       >
         {heroPhones.map((h) => (
           <div class:list={["transform-gpu will-change-transform", ...h.wrap]}>

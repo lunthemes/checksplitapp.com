@@ -29,7 +29,7 @@ export const ctaPhoneScreen = screenUrl(SCREENS.cta);
 
 /** Step 1 … 5 (aceeași ordine ca în `howSteps` din `landing.ts`). */
 export const howStepScreens = [
-  screenUrl(SCREENS.homeTrip),
+  screenUrl(SCREENS.home),
   screenUrl(SCREENS.liveSplit),
   screenUrl(SCREENS.allExpenses),
   screenUrl(SCREENS.whoOwes),
