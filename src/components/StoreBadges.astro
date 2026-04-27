@@ -37,11 +37,12 @@ const linkClass = [
 
 const playSoonPillClass =
   variant === "footer"
-    ? "text-[0.6rem] px-1 py-0.5 bg-amber-500 text-white"
+    ? "text-[0.7rem] sm:text-xs bg-amber-500 text-white"
     : variant === "cta"
-      ? "text-[0.65rem] sm:text-xs bg-amber-200 text-amber-950"
-      : "text-[0.65rem] sm:text-xs bg-amber-500 text-white";
+      ? "text-xs sm:text-sm bg-amber-200 text-amber-950"
+      : "text-xs sm:text-sm bg-amber-500 text-white";
 ---
+
 
 <div
   class:list={["flex flex-wrap items-center gap-3 sm:gap-4", className]}
@@ -75,9 +76,12 @@ const playSoonPillClass =
   >
     <span
       class:list={[
-        "absolute -right-0.5 -top-0.5 z-10 max-w-[min(100%,6rem)] truncate rounded px-1.5 py-0.5 text-center font-semibold leading-tight shadow-sm",
+        "absolute z-20 max-w-[min(100%,8rem)] truncate rounded-md text-center font-semibold leading-tight shadow-md",
+        variant === "footer" ? "px-1.5 py-0.5" : "px-2.5 py-1",
+        variant === "footer"
+          ? "-right-1 -top-1 sm:-right-1.5 sm:-top-1.5"
+          : "-right-1.5 -top-1.5 sm:-right-2.5 sm:-top-2.5",
         playSoonPillClass,
-        variant === "footer" && "right-0 top-0 max-w-[5.5rem]",
       ]}
     >
       {playSoon}

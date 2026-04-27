@@ -15,7 +15,8 @@ export const pl: Dictionary = {
   nav: { features: "Funkcje", how: "Działanie", useCases: "Zastosowania", faq: "FAQ" },
   header: { download: "Pobierz aplikację" },
   hero: {
-    title: "Dziel koszty, skanuj paragony, śledź rachunki grupowe",
+    title:
+      "Dziel koszty, skanuj paragony i w każdej chwili wiedz, kto komu i ile",
     body: "CheqSplit ułatwia dzielenie kosztów, skanowanie paragonów, śledzenie wspólnych wydatków i widzenie, kto komu się z czym rozlicza — w restauracji, w podróży, na zakupach, w grupie.",
     alts: [
       "Ekran wycieczki grupowej CheqSplit",

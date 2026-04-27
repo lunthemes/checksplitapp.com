@@ -15,7 +15,8 @@ export const hu: Dictionary = {
   nav: { features: "Funkciók", how: "Működés", useCases: "Használat", faq: "GYIK" },
   header: { download: "Alkalmazás letöltése" },
   hero: {
-    title: "Osszd a költséget, szkeneld a nyugtát, kövesd a csoport számláját",
+    title:
+      "Oszd a számlát, szkenelj blokkot, és tudd, ki kinek és mennyi tartozik",
     body: "A CheqSplit segít megbontani a terhet, beolvasni a blokkot, nőni a közös jegyekre és tudni, ki kinek tartozik. Étterem, út, bolt, baráti cél.",
     alts: [
       "CheqSplit: csoportos utazás képernyő",

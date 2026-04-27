@@ -20,7 +20,8 @@ export const es: Dictionary = {
   },
   header: { download: "Descargar app" },
   hero: {
-    title: "Divide gastos, escanea recibos y controla facturas de grupo",
+    title:
+      "Reparte los gastos, escanea el recibo y deja claro quién debe a quién",
     body: "CheqSplit te ayuda a dividir gastos, escanear recibos, facturas compartidas y ver quién debe a quién tras un restaurante, un viaje, la compra o un plan de grupo.",
     alts: [
       "Pantalla de viaje en grupo CheqSplit",

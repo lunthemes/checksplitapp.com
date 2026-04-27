@@ -2,11 +2,12 @@ import type { FaqEntry } from "../i18n/types";
 
 export const siteUrl = "https://cheqsplitapp.com" as const;
 
-export function getSoftwareApplicationJsonLd(description: string) {
+export function getSoftwareApplicationJsonLd(description: string, pageUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "CheqSplit",
+    url: pageUrl,
     operatingSystem: "iOS, Android",
     applicationCategory: "FinanceApplication",
     description,

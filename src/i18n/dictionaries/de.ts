@@ -20,7 +20,8 @@ export const de: Dictionary = {
   },
   header: { download: "App herunterladen" },
   hero: {
-    title: "Kosten teilen, Belege scannen und Gruppenkosten verfolgen",
+    title:
+      "Gemeinsame Kosten teilen, Belege scannen und sofort sehen, wer wem was schuldet",
     body: "CheqSplit hilft dir, Kosten zu teilen, Belege zu scannen, gemeinsame Kosten im Blick zu behalten und schnell zu sehen, wer wem was schuldet – nach dem Restaurant, auf Reisen, beim Einkauf oder in der Gruppe.",
     alts: [
       "CheqSplit-Gruppenreise-Übersicht",

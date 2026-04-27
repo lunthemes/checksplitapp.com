@@ -20,7 +20,8 @@ export const fr: Dictionary = {
   },
   header: { download: "Télécharger l'app" },
   hero: {
-    title: "Partagez les dépenses, scannez des tickets et suivez les factures de groupe",
+    title:
+      "Partagez les dépenses, scannez l’addition et suivez les comptes du groupe",
     body: "CheqSplit vous aide à partager les dépenses, scanner des tickets, suivre les factures partagées et savoir qui doit quoi à qui après un restaurant, un voyage, des courses ou une activité de groupe.",
     alts: [
       "Écran de suivi des dépenses de voyage de groupe CheqSplit",

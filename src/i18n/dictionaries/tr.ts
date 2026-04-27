@@ -15,7 +15,8 @@ export const tr: Dictionary = {
   nav: { features: "Özellikler", how: "Nasıl çalışır", useCases: "Kullanım alanları", faq: "S.S.S." },
   header: { download: "Uygulamayı indir" },
   hero: {
-    title: "Harcamayı böl, fiş tara, grup faturasını izle",
+    title:
+      "Giderleri paylaş, fişi tara, grupta kimin kime ne borçlu olduğunu anında gör",
     body: "CheqSplit, masrafları bölüştürmek, fişleri taramak, paylaşılan giderler ve net bakiyeleri görmek isteyen ekiplere: restoran, yol, market, ekip hâli.",
     alts: [
       "CheqSplit gezi ekranı",

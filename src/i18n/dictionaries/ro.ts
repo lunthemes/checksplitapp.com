@@ -20,7 +20,8 @@ export const ro: Dictionary = {
   },
   header: { download: "Descarcă aplicația" },
   hero: {
-    title: "Împarte cheltuielile, scanează bonurile, urmărește facturile de grup",
+    title:
+      "Împarte cheltuielile, scanează bonurile și află cine plătește ce",
     body: "CheqSplit te ajută să împarți cheltuielile, scanezi bonurile, urmărești facturile comune și vezi cine cui trebuie după restaurant, excursii, cumpărături sau activități de grup.",
     alts: [
       "Ecran CheqSplit: excursie de grup și cheltuieli",

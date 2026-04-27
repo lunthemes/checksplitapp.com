@@ -40,7 +40,9 @@ const featureItems = buildFeatureItems(t);
 const useCaseItems = buildUseCaseItems(t);
 const year = new Date().getFullYear();
 
-const siteRoot = new URL("/", siteUrl);
+/** Originea publică: `astro.config` `site` (aliniat cu canonicale și sitemap) */
+const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
+const siteRoot = new URL("/", siteBase);
 const canonicalUrl = new URL(localePath(lang), siteRoot).href;
 const alternatePages = [...supportedLanguages].map((l) => ({
   href: new URL(localePath(l), siteRoot).href,
@@ -49,7 +51,7 @@ const alternatePages = [...supportedLanguages].map((l) => ({
 const xDefaultUrl = new URL(localePath(defaultLocale), siteRoot).href;
 
 const softwareJsonLd = JSON.stringify(
-  getSoftwareApplicationJsonLd(t.meta.softwareDescription),
+  getSoftwareApplicationJsonLd(t.meta.softwareDescription, canonicalUrl),
 );
 const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
 ---
