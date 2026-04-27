@@ -2,49 +2,63 @@
 import { site } from "../data/landing";
 import Logo from "./Logo.astro";
 import StoreBadges from "./StoreBadges.astro";
-const year = new Date().getFullYear();
+import type { Dictionary } from "../i18n/types";
+import { localePath } from "../i18n/paths";
+import type { SupportedLanguage } from "../i18n/config";
+
+export interface Props {
+  t: Dictionary;
+  year: number;
+  lang: SupportedLanguage;
+}
+
+const { t, year, lang } = Astro.props;
 ---
 
 <footer class="border-t border-slate-200 bg-slate-50">
   <div class="mx-auto max-w-6xl px-4 py-14 md:px-6">
     <div class="flex flex-col justify-between gap-8 md:flex-row">
       <div>
-        <Logo variant="footer" />
+        <Logo
+          variant="footer"
+          homeHref={localePath(lang)}
+          homeAriaLabel={t.a11y.logoHome}
+        />
         <p class="mt-2 max-w-sm text-sm text-slate-600">
-          The easier way to split group expenses—fair, fast, and clear.
+          {t.footer.tagline}
         </p>
       </div>
       <div class="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
         <div>
-          <p class="font-semibold text-slate-900">Product</p>
+          <p class="font-semibold text-slate-900">{t.footer.product}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#features" class="hover:text-brand-600">Features</a>
+              <a href="#features" class="hover:text-brand-600">{t.nav.features}</a>
             </li>
             <li>
-              <a href="#how" class="hover:text-brand-600">How it works</a>
+              <a href="#how" class="hover:text-brand-600">{t.nav.how}</a>
             </li>
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-slate-900">Company</p>
+          <p class="font-semibold text-slate-900">{t.footer.company}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#" class="hover:text-brand-600">About</a>
+              <a href="#" class="hover:text-brand-600">{t.footer.about}</a>
             </li>
             <li>
-              <a href="#" class="hover:text-brand-600">Contact</a>
+              <a href="#" class="hover:text-brand-600">{t.footer.contact}</a>
             </li>
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-slate-900">Legal</p>
+          <p class="font-semibold text-slate-900">{t.footer.legal}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#" class="hover:text-brand-600">Privacy</a>
+              <a href="#" class="hover:text-brand-600">{t.footer.privacy}</a>
             </li>
             <li>
-              <a href="#" class="hover:text-brand-600">Terms</a>
+              <a href="#" class="hover:text-brand-600">{t.footer.terms}</a>
             </li>
           </ul>
         </div>
@@ -53,8 +67,16 @@ const year = new Date().getFullYear();
     <div
       class="mt-10 flex flex-col items-start justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-500 md:flex-row md:items-center"
     >
-      <p>© {year} {site.name}. All rights reserved.</p>
-      <StoreBadges variant="footer" class="max-w-full justify-end" />
+      <p>© {year} {site.name}. {t.footer.rights}</p>
+      <StoreBadges
+        variant="footer"
+        class="max-w-full justify-end"
+        appStoreAlt={t.cta.badgeAlts.appStore}
+        playAlt={t.cta.badgeAlts.play}
+        playSoon={t.cta.playSoon}
+        playDisabledHint={t.cta.playDisabledHint}
+        groupAria={t.cta.groupAria}
+      />
     </div>
   </div>
 </footer>

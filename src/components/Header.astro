@@ -1,29 +1,47 @@
 ---
 import Logo from "./Logo.astro";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import type { Dictionary } from "../i18n/types";
+import { localePath } from "../i18n/paths";
+import type { SupportedLanguage } from "../i18n/config";
+
+export interface Props {
+  lang: SupportedLanguage;
+  t: Dictionary;
+}
+
+const { lang, t } = Astro.props;
 ---
 
 <header
   class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur"
 >
   <div
-    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:px-6"
   >
-    <Logo variant="header" />
+    <Logo
+      variant="header"
+      homeHref={localePath(lang)}
+      homeAriaLabel={t.a11y.logoHome}
+    />
     <nav
       class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex"
-      aria-label="Primary"
+      aria-label={t.a11y.primaryNav}
     >
-      <a href="#features" class="hover:text-brand-600">Features</a>
-      <a href="#how" class="hover:text-brand-600">How it works</a>
-      <a href="#use-cases" class="hover:text-brand-600">Use cases</a>
-      <a href="#faq" class="hover:text-brand-600">FAQ</a>
+      <a href="#features" class="hover:text-brand-600">{t.nav.features}</a>
+      <a href="#how" class="hover:text-brand-600">{t.nav.how}</a>
+      <a href="#use-cases" class="hover:text-brand-600">{t.nav.useCases}</a>
+      <a href="#faq" class="hover:text-brand-600">{t.nav.faq}</a>
     </nav>
-    <a
-      href="#download"
-      class="rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
-      data-ga-event="click_download_app"
-    >
-      Download app
-    </a>
+    <div class="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
+      <LanguageSwitcher current={lang} />
+      <a
+        href="#download"
+        class="whitespace-nowrap rounded-lg bg-brand-500 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 sm:px-4"
+        data-ga-event="click_download_app"
+      >
+        {t.header.download}
+      </a>
+    </div>
   </div>
 </header>

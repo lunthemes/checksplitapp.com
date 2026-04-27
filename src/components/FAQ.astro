@@ -1,16 +1,27 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import FaqItem from "./FaqItem.astro";
-import { faqItems } from "../data/landing";
+import type { Dictionary, FaqEntry } from "../i18n/types";
+
+export interface Props {
+  t: Dictionary;
+  items: FaqEntry[];
+}
+
+const { t, items } = Astro.props;
 ---
 
-<section id="faq" class="py-20 md:py-24" aria-label="FAQ">
+<section
+  id="faq"
+  class="py-20 md:py-24"
+  aria-label={t.faq.title}
+>
   <div class="mx-auto max-w-4xl px-4 md:px-6">
     <SectionHeader
-      title="Frequently Asked Questions"
+      title={t.faq.title}
     />
     <div class="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2">
-      {faqItems.map((item) => (
+      {items.map((item) => (
         <FaqItem question={item.q} answer={item.a} />
       ))}
     </div>

@@ -1,30 +1,34 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import UseCaseCard from "./UseCaseCard.astro";
-import { useCases } from "../data/landing";
+import type { Dictionary } from "../i18n/types";
+
+export interface Props {
+  t: Dictionary;
+  items: { title: string; desc: string; icon: string; ring: string }[];
+}
+
+const { t, items } = Astro.props;
 ---
 
 <section
   id="use-cases"
   class="border-t border-slate-100 bg-slate-50 py-20 md:py-24"
-  aria-label="Use cases"
+  aria-label={t.nav.useCases}
 >
   <div class="mx-auto max-w-6xl px-4 md:px-6">
     <SectionHeader
-      title="Perfect for Any Shared Expense"
+      title={t.useCases.title}
     />
     <p
       class="mx-auto mt-4 max-w-3xl text-pretty text-center text-sm leading-relaxed text-slate-600 md:mt-5 md:text-base"
     >
-      CheqSplit is built for real-life shared expenses: restaurant bills, group trips,
-      roommate groceries, family purchases, and shopping with friends. Instead of
-      calculating manually, you can scan receipts, assign items, add fees or discounts, and
-      get a clear settlement summary.
+      {t.useCases.intro}
     </p>
     <div
       class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-10 lg:grid-cols-4"
     >
-      {useCases.map((u) => (
+      {items.map((u) => (
         <UseCaseCard
           title={u.title}
           desc={u.desc}

@@ -1,12 +1,19 @@
 ---
 import StoreBadges from "./StoreBadges.astro";
 import { ctaPhoneScreen } from "../data/screens";
+import type { Dictionary } from "../i18n/types";
+
+export interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
 ---
 
 <section
   id="download"
   class="scroll-mt-20 px-4 py-5 md:px-6"
-  aria-label="Download CheqSplit"
+  aria-label={t.cta.sectionAria}
 >
   <div
     class="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl shadow-[0_20px_50px_-12px_rgba(37,99,235,0.4)] ring-1 ring-white/20"
@@ -44,15 +51,22 @@ import { ctaPhoneScreen } from "../data/screens";
           <h2
             class="text-balance text-2xl font-bold leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.2)] sm:text-3xl md:text-[1.9rem] lg:text-[2.1rem] lg:leading-tight"
           >
-            Ready to split smarter?
+            {t.cta.title}
           </h2>
           <p
             class="mx-auto mt-3 max-w-md text-pretty text-base text-white md:mx-0 md:mt-3.5 md:text-lg"
           >
-            Join thousands of groups who split expenses without the stress.
+            {t.cta.body}
           </p>
           <div class="mt-5 flex flex-wrap justify-center gap-2 sm:mt-6 md:justify-start">
-            <StoreBadges variant="cta" />
+            <StoreBadges
+              variant="cta"
+              appStoreAlt={t.cta.badgeAlts.appStore}
+              playAlt={t.cta.badgeAlts.play}
+              playSoon={t.cta.playSoon}
+              playDisabledHint={t.cta.playDisabledHint}
+              groupAria={t.cta.groupAria}
+            />
           </div>
         </div>
         <div
@@ -63,7 +77,7 @@ import { ctaPhoneScreen } from "../data/screens";
           >
             <img
               src={ctaPhoneScreen}
-              alt="CheqSplit mobile app home screen for splitting bills and shared expenses"
+              alt={t.cta.imgAlt}
               class="absolute left-0 top-0 h-[128%] w-full object-cover object-top"
               width="1122"
               height="1402"

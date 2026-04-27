@@ -1,10 +1,6 @@
 ---
 import "../styles/global.css";
-import {
-  getFaqPageJsonLd,
-  siteUrl,
-  softwareApplicationJsonLd,
-} from "../data/structured-data";
+import { siteUrl } from "../data/structured-data";
 
 interface Props {
   title: string;
@@ -19,6 +15,16 @@ interface Props {
   ogImageUrl?: string;
   /** LCP/hero: background image path to preload (e.g. /backgrounds/home-hero.png) */
   preloadHeroImage?: string;
+  /** BCP 47 language code for <html lang> */
+  lang?: string;
+  /** `href` + `hreflang` for alternate language versions of this page */
+  alternatePages?: { href: string; hreflang: string }[];
+  /** Main locale URL for hreflang="x-default" (e.g. English homepage) */
+  xDefaultUrl?: string;
+  /** JSON-LD string for SoftwareApplication (locale-specific description) */
+  softwareJsonLd: string;
+  /** JSON-LD string for FAQPage (locale-matched) */
+  faqJsonLd: string;
 }
 
 const {
@@ -29,21 +35,28 @@ const {
   canonicalUrl = siteUrl + "/",
   ogImageUrl = "https://cheqsplitapp.com/og-image.png",
   preloadHeroImage,
+  lang = "en",
+  alternatePages = [],
+  xDefaultUrl,
+  softwareJsonLd,
+  faqJsonLd,
 } = Astro.props;
 
 const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImageUrl, siteUrl + "/").href;
-const softwareLd = JSON.stringify(softwareApplicationJsonLd);
-const faqLd = JSON.stringify(getFaqPageJsonLd());
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {alternatePages.map((a) => (
+      <link rel="alternate" href={a.href} hreflang={a.hreflang} />
+    ))}
+    {xDefaultUrl && <link rel="alternate" href={xDefaultUrl} hreflang="x-default" />}
     <title>{title}</title>
 
     <meta property="og:type" content="website" />
@@ -85,8 +98,8 @@ const faqLd = JSON.stringify(getFaqPageJsonLd());
       gtag("js", new Date());
       gtag("config", "G-86G5SPYDK6");
     </script>
-    <script is:inline type="application/ld+json" set:html={softwareLd} />
-    <script is:inline type="application/ld+json" set:html={faqLd} />
+    <script is:inline type="application/ld+json" set:html={softwareJsonLd} />
+    <script is:inline type="application/ld+json" set:html={faqJsonLd} />
   </head>
   <body class="min-h-dvh font-sans antialiased text-slate-900 bg-white">
     <slot />

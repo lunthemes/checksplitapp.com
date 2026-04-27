@@ -4,15 +4,20 @@ import { site } from "../data/landing";
 export interface Props {
   /** Header: icon + text mai proeminent. Footer: puțin mai discret. */
   variant?: "header" | "footer";
+  /** Home URL including locale, e.g. /en/ */
+  homeHref?: string;
+  /** Accessible name for the home link */
+  homeAriaLabel?: string;
 }
 
-const { variant = "header" } = Astro.props;
+const { variant = "header", homeHref = "/", homeAriaLabel } = Astro.props;
+const aria = homeAriaLabel ?? `${site.name} home`;
 ---
 
 <a
-  href="/"
+  href={homeHref}
   class="inline-flex items-center gap-2.5"
-  aria-label={`${site.name} home`}
+  aria-label={aria}
 >
   <img
     src={site.logoIcon}

@@ -1,24 +1,24 @@
-import { faqItems } from "./landing";
+import type { FaqEntry } from "../i18n/types";
 
 export const siteUrl = "https://cheqsplitapp.com" as const;
 
-/** softwareApplication: no aggregateRating (ratings in UI are not verified to match schema) */
-export const softwareApplicationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "CheqSplit",
-  operatingSystem: "iOS, Android",
-  applicationCategory: "FinanceApplication",
-  description:
-    "CheqSplit helps you scan receipts, split bills by item, track group expenses, and see who owes whom.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-} as const;
+export function getSoftwareApplicationJsonLd(description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "CheqSplit",
+    operatingSystem: "iOS, Android",
+    applicationCategory: "FinanceApplication",
+    description,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  } as const;
+}
 
-export function getFaqPageJsonLd() {
+export function getFaqPageJsonLd(faqItems: readonly FaqEntry[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

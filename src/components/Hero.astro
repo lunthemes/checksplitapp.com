@@ -2,13 +2,20 @@
 import SectionHeader from "./SectionHeader.astro";
 import StoreBadges from "./StoreBadges.astro";
 import { heroPhoneScreens } from "../data/screens";
+import type { Dictionary } from "../i18n/types";
+
+export interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
 
 const HERO_BG = "/backgrounds/home-hero.png";
 
 const heroPhones = [
   {
     src: heroPhoneScreens[0],
-    alt: "CheqSplit group trip expense tracker screen",
+    alt: t.hero.alts[0],
     wrap: [
       "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
       "[transform:rotateY(19deg)]",
@@ -18,14 +25,14 @@ const heroPhones = [
   },
   {
     src: heroPhoneScreens[1],
-    alt: "CheqSplit mobile app screen showing shared expenses",
+    alt: t.hero.alts[1],
     wrap: [
       "relative z-30 -mx-2.5 w-[28%] min-w-[80px] max-w-[145px] scale-[1.04] sm:-mx-4 sm:max-w-[170px] sm:scale-[1.07] md:max-w-[200px]",
     ],
   },
   {
     src: heroPhoneScreens[2],
-    alt: "CheqSplit live bill split and receipt line items",
+    alt: t.hero.alts[2],
     wrap: [
       "relative z-10 w-[25%] min-w-[72px] max-w-[130px] sm:w-[26%] sm:max-w-[155px] md:max-w-[180px]",
       "[transform:rotateY(-19deg)]",
@@ -63,14 +70,20 @@ const heroPhones = [
     <SectionHeader
       as="h1"
       align="left"
-      title="Split Bills, Scan Receipts, and Track Group Expenses"
+      title={t.hero.title}
     />
     <p class="mt-4 text-lg text-slate-600">
-      CheqSplit helps you scan receipts, split bills by item, track shared expenses, and
-      see who owes whom after restaurants, trips, groceries, or group activities.
+      {t.hero.body}
     </p>
     <div class="mt-8">
-      <StoreBadges variant="hero" />
+      <StoreBadges
+        variant="hero"
+        appStoreAlt={t.cta.badgeAlts.appStore}
+        playAlt={t.cta.badgeAlts.play}
+        playSoon={t.cta.playSoon}
+        playDisabledHint={t.cta.playDisabledHint}
+        groupAria={t.cta.groupAria}
+      />
     </div>
   </div>
   <div

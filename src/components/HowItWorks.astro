@@ -1,15 +1,36 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import StepRow from "./StepRow.astro";
-import { howSteps } from "../data/landing";
+import type { Dictionary } from "../i18n/types";
+
+type HowStep = {
+  step: string;
+  label: string;
+  body: string;
+  image: { src: string; alt: string };
+  items: string[];
+  theme: {
+    section: string;
+    pill: string;
+    check: string;
+  };
+};
+
+export interface Props {
+  t: Dictionary;
+  howSteps: HowStep[];
+}
+
+const { t, howSteps } = Astro.props;
 ---
 
-<section id="how" class="pt-20 md:pt-28" aria-label="How it works">
+<section
+  id="how"
+  class="pt-20 md:pt-28"
+  aria-label={t.a11y.howSection}
+>
   <div class="mx-auto max-w-6xl px-4 pb-4 md:px-6">
-    <SectionHeader
-      title="How CheqSplit Works"
-      subtitle="Five clear steps from trip to a clean report everyone can trust."
-    />
+    <SectionHeader title={t.how.title} subtitle={t.how.subtitle} />
   </div>
   {howSteps.map((s, i) => {
     const reverse = i % 2 === 1;
@@ -26,10 +47,11 @@ import { howSteps } from "../data/landing";
         >
           <StepRow
             step={s.step}
+            stepPill={t.how.stepPill(s.step)}
             label={s.label}
             body={s.body}
             image={s.image}
-            items={[...s.items]}
+            items={s.items}
             theme={s.theme}
             reverse={reverse}
           />

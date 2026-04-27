@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import FeatureBar from "../../components/FeatureBar.astro";
+import HowItWorks from "../../components/HowItWorks.astro";
+import UseCases from "../../components/UseCases.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+import { isLocale, defaultLocale, supportedLanguages } from "../../i18n/config";
+import { localePath } from "../../i18n/paths";
+import { getDictionary } from "../../i18n/dictionaries";
+import {
+  buildHowSteps,
+  buildFeatureItems,
+  buildUseCaseItems,
+} from "../../i18n/build";
+import {
+  siteUrl,
+  getFaqPageJsonLd,
+  getSoftwareApplicationJsonLd,
+} from "../../data/structured-data";
+
+export function getStaticPaths() {
+  return [...supportedLanguages].map((lang) => ({ params: { lang } }));
+}
+
+const { lang: langParam } = Astro.params;
+const normalized =
+  typeof langParam === "string" ? langParam.toLowerCase() : "";
+if (!isLocale(normalized)) {
+  return Astro.redirect(localePath(defaultLocale));
+}
+const lang = normalized;
+
+const t = getDictionary(lang);
+const howSteps = buildHowSteps(t);
+const featureItems = buildFeatureItems(t);
+const useCaseItems = buildUseCaseItems(t);
+const year = new Date().getFullYear();
+
+const siteRoot = new URL("/", siteUrl);
+const canonicalUrl = new URL(localePath(lang), siteRoot).href;
+const alternatePages = [...supportedLanguages].map((l) => ({
+  href: new URL(localePath(l), siteRoot).href,
+  hreflang: l,
+}));
+const xDefaultUrl = new URL(localePath(defaultLocale), siteRoot).href;
+
+const softwareJsonLd = JSON.stringify(
+  getSoftwareApplicationJsonLd(t.meta.softwareDescription),
+);
+const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
+---
+
+<Layout
+  title={t.meta.title}
+  description={t.meta.description}
+  ogDescription={t.meta.ogDescription}
+  twitterDescription={t.meta.twitterDescription}
+  canonicalUrl={canonicalUrl}
+  ogImageUrl="https://cheqsplitapp.com/og-image.png"
+  preloadHeroImage="/backgrounds/home-hero.png"
+  lang={lang}
+  alternatePages={alternatePages}
+  xDefaultUrl={xDefaultUrl}
+  softwareJsonLd={softwareJsonLd}
+  faqJsonLd={faqJsonLd}
+>
+  <Header lang={lang} t={t} />
+  <main>
+    <Hero t={t} />
+    <FeatureBar t={t} items={featureItems} />
+    <HowItWorks t={t} howSteps={howSteps} />
+    <UseCases t={t} items={useCaseItems} />
+    <CallToAction t={t} />
+    <FAQ t={t} items={t.faq.items} />
+  </main>
+  <Footer t={t} year={year} lang={lang} />
+</Layout>

@@ -5,12 +5,18 @@ export interface Props {
   /** hero: mărime standard; cta: pe fundal colorat; footer: compact */
   variant?: "hero" | "cta" | "footer";
   class?: string;
+  appStoreAlt: string;
+  playAlt: string;
+  /** Etichetă scurtă lângă Google Play (ex. «Curând») */
+  playSoon: string;
+  playDisabledHint: string;
+  groupAria: string;
 }
 
-const { variant = "hero", class: className } = Astro.props;
+const { variant = "hero", class: className, appStoreAlt, playAlt, playSoon, playDisabledHint, groupAria } =
+  Astro.props;
 
 const appStoreUrl = store.appStoreUrl;
-const googlePlayUrl = store.googlePlayUrl;
 const appSrc = store.badgeAppStore;
 const playSrc = store.badgeGooglePlay;
 
@@ -28,12 +34,19 @@ const linkClass = [
   variant === "hero" && "ring-offset-white",
   variant === "cta" && "ring-offset-violet-800",
 ];
+
+const playSoonPillClass =
+  variant === "footer"
+    ? "text-[0.6rem] px-1 py-0.5 bg-amber-500 text-white"
+    : variant === "cta"
+      ? "text-[0.65rem] sm:text-xs bg-amber-200 text-amber-950"
+      : "text-[0.65rem] sm:text-xs bg-amber-500 text-white";
 ---
 
 <div
   class:list={["flex flex-wrap items-center gap-3 sm:gap-4", className]}
   role="group"
-  aria-label="Download the app"
+  aria-label={groupAria}
 >
   <a
     href={appStoreUrl}
@@ -43,7 +56,7 @@ const linkClass = [
   >
     <img
       src={appSrc}
-      alt="Download on the App Store"
+      alt={appStoreAlt}
       class:list={[sizeClass]}
       width="120"
       height="40"
@@ -51,20 +64,33 @@ const linkClass = [
       decoding="async"
     />
   </a>
-  <a
-    href={googlePlayUrl}
-    class:list={linkClass}
-    rel="noopener noreferrer"
-    data-ga-event="click_google_play"
+  <div
+    role="img"
+    class:list={[
+      "relative inline-flex shrink-0 select-none",
+      "pointer-events-none cursor-not-allowed",
+      "rounded-md opacity-70 [filter:grayscale(0.55)]",
+    ]}
+    aria-label={`${playAlt} — ${playSoon}. ${playDisabledHint}.`}
   >
+    <span
+      class:list={[
+        "absolute -right-0.5 -top-0.5 z-10 max-w-[min(100%,6rem)] truncate rounded px-1.5 py-0.5 text-center font-semibold leading-tight shadow-sm",
+        playSoonPillClass,
+        variant === "footer" && "right-0 top-0 max-w-[5.5rem]",
+      ]}
+    >
+      {playSoon}
+    </span>
     <img
       src={playSrc}
-      alt="Get it on Google Play"
+      alt=""
       class:list={[sizeClass]}
       width="135"
       height="40"
       loading="eager"
       decoding="async"
+      aria-hidden="true"
     />
-  </a>
+  </div>
 </div>
