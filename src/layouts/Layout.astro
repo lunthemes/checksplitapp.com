@@ -71,11 +71,37 @@ const faqLd = JSON.stringify(getFaqPageJsonLd());
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Google tag (gtag.js) -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-86G5SPYDK6"
+    />
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-86G5SPYDK6");
+    </script>
     <script is:inline type="application/ld+json" set:html={softwareLd} />
     <script is:inline type="application/ld+json" set:html={faqLd} />
   </head>
   <body class="min-h-dvh font-sans antialiased text-slate-900 bg-white">
     <slot />
+    <script is:inline>
+      (function () {
+        document.addEventListener("click", function (e) {
+          const el = e.target;
+          if (!el || !("closest" in el)) return;
+          const link = el.closest("a[data-ga-event]");
+          if (!link || !window.gtag) return;
+          const name = link.getAttribute("data-ga-event");
+          if (name) window.gtag("event", name);
+        });
+      })();
+    </script>
   </body>
 </html>
 
