@@ -174,6 +174,7 @@ export const it: Dictionary = {
   a11y: {
     keyFeatures: "Punti salienti",
     primaryNav: "Navigazione principale",
+    openMenu: "Apri il menu",
     howSection: "Come funziona",
     logoHome: "Home CheqSplit",
   },

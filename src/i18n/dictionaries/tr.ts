@@ -136,6 +136,7 @@ export const tr: Dictionary = {
   a11y: {
     keyFeatures: "Ana özellikler",
     primaryNav: "Birincil gezinme",
+    openMenu: "Menüyü aç",
     howSection: "Nasıl çalışır",
     logoHome: "CheqSplit ana sayfa",
   },

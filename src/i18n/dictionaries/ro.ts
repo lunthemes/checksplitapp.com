@@ -180,6 +180,7 @@ export const ro: Dictionary = {
   a11y: {
     keyFeatures: "Puncte principale",
     primaryNav: "Navigare principală",
+    openMenu: "Deschide meniul",
     howSection: "Cum funcționează",
     logoHome: "Prima pagină CheqSplit",
   },

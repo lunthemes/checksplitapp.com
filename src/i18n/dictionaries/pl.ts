@@ -147,6 +147,7 @@ export const pl: Dictionary = {
   a11y: {
     keyFeatures: "Kluczowe funkcje",
     primaryNav: "Nawigacja główna",
+    openMenu: "Otwórz menu",
     howSection: "Jak to działa",
     logoHome: "Strona główna CheqSplit",
   },

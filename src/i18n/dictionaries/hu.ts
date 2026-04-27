@@ -136,6 +136,7 @@ export const hu: Dictionary = {
   a11y: {
     keyFeatures: "Lényeg",
     primaryNav: "Elsődleges navigáció",
+    openMenu: "Menü megnyitása",
     howSection: "Folyamat",
     logoHome: "CheqSplit kezdőlap",
   },

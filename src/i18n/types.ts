@@ -74,6 +74,7 @@ export interface Dictionary {
   a11y: {
     keyFeatures: string;
     primaryNav: string;
+    openMenu: string;
     howSection: string;
     logoHome: string;
   };

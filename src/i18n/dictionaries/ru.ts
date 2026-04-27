@@ -136,6 +136,7 @@ export const ru: Dictionary = {
   a11y: {
     keyFeatures: "Ключевые функции",
     primaryNav: "Навигация",
+    openMenu: "Открыть меню",
     howSection: "Как работает",
     logoHome: "Домой CheqSplit",
   },

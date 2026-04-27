@@ -180,6 +180,7 @@ export const fr: Dictionary = {
   a11y: {
     keyFeatures: "Fonctionnalités clés",
     primaryNav: "Navigation principale",
+    openMenu: "Ouvrir le menu",
     howSection: "Fonctionnement",
     logoHome: "Accueil CheqSplit",
   },
