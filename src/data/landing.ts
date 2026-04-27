@@ -4,25 +4,25 @@ export const featureItems = [
   {
     title: "Scan bills instantly",
     desc: "Use receipt scanning to capture items, prices, taxes, and totals in seconds.",
-    icon: "/icons/scan-bill.svg",
+    icon: "/app-icons/scan-bill.svg",
     iconBg: "bg-blue-100",
   },
   {
     title: "Split by item",
     desc: "Assign each receipt item to the right people instead of guessing equal shares.",
-    icon: "/icons/split-item.svg",
+    icon: "/app-icons/split-item.svg",
     iconBg: "bg-purple-100",
   },
   {
     title: "Track everything",
     desc: "Keep restaurant bills, groceries, trip costs, and shared expenses in one place.",
-    icon: "/icons/track-expenses.svg",
+    icon: "/app-icons/track-expenses.svg",
     iconBg: "bg-emerald-100",
   },
   {
     title: "See who owes whom",
     desc: "CheqSplit calculates balances automatically, so everyone knows what to pay.",
-    icon: "/icons/who-owes-whom.svg",
+    icon: "/app-icons/who-owes-whom.svg",
     iconBg: "bg-orange-100",
   },
 ] as const;
@@ -138,25 +138,25 @@ export const useCases = [
   {
     title: "Restaurants",
     desc: "Itemize the check, split by dish, and settle fairly.",
-    icon: "/icons/split-item.svg",
+    icon: "/app-icons/split-item.svg",
     ring: "ring-orange-200 bg-orange-50",
   },
   {
     title: "Group trips",
     desc: "Flights, hotels, and meals in one place.",
-    icon: "/icons/trip.svg",
+    icon: "/app-icons/trip.svg",
     ring: "ring-sky-200 bg-sky-50",
   },
   {
     title: "Families",
     desc: "Groceries, events, and household bills.",
-    icon: "/icons/scan-bill.svg",
+    icon: "/app-icons/scan-bill.svg",
     ring: "ring-amber-200 bg-amber-50",
   },
   {
     title: "Shared shopping",
     desc: "Gifts, bulk buys, and projects with friends.",
-    icon: "/icons/shopping.svg",
+    icon: "/app-icons/shopping.svg",
     ring: "ring-violet-200 bg-violet-50",
   },
 ] as const;
