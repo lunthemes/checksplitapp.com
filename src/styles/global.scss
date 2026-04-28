@@ -1,0 +1,8 @@
+@use "./components/header";
+@use "./components/language-switcher";
+@use "./components/hero";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

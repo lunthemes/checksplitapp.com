@@ -35,7 +35,8 @@ const aria = homeAriaLabel ?? `${site.name} home`;
   <span
     class:list={[
       "text-slate-900",
-      variant === "header" && "text-lg font-extrabold tracking-tight sm:text-xl",
+      variant === "header" &&
+        "hidden text-lg font-extrabold tracking-tight sm:inline sm:text-xl",
       variant === "footer" && "text-base font-extrabold tracking-tight",
     ]}
   >

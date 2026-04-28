@@ -43,15 +43,14 @@ const heroPhones = [
 ] as const;
 ---
 
-<section class="relative w-full overflow-hidden">
+<section class="hero">
   <div
-    class="pointer-events-none absolute inset-0 -z-10"
+    class="hero__bg"
     aria-hidden="true"
   >
     <img
       src={HERO_BG}
       alt=""
-      class="h-full w-full object-cover object-center"
       width="1920"
       height="1080"
       fetchpriority="high"
@@ -59,12 +58,9 @@ const heroPhones = [
       decoding="async"
     />
   </div>
+  <div class="hero__overlay" aria-hidden="true" />
   <div
-    class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/20 to-white/25"
-    aria-hidden="true"
-  />
-  <div
-    class="relative z-0 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-14 md:grid-cols-2 md:px-6 md:py-2"
+    class="hero__grid"
   >
   <div>
     <SectionHeader
@@ -86,21 +82,18 @@ const heroPhones = [
       />
     </div>
   </div>
-  <div
-    class="relative flex min-h-[360px] w-full items-center justify-center overflow-visible md:min-h-[480px] lg:min-h-[520px]"
-  >
+  <div class="hero__visual">
     <div
-      class="flex w-full max-w-lg [perspective:1100px] [perspective-origin:50%_100%] items-end justify-center px-1 pt-4 md:[perspective-origin:50%_50%] md:items-center md:pt-0 md:max-w-3xl md:px-3 lg:max-w-[56rem] lg:px-4"
+      class="hero__phones-wrap"
     >
       <div
-        class="flex w-full max-w-[min(100%,420px)] origin-bottom md:origin-center scale-[1.3225] items-end justify-center [transform-style:preserve-3d] md:max-w-[min(100%,600px)] lg:max-w-[min(100%,680px)]"
+        class="hero__phones"
       >
         {heroPhones.map((h) => (
-          <div class:list={["transform-gpu will-change-transform", ...h.wrap]}>
+          <div class:list={["hero__phone", ...h.wrap]}>
             <img
               src={h.src}
               alt={h.alt}
-              class="h-auto w-full max-w-full select-none object-contain [filter:drop-shadow(0_18px_40px_rgba(15,23,42,0.28))]"
               width="360"
               height="780"
               loading="eager"

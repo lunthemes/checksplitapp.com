@@ -15,63 +15,58 @@ interface Props {
 const { current } = Astro.props;
 const label = localePickerLabel[current];
 const currentFlag = localeFlags[current];
+const sortedLanguages = [...supportedLanguages].sort((a, b) =>
+  localeDisplayNames[a].localeCompare(localeDisplayNames[b], "en", {
+    sensitivity: "base",
+  })
+);
 ---
 
-<div class="relative z-[60] flex min-w-0 w-auto shrink-0 sm:max-w-none">
-  <details class="group relative w-auto min-w-0">
+<div class="language-switcher">
+  <details>
     <summary
-      class="flex w-auto min-w-0 cursor-pointer list-none items-center justify-center gap-1.5 rounded-lg border border-slate-200/90 bg-white px-2.5 py-2 text-left text-sm font-medium text-slate-800 shadow-sm [details[open]>&]:ring-1 [details[open]>&]:ring-slate-300 [details[open]>&]:ring-offset-0 focus:outline-none focus:ring-1 focus:ring-slate-300 focus:ring-offset-0 lg:justify-start lg:px-3"
       aria-label={`${label}: ${localeDisplayNames[current]}`}
     >
-      <span class="shrink-0 text-lg leading-none" aria-hidden="true"
-        >{currentFlag}</span
-      >
-      <span class="hidden leading-tight lg:inline">{label}</span>
+      <span aria-hidden="true">{currentFlag}</span>
+      <span class="language-switcher__label">{label}</span>
       <span
-        class="ml-0.5 shrink-0 text-slate-500 transition [details[open]>&]:rotate-180"
+        class="language-switcher__chevron"
         aria-hidden="true">▾</span
       >
     </summary>
     <div
-      class="absolute right-0 z-[70] mt-1 w-full min-w-[13rem] max-w-[min(100vw-2rem,20rem)] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg sm:min-w-[15rem]"
+      class="language-switcher__panel"
     >
       <p
-        class="border-b border-slate-100 px-3 py-2 text-xs font-medium text-slate-500 lg:hidden"
+        class="language-switcher__panel-title"
         aria-hidden="true"
       >
         {label}
       </p>
       <ul
-        class="max-h-72 overflow-y-auto overscroll-contain py-1 [scrollbar-gutter:stable]"
+        class="language-switcher__list"
         role="listbox"
         aria-label={label}
       >
-        {supportedLanguages.map((l) => {
+        {sortedLanguages.map((l) => {
           const href = localePath(l);
           return (
             <li role="none">
               <a
                 href={href}
                 class:list={[
-                  "flex items-center gap-2.5 px-3 py-2.5 text-sm",
-                  l === current
-                    ? "bg-slate-100 font-semibold text-slate-900"
-                    : "text-slate-700 hover:bg-slate-50",
+                  "language-switcher__option",
+                  l === current && "language-switcher__option--active",
                 ]}
                 hreflang={l}
                 lang={l}
                 role="option"
                 aria-selected={l === current ? "true" : "false"}
               >
-                <span
-                  class="shrink-0 text-base leading-none"
-                  aria-hidden="true"
-                >
+                <span class="language-switcher__flag" aria-hidden="true">
                   {localeFlags[l]}
                 </span>
-                <span class="min-w-0 flex-1 truncate"
-                  >{localeDisplayNames[l]}</span
-                >
+                <span class="language-switcher__name">{localeDisplayNames[l]}</span>
               </a>
             </li>
           );
