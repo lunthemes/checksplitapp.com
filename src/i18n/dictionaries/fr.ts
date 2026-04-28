@@ -20,7 +20,7 @@ export const fr: Dictionary = {
   },
   header: { download: "Télécharger l'app" },
   hero: {
-    title: "Partagez les dépenses, scannez l’addition, voyez qui doit quoi à qui",
+    title: "Partagez les dépenses, scannez les reçus et laissez l’application s’occuper du reste",
     body: "Scannez le ticket, suivez les dépenses partagées et gardez une vision simple de qui doit combien à qui – sortie au resto, week-end, courses à plusieurs, soirée entre amis.",
     alts: [
       "CheqSplit : suivi de dépenses pour un voyage de groupe",

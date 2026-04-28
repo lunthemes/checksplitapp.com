@@ -20,7 +20,7 @@ export const de: Dictionary = {
   },
   header: { download: "App herunterladen" },
   hero: {
-    title: "Ausgaben teilen, Belege scannen, Saldo kennen",
+    title: "Teilt Ausgaben, scannt Belege und lasst die App den Rest erledigen",
     body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe.",
     alts: [
       "CheqSplit: Gruppenreise, gemeinsame Ausgaben",

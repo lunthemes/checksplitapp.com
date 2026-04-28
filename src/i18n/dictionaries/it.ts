@@ -20,7 +20,7 @@ export const it: Dictionary = {
   },
   header: { download: "Scarica l'app" },
   hero: {
-    title: "Dividi le spese, scansiona lo scontrino, vedi chi deve quanto a chi",
+    title: "Dividete le spese, scansionate gli scontrini e lasciate che l’app faccia il resto",
     body: "Con CheqSplit puoi scansionare gli scontrini, tenere sotto controllo le spese condivise e vedere in un attimo cosa resta da saldare, dopo cena, in gita, a casa o in viaggio con amici e famiglia.",
     alts: [
       "CheqSplit: viaggio di gruppo e spese condivise",

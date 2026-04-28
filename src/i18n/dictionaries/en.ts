@@ -20,7 +20,7 @@ export const en: Dictionary = {
   },
   header: { download: "Get the app" },
   hero: {
-    title: "Split expenses, scan receipts, track shared bills",
+    title: "Split expenses, scan receipts, and let the app handle the rest",
     body: "Split expenses, scan receipts, and track what the group spent—so you always see who owes whom after dinner out, a trip, groceries, or a shared night in.",
     alts: [
       "CheqSplit: group trip and shared expenses",

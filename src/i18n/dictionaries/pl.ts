@@ -15,7 +15,7 @@ export const pl: Dictionary = {
   nav: { features: "Funkcje", how: "Jak to działa", useCases: "Zastosowania", faq: "FAQ" },
   header: { download: "Pobierz aplikację" },
   hero: {
-    title: "Dziel wydatki, skanuj paragony, zobacz, kto komu ile jest winien",
+    title: "Dzielcie wydatki, skanujcie paragony i pozwólcie aplikacji zająć się resztą",
     body: "CheqSplit ułatwia dzielenie wydatków, skanowanie paragonów, śledzenie wspólnych kosztów i rozliczanie, kto komu ile jest winien – w restauracji, na wyjeździe, na zakupach, w grupie.",
     alts: [
       "CheqSplit: wspólna podróż, lista wydatków",

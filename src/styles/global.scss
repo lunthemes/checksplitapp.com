@@ -1,6 +1,7 @@
 @use "./components/header";
 @use "./components/language-switcher";
 @use "./components/hero";
+@use "./typography";
 
 @tailwind base;
 @tailwind components;

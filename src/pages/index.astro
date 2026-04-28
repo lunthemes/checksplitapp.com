@@ -1,5 +1,74 @@
 ---
-import { defaultLocale } from "../i18n/config";
+import { defaultLocale, supportedLanguages } from "../i18n/config";
 import { localePath } from "../i18n/paths";
-return Astro.redirect(localePath(defaultLocale), 301);
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <script
+      is:inline
+      define:vars={{ supportedLanguages, defaultLocale, defaultLocalePath: localePath(defaultLocale) }}
+    >
+      (function () {
+        const supported = new Set(supportedLanguages);
+        const fallback = supported.has("en") ? "en" : defaultLocale;
+        const basePath = defaultLocalePath;
+
+        // Optional manual override via ?lang=xx (persisted)
+        const url = new URL(window.location.href);
+        const qLang = url.searchParams.get("lang");
+        if (qLang && supported.has(qLang)) {
+          try {
+            localStorage.setItem("preferredLang", qLang);
+          } catch {}
+          window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${qLang}/`));
+          return;
+        }
+
+        // Saved preference wins
+        try {
+          const saved = localStorage.getItem("preferredLang");
+          if (saved && supported.has(saved)) {
+            window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${saved}/`));
+            return;
+          }
+        } catch {}
+
+        const candidates = []
+          .concat(navigator.languages || [])
+          .concat([navigator.language])
+          .filter(Boolean);
+
+        function pickLang(tag) {
+          const lower = String(tag).toLowerCase();
+          const primary = lower.split("-")[0];
+          if (supported.has(primary)) return primary;
+          // Common special-cases
+          if (primary === "uk" && supported.has("ru")) return "ru";
+          return null;
+        }
+
+        let best = null;
+        for (const tag of candidates) {
+          const picked = pickLang(tag);
+          if (picked) {
+            best = picked;
+            break;
+          }
+        }
+
+        const target = best || fallback;
+        window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${target}/`));
+      })();
+    </script>
+  </body>
+</html>

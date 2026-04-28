@@ -15,8 +15,7 @@ export const hu: Dictionary = {
   nav: { features: "Funkciók", how: "Működés", useCases: "Használat", faq: "GYIK" },
   header: { download: "Alkalmazás letöltése" },
   hero: {
-    title:
-      "Oszd a számlát, szkenelj blokkot, és tudd, ki kinek és mennyi tartozik",
+    title: "Osszátok meg a költségeket, szkenneljétek be a nyugtákat, a többit pedig bízzátok az alkalmazásra",
     body: "A CheqSplit segít a költségek megosztásában, a blokkok beolvasásában és a közös kiadások követésében, hogy tisztán lásd, ki kinek mennyivel tartozik — étteremben, utazáson, bevásárláskor, baráti vagy családi környezetben.",
     alts: [
       "CheqSplit: csoportos utazás képernyő",
