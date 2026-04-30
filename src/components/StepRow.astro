@@ -16,12 +16,8 @@ interface Props {
   theme: Theme;
 }
 
-const { step, stepPill, label, body, items, image, reverse, theme } = Astro.props;
-/** Step 1: lățime mărită incremental (total +25px peste baza 364.8/422.4/460.8/499.2 px). */
-const phoneSize =
-  step === "1"
-    ? "max-w-[min(100%,calc(364.8px+25px))] sm:max-w-[calc(422.4px+25px)] md:max-w-[calc(460.8px+25px)] lg:max-w-[calc(499.2px+25px)]"
-    : "max-w-[min(100%,280px)] sm:max-w-[320px] md:max-w-[352px] lg:max-w-[384px]";
+const { stepPill, label, body, items, image, reverse, theme } = Astro.props;
+const phoneSize = "max-w-[min(100%,280px)] sm:max-w-[320px] md:max-w-[352px] lg:max-w-[384px]";
 ---
 
 <div
@@ -43,8 +39,6 @@ const phoneSize =
         <div
           class:list={[
             "relative w-full overflow-hidden [aspect-ratio:9/11.4]",
-            step === "1" &&
-              "max-h-[calc(280px*11.4/9)] sm:max-h-[calc(320px*11.4/9)] md:max-h-[calc(352px*11.4/9)] lg:max-h-[calc(384px*11.4/9)]",
           ]}
         >
           <img
@@ -55,11 +49,7 @@ const phoneSize =
             height="1280"
             loading="lazy"
             decoding="async"
-            sizes={
-              step === "1"
-                ? "(min-width: 1024px) calc(499.2px + 25px), (min-width: 768px) calc(460.8px + 25px), calc(364.8px + 25px)"
-                : "(min-width: 1024px) 384px, (min-width: 768px) 352px, 288px"
-            }
+            sizes="(min-width: 1024px) 384px, (min-width: 768px) 352px, 288px"
           />
         </div>
       </div>

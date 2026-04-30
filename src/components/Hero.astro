@@ -170,6 +170,21 @@ const heroPhones = [
     const btnPrev = document.querySelector("[data-arrow='prev']");
     const btnNext = document.querySelector("[data-arrow='next']");
 
+    const slides = Array.from(viewport.querySelectorAll("[data-slide]"));
+    const lastIndex = Math.max(0, slides.length - 1);
+
+    // Clone first slide at the end so wrap-around always animates right→left.
+    // This keeps the motion direction consistent (new slide enters from the right).
+    const firstReal = viewport.querySelector("[data-slide='0']");
+    if (firstReal) {
+      const clone = firstReal.cloneNode(true);
+      if (clone instanceof HTMLElement) {
+        clone.setAttribute("data-clone", "true");
+        // Keep data-slide=0 so dots still map correctly.
+        viewport.appendChild(clone);
+      }
+    }
+
     function syncHeight() {
       const first = viewport.querySelector("[data-slide='0']");
       if (!first) return;
@@ -189,13 +204,34 @@ const heroPhones = [
     }
 
     function scrollToIndex(idx) {
+      const current = getCurrentIndex();
+
+      // If we wrap from last -> first, scroll to the cloned first slide (to the right),
+      // then snap back to the real first slide once the smooth scroll finishes.
+      if (idx === 0 && current === lastIndex) {
+        const clone = viewport.querySelector("[data-clone='true']");
+        const real0 = viewport.querySelector("[data-slide='0']");
+        if (clone && real0) {
+          clone.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+          setCurrent(0);
+          window.setTimeout(() => {
+            // Snap without animation.
+            const prevBehavior = viewport.style.scrollBehavior;
+            viewport.style.scrollBehavior = "auto";
+            real0.scrollIntoView({ behavior: "auto", inline: "start", block: "nearest" });
+            viewport.style.scrollBehavior = prevBehavior;
+          }, 450);
+          return;
+        }
+      }
+
       const slide = viewport.querySelector(`[data-slide='${idx}']`);
       if (!slide) return;
       slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
       setCurrent(idx);
     }
 
-    // Autoplay: advance every 4s; stop permanently on any user interaction.
+    // Autoplay: advance every 5s; stop permanently on any user interaction.
     let autoplayTimer = null;
     let autoplayStopped = false;
     function stopAutoplay() {
@@ -213,7 +249,7 @@ const heroPhones = [
       autoplayTimer = setInterval(() => {
         const next = (getCurrentIndex() + 1) % dots.length;
         scrollToIndex(next);
-      }, 4000);
+      }, 5000);
     }
 
     dots.forEach((btn) => {
@@ -226,8 +262,9 @@ const heroPhones = [
     if (btnPrev) {
       btnPrev.addEventListener("click", () => {
         stopAutoplay();
-        const prev = (getCurrentIndex() - 1 + dots.length) % dots.length;
-        scrollToIndex(prev);
+        const cur = getCurrentIndex();
+        const nextRtl = (cur + 1) % dots.length;
+        scrollToIndex(nextRtl);
       });
     }
     if (btnNext) {
@@ -262,15 +299,6 @@ const heroPhones = [
     viewport.addEventListener("pointerdown", stopAutoplay, { passive: true });
     viewport.addEventListener("touchstart", stopAutoplay, { passive: true });
     viewport.addEventListener("wheel", stopAutoplay, { passive: true });
-    viewport.addEventListener("keydown", stopAutoplay, { passive: true });
-    viewport.addEventListener(
-      "scroll",
-      () => {
-        // If scroll happens soon after pointer/touch, treat as interaction.
-        if (!autoplayStopped) stopAutoplay();
-      },
-      { passive: true },
-    );
 
     syncHeight();
     window.addEventListener("resize", () => requestAnimationFrame(syncHeight), { passive: true });

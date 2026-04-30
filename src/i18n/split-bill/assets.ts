@@ -15,6 +15,7 @@ export const splitBillFeatureAssets = [
   {
     icon: "/app-icons/split-bill-app/receipt-seconds.svg",
     img: "/screens/split-bill-app/split-bill-1.png",
+    mediaImgMaxHeightPx: 400,
   },
   {
     icon: "/app-icons/split-bill-app/review.svg",
