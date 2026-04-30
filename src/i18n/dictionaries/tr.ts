@@ -13,15 +13,20 @@ export const tr: Dictionary = {
       "CheqSplit, masrafları bölüşmeye, fişleri taramaya, ortak harcamaları takip etmeye ve kimin kime ne kadar borçlu olduğunu net görmeye yardımcı olur: yemek, grup seyahatleri, alışveriş, günlük planlar.",
   },
   nav: { features: "Özellikler", how: "Nasıl çalışır", useCases: "Kullanım alanları", faq: "S.S.S." },
-  header: { download: "Uygulamayı indir" },
+  header: { download: "Uygulamayı ücretsiz indir" },
   hero: {
     title: "Harcamaları paylaşın, fişleri tarayın ve gerisini uygulamaya bırakın",
-    body: "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak giderleri izlemenize ve kimin kime ne kadar borçlu olduğunu anında görmenize yardımcı olur: restoranda, yolculukta, market alışverişinde, grup içinde.",
+    body: "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak giderleri izlemenize ve kimin kime ne kadar borçlu olduğunu anında görmenize yardımcı olur: restoranda, yolculukta, market alışverişinde, grup içinde. Uygulamayı ücretsiz indirebilirsiniz.",
     alts: [
       "CheqSplit gezi ekranı",
       "CheqSplit uygulaması: ortak harcama",
       "Hesap böl, fiş satırları CheqSplit",
     ],
+  },
+  heroSlide2: {
+    title: "Restoran hesaplarını daha hızlı bölün",
+    description: "Fişi tarayın, ürünleri kişilere atayın ve herkesin payını net görün — arkadaş yemekleri, buluşmalar ve grup sofraları için ideal.",
+    button: "Daha fazla bilgi",
   },
   features: {
     title: "Neden CheqSplit?",
@@ -102,18 +107,21 @@ export const tr: Dictionary = {
   },
   cta: {
     title: "Giderleri daha net bölüştürmek ister misiniz?",
-    body: "Binlerce grup, CheqSplit ile hesap kavgası olmadan hallediyor.",
-    sectionAria: "CheqSplit indir",
+    body: "CheqSplit’i ücretsiz indirin — binlerce grup hesabı kavgası olmadan hallediyor.",
+    sectionAria: "CheqSplit’i ücretsiz indir",
     imgAlt: "CheqSplit açılış, hesap böl",
-    badgeAlts: { appStore: "App Store’da al", play: "Google Play’de al" },
+    badgeAlts: {
+      appStore: "App Store’da ücretsiz indir",
+      play: "Google Play’de ücretsiz indir",
+    },
     playSoon: "Yakında",
     playDisabledHint: "Henüz yok",
-    groupAria: "İndir",
+    groupAria: "Uygulamayı ücretsiz indir",
   },
   faq: {
     title: "Sıkça sorulan sorular",
     items: [
-      { q: "CheqSplit nedir?", a: "Ortak masraf ve hesap uygulaması: fiş taraması, satırları kişilere atama, kimin kime ne kadar borçlu olduğunu tek ekranda görmek." },
+      { q: "CheqSplit nedir?", a: "Ücretsiz ortak masraf ve hesap uygulaması: fiş taraması, satırları kişilere atama, kimin kime ne kadar borçlu olduğunu tek ekranda görmek." },
       { q: "Fişi satır satır bölebiliyor musunuz?", a: "Evet. Her kalemi tüketene göre ayrı ayrı paylaşabilirsiniz." },
       { q: "Arkadaşlarla tatile uygun mu?", a: "Evet. Gezi açar, gider eklersiniz, kişileri ve fişleri eklersiniz; sonda anlaşılır bir rapor alırsınız." },
       { q: "Sadece restoran için mi?", a: "Hayır. Kafe, market, gezi, ortak alışveriş, birkaç kişinin aynı kasadan ödediği her senaryo için uygundur." },

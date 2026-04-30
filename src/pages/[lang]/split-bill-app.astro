@@ -1,0 +1,314 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import StoreBadges from "../../components/StoreBadges.astro";
+import FAQ from "../../components/FAQ.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+import { site } from "../../data/landing";
+import { getDictionary } from "../../i18n/dictionaries";
+import {
+  getSplitBillCopy,
+  splitBillHeroScreens,
+  splitBillStepIcons,
+  splitBillFeatureAssets,
+} from "../../i18n/split-bill";
+import { localePath, localeSplitBillPath } from "../../i18n/paths";
+import {
+  siteUrl,
+  getFaqPageJsonLd,
+  getSoftwareApplicationJsonLd,
+} from "../../data/structured-data";
+import { defaultLocale, isLocale, supportedLanguages } from "../../i18n/config";
+import type { SupportedLanguage } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return [...supportedLanguages].map((lang) => ({ params: { lang } }));
+}
+
+const { lang: langParam } = Astro.params;
+const normalized =
+  typeof langParam === "string" ? langParam.toLowerCase() : "";
+if (!isLocale(normalized)) {
+  return Astro.redirect(localeSplitBillPath(defaultLocale));
+}
+const lang = normalized as SupportedLanguage;
+
+const t = getDictionary(lang);
+const copy = getSplitBillCopy(lang);
+const year = new Date().getFullYear();
+
+const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
+const siteRoot = new URL("/", siteBase);
+const canonicalUrl = new URL(localeSplitBillPath(lang), siteRoot).href;
+
+const alternatePages = [...supportedLanguages].map((l) => ({
+  href: new URL(localeSplitBillPath(l), siteRoot).href,
+  hreflang: l,
+}));
+const xDefaultUrl = new URL(localeSplitBillPath("en"), siteRoot).href;
+
+const softwareJsonLd = JSON.stringify(
+  getSoftwareApplicationJsonLd(copy.softwareDescription, canonicalUrl),
+);
+const faqItems = [...copy.faq];
+const faqJsonLd = JSON.stringify(getFaqPageJsonLd(faqItems));
+
+const HERO_BG = "/backgrounds/split-bill-app.png";
+
+const MARKER = "CheqSplit";
+const h1Full = copy.h1;
+const h1Idx = h1Full.indexOf(MARKER);
+const h1Before = h1Idx >= 0 ? h1Full.slice(0, h1Idx) : "";
+const h1After = h1Idx >= 0 ? h1Full.slice(h1Idx + MARKER.length) : "";
+const h1HasAccent = h1Idx >= 0;
+
+const featureRows = splitBillFeatureAssets.map((asset, i) => ({
+  ...asset,
+  title: copy.features[i]!.title,
+  desc: copy.features[i]!.desc,
+}));
+---
+
+<Layout
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  ogDescription={copy.metaDescription}
+  twitterDescription={copy.metaDescription}
+  canonicalUrl={canonicalUrl}
+  preloadHeroImage={HERO_BG}
+  lang={lang}
+  alternatePages={alternatePages}
+  xDefaultUrl={xDefaultUrl}
+  softwareJsonLd={softwareJsonLd}
+  faqJsonLd={faqJsonLd}
+>
+  <main class="split-bill">
+    <header class="split-bill__nav" aria-label={copy.a11y.nav}>
+      <div class="split-bill__nav-inner">
+        <a class="split-bill__brand" href={localePath(lang)}>
+          <img
+            src={site.logoIcon}
+            alt=""
+            width="40"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
+          <span>CheqSplit</span>
+        </a>
+        <nav class="split-bill__nav-links" aria-label={copy.a11y.nav}>
+          <a href="#features">{t.nav.features}</a>
+          <a href="#how">{t.nav.how}</a>
+          <a href="#faq">{t.nav.faq}</a>
+        </nav>
+        <div class="split-bill__nav-actions">
+          <LanguageSwitcher current={lang} hrefForLang={localeSplitBillPath} />
+          <a class="split-bill__nav-cta" href={localePath(lang) + "#download"}>
+            {t.header.download}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="split-bill__hero" aria-label={copy.a11y.hero}>
+      <div class="split-bill__hero-bg" aria-hidden="true">
+        <img
+          src={HERO_BG}
+          alt=""
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="split-bill__hero-overlay" aria-hidden="true" />
+      <div class="split-bill__hero-arcs" aria-hidden="true"></div>
+
+      <div class="split-bill__hero-container">
+        <div class="split-bill__hero-grid">
+          <div class="split-bill__hero-copy typography">
+            <h1 class="split-bill__hero-title">
+              {
+                h1HasAccent ? (
+                  <>
+                    <span>{h1Before}</span>
+                    <span class="split-bill__accent">{MARKER}</span>
+                    <span>{h1After}</span>
+                  </>
+                ) : (
+                  h1Full
+                )
+              }
+            </h1>
+
+            <div class="split-bill__hero-sub">
+              <div>{copy.heroSubLine1}</div>
+              <div>{copy.heroSubLine2}</div>
+            </div>
+
+            <p class="split-bill__hero-desc">
+              {copy.heroParagraph}
+            </p>
+
+            <div class="split-bill__hero-badges">
+              <StoreBadges
+                variant="hero"
+                appStoreAlt={t.cta.badgeAlts.appStore}
+                playAlt={t.cta.badgeAlts.play}
+                playSoon={t.cta.playSoon}
+                playDisabledHint={t.cta.playDisabledHint}
+                groupAria={t.cta.groupAria}
+              />
+            </div>
+          </div>
+
+          <div class="split-bill__phones-visual" aria-hidden="true">
+            <div class="split-bill__phones-wrap">
+              <div class="split-bill__phones">
+                {splitBillHeroScreens.map((src, idx) => (
+                  <div class:list={["split-bill__hero-phone", `split-bill__hero-phone--${idx}`]}>
+                    <div class="split-bill__phone-shell">
+                      <div class="split-bill__phone-notch"></div>
+                      <img
+                        src={src}
+                        alt=""
+                        width="360"
+                        height="780"
+                        loading={idx === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="split-bill__light"
+      id="how"
+      aria-label={`${copy.stepsSectionH2} — ${copy.howSectionH2}`}
+    >
+      <div class="split-bill__container">
+        <div class="split-bill__section-heading typography">
+          <h2 class="typ-h2 typ-title-color">{copy.stepsSectionH2}</h2>
+        </div>
+
+        <div class="split-bill__steps" aria-label={copy.a11y.stepsRegion}>
+          {copy.steps.map((s, idx) => (
+            <div class="split-bill__step typography">
+              <div class="split-bill__step-icon" aria-hidden="true">
+                <img
+                  src={splitBillStepIcons[idx]}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="typ-h3 typ-title-color split-bill__step-title">{s.title}</h3>
+              <div class="split-bill__step-desc">{s.desc}</div>
+              {idx < 2 && <div class="split-bill__step-arrow" aria-hidden="true">→</div>}
+            </div>
+          ))}
+        </div>
+
+        <div class="split-bill__how-follow typography">
+          <h2 class="typ-h2 typ-title-color">{copy.howSectionH2}</h2>
+          <p class="split-bill__section-sub">{copy.howSectionSub}</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="split-bill__light"
+      id="features"
+      aria-label={copy.a11y.features}
+    >
+      <div class="split-bill__container split-bill__container--narrow">
+        {featureRows.map((f, idx) => (
+          <div
+            class:list={[
+              "split-bill__feature",
+              idx % 2 === 0 && "split-bill__feature--reverse",
+            ]}
+          >
+            <div class="split-bill__feature-card">
+              <div class="split-bill__feature-icon" aria-hidden="true">
+                {f.icon ? (
+                  <img src={f.icon} alt="" width="56" height="56" loading="lazy" decoding="async" />
+                ) : (
+                  <span>✦</span>
+                )}
+              </div>
+              <div class="typography">
+                <h2 class="split-bill__feature-title">{f.title}</h2>
+                <div class="split-bill__feature-desc">{f.desc}</div>
+              </div>
+            </div>
+            <div class="split-bill__feature-media" aria-hidden="true">
+              <img
+                src={f.img}
+                alt=""
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                style={
+                  [
+                    "mediaImgWidthPx" in f && f.mediaImgWidthPx != null
+                      ? `width: ${f.mediaImgWidthPx}px`
+                      : "",
+                    "mediaImgMaxHeightPx" in f && f.mediaImgMaxHeightPx != null
+                      ? `max-height: ${f.mediaImgMaxHeightPx}px`
+                      : "",
+                    ("mediaImgWidthPx" in f && f.mediaImgWidthPx != null) ||
+                    ("mediaImgMaxHeightPx" in f && f.mediaImgMaxHeightPx != null)
+                      ? "height: auto; object-fit: unset"
+                      : "",
+                  ]
+                    .filter(Boolean)
+                    .join("; ") || undefined
+                }
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <CallToAction
+      t={t}
+      title={copy.ctaTitle}
+      body={copy.ctaBody}
+    />
+
+    <section class="split-bill__light" aria-label={copy.a11y.faq}>
+      <div class="split-bill__container">
+        <FAQ
+          t={t}
+          items={faqItems}
+          sectionClass="pt-[10px] pb-[10px]"
+        />
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t} year={year} lang={lang} />
+</Layout>
+
+<script is:inline>
+  const nav = document.querySelector(".split-bill__nav");
+  if (nav) {
+    const onScroll = () => {
+      nav.classList.toggle("split-bill__nav--scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+</script>

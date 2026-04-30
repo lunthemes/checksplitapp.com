@@ -18,15 +18,20 @@ export const ro: Dictionary = {
     useCases: "Cazuri de folosință",
     faq: "Întrebări frecvente",
   },
-  header: { download: "Descarcă aplicația" },
+  header: { download: "Descarcă gratuit aplicația" },
   hero: {
     title: "Împărțiți cheltuielile, scanați bonurile și lăsați aplicația să calculeze restul",
-    body: "CheqSplit te ajută să împarți nota, să scanezi bonurile, să urmărești plățile făcute de grup și să vezi ușor cine cui datorează bani, după cină, la drum, la magazin sau când vă puneți banii la comun.",
+    body: "CheqSplit te ajută să împarți nota, să scanezi bonurile, să urmărești plățile făcute de grup și să vezi ușor cine cui datorează bani, după cină, la drum, la magazin sau când vă puneți banii la comun. Aplicația se descarcă gratuit.",
     alts: [
       "CheqSplit: listă de cheltuieli la o excursie de grup",
       "CheqSplit: ecran aplicație cu plăți împărțite",
       "CheqSplit: notă de plată, împărțire pe articole",
     ],
+  },
+  heroSlide2: {
+    title: "Împarte nota de la restaurant mai rapid",
+    description: "Scanează bonul, atribuie articolele și vezi clar partea fiecăruia — perfect pentru cine cu prietenii, întâlniri și mese de grup.",
+    button: "Află mai multe",
   },
   features: {
     title: "De ce CheqSplit?",
@@ -126,23 +131,23 @@ export const ro: Dictionary = {
   },
   cta: {
     title: "Vrei să lași în urmă haosul de la decont?",
-    body: "CheqSplit pune ordine pe notele la restaurant, pe excursiile cu bani la comun și te ajută pe toți să știți cine a plătit cât.",
-    sectionAria: "Descarcă CheqSplit",
+    body: "Descarcă gratuit CheqSplit: pune ordine pe notele la restaurant, pe excursiile cu bani la comun și ajută întregul grup să știe cine a plătit cât.",
+    sectionAria: "Descarcă gratuit CheqSplit",
     imgAlt: "CheqSplit, aplicația prin care împarți la comun bonurile și plățile de grup",
     badgeAlts: {
-      appStore: "Descarcă pe App Store",
-      play: "Disponibil pe Google Play",
+      appStore: "Descarcă gratuit din App Store",
+      play: "Descarcă gratuit din Google Play",
     },
     playSoon: "Curând",
     playDisabledHint: "În curând aici",
-    groupAria: "Descarcă aplicația",
+    groupAria: "Descarcă gratuit aplicația",
   },
   faq: {
     title: "Întrebări frecvente",
     items: [
       {
         q: "Ce este CheqSplit?",
-        a: "E o aplicație ca să împarți notele de plată și cheltuielile comune: scanezi bonurile, ții evidența, vezi cine cui datorează bani — tot într-un singur loc.",
+        a: "E o aplicație gratuită ca să împarți notele de plată și cheltuielile comune: scanezi bonurile, ții evidența, vezi cine cui datorează bani — tot într-un singur loc.",
       },
       {
         q: "Pot împărți bonul pe fiecare articol în parte?",

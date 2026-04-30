@@ -13,15 +13,20 @@ export const hu: Dictionary = {
       "A CheqSplit segít költséget megosztani, blokkot szkennelni, közös kiadásokat követni, és megnézni, ki kinek mennyit tartozik, vacsorán, utazáson, csoportban.",
   },
   nav: { features: "Funkciók", how: "Működés", useCases: "Használat", faq: "GYIK" },
-  header: { download: "Alkalmazás letöltése" },
+  header: { download: "Töltsd le ingyen az alkalmazást" },
   hero: {
     title: "Osszátok meg a költségeket, szkenneljétek be a nyugtákat, a többit pedig bízzátok az alkalmazásra",
-    body: "A CheqSplit segít a költségek megosztásában, a blokkok beolvasásában és a közös kiadások követésében, hogy tisztán lásd, ki kinek mennyivel tartozik — étteremben, utazáson, bevásárláskor, baráti vagy családi környezetben.",
+    body: "A CheqSplit segít a költségek megosztásában, a blokkok beolvasásában és a közös kiadások követésében, hogy tisztán lásd, ki kinek mennyivel tartozik — étteremben, utazáson, bevásárláskor, baráti vagy családi környezetben. Az alkalmazás ingyenesen letölthető.",
     alts: [
       "CheqSplit: csoportos utazás képernyő",
       "CheqSplit: közös kiadások",
       "Számlamegosztás, tétel sorok CheqSplit",
     ],
+  },
+  heroSlide2: {
+    title: "Osszátok fel gyorsabban az éttermi számlát",
+    description: "Olvassátok be a nyugtát, rendeljétek hozzá a tételeket, és lássátok tisztán mindenki részét — ideális baráti vacsorákhoz, randikhoz és közös étkezésekhez.",
+    button: "Tudj meg többet",
   },
   features: {
     title: "Miért épp a CheqSplit?",
@@ -102,18 +107,21 @@ export const hu: Dictionary = {
   },
   cta: {
     title: "Egyszerűbb elszámolás, kevesebb számológéppel töltött perc?",
-    body: "A CheqSplit segít átláthatóan rendezni a közös kiadásokat, számolópapír nélkül, kevesebb félreértéssel.",
-    sectionAria: "CheqSplit letöltése",
+    body: "Töltsd le ingyen a CheqSplitet – átláthatóan rendezi a közös kiadásokat, számolópapír nélkül, kevesebb félreértéssel.",
+    sectionAria: "CheqSplit ingyenes letöltése",
     imgAlt: "CheqSplit kezdőképernyő, közös számlák és kiadások",
-    badgeAlts: { appStore: "Letöltés App Store-ból", play: "Letöltés Google Play-ből" },
+    badgeAlts: {
+      appStore: "Ingyenes letöltés App Store-ból",
+      play: "Ingyenes letöltés Google Play-ből",
+    },
     playSoon: "Hamarosan",
     playDisabledHint: "Még nem elérhető",
-    groupAria: "Töltsd le",
+    groupAria: "Alkalmazás ingyenes letöltése",
   },
   faq: {
     title: "Gyakori kérdések",
     items: [
-      { q: "Mi a CheqSplit?", a: "Alkalmazás közös számlákhoz: blokk beolvasás, tételes bontás, mindenki látja az egyenleget, ki kinek mennyit." },
+      { q: "Mi a CheqSplit?", a: "Ingyenes alkalmazás közös számlákhoz: blokk beolvasás, tételes bontás, mindenki látja az egyenleget, ki kinek mennyit." },
       { q: "Lehet tételsoronként osztani a blokkot?", a: "Igen. A tételek emberekhez rendelhetők, mindenki azt fizeti, amit ténylegesen fogyasztott." },
       { q: "Működik csoportos utazáshoz is?", a: "Igen. Létrehozol egy utat, hozzáadsz kiadásokat, meghívod a társakat, a végén egy tiszta összegzést kapsz, ki kinek mennyivel tartozik." },
       { q: "Csak étteremhez jó?", a: "Bárhol, ahol több ember osztja a költséget: kocsma, bevásárlás, rövid vagy hosszabb utazás, közös vásárlás – a lényeg, hogy ne egyedül fizesd." },

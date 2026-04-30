@@ -1,6 +1,7 @@
 import { defaultLocale, isLocale, type SupportedLanguage } from "../config";
 import type { Dictionary } from "../types";
 import { en } from "./en";
+import { cs } from "./cs.ts";
 import { ro } from "./ro";
 import { fr } from "./fr";
 import { de } from "./de";
@@ -13,6 +14,7 @@ import { tr } from "./tr";
 
 const byLocale: Record<SupportedLanguage, Dictionary> = {
   en,
+  cs,
   ro,
   fr,
   de,
@@ -31,4 +33,4 @@ export function getDictionary(lang: string): Dictionary {
   return byLocale[defaultLocale]!;
 }
 
-export { en, ro };
+export { en, cs, ro };

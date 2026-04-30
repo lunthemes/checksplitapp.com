@@ -18,15 +18,20 @@ export const es: Dictionary = {
     useCases: "Casos de uso",
     faq: "Preguntas frecuentes",
   },
-  header: { download: "Descargar la app" },
+  header: { download: "Descargar la app gratis" },
   hero: {
     title: "Divide los gastos, escanea los recibos y deja que la app se encargue del resto",
-    body: "Con CheqSplit escaneas recibos, sigues los gastos compartidos y ves al instante quién debe cuánto a quién, tras una cena, un viaje, la compra o cualquier plan en grupo.",
+    body: "Con CheqSplit escaneas recibos, sigues los gastos compartidos y ves al instante quién debe cuánto a quién, tras una cena, un viaje, la compra o cualquier plan en grupo. La app es gratis para descargar.",
     alts: [
       "CheqSplit: viaje y gasto compartido en grupo",
       "App CheqSplit con gasto compartido",
       "CheqSplit: dividir la cuenta, líneas del recibo",
     ],
+  },
+  heroSlide2: {
+    title: "Divide cuentas de restaurante más rápido",
+    description: "Escanea el recibo, asigna los artículos y ve claramente la parte de cada persona — perfecto para cenas con amigos, citas y comidas en grupo.",
+    button: "Más información",
   },
   features: {
     title: "Por qué CheqSplit",
@@ -119,23 +124,23 @@ export const es: Dictionary = {
   },
   cta: {
     title: "¿Listo para dejar de recalcular en el chat?",
-    body: "Prueba CheqSplit: divide gastos con criterio, con saldos claros y sin hojas de cálculo improvisadas.",
-    sectionAria: "Descargar CheqSplit",
+    body: "Descarga gratis CheqSplit: divide gastos con criterio, con saldos claros y sin hojas de cálculo improvisadas.",
+    sectionAria: "Descargar CheqSplit gratis",
     imgAlt: "Pantalla inicial de CheqSplit, dividir gasto en grupo",
     badgeAlts: {
-      appStore: "Descargar en el App Store",
-      play: "Descargar en Google Play",
+      appStore: "Descargar gratis en el App Store",
+      play: "Descargar gratis en Google Play",
     },
     playSoon: "Pronto",
     playDisabledHint: "Aún no disponible",
-    groupAria: "Descargar la aplicación",
+    groupAria: "Descargar la aplicación gratis",
   },
   faq: {
     title: "Preguntas frecuentes",
     items: [
       {
         q: "¿Qué es CheqSplit?",
-        a: "Una app para compartir cuentas y llevar el control del gasto en grupo: recibos escaneados, reparto por filas, saldo claro de quién a quién, todo junto en la misma app.",
+        a: "Una app gratuita para compartir cuentas y llevar el control del gasto en grupo: recibos escaneados, reparto por filas, saldo claro de quién a quién, todo junto en la misma app.",
       },
       {
         q: "¿Puedo repartir un recibo artículo por artículo?",

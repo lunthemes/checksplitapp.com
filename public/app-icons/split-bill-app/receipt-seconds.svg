@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Scan the receipt in seconds">
+  <defs>
+    <linearGradient id="bg" x1="7" y1="7" x2="57" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D8BFF"/>
+      <stop offset="1" stop-color="#6C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#bg)"/>
+  <path d="M13 22v-5a4 4 0 0 1 4-4h5"
+        stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M42 13h5a4 4 0 0 1 4 4v5"
+        stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M51 42v5a4 4 0 0 1-4 4h-5"
+        stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 51h-5a4 4 0 0 1-4-4v-5"
+        stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M23 18h18l3 3v25l-4-2.5-4 2.5-4-2.5-4 2.5-4-2.5-4 2.5V22a4 4 0 0 1 4-4Z"
+        stroke="white" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M28 28h11M28 35h8"
+        stroke="white" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

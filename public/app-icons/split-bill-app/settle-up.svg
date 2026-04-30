@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Settle live">
+  <defs>
+    <linearGradient id="bg" x1="7" y1="7" x2="57" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5AE1A0"/>
+      <stop offset="1" stop-color="#16B36B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#bg)"/>
+
+  <path d="M31 12a20 20 0 1 0 20 20H31V12Z"
+        stroke="white"
+        stroke-width="4"
+        stroke-linejoin="round"/>
+
+  <path d="M38 12.8A19.8 19.8 0 0 1 50.5 25H38V12.8Z"
+        stroke="white"
+        stroke-width="4"
+        stroke-linejoin="round"/>
+</svg>

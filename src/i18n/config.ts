@@ -4,6 +4,7 @@
  */
 export const supportedLanguages = [
   "en",
+  "cs",
   "ro",
   "ru",
   "fr",
@@ -37,6 +38,7 @@ export function isLocale(s: string): s is SupportedLanguage {
  */
 export const localeFlags: Record<SupportedLanguage, string> = {
   en: "🇬🇧",
+  cs: "🇨🇿",
   ro: "🇷🇴",
   ru: "🇷🇺",
   fr: "🇫🇷",
@@ -51,6 +53,7 @@ export const localeFlags: Record<SupportedLanguage, string> = {
 /** Short code shown in compact UI (optional) */
 export const localeShortCode: Record<SupportedLanguage, string> = {
   en: "EN",
+  cs: "CS",
   ro: "RO",
   ru: "RU",
   fr: "FR",
@@ -65,6 +68,7 @@ export const localeShortCode: Record<SupportedLanguage, string> = {
 /** Native name for the language dropdown */
 export const localeDisplayNames: Record<SupportedLanguage, string> = {
   en: "English",
+  cs: "Čeština",
   ro: "Română",
   ru: "Русский",
   fr: "Français",
@@ -79,6 +83,7 @@ export const localeDisplayNames: Record<SupportedLanguage, string> = {
 /** "Language" label for the picker, in that locale’s UI */
 export const localePickerLabel: Record<SupportedLanguage, string> = {
   en: "Language",
+  cs: "Jazyk",
   ro: "Limbă",
   ru: "Язык",
   fr: "Langue",

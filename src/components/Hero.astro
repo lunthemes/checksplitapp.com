@@ -2,15 +2,19 @@
 import SectionHeader from "./SectionHeader.astro";
 import StoreBadges from "./StoreBadges.astro";
 import { heroPhoneScreens } from "../data/screens";
+import { localeSplitBillPath } from "../i18n/paths";
 import type { Dictionary } from "../i18n/types";
+import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
   t: Dictionary;
+  lang: SupportedLanguage;
 }
 
-const { t } = Astro.props;
+const { t, lang } = Astro.props;
 
 const HERO_BG = "/backgrounds/home-hero.png";
+const SLIDE2_VIDEO = "/videos/hero-restaurants.mp4";
 
 const heroPhones = [
   {
@@ -43,11 +47,8 @@ const heroPhones = [
 ] as const;
 ---
 
-<section class="hero">
-  <div
-    class="hero__bg"
-    aria-hidden="true"
-  >
+<section class="hero-slider" aria-label="Hero slider">
+  <div class="hero-slider__bg" aria-hidden="true">
     <img
       src={HERO_BG}
       alt=""
@@ -58,51 +59,221 @@ const heroPhones = [
       decoding="async"
     />
   </div>
-  <div class="hero__overlay" aria-hidden="true" />
-  <div
-    class="hero__grid"
-  >
-  <div>
-    <SectionHeader
-      as="h1"
-      align="left"
-      title={t.hero.title}
-    />
-    <p class="mt-4 text-lg text-slate-600">
-      {t.hero.body}
-    </p>
-    <div class="mt-8">
-      <StoreBadges
-        variant="hero"
-        appStoreAlt={t.cta.badgeAlts.appStore}
-        playAlt={t.cta.badgeAlts.play}
-        playSoon={t.cta.playSoon}
-        playDisabledHint={t.cta.playDisabledHint}
-        groupAria={t.cta.groupAria}
-      />
+  <div class="hero-slider__overlay" aria-hidden="true" />
+  <div class="hero-slider__viewport" data-hero-slider>
+    <div class="hero-slider__slide" data-slide="0">
+      <section class="hero">
+        <div class="hero__grid">
+          <div>
+            <SectionHeader as="h1" align="left" title={t.hero.title} />
+            <p class="mt-4 text-lg text-slate-600">{t.hero.body}</p>
+            <div class="mt-8">
+              <StoreBadges
+                variant="hero"
+                appStoreAlt={t.cta.badgeAlts.appStore}
+                playAlt={t.cta.badgeAlts.play}
+                playSoon={t.cta.playSoon}
+                playDisabledHint={t.cta.playDisabledHint}
+                groupAria={t.cta.groupAria}
+              />
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__phones-wrap">
+              <div class="hero__phones">
+                {heroPhones.map((h) => (
+                  <div class:list={["hero__phone", ...h.wrap]}>
+                    <img
+                      src={h.src}
+                      alt={h.alt}
+                      width="360"
+                      height="780"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-  <div class="hero__visual">
-    <div
-      class="hero__phones-wrap"
-    >
-      <div
-        class="hero__phones"
-      >
-        {heroPhones.map((h) => (
-          <div class:list={["hero__phone", ...h.wrap]}>
-            <img
-              src={h.src}
-              alt={h.alt}
-              width="360"
-              height="780"
-              loading="eager"
-              decoding="async"
+
+    <div class="hero-slider__slide" data-slide="1">
+      <section class="hero-slide2">
+        <div class="hero-slide2__grid">
+          <div>
+            <div class="typography typ-h1 typ-title-color">
+              {t.heroSlide2.title}
+            </div>
+            <p class="hero-slide2__body">
+              {t.heroSlide2.description}
+            </p>
+            <a class="hero-slide2__learn" href={localeSplitBillPath(lang)}>
+              {t.heroSlide2.button} <span aria-hidden="true">→</span>
+            </a>
+            <div class="hero-slide2__actions">
+              <StoreBadges
+                variant="hero"
+                appStoreAlt={t.cta.badgeAlts.appStore}
+                playAlt={t.cta.badgeAlts.play}
+                playSoon={t.cta.playSoon}
+                playDisabledHint={t.cta.playDisabledHint}
+                groupAria={t.cta.groupAria}
+              />
+            </div>
+          </div>
+          <div class="hero-slide2__media" aria-hidden="true">
+            <video
+              class="hero-slide2__video"
+              src={SLIDE2_VIDEO}
+              muted
+              playsinline
+              loop
+              autoplay
+              preload="metadata"
             />
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   </div>
+
+  <div class="hero-slider__controls" aria-label="Hero slide navigation">
+    <button class="hero-slider__dot" type="button" aria-label="Slide 1" aria-current="true" data-dot="0"></button>
+    <button class="hero-slider__dot" type="button" aria-label="Slide 2" aria-current="false" data-dot="1"></button>
+  </div>
+
+  <div class="hero-slider__arrows" aria-label="Hero slider controls">
+    <button class="hero-slider__arrow" type="button" aria-label="Previous slide" data-arrow="prev">
+      <svg class="hero-slider__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M14.5 6.5L9 12l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="hero-slider__arrow" type="button" aria-label="Next slide" data-arrow="next">
+      <svg class="hero-slider__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9.5 6.5L15 12l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
   </div>
 </section>
+
+<script is:inline>
+  (function () {
+    const viewport = document.querySelector("[data-hero-slider]");
+    if (!viewport) return;
+
+    const dots = Array.from(document.querySelectorAll("[data-dot]"));
+    if (!dots.length) return;
+
+    const btnPrev = document.querySelector("[data-arrow='prev']");
+    const btnNext = document.querySelector("[data-arrow='next']");
+
+    function syncHeight() {
+      const first = viewport.querySelector("[data-slide='0']");
+      if (!first) return;
+      const h = first.getBoundingClientRect().height;
+      if (h && Number.isFinite(h)) {
+        viewport.style.height = `${Math.ceil(h)}px`;
+      }
+    }
+
+    function setCurrent(idx) {
+      dots.forEach((b, i) => b.setAttribute("aria-current", i === idx ? "true" : "false"));
+    }
+
+    function getCurrentIndex() {
+      const cur = dots.findIndex((b) => b.getAttribute("aria-current") === "true");
+      return cur >= 0 ? cur : 0;
+    }
+
+    function scrollToIndex(idx) {
+      const slide = viewport.querySelector(`[data-slide='${idx}']`);
+      if (!slide) return;
+      slide.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      setCurrent(idx);
+    }
+
+    // Autoplay: advance every 4s; stop permanently on any user interaction.
+    let autoplayTimer = null;
+    let autoplayStopped = false;
+    function stopAutoplay() {
+      if (autoplayStopped) return;
+      autoplayStopped = true;
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function startAutoplay() {
+      if (autoplayStopped) return;
+      if (autoplayTimer) return;
+      autoplayTimer = setInterval(() => {
+        const next = (getCurrentIndex() + 1) % dots.length;
+        scrollToIndex(next);
+      }, 4000);
+    }
+
+    dots.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        stopAutoplay();
+        scrollToIndex(Number(btn.getAttribute("data-dot")) || 0);
+      });
+    });
+
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        stopAutoplay();
+        const prev = (getCurrentIndex() - 1 + dots.length) % dots.length;
+        scrollToIndex(prev);
+      });
+    }
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        stopAutoplay();
+        const next = (getCurrentIndex() + 1) % dots.length;
+        scrollToIndex(next);
+      });
+    }
+
+    const onScroll = () => {
+      const rect = viewport.getBoundingClientRect();
+      const mid = rect.left + rect.width / 2;
+      const slides = Array.from(viewport.querySelectorAll("[data-slide]"));
+      let bestIdx = 0;
+      let bestDist = Infinity;
+      for (const el of slides) {
+        const r = el.getBoundingClientRect();
+        const center = r.left + r.width / 2;
+        const d = Math.abs(center - mid);
+        const idx = Number(el.getAttribute("data-slide")) || 0;
+        if (d < bestDist) {
+          bestDist = d;
+          bestIdx = idx;
+        }
+      }
+      setCurrent(bestIdx);
+    };
+    viewport.addEventListener("scroll", () => requestAnimationFrame(onScroll), { passive: true });
+
+    // Stop autoplay when the user interacts with the slider in any way.
+    viewport.addEventListener("pointerdown", stopAutoplay, { passive: true });
+    viewport.addEventListener("touchstart", stopAutoplay, { passive: true });
+    viewport.addEventListener("wheel", stopAutoplay, { passive: true });
+    viewport.addEventListener("keydown", stopAutoplay, { passive: true });
+    viewport.addEventListener(
+      "scroll",
+      () => {
+        // If scroll happens soon after pointer/touch, treat as interaction.
+        if (!autoplayStopped) stopAutoplay();
+      },
+      { passive: true },
+    );
+
+    syncHeight();
+    window.addEventListener("resize", () => requestAnimationFrame(syncHeight), { passive: true });
+    startAutoplay();
+  })();
+</script>

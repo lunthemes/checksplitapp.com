@@ -29,6 +29,11 @@ export interface Dictionary {
     body: string;
     alts: [string, string, string];
   };
+  heroSlide2: {
+    title: string;
+    description: string;
+    button: string;
+  };
   features: {
     title: string;
     items: [FeatureText, FeatureText, FeatureText, FeatureText];

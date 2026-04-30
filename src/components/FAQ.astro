@@ -6,14 +6,16 @@ import type { Dictionary, FaqEntry } from "../i18n/types";
 export interface Props {
   t: Dictionary;
   items: FaqEntry[];
+  /** Tailwind classes for the outer section; default matches the home page spacing */
+  sectionClass?: string;
 }
 
-const { t, items } = Astro.props;
+const { t, items, sectionClass = "py-20 md:py-24" } = Astro.props;
 ---
 
 <section
   id="faq"
-  class="py-20 md:py-24"
+  class={sectionClass}
   aria-label={t.faq.title}
 >
   <div class="mx-auto max-w-4xl px-4 md:px-6">

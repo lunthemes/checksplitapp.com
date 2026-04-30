@@ -4,7 +4,6 @@
   --h2-size: 30px;
   --h2-size-md: 42px;
   --h3-size: 20px;
-  --h3-size-md: 34px;
 }
 
 /* Headings */
@@ -40,13 +39,6 @@
   font-size: var(--h3-size);
   font-weight: 600;
   line-height: 1.25;
-}
-
-@media (min-width: 768px) {
-  .typ-h3 {
-    font-size: var(--h3-size-md);
-    letter-spacing: -0.51px;
-  }
 }
 
 /* Optional helpers */

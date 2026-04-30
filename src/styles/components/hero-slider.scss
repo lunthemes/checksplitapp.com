@@ -1,0 +1,224 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slider__bg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
+.hero-slider__bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-slider__overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0.4),
+    rgb(255 255 255 / 0.2),
+    rgb(255 255 255 / 0.25)
+  );
+}
+
+.hero-slider__viewport {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  align-items: stretch;
+}
+
+.hero-slider__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-slider__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  height: 100%;
+}
+
+.hero-slider__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.hero-slider__dot {
+  pointer-events: auto;
+  height: 8px;
+  width: 8px;
+  border-radius: 999px;
+  background: rgb(15 23 42 / 0.25);
+  border: 0;
+  padding: 0;
+}
+
+.hero-slider__dot[aria-current="true"] {
+  background: rgb(15 23 42 / 0.7);
+}
+
+.hero-slider__arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .hero-slider__arrows {
+    padding: 0 18px;
+  }
+}
+
+.hero-slider__arrow {
+  pointer-events: auto;
+  height: 44px;
+  width: 44px;
+  border-radius: 999px;
+  border: 1px solid rgb(15 23 42 / 0.18);
+  background: rgb(255 255 255 / 0.75);
+  color: rgb(15 23 42);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px -20px rgb(15 23 42 / 0.5);
+}
+
+.hero-slider__chevron {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.hero-slider__arrow:hover {
+  background: rgb(255 255 255 / 0.92);
+  border-color: rgb(15 23 42 / 0.28);
+}
+
+.hero-slider__arrow:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  .hero-slider__arrow {
+    height: 38px;
+    width: 38px;
+  }
+
+  .hero-slider__chevron {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hero-slide2 {
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-slide2__grid {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1152px;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 56px 16px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-slide2__grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    padding: 80px 24px;
+  }
+}
+
+.hero-slide2__body {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgb(71 85 105);
+  max-width: 520px;
+}
+
+.hero-slide2__actions {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.hero-slide2__learn {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 2px solid rgb(15 23 42 / 0.25);
+  color: rgb(15 23 42);
+  font-size: 14px;
+  font-weight: 700;
+  background: rgb(255 255 255 / 0.7);
+  text-decoration: none;
+}
+
+.hero-slide2__learn:hover {
+  border-color: rgb(15 23 42 / 0.45);
+  background: rgb(255 255 255);
+}
+
+.hero-slide2__media {
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgb(15 23 42 / 0.04);
+  box-shadow: 0 24px 60px -22px rgb(15 23 42 / 0.22);
+}
+
+.hero-slide2__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+

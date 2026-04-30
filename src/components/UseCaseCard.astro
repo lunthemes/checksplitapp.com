@@ -12,20 +12,23 @@ const { title, desc, iconSrc, iconAlt = "", ring } = Astro.props;
 ---
 
 <article
-  class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm"
+  class="typography rounded-2xl border border-slate-100 bg-white p-5 shadow-sm"
 >
   <div
-    class:list={["mb-3 flex h-12 w-12 items-center justify-center rounded-xl ring-1", ring]}
+    class:list={[
+      "mb-3 flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-2xl ring-1",
+      ring,
+    ]}
   >
     <img
       src={iconSrc}
       alt={iconAlt}
-      class="h-8 w-8 object-contain"
-      width="32"
-      height="32"
+      class="h-[56px] w-[56px] object-contain"
+      width="56"
+      height="56"
       loading="lazy"
     />
   </div>
-  <h3 class="font-semibold text-slate-900">{title}</h3>
+  <h3 class="typ-h3 typ-title-color">{title}</h3>
   <p class="mt-1 text-sm text-slate-600">{desc}</p>
 </article>

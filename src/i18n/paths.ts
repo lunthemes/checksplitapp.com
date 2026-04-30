@@ -12,3 +12,13 @@ export function localePath(lang: SupportedLanguage): string {
   const b = base.endsWith("/") ? base : `${base}/`;
   return `${b}${lang}/`;
 }
+
+/** Localized “How CheqSplit works” landing (trailing slash). */
+export function localeSplitBillPath(lang: SupportedLanguage): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return `/${lang}/split-bill-app/`;
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return `${b}${lang}/split-bill-app/`;
+}

@@ -10,9 +10,12 @@ import { localePath } from "../i18n/paths";
 
 interface Props {
   current: SupportedLanguage;
+  /** Per-locale link target (e.g. localized split-bill page). Defaults to home `localePath`. */
+  hrefForLang?: (lang: SupportedLanguage) => string;
 }
 
-const { current } = Astro.props;
+const { current, hrefForLang: hrefForLangProp } = Astro.props;
+const hrefForLang = hrefForLangProp ?? localePath;
 const label = localePickerLabel[current];
 const currentFlag = localeFlags[current];
 const sortedLanguages = [...supportedLanguages].sort((a, b) =>
@@ -49,7 +52,7 @@ const sortedLanguages = [...supportedLanguages].sort((a, b) =>
         aria-label={label}
       >
         {sortedLanguages.map((l) => {
-          const href = localePath(l);
+          const href = hrefForLang(l);
           return (
             <li role="none">
               <a

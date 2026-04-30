@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Edit items icon">
+  <defs>
+    <linearGradient id="bg" x1="7" y1="7" x2="57" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB547"/>
+      <stop offset="1" stop-color="#FF7D00"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#bg)"/>
+
+  <!-- document outline with interrupted right edge -->
+  <path d="M21 16H35L43 24" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 16V46H43" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 24V26.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 38.5V46" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 16V24H43" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- text lines -->
+  <path d="M26 27H35" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M26 33H33" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- longer pencil, extending slightly beyond the paper on the right -->
+  <path d="M30.3 40.7L42.35 28.65C43.13 27.87 44.4 27.87 45.18 28.65L47.15 30.62C47.93 31.4 47.93 32.67 47.15 33.45L35.1 45.5L29.15 46.95L30.3 40.7Z"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+  <path d="M39.95 31.05L44.75 35.85" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -18,15 +18,20 @@ export const de: Dictionary = {
     useCases: "Einsatzbereiche",
     faq: "FAQ",
   },
-  header: { download: "App herunterladen" },
+  header: { download: "App kostenlos laden" },
   hero: {
     title: "Teilt Ausgaben, scannt Belege und lasst die App den Rest erledigen",
-    body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe.",
+    body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe. Die App kannst du kostenlos herunterladen.",
     alts: [
       "CheqSplit: Gruppenreise, gemeinsame Ausgaben",
       "CheqSplit-App: geteilte Ausgaben im Überblick",
       "CheqSplit: Rechnung splitten, Kassenbon-Zeilen",
     ],
+  },
+  heroSlide2: {
+    title: "Restaurantrechnungen schneller aufteilen",
+    description: "Scanne den Beleg, ordne die Artikel zu und sieh klar den Anteil jeder Person — ideal für Abendessen mit Freunden, Dates und Gruppenessen.",
+    button: "Mehr erfahren",
   },
   features: {
     title: "Warum CheqSplit?",
@@ -126,23 +131,23 @@ export const de: Dictionary = {
   },
   cta: {
     title: "Bereit, Ausgaben entspannter zu teilen?",
-    body: "CheqSplit sorgt dafür, dass eure Gruppe schnell weiß, wer wem was schuldet – ganz ohne Zettelwirtschaft.",
-    sectionAria: "CheqSplit herunterladen",
+    body: "Hol dir CheqSplit kostenlos – eure Gruppe weiß schnell, wer wem was schuldet, ganz ohne Zettelwirtschaft.",
+    sectionAria: "CheqSplit kostenlos herunterladen",
     imgAlt: "CheqSplit Start, Rechnung teilen, Ausgaben verfolgen",
     badgeAlts: {
-      appStore: "Im App Store herunterladen",
-      play: "Bei Google Play",
+      appStore: "Kostenlos im App Store laden",
+      play: "Kostenlos bei Google Play",
     },
     playSoon: "Bald",
     playDisabledHint: "Noch nicht verfügbar",
-    groupAria: "App herunterladen",
+    groupAria: "App kostenlos herunterladen",
   },
   faq: {
     title: "Häufige Fragen",
     items: [
       {
         q: "Was ist CheqSplit?",
-        a: "Eine App, mit der du Kosten teilst, Kassenzettel scannst, alle Ausgaben der Gruppe im Blick behältst und auf einen Blick siehst, wer wem was schuldet – sauber, nachvollziehbar, Zeile für Zeile.",
+        a: "Eine kostenlose App, mit der du Kosten teilst, Kassenzettel scannst, alle Ausgaben der Gruppe im Blick behältst und auf einen Blick siehst, wer wem was schuldet – sauber, nachvollziehbar, Zeile für Zeile.",
       },
       {
         q: "Kann ich einen Kassenbon tatsächlich pro Artikel teilen?",

@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Scan the bill">
+  <defs>
+    <linearGradient id="g" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D8BFF"/>
+      <stop offset="1" stop-color="#6C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)"/>
+  <path d="M20 18v-4h6M44 18v-4h-6M20 46v4h6M44 46v4h-6" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 18h20v28l-3.2-1.8L35.6 46l-3.2-1.8L29.2 46 26 44.2 22.8 46 22 46V18Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M27 27h10M27 34h10" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>

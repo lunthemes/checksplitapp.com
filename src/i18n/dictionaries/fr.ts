@@ -18,15 +18,20 @@ export const fr: Dictionary = {
     useCases: "Cas d'usage",
     faq: "FAQ",
   },
-  header: { download: "Télécharger l'app" },
+  header: { download: "Télécharger l’app gratuitement" },
   hero: {
     title: "Partagez les dépenses, scannez les reçus et laissez l’application s’occuper du reste",
-    body: "Scannez le ticket, suivez les dépenses partagées et gardez une vision simple de qui doit combien à qui – sortie au resto, week-end, courses à plusieurs, soirée entre amis.",
+    body: "Scannez le ticket, suivez les dépenses partagées et gardez une vision simple de qui doit combien à qui – sortie au resto, week-end, courses à plusieurs, soirée entre amis. L’application se télécharge gratuitement.",
     alts: [
       "CheqSplit : suivi de dépenses pour un voyage de groupe",
       "App CheqSplit : dépenses partagées",
       "CheqSplit : écran de partage d'addition, lignes de ticket",
     ],
+  },
+  heroSlide2: {
+    title: "Partagez l’addition au restaurant plus vite",
+    description: "Scannez le reçu, attribuez les articles et voyez clairement la part de chacun — parfait pour les dîners entre amis, les rendez-vous et les repas de groupe.",
+    button: "En savoir plus",
   },
   features: {
     title: "Pourquoi choisir CheqSplit ?",
@@ -126,23 +131,23 @@ export const fr: Dictionary = {
   },
   cta: {
     title: "Prêt à arrêter de tout recalculer à la main ?",
-    body: "Avec CheqSplit, le groupe partage les dépenses proprement, sans se prendre la tête sur le détail de chaque ticket.",
-    sectionAria: "Télécharger CheqSplit",
+    body: "Téléchargez gratuitement CheqSplit : le groupe partage les dépenses proprement, sans se prendre la tête sur le détail de chaque ticket.",
+    sectionAria: "Télécharger CheqSplit gratuitement",
     imgAlt: "Accueil de l'app CheqSplit pour partager l'addition",
     badgeAlts: {
-      appStore: "Télécharger sur l'App Store",
-      play: "Télécharger sur Google Play",
+      appStore: "Télécharger gratuitement sur l’App Store",
+      play: "Télécharger gratuitement sur Google Play",
     },
     playSoon: "Bientôt",
     playDisabledHint: "Pas encore disponible",
-    groupAria: "Télécharger l'application",
+    groupAria: "Télécharger l’application gratuitement",
   },
   faq: {
     title: "Questions fréquentes",
     items: [
       {
         q: "Qu'est-ce que CheqSplit ?",
-        a: "C'est une application pour partager les factures, suivre les dépenses de groupe et comprendre en un coup d'œil qui doit quoi à qui, à partir de tickets scannés et d'affectations ligne par ligne.",
+        a: "C'est une application gratuite pour partager les factures, suivre les dépenses de groupe et comprendre en un coup d'œil qui doit quoi à qui, à partir de tickets scannés et d'affectations ligne par ligne.",
       },
       {
         q: "Puis-je partager un ticket poste par poste ?",

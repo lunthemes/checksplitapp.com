@@ -18,15 +18,20 @@ export const en: Dictionary = {
     useCases: "Use cases",
     faq: "FAQ",
   },
-  header: { download: "Get the app" },
+  header: { download: "Get the free app" },
   hero: {
     title: "Split expenses, scan receipts, and let the app handle the rest",
-    body: "Split expenses, scan receipts, and track what the group spent—so you always see who owes whom after dinner out, a trip, groceries, or a shared night in.",
+    body: "Split expenses, scan receipts, and track what the group spent—so you always see who owes whom after dinner out, a trip, groceries, or a shared night in. CheqSplit is free to download.",
     alts: [
       "CheqSplit: group trip and shared expenses",
       "CheqSplit mobile app showing shared expenses",
       "CheqSplit: itemized bill split and receipt lines",
     ],
+  },
+  heroSlide2: {
+    title: "Split restaurant bills faster",
+    description: "Scan the receipt, assign items, and see each person’s share clearly — perfect for dinners out with friends, dates, and group meals.",
+    button: "Learn more",
   },
   features: {
     title: "Why CheqSplit?",
@@ -126,23 +131,23 @@ export const en: Dictionary = {
   },
   cta: {
     title: "Ready to split expenses without the stress?",
-    body: "Get CheqSplit and make shared bills and group expenses easier for everyone.",
-    sectionAria: "Download CheqSplit",
+    body: "Get CheqSplit for free and make shared bills and group expenses easier for everyone.",
+    sectionAria: "Download CheqSplit for free",
     imgAlt: "CheqSplit home: split shared bills and track group expenses",
     badgeAlts: {
-      appStore: "Download on the App Store",
-      play: "Get it on Google Play",
+      appStore: "Download free on the App Store",
+      play: "Get it free on Google Play",
     },
     playSoon: "Soon",
     playDisabledHint: "Not available yet",
-    groupAria: "Download the app",
+    groupAria: "Download the app for free",
   },
   faq: {
     title: "Frequently asked questions",
     items: [
       {
         q: "What is CheqSplit?",
-        a: "CheqSplit is a bill-splitting and group expense app. Scan receipts, split line items, track shared costs, and see who owes whom in one place.",
+        a: "CheqSplit is a free bill-splitting and group expense app. Scan receipts, split line items, track shared costs, and see who owes whom in one place.",
       },
       {
         q: "Can I split a receipt by line item?",

@@ -100,8 +100,17 @@ const { lang, t } = Astro.props;
 </header>
 
 <script is:inline>
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("site-header--scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   document.addEventListener("click", (e) => {
-    const header = document.querySelector("header");
+    const header = document.querySelector(".site-header");
     if (!header) return;
     const t = e.target;
     if (!(t instanceof Node)) return;

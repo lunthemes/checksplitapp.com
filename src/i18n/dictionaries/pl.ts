@@ -13,15 +13,20 @@ export const pl: Dictionary = {
       "CheqSplit pomaga dzielić wydatki, skanować paragony, śledzić wspólne koszty i sprawdzać, kto komu ile jest winien, po spotkaniach, w podróży i w grupie.",
   },
   nav: { features: "Funkcje", how: "Jak to działa", useCases: "Zastosowania", faq: "FAQ" },
-  header: { download: "Pobierz aplikację" },
+  header: { download: "Pobierz aplikację za darmo" },
   hero: {
     title: "Dzielcie wydatki, skanujcie paragony i pozwólcie aplikacji zająć się resztą",
-    body: "CheqSplit ułatwia dzielenie wydatków, skanowanie paragonów, śledzenie wspólnych kosztów i rozliczanie, kto komu ile jest winien – w restauracji, na wyjeździe, na zakupach, w grupie.",
+    body: "CheqSplit ułatwia dzielenie wydatków, skanowanie paragonów, śledzenie wspólnych kosztów i rozliczanie, kto komu ile jest winien – w restauracji, na wyjeździe, na zakupach, w grupie. Aplikację pobierzesz bezpłatnie.",
     alts: [
       "CheqSplit: wspólna podróż, lista wydatków",
       "Aplikacja CheqSplit: wspólne wydatki w grupie",
       "CheqSplit: podział rachunku, pozycje z paragonu",
     ],
+  },
+  heroSlide2: {
+    title: "Dziel rachunki w restauracji szybciej",
+    description: "Zeskanuj paragon, przypisz pozycje i zobacz jasno udział każdej osoby — idealne na kolacje ze znajomymi, randki i spotkania w grupie.",
+    button: "Dowiedz się więcej",
   },
   features: {
     title: "Dlaczego CheqSplit?",
@@ -114,18 +119,21 @@ export const pl: Dictionary = {
   },
   cta: {
     title: "Mniej chaosu przy wspólnych rachunkach?",
-    body: "Z CheqSplit szybko ustalicie, kto, ile i za co płaci — bez wojen o kalkulator.",
-    sectionAria: "Pobierz CheqSplit",
+    body: "Pobierz za darmo CheqSplit i szybko ustalcie, kto, ile i za co płaci — bez wojen o kalkulator.",
+    sectionAria: "Pobierz CheqSplit za darmo",
     imgAlt: "Ekran startu CheqSplit, dzielenie rachunku",
-    badgeAlts: { appStore: "Pobierz w App Store", play: "Pobierz w Google Play" },
+    badgeAlts: {
+      appStore: "Pobierz za darmo w App Store",
+      play: "Pobierz za darmo w Google Play",
+    },
     playSoon: "Wkrótce",
     playDisabledHint: "Jeszcze niedostępne",
-    groupAria: "Pobierz aplikację",
+    groupAria: "Pobierz aplikację za darmo",
   },
   faq: {
     title: "Najczęściej zadawane pytania",
     items: [
-      { q: "Co to CheqSplit?", a: "Aplikacja do dzielenia rachunków i wspólnych wydatków. Skanujesz, przypisujesz linie, widzisz, kto komu ile jest winien, w jednym miejscu." },
+      { q: "Co to CheqSplit?", a: "Bezpłatna aplikacja do dzielenia rachunków i wspólnych wydatków. Skanujesz, przypisujesz linie, widzisz, kto komu ile jest winien, w jednym miejscu." },
       { q: "Czy da się dzielić rachunek do pozycji z paragonu?", a: "Tak. Każdą linię możesz dodać do właściwej osoby – płacisz tylko za to, z czego skorzystałeś." },
       { q: "Czy to się sprawdza na wycieczkach w kilka osób?", a: "Tak. Utwórz wycieczkę, dodawaj wydatki, wrzucaj zdjęcia paragonów, a na końcu wyciągnij z tego czytelną listę, kto komu ile jest winien." },
       { q: "Czy działa tylko w restauracji?", a: "Nie, zawsze wtedy, gdy kilka osób łączy w jednym koszty – w barze, sklepie, w podróży, na wspólnym zamówieniu." },

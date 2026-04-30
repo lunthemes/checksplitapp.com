@@ -18,15 +18,20 @@ export const it: Dictionary = {
     useCases: "Casi d'uso",
     faq: "Domande frequenti",
   },
-  header: { download: "Scarica l'app" },
+  header: { download: "Scarica gratis l’app" },
   hero: {
     title: "Dividete le spese, scansionate gli scontrini e lasciate che l’app faccia il resto",
-    body: "Con CheqSplit puoi scansionare gli scontrini, tenere sotto controllo le spese condivise e vedere in un attimo cosa resta da saldare, dopo cena, in gita, a casa o in viaggio con amici e famiglia.",
+    body: "Con CheqSplit puoi scansionare gli scontrini, tenere sotto controllo le spese condivise e vedere in un attimo cosa resta da saldare, dopo cena, in gita, a casa o in viaggio con amici e famiglia. L’app si scarica gratuitamente.",
     alts: [
       "CheqSplit: viaggio di gruppo e spese condivise",
       "App CheqSplit: elenco spese di gruppo",
       "CheqSplit: scontrino, divisione per riga",
     ],
+  },
+  heroSlide2: {
+    title: "Dividi i conti al ristorante più velocemente",
+    description: "Scansiona lo scontrino, assegna gli articoli e vedi chiaramente la quota di ciascuno — perfetto per cene con amici, appuntamenti e pasti di gruppo.",
+    button: "Scopri di più",
   },
   features: {
     title: "Perché usare CheqSplit",
@@ -120,23 +125,23 @@ export const it: Dictionary = {
   },
   cta: {
     title: "Pronto a dividere le spese con meno grattacapi?",
-    body: "Migliaia di persone usano CheqSplit per uscite di gruppo più ordinate, senza litigate sull'ultima cifra.",
-    sectionAria: "Scarica CheqSplit",
+    body: "Scarica gratis CheqSplit: uscite di gruppo più ordinate, senza litigate sull’ultima cifra.",
+    sectionAria: "Scarica CheqSplit gratis",
     imgAlt: "Home CheqSplit: dividi scontrini e spese condivise",
     badgeAlts: {
-      appStore: "Scarica sull'App Store",
-      play: "Disponibile su Google Play",
+      appStore: "Scarica gratis sull’App Store",
+      play: "Scarica gratis su Google Play",
     },
     playSoon: "Presto",
     playDisabledHint: "Non ancora disponibile",
-    groupAria: "Scarica l'applicazione",
+    groupAria: "Scarica l’applicazione gratis",
   },
   faq: {
     title: "Domande frequenti",
     items: [
       {
         q: "Che cos'è CheqSplit?",
-        a: "È un'app per dividere i conti, scansionare scontrini, tracciare le uscite a più e vedere come si ripartiscono i costi, senza fogli o chat infinite.",
+        a: "È un'app gratuita per dividere i conti, scansionare scontrini, tracciare le uscite a più e vedere come si ripartiscono i costi, senza fogli o chat infinite.",
       },
       {
         q: "Posso dividere un scontrino per articolo?",
