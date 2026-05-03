@@ -78,3 +78,31 @@ const sortedLanguages = [...supportedLanguages].sort((a, b) =>
     </div>
   </details>
 </div>
+
+<script is:inline>
+  (function () {
+    if (typeof window === "undefined") return;
+    if (window.__cheqsplitLangSwitcherOutside) return;
+    window.__cheqsplitLangSwitcherOutside = true;
+
+    document.addEventListener(
+      "click",
+      function (event) {
+        var target = event.target;
+        var el =
+          target instanceof Element ? target : target && target.parentElement;
+        if (!(el instanceof Element)) return;
+
+        document
+          .querySelectorAll(".language-switcher details[open]")
+          .forEach(function (details) {
+            var root = details.closest(".language-switcher");
+            if (root && !root.contains(el)) {
+              details.open = false;
+            }
+          });
+      },
+      false,
+    );
+  })();
+</script>
