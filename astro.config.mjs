@@ -6,9 +6,11 @@ const site = "https://cheqsplitapp.com";
 export default defineConfig({
   site,
   /**
-   * `ignore`: `/en` and `/en/` serve the same HTML (fixes static preview and hosts without redirects).
-   * Canonicals, hreflang, and sitemap still omit the trailing slash.
+   * Must be `"never"` with default `build.format: "directory"`. Using `"ignore"` makes Astro
+   * prerender with a `/en/` URL, which becomes a 301 and writes **redirect stub HTML** instead
+   * of the real page (the “Redirecting from /en/ to …” screen). Trailing `/en/` is handled by
+   * `src/middleware.ts` in dev and `dist/_redirects` on Netlify/Cloudflare.
    */
-  trailingSlash: "ignore",
+  trailingSlash: "never",
   integrations: [tailwind()],
 });

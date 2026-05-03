@@ -30,7 +30,7 @@ export function normalizePageUrl(url: string): string {
 
 /**
  * Home URL for a locale (respects `base` in astro.config, e.g. /subdir/en).
- * No trailing slash (canonical / sitemap; `trailingSlash: "ignore"` allows both URL forms).
+ * No trailing slash (canonical / sitemap; Astro `trailingSlash: "never"`).
  */
 export function localePath(lang: SupportedLanguage): string {
   const base = import.meta.env.BASE_URL;
