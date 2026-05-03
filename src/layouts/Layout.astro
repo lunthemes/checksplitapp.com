@@ -9,7 +9,7 @@ interface Props {
   ogDescription?: string;
   /** Twitter card description */
   twitterDescription?: string;
-  /** Absolute canonical URL (no trailing slash on page paths; site root may end with `/`) */
+  /** Absolute canonical URL (public pages end with `/`; site root is `https://…/`) */
   canonicalUrl?: string;
   /** Open Graph & Twitter image (absolute URL) */
   ogImageUrl?: string;
@@ -42,7 +42,7 @@ const {
   faqJsonLd,
 } = Astro.props;
 
-const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImageUrl, siteUrl + "/").href;
+const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImageUrl, siteUrl).href;
 ---
 
 <!doctype html>

@@ -1,12 +1,14 @@
 import type { SupportedLanguage } from "./config";
 
 /**
- * Site path or absolute URL: remove trailing slashes except root `/` or bare origin
- * `https://example.com/` (pathname `/` only — left unchanged).
+ * Public HTML page path: ensure a trailing slash. Root stays `/`.
+ * Does not apply to asset URLs (those should not go through this helper).
  */
 export function normalizePagePath(path: string): string {
   if (path === "/" || path === "") return "/";
-  return path.replace(/\/+$/, "") || "/";
+  const trimmed = path.replace(/\/+$/, "");
+  if (trimmed === "") return "/";
+  return `${trimmed}/`;
 }
 
 /**
@@ -29,8 +31,8 @@ export function normalizePageUrl(url: string): string {
 }
 
 /**
- * Home URL for a locale (respects `base` in astro.config, e.g. /subdir/en).
- * No trailing slash (canonical / sitemap; Astro `trailingSlash: "never"`).
+ * Home URL for a locale (respects `base` in astro.config, e.g. /subdir/en/).
+ * Trailing slash (canonical / sitemap; Astro `trailingSlash: "always"`).
  */
 export function localePath(lang: SupportedLanguage): string {
   const base = import.meta.env.BASE_URL;
@@ -41,7 +43,7 @@ export function localePath(lang: SupportedLanguage): string {
   return normalizePagePath(`${b}${lang}/`);
 }
 
-/** Localized “How CheqSplit works” landing (no trailing slash). */
+/** Localized “How CheqSplit works” landing (trailing slash). */
 export function localeSplitBillPath(lang: SupportedLanguage): string {
   const base = import.meta.env.BASE_URL;
   if (!base || base === "/") {

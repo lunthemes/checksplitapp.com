@@ -25,7 +25,7 @@ import { localePath } from "../i18n/paths";
         const toLocaleHome = function (locale) {
           return basePath.replace(
             new RegExp("/" + defaultLocale + "(?:/|$)"),
-            "/" + locale,
+            "/" + locale + "/",
           );
         };
 

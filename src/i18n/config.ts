@@ -25,8 +25,8 @@ export type Locale = SupportedLanguage;
 
 export const defaultLocale: SupportedLanguage = "en";
 
-/** Root `/` client redirect target (no trailing slash; matches `localePath`). */
-export const defaultLocalePath = `/${defaultLocale}` as const;
+/** Root `/` client redirect target (trailing slash; matches `localePath`). */
+export const defaultLocalePath = `/${defaultLocale}/` as const;
 
 export function isLocale(s: string): s is SupportedLanguage {
   return (supportedLanguages as readonly string[]).includes(s);

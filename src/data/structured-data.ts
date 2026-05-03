@@ -1,6 +1,7 @@
 import type { FaqEntry } from "../i18n/types";
 
-export const siteUrl = "https://cheqsplitapp.com" as const;
+/** Site origin with trailing slash (canonical root `https://example.com/`). */
+export const siteUrl = "https://cheqsplitapp.com/" as const;
 
 export function getSoftwareApplicationJsonLd(description: string, pageUrl: string) {
   return {
