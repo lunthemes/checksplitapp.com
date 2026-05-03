@@ -22,6 +22,12 @@ import { localePath } from "../i18n/paths";
         const supported = new Set(supportedLanguages);
         const fallback = supported.has("en") ? "en" : defaultLocale;
         const basePath = defaultLocalePath;
+        const toLocaleHome = function (locale) {
+          return basePath.replace(
+            new RegExp("/" + defaultLocale + "(?:/|$)"),
+            "/" + locale,
+          );
+        };
 
         // Optional manual override via ?lang=xx (persisted)
         const url = new URL(window.location.href);
@@ -30,7 +36,7 @@ import { localePath } from "../i18n/paths";
           try {
             localStorage.setItem("preferredLang", qLang);
           } catch {}
-          window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${qLang}/`));
+          window.location.replace(toLocaleHome(qLang));
           return;
         }
 
@@ -38,7 +44,7 @@ import { localePath } from "../i18n/paths";
         try {
           const saved = localStorage.getItem("preferredLang");
           if (saved && supported.has(saved)) {
-            window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${saved}/`));
+            window.location.replace(toLocaleHome(saved));
             return;
           }
         } catch {}
@@ -67,7 +73,7 @@ import { localePath } from "../i18n/paths";
         }
 
         const target = best || fallback;
-        window.location.replace(basePath.replace(`/${defaultLocale}/`, `/${target}/`));
+        window.location.replace(toLocaleHome(target));
       })();
     </script>
   </body>

@@ -6,9 +6,9 @@ const site = "https://cheqsplitapp.com";
 export default defineConfig({
   site,
   /**
-   * URL-uri aliniate cu <link rel="canonical"> (slash final) și cu cerința
-   * https://cheqsplitapp.com/{lang}/
+   * `ignore`: `/en` and `/en/` serve the same HTML (fixes static preview and hosts without redirects).
+   * Canonicals, hreflang, and sitemap still omit the trailing slash.
    */
-  trailingSlash: "always",
+  trailingSlash: "ignore",
   integrations: [tailwind()],
 });

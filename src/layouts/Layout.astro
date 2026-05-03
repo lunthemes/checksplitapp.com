@@ -9,7 +9,7 @@ interface Props {
   ogDescription?: string;
   /** Twitter card description */
   twitterDescription?: string;
-  /** Absolute canonical URL, usually with trailing slash */
+  /** Absolute canonical URL (no trailing slash on page paths; site root may end with `/`) */
   canonicalUrl?: string;
   /** Open Graph & Twitter image (absolute URL) */
   ogImageUrl?: string;
@@ -32,7 +32,7 @@ const {
   description = "CheqSplit helps you scan receipts, split bills by item, track group expenses, and see who owes whom. Perfect for trips, restaurants, roommates, families, and shared shopping.",
   ogDescription = "Scan receipts, split bills by item, track group expenses, and instantly see who owes whom. Perfect for trips, restaurants, roommates, and families.",
   twitterDescription = "The easy way to split receipts and shared expenses without awkward math.",
-  canonicalUrl = siteUrl + "/",
+  canonicalUrl = siteUrl,
   ogImageUrl = "https://cheqsplitapp.com/og-image.png",
   preloadHeroImage,
   lang = "en",

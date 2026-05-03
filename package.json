@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && node scripts/generate-sitemap.mjs",
+    "build": "astro build && tsx scripts/generate-sitemap.ts",
     "check": "astro check",
     "preview": "astro preview",
     "site-copy": "tsx scripts/site-copy-export.ts > docs/SITE_COPY_BY_LANGUAGE.md"
