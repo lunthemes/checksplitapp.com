@@ -178,8 +178,10 @@ export const ro: Dictionary = {
     legal: "Legal",
     about: "Despre",
     contact: "Contact",
-    privacy: "Confidențialitate",
-    terms: "Termeni",
+    privacy: "Politica de confidențialitate",
+    terms: "Termeni și condiții",
+    deleteAccount: "Ștergere cont",
+    deleteData: "Ștergerea datelor",
     rights: "Toate drepturile rezervate.",
   },
   a11y: {

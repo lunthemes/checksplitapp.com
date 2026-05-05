@@ -172,8 +172,10 @@ export const it: Dictionary = {
     legal: "Note legali",
     about: "Informazioni",
     contact: "Contatti",
-    privacy: "Privacy",
-    terms: "Termini",
+    privacy: "Informativa sulla privacy",
+    terms: "Termini di servizio",
+    deleteAccount: "Elimina account",
+    deleteData: "Elimina i tuoi dati",
     rights: "Tutti i diritti riservati.",
   },
   a11y: {

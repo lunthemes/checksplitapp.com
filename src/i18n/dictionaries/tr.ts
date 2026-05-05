@@ -136,8 +136,10 @@ export const tr: Dictionary = {
     legal: "Yasal",
     about: "Hakkında",
     contact: "İletişim",
-    privacy: "Gizlilik",
-    terms: "Kullanım koşulları",
+    privacy: "Gizlilik politikası",
+    terms: "Hizmet şartları",
+    deleteAccount: "Hesabı sil",
+    deleteData: "Verilerinizi silin",
     rights: "Tüm haklar saklıdır.",
   },
   a11y: {

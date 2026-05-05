@@ -74,6 +74,8 @@ export interface Dictionary {
     contact: string;
     privacy: string;
     terms: string;
+    deleteAccount: string;
+    deleteData: string;
     rights: string;
   };
   a11y: {

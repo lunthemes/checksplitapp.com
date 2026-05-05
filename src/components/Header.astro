@@ -8,9 +8,12 @@ import type { SupportedLanguage } from "../i18n/config";
 export interface Props {
   lang: SupportedLanguage;
   t: Dictionary;
+  /** When set (e.g. `/en/`), nav targets homepage anchors as `${sectionBase}#features`. */
+  sectionBase?: string;
 }
 
-const { lang, t } = Astro.props;
+const { lang, t, sectionBase = "" } = Astro.props;
+const hb = sectionBase;
 ---
 
 <header
@@ -28,15 +31,15 @@ const { lang, t } = Astro.props;
       class="site-header__nav"
       aria-label={t.a11y.primaryNav}
     >
-      <a href="#features" class="hover:text-brand-600">{t.nav.features}</a>
-      <a href="#how" class="hover:text-brand-600">{t.nav.how}</a>
-      <a href="#use-cases" class="hover:text-brand-600">{t.nav.useCases}</a>
-      <a href="#faq" class="hover:text-brand-600">{t.nav.faq}</a>
+      <a href={`${hb}#features`} class="hover:text-brand-600">{t.nav.features}</a>
+      <a href={`${hb}#how`} class="hover:text-brand-600">{t.nav.how}</a>
+      <a href={`${hb}#use-cases`} class="hover:text-brand-600">{t.nav.useCases}</a>
+      <a href={`${hb}#faq`} class="hover:text-brand-600">{t.nav.faq}</a>
     </nav>
     <div class="site-header__actions">
       <LanguageSwitcher current={lang} />
       <a
-        href="#download"
+        href={`${hb}#download`}
         class="site-header__cta"
         data-ga-event="click_download_app"
       >
@@ -64,29 +67,29 @@ const { lang, t } = Astro.props;
             aria-label={t.a11y.primaryNav}
           >
             <a
-              href="#features"
+              href={`${hb}#features`}
               class=""
               >{t.nav.features}</a
             >
             <a
-              href="#how"
+              href={`${hb}#how`}
               class=""
               >{t.nav.how}</a
             >
             <a
-              href="#use-cases"
+              href={`${hb}#use-cases`}
               class=""
               >{t.nav.useCases}</a
             >
             <a
-              href="#faq"
+              href={`${hb}#faq`}
               class=""
               >{t.nav.faq}</a
             >
           </nav>
           <div class="site-header__menu-footer">
             <a
-              href="#download"
+              href={`${hb}#download`}
               class="site-header__menu-cta"
               data-ga-event="click_download_app"
             >

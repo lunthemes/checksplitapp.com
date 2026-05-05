@@ -10,9 +10,12 @@ export interface Props {
   t: Dictionary;
   year: number;
   lang: SupportedLanguage;
+  /** Homepage section anchors as `${sectionBase}#features`; omit on locale homepage. */
+  sectionBase?: string;
 }
 
-const { t, year, lang } = Astro.props;
+const { t, year, lang, sectionBase = "" } = Astro.props;
+const hb = sectionBase;
 ---
 
 <footer class="border-t border-slate-200 bg-slate-50">
@@ -33,10 +36,10 @@ const { t, year, lang } = Astro.props;
           <p class="font-semibold text-slate-900">{t.footer.product}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#features" class="hover:text-brand-600">{t.nav.features}</a>
+              <a href={`${hb}#features`} class="hover:text-brand-600">{t.nav.features}</a>
             </li>
             <li>
-              <a href="#how" class="hover:text-brand-600">{t.nav.how}</a>
+              <a href={`${hb}#how`} class="hover:text-brand-600">{t.nav.how}</a>
             </li>
           </ul>
         </div>
@@ -44,10 +47,13 @@ const { t, year, lang } = Astro.props;
           <p class="font-semibold text-slate-900">{t.footer.company}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#" class="hover:text-brand-600">{t.footer.about}</a>
+              <a href="/support/" class="hover:text-brand-600">{t.footer.about}</a>
             </li>
             <li>
-              <a href="#" class="hover:text-brand-600">{t.footer.contact}</a>
+              <a
+                href="mailto:lungusterus@gmail.com"
+                class="hover:text-brand-600">{t.footer.contact}</a
+              >
             </li>
           </ul>
         </div>
@@ -55,10 +61,24 @@ const { t, year, lang } = Astro.props;
           <p class="font-semibold text-slate-900">{t.footer.legal}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="#" class="hover:text-brand-600">{t.footer.privacy}</a>
+              <a href="/privacy-policy/" class="hover:text-brand-600"
+                >{t.footer.privacy}</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-brand-600">{t.footer.terms}</a>
+              <a href="/terms-of-service/" class="hover:text-brand-600"
+                >{t.footer.terms}</a
+              >
+            </li>
+            <li>
+              <a href="/delete-account/" class="hover:text-brand-600"
+                >{t.footer.deleteAccount}</a
+              >
+            </li>
+            <li>
+              <a href="/delete-data/" class="hover:text-brand-600"
+                >{t.footer.deleteData}</a
+              >
             </li>
           </ul>
         </div>

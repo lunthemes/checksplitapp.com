@@ -1,0 +1,43 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary } from "../i18n/dictionaries";
+import { siteUrl } from "../data/structured-data";
+import { localePath } from "../i18n/paths";
+
+interface Props {
+  title: string;
+  description: string;
+  /** e.g. `/privacy-policy/` */
+  canonicalPath: string;
+}
+
+const { title, description, canonicalPath } = Astro.props;
+
+const t = getDictionary("en");
+const year = new Date().getFullYear();
+const sectionBase = localePath("en");
+const canonicalUrl = new URL(canonicalPath.replace(/^\/+/, ""), siteUrl).href;
+
+const noopLd = "{}";
+---
+
+<Layout
+  title={title}
+  description={description}
+  ogDescription={description}
+  twitterDescription={description}
+  canonicalUrl={canonicalUrl}
+  ogImageUrl="https://cheqsplitapp.com/og-image.png"
+  lang="en"
+  alternatePages={[]}
+  softwareJsonLd={noopLd}
+  faqJsonLd={noopLd}
+>
+  <Header lang="en" t={t} sectionBase={sectionBase} />
+  <main class="mx-auto max-w-3xl px-4 py-10 md:px-6 md:py-14">
+    <slot />
+  </main>
+  <Footer t={t} year={year} lang="en" sectionBase={sectionBase} />
+</Layout>

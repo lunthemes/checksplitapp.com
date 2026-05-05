@@ -136,8 +136,10 @@ export const hu: Dictionary = {
     legal: "Jogi",
     about: "Rólunk",
     contact: "Kapcsolat",
-    privacy: "Adatvédelem",
-    terms: "Feltételek",
+    privacy: "Adatvédelmi szabályzat",
+    terms: "Szolgáltatási feltételek",
+    deleteAccount: "Fiók törlése",
+    deleteData: "Adataid törlése",
     rights: "Minden jog fenntartva.",
   },
   a11y: {

@@ -148,8 +148,10 @@ export const pl: Dictionary = {
     legal: "Informacje prawne",
     about: "O nas",
     contact: "Kontakt",
-    privacy: "Prywatność",
+    privacy: "Polityka prywatności",
     terms: "Regulamin",
+    deleteAccount: "Usuń konto",
+    deleteData: "Usuń swoje dane",
     rights: "Wszelkie prawa zastrzeżone.",
   },
   a11y: {

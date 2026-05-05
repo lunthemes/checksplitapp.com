@@ -20,9 +20,17 @@ const splitBillUrls = supportedLanguages.map(
     `  <url><loc>${SITE}/${lang}/split-bill-app/</loc><priority>0.85</priority></url>`,
 );
 
+const legalUrls = [
+  `  <url><loc>${SITE}/privacy-policy/</loc><priority>0.4</priority></url>`,
+  `  <url><loc>${SITE}/terms-of-service/</loc><priority>0.4</priority></url>`,
+  `  <url><loc>${SITE}/delete-account/</loc><priority>0.35</priority></url>`,
+  `  <url><loc>${SITE}/delete-data/</loc><priority>0.35</priority></url>`,
+  `  <url><loc>${SITE}/support/</loc><priority>0.5</priority></url>`,
+];
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[...homeUrls, ...splitBillUrls].join("\n")}
+${[...homeUrls, ...splitBillUrls, ...legalUrls].join("\n")}
 </urlset>
 `;
 
@@ -33,13 +41,18 @@ const redirects = [
     (lang) => `/${lang}/split-bill-app /${lang}/split-bill-app/ 301`,
   ),
   "/split-bill-app /split-bill-app/ 301",
+  "/privacy-policy /privacy-policy/ 301",
+  "/terms-of-service /terms-of-service/ 301",
+  "/delete-account /delete-account/ 301",
+  "/delete-data /delete-data/ 301",
+  "/support /support/ 301",
 ].join("\n");
 
 writeFileSync(join(distDir, "sitemap.xml"), xml, "utf8");
 writeFileSync(join(distDir, "_redirects"), redirects + "\n", "utf8");
 
-const n = supportedLanguages.length * 2;
+const n = supportedLanguages.length * 2 + legalUrls.length;
 console.log(`[generate-sitemap] wrote dist/sitemap.xml (${n} URLs)`);
 console.log(
-  `[generate-sitemap] wrote dist/_redirects (${supportedLanguages.length * 2 + 1} rules)`,
+  `[generate-sitemap] wrote dist/_redirects (${supportedLanguages.length * 2 + 6} rules)`,
 );

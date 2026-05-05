@@ -178,8 +178,10 @@ export const cs: Dictionary = {
     legal: "Právní",
     about: "O nás",
     contact: "Kontakt",
-    privacy: "Soukromí",
-    terms: "Podmínky",
+    privacy: "Zásady ochrany osobních údajů",
+    terms: "Podmínky služby",
+    deleteAccount: "Smazat účet",
+    deleteData: "Smazat vaše data",
     rights: "Všechna práva vyhrazena.",
   },
   a11y: {

@@ -178,8 +178,10 @@ export const en: Dictionary = {
     legal: "Legal",
     about: "About",
     contact: "Contact",
-    privacy: "Privacy",
-    terms: "Terms",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    deleteAccount: "Delete account",
+    deleteData: "Delete your data",
     rights: "All rights reserved.",
   },
   a11y: {

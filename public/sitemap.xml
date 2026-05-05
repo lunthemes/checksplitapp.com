@@ -22,4 +22,9 @@
   <url><loc>https://cheqsplitapp.com/pl/split-bill-app/</loc><priority>0.85</priority></url>
   <url><loc>https://cheqsplitapp.com/hu/split-bill-app/</loc><priority>0.85</priority></url>
   <url><loc>https://cheqsplitapp.com/tr/split-bill-app/</loc><priority>0.85</priority></url>
+  <url><loc>https://cheqsplitapp.com/privacy-policy/</loc><priority>0.4</priority></url>
+  <url><loc>https://cheqsplitapp.com/terms-of-service/</loc><priority>0.4</priority></url>
+  <url><loc>https://cheqsplitapp.com/delete-account/</loc><priority>0.35</priority></url>
+  <url><loc>https://cheqsplitapp.com/delete-data/</loc><priority>0.35</priority></url>
+  <url><loc>https://cheqsplitapp.com/support/</loc><priority>0.5</priority></url>
 </urlset>
