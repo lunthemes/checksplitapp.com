@@ -52,3 +52,20 @@ export function localeSplitBillPath(lang: SupportedLanguage): string {
   const b = base.endsWith("/") ? base : `${base}/`;
   return normalizePagePath(`${b}${lang}/split-bill-app/`);
 }
+
+/** Legal/support marketing pages under `/[lang]/…/` */
+export type LegalSlug =
+  | "privacy-policy"
+  | "terms-of-service"
+  | "delete-account"
+  | "delete-data"
+  | "support";
+
+export function localeLegalPath(lang: SupportedLanguage, slug: LegalSlug): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return normalizePagePath(`/${lang}/${slug}/`);
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return normalizePagePath(`${b}${lang}/${slug}/`);
+}

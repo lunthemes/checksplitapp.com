@@ -20,13 +20,27 @@ const splitBillUrls = supportedLanguages.map(
     `  <url><loc>${SITE}/${lang}/split-bill-app/</loc><priority>0.85</priority></url>`,
 );
 
-const legalUrls = [
-  `  <url><loc>${SITE}/privacy-policy/</loc><priority>0.4</priority></url>`,
-  `  <url><loc>${SITE}/terms-of-service/</loc><priority>0.4</priority></url>`,
-  `  <url><loc>${SITE}/delete-account/</loc><priority>0.35</priority></url>`,
-  `  <url><loc>${SITE}/delete-data/</loc><priority>0.35</priority></url>`,
-  `  <url><loc>${SITE}/support/</loc><priority>0.5</priority></url>`,
-];
+const LEGAL_SLUGS = [
+  "privacy-policy",
+  "terms-of-service",
+  "delete-account",
+  "delete-data",
+  "support",
+] as const;
+const legalPriority: Record<(typeof LEGAL_SLUGS)[number], string> = {
+  "privacy-policy": "0.4",
+  "terms-of-service": "0.4",
+  "delete-account": "0.35",
+  "delete-data": "0.35",
+  support: "0.5",
+};
+
+const legalUrls = supportedLanguages.flatMap((lang) =>
+  LEGAL_SLUGS.map(
+    (slug) =>
+      `  <url><loc>${SITE}/${lang}/${slug}/</loc><priority>${legalPriority[slug]}</priority></url>`,
+  ),
+);
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -41,11 +55,11 @@ const redirects = [
     (lang) => `/${lang}/split-bill-app /${lang}/split-bill-app/ 301`,
   ),
   "/split-bill-app /split-bill-app/ 301",
-  "/privacy-policy /privacy-policy/ 301",
-  "/terms-of-service /terms-of-service/ 301",
-  "/delete-account /delete-account/ 301",
-  "/delete-data /delete-data/ 301",
-  "/support /support/ 301",
+  "/privacy-policy /en/privacy-policy/ 301",
+  "/terms-of-service /en/terms-of-service/ 301",
+  "/delete-account /en/delete-account/ 301",
+  "/delete-data /en/delete-data/ 301",
+  "/support /en/support/ 301",
 ].join("\n");
 
 writeFileSync(join(distDir, "sitemap.xml"), xml, "utf8");
@@ -53,6 +67,6 @@ writeFileSync(join(distDir, "_redirects"), redirects + "\n", "utf8");
 
 const n = supportedLanguages.length * 2 + legalUrls.length;
 console.log(`[generate-sitemap] wrote dist/sitemap.xml (${n} URLs)`);
-console.log(
-  `[generate-sitemap] wrote dist/_redirects (${supportedLanguages.length * 2 + 6} rules)`,
-);
+const redirectRules =
+  1 + supportedLanguages.length * 2 + 1 + LEGAL_SLUGS.length;
+console.log(`[generate-sitemap] wrote dist/_redirects (${redirectRules} rules)`);

@@ -3,7 +3,7 @@ import { site } from "../data/landing";
 import Logo from "./Logo.astro";
 import StoreBadges from "./StoreBadges.astro";
 import type { Dictionary } from "../i18n/types";
-import { localePath } from "../i18n/paths";
+import { localeLegalPath, localePath } from "../i18n/paths";
 import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
@@ -47,7 +47,7 @@ const hb = sectionBase;
           <p class="font-semibold text-slate-900">{t.footer.company}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="/support/" class="hover:text-brand-600">{t.footer.about}</a>
+              <a href={localeLegalPath(lang, "support")} class="hover:text-brand-600">{t.footer.about}</a>
             </li>
             <li>
               <a
@@ -61,22 +61,22 @@ const hb = sectionBase;
           <p class="font-semibold text-slate-900">{t.footer.legal}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href="/privacy-policy/" class="hover:text-brand-600"
+              <a href={localeLegalPath(lang, "privacy-policy")} class="hover:text-brand-600"
                 >{t.footer.privacy}</a
               >
             </li>
             <li>
-              <a href="/terms-of-service/" class="hover:text-brand-600"
+              <a href={localeLegalPath(lang, "terms-of-service")} class="hover:text-brand-600"
                 >{t.footer.terms}</a
               >
             </li>
             <li>
-              <a href="/delete-account/" class="hover:text-brand-600"
+              <a href={localeLegalPath(lang, "delete-account")} class="hover:text-brand-600"
                 >{t.footer.deleteAccount}</a
               >
             </li>
             <li>
-              <a href="/delete-data/" class="hover:text-brand-600"
+              <a href={localeLegalPath(lang, "delete-data")} class="hover:text-brand-600"
                 >{t.footer.deleteData}</a
               >
             </li>

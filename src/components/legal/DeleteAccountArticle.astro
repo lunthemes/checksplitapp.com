@@ -1,0 +1,76 @@
+---
+import type { DeleteAccountPage } from "../../i18n/legal/types";
+import type { SupportedLanguage } from "../../i18n/config";
+import { localeLegalPath } from "../../i18n/paths";
+
+interface Props {
+  c: DeleteAccountPage;
+  lang: SupportedLanguage;
+}
+
+const { c, lang } = Astro.props;
+const tp = (slug: Parameters<typeof localeLegalPath>[1]) => localeLegalPath(lang, slug);
+---
+
+<article class="legal-doc text-slate-800" aria-labelledby="del-acc-title">
+  <header class="mb-10 border-b border-slate-200 pb-8">
+    <h1 id="del-acc-title" class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">{c.h1}</h1>
+    <p class="mt-3 text-sm text-slate-600">
+      <strong>{c.lastUpdatedPrefix}</strong>
+      {c.lastUpdatedDate}
+    </p>
+  </header>
+
+  <div class="space-y-10 text-base leading-relaxed">
+    <p set:html={c.intro} />
+
+    <section class="space-y-4" aria-labelledby="how-req">
+      <h2 id="how-req" class="text-xl font-semibold text-slate-900">{c.howTitle}</h2>
+      <ol class="list-decimal space-y-3 pl-6">
+        <li set:html={c.howSteps[0]} />
+        <li set:html={c.howSteps[1]} />
+        <li set:html={c.howSteps[2]} />
+      </ol>
+      <p>{c.howNote}</p>
+    </section>
+
+    <section class="space-y-4" aria-labelledby="what-del">
+      <h2 id="what-del" class="text-xl font-semibold text-slate-900">{c.whatDeleteTitle}</h2>
+      <p>{c.whatDeleteIntro}</p>
+      <ul class="list-disc space-y-2 pl-6">
+        {c.whatDeleteList.map((line) => <li>{line}</li>)}
+      </ul>
+    </section>
+
+    <section class="space-y-4" aria-labelledby="what-keep">
+      <h2 id="what-keep" class="text-xl font-semibold text-slate-900">{c.retainTitle}</h2>
+      <ul class="list-disc space-y-3 pl-6">
+        {
+          c.retainBullets.map((b) => (
+            <li>
+              <strong>{b.label}</strong> {b.text}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="space-y-4" aria-labelledby="timing">
+      <h2 id="timing" class="text-xl font-semibold text-slate-900">{c.timingTitle}</h2>
+      <p set:html={c.timingBody} />
+    </section>
+
+    <p class="border-t border-slate-200 pt-6 text-sm text-slate-600">
+      {c.privacySeeAlso}{" "}
+      <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("privacy-policy")}>{c.privacyLinkText}</a>.
+    </p>
+
+    <nav class="border-t border-slate-200 pt-8 text-sm text-slate-600" aria-label="Related legal pages">
+      <p>
+        {c.relatedNavLabel}{" "}
+        <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("delete-data")}>{c.relatedDeleteData}</a>,{" "}
+        <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("terms-of-service")}>{c.relatedTerms}</a>.
+      </p>
+    </nav>
+  </div>
+</article>

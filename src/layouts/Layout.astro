@@ -53,6 +53,21 @@ const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImage
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <!-- Google tag (gtag.js) — load early in <head>; must execute (not deferred by consent logic). -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-86G5SPYDK6"
+      is:inline
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-86G5SPYDK6');
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
@@ -87,20 +102,6 @@ const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImage
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Google tag (gtag.js) -->
-    <script
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-86G5SPYDK6"
-    />
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-86G5SPYDK6");
-    </script>
     <script is:inline type="application/ld+json" set:html={softwareJsonLd} />
     <script is:inline type="application/ld+json" set:html={faqJsonLd} />
   </head>

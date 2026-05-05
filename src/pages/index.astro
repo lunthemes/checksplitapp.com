@@ -10,6 +10,21 @@ import { localePath } from "../i18n/paths";
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <!-- Google tag (gtag.js) — same as Layout.astro -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-86G5SPYDK6"
+      is:inline
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-86G5SPYDK6');
+    </script>
     <meta name="robots" content="noindex" />
     <title>Redirecting…</title>
   </head>

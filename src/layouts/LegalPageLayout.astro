@@ -4,21 +4,33 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { getDictionary } from "../i18n/dictionaries";
 import { siteUrl } from "../data/structured-data";
-import { localePath } from "../i18n/paths";
+import { localePath, localeLegalPath, type LegalSlug } from "../i18n/paths";
+import type { SupportedLanguage } from "../i18n/config";
+import { supportedLanguages } from "../i18n/config";
 
 interface Props {
+  lang: SupportedLanguage;
   title: string;
   description: string;
-  /** e.g. `/privacy-policy/` */
+  /** e.g. `/ro/privacy-policy/` */
   canonicalPath: string;
+  /** Current legal page for language-switch links */
+  legalSlug: LegalSlug;
 }
 
-const { title, description, canonicalPath } = Astro.props;
+const { lang, title, description, canonicalPath, legalSlug } = Astro.props;
 
-const t = getDictionary("en");
+const t = getDictionary(lang);
 const year = new Date().getFullYear();
-const sectionBase = localePath("en");
+const sectionBase = localePath(lang);
 const canonicalUrl = new URL(canonicalPath.replace(/^\/+/, ""), siteUrl).href;
+
+const alternatePages = [...supportedLanguages].map((l) => ({
+  href: new URL(localeLegalPath(l, legalSlug), siteUrl).href,
+  hreflang: l,
+}));
+
+const hrefForLang = (l: SupportedLanguage) => localeLegalPath(l, legalSlug);
 
 const noopLd = "{}";
 ---
@@ -30,14 +42,14 @@ const noopLd = "{}";
   twitterDescription={description}
   canonicalUrl={canonicalUrl}
   ogImageUrl="https://cheqsplitapp.com/og-image.png"
-  lang="en"
-  alternatePages={[]}
+  lang={lang}
+  alternatePages={alternatePages}
   softwareJsonLd={noopLd}
   faqJsonLd={noopLd}
 >
-  <Header lang="en" t={t} sectionBase={sectionBase} />
+  <Header lang={lang} t={t} sectionBase={sectionBase} hrefForLang={hrefForLang} />
   <main class="mx-auto max-w-3xl px-4 py-10 md:px-6 md:py-14">
     <slot />
   </main>
-  <Footer t={t} year={year} lang="en" sectionBase={sectionBase} />
+  <Footer t={t} year={year} lang={lang} sectionBase={sectionBase} />
 </Layout>

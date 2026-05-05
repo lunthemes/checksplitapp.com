@@ -1,0 +1,30 @@
+---
+import LegalPageLayout from "../../layouts/LegalPageLayout.astro";
+import TermsOfServiceArticle from "../../components/legal/TermsOfServiceArticle.astro";
+import { getLegalBundle } from "../../i18n/legal/registry";
+import { defaultLocale, isLocale, supportedLanguages } from "../../i18n/config";
+import { localeLegalPath } from "../../i18n/paths";
+import type { SupportedLanguage } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return [...supportedLanguages].map((lang) => ({ params: { lang } }));
+}
+
+const raw = Astro.params.lang;
+const normalized = typeof raw === "string" ? raw.toLowerCase() : "";
+if (!isLocale(normalized)) {
+  return Astro.redirect(localeLegalPath(defaultLocale, "terms-of-service"), 301);
+}
+const lang = normalized as SupportedLanguage;
+const c = getLegalBundle(lang).terms;
+---
+
+<LegalPageLayout
+  lang={lang}
+  title={c.metaTitle}
+  description={c.metaDescription}
+  canonicalPath={localeLegalPath(lang, "terms-of-service")}
+  legalSlug="terms-of-service"
+>
+  <TermsOfServiceArticle c={c} lang={lang} />
+</LegalPageLayout>

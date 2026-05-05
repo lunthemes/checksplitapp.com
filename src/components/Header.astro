@@ -10,9 +10,11 @@ export interface Props {
   t: Dictionary;
   /** When set (e.g. `/en/`), nav targets homepage anchors as `${sectionBase}#features`. */
   sectionBase?: string;
+  /** Override language-switch targets (e.g. stay on same legal page per locale). */
+  hrefForLang?: (lang: SupportedLanguage) => string;
 }
 
-const { lang, t, sectionBase = "" } = Astro.props;
+const { lang, t, sectionBase = "", hrefForLang } = Astro.props;
 const hb = sectionBase;
 ---
 
@@ -37,7 +39,7 @@ const hb = sectionBase;
       <a href={`${hb}#faq`} class="hover:text-brand-600">{t.nav.faq}</a>
     </nav>
     <div class="site-header__actions">
-      <LanguageSwitcher current={lang} />
+      <LanguageSwitcher current={lang} hrefForLang={hrefForLang} />
       <a
         href={`${hb}#download`}
         class="site-header__cta"

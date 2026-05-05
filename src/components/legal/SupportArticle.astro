@@ -1,0 +1,71 @@
+---
+import type { SupportPage } from "../../i18n/legal/types";
+import type { SupportedLanguage } from "../../i18n/config";
+import { localeLegalPath } from "../../i18n/paths";
+
+interface Props {
+  c: SupportPage;
+  lang: SupportedLanguage;
+}
+
+const { c, lang } = Astro.props;
+const tp = (slug: Parameters<typeof localeLegalPath>[1]) => localeLegalPath(lang, slug);
+---
+
+<article class="legal-doc text-slate-800" aria-labelledby="support-title">
+  <header class="mb-10 border-b border-slate-200 pb-8">
+    <h1 id="support-title" class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">{c.h1}</h1>
+  </header>
+
+  <div class="space-y-10 text-base leading-relaxed">
+    <p>{c.thankYou}</p>
+
+    <section class="space-y-4" aria-labelledby="contact-email">
+      <h2 id="contact-email" class="text-xl font-semibold text-slate-900">{c.contactTitle}</h2>
+      <p>
+        <a class="font-medium text-brand-600 underline hover:text-brand-700" href="mailto:lungusterus@gmail.com"
+          >lungusterus@gmail.com</a
+        >
+      </p>
+      <p class="text-sm text-slate-600">{c.contactNote}</p>
+    </section>
+
+    <section class="space-y-4" aria-labelledby="faq-support">
+      <h2 id="faq-support" class="text-xl font-semibold text-slate-900">{c.faqTitle}</h2>
+      <ul class="list-disc space-y-4 pl-6">
+        <li>
+          <strong>{c.faqScanTitle}</strong>
+          {c.faqScanBody}
+        </li>
+        <li>
+          <strong>{c.faqJoinTitle}</strong>
+          {c.faqJoinBody}
+        </li>
+        <li>
+          <strong>{c.faqSubTitle}</strong>
+          {c.faqSubBody}
+        </li>
+      </ul>
+    </section>
+
+    <section class="space-y-4" aria-labelledby="legal-support">
+      <h2 id="legal-support" class="text-xl font-semibold text-slate-900">{c.legalTitle}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>
+          <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("privacy-policy")}>{c.legalPrivacy}</a>
+        </li>
+        <li>
+          <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("terms-of-service")}>{c.legalTerms}</a>
+        </li>
+        <li>
+          <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("delete-account")}>{c.legalDeleteAccount}</a>
+        </li>
+        <li>
+          <a class="font-medium text-brand-600 hover:text-brand-700" href={tp("delete-data")}>{c.legalDeleteData}</a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="text-sm text-slate-600" set:html={c.developerLine} />
+  </div>
+</article>

@@ -1,0 +1,30 @@
+---
+import LegalPageLayout from "../../layouts/LegalPageLayout.astro";
+import DeleteDataArticle from "../../components/legal/DeleteDataArticle.astro";
+import { getLegalBundle } from "../../i18n/legal/registry";
+import { defaultLocale, isLocale, supportedLanguages } from "../../i18n/config";
+import { localeLegalPath } from "../../i18n/paths";
+import type { SupportedLanguage } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return [...supportedLanguages].map((lang) => ({ params: { lang } }));
+}
+
+const raw = Astro.params.lang;
+const normalized = typeof raw === "string" ? raw.toLowerCase() : "";
+if (!isLocale(normalized)) {
+  return Astro.redirect(localeLegalPath(defaultLocale, "delete-data"), 301);
+}
+const lang = normalized as SupportedLanguage;
+const c = getLegalBundle(lang).deleteData;
+---
+
+<LegalPageLayout
+  lang={lang}
+  title={c.metaTitle}
+  description={c.metaDescription}
+  canonicalPath={localeLegalPath(lang, "delete-data")}
+  legalSlug="delete-data"
+>
+  <DeleteDataArticle c={c} lang={lang} />
+</LegalPageLayout>

@@ -1,0 +1,30 @@
+---
+import LegalPageLayout from "../../layouts/LegalPageLayout.astro";
+import SupportArticle from "../../components/legal/SupportArticle.astro";
+import { getLegalBundle } from "../../i18n/legal/registry";
+import { defaultLocale, isLocale, supportedLanguages } from "../../i18n/config";
+import { localeLegalPath } from "../../i18n/paths";
+import type { SupportedLanguage } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return [...supportedLanguages].map((lang) => ({ params: { lang } }));
+}
+
+const raw = Astro.params.lang;
+const normalized = typeof raw === "string" ? raw.toLowerCase() : "";
+if (!isLocale(normalized)) {
+  return Astro.redirect(localeLegalPath(defaultLocale, "support"), 301);
+}
+const lang = normalized as SupportedLanguage;
+const c = getLegalBundle(lang).support;
+---
+
+<LegalPageLayout
+  lang={lang}
+  title={c.metaTitle}
+  description={c.metaDescription}
+  canonicalPath={localeLegalPath(lang, "support")}
+  legalSlug="support"
+>
+  <SupportArticle c={c} lang={lang} />
+</LegalPageLayout>
