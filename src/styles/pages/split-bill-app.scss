@@ -440,6 +440,12 @@
   text-align: center;
 }
 
+/* Section headings only; body copy under SEO / use cases stays left-aligned */
+#how h2.typ-h2,
+#how h3.typ-h3 {
+  text-align: center;
+}
+
 .split-bill__section-sub {
   margin: 16px auto 0;
   max-width: 42rem;
