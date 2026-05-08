@@ -31,7 +31,7 @@ export const ro: Dictionary = {
   heroSlide2: {
     title: "Împarte nota de la restaurant mai rapid",
     description: "Scanează bonul, atribuie articolele și vezi clar partea fiecăruia — perfect pentru cine cu prietenii, întâlniri și mese de grup.",
-    button: "Află mai multe",
+    button: "Află cum să împarți nota și să scanezi bonuri",
   },
   features: {
     title: "De ce CheqSplit?",

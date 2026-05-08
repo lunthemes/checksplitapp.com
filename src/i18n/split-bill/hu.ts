@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillHu: SplitBillLocaleCopy = {
-  metaTitle:
-    "Így működik a CheqSplit | Nyugták beolvasása, számlák megosztása és közös kiadások kezelése",
-  metaDescription:
-    "Nézd meg, hogyan működik a CheqSplit: olvasd be a nyugtákat, hívd meg a barátokat QR-kóddal vagy linkkel, oszd meg a számlát valós időben, és lásd, ki kinek tartozik.",
+  metaTitle: "Számlák megosztása és blokkok szkennelése barátokkal | CheqSplit",
+  metaDescription: "A CheqSplit segít éttermi blokkokat beolvasni, számlákat megosztani a barátokkal, tételeket hozzárendelni és azonnal látni, ki kinek mennyivel tartozik. Ideális éttermekhez, utazásokhoz és közös kiadásokhoz.",
   softwareDescription:
     "A CheqSplit segít nyugtákat beolvasni, számlákat megosztani, közös kiadásokat követni és látni, ki kinek tartozik—ideális éttermekhez, utazásokhoz és csoportokhoz.",
-  h1: "Így működik a CheqSplit",
+  h1: "Oszd meg a számlát, szkenneld be a blokkot, és lásd, ki kinek tartozik",
   heroSubLine1: "Olvasd be a nyugtát. Oszd meg a számlát. Közösen osszátok a kiadásokat élőben.",
   heroSubLine2: "Lásd, ki kinek tartozik.",
   heroParagraph:
-    "A CheqSplit néhány egyszerű lépésben segít beolvasni a nyugtákat, megosztani a számlákat és kezelni a közös kiadásokat a barátokkal.",
+    "Szkenneld be az éttermi blokkot, oszd meg a számlát a barátaiddal, válaszd ki, ki melyik tételben vett részt, és azonnal lásd, ki kinek mennyivel tartozik. A CheqSplit segít kézi számolás nélkül kezelni a közös kiadásokat.",
+  seoBlockH2: "Oszd meg a számlát és szkenneld be a blokkot CheqSplit segítségével",
+  seoBlockP1: "A CheqSplit egy számlamegosztó alkalmazás éttermekhez, utazásokhoz és minden olyan helyzethez, ahol közös kiadások vannak. Ahelyett, hogy kézzel írnád be az összes tételt vagy számolgatnád, ki mennyit fizessen, beolvashatod a blokkot, ellenőrizheted a felismert tételeket, meghívhatod a barátaidat, és valós időben oszthatjátok meg a számlát.",
+  seoBlockP2: "Az egész számlát eloszthatod egyenlően, egyes tételeket hozzárendelhetsz konkrét személyekhez, vagy egy tételt százalékosan is megoszthatsz. A CheqSplit kiszámolja a végösszeget, és megmutatja, ki kinek mennyivel tartozik, így a társaság gyorsabban és félreértések nélkül rendezheti a költségeket.",
+  useCasesH2: "Mikor használd a CheqSplitet",
+  useCases: [
+    { title: "Éttermi számlák", text: "Szkenneld be a blokkot, rendeld az ételeket a megfelelő emberekhez, oszd meg az adókat és a borravalót, és lásd, ki kinek tartozik." },
+    { title: "Utazások barátokkal", text: "Kövesd a közös kiadásokat utazás közben, és tarts mindent rendezetten egy helyen." },
+    { title: "Közös kiadások", text: "Használd a CheqSplitet bevásárláshoz, eseményekhez, lakótársakkal vagy bármilyen helyzetben, ahol többen osztoznak a költségeken." },
+  ],
   howSectionH2: "Így szkeneld a nyugtákat és oszd el a számlát",
   howSectionSub:
     "A CheqSplittel szkennelheted a nyugtát, meghívhatod a barátaidat, élőben oszthatod a tételeket, és tisztán láthatod a végeredményt.",

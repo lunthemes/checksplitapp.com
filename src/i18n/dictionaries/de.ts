@@ -31,7 +31,7 @@ export const de: Dictionary = {
   heroSlide2: {
     title: "Restaurantrechnungen schneller aufteilen",
     description: "Scanne den Beleg, ordne die Artikel zu und sieh klar den Anteil jeder Person — ideal für Abendessen mit Freunden, Dates und Gruppenessen.",
-    button: "Mehr erfahren",
+    button: "So teilst du Rechnungen und scannst Belege",
   },
   features: {
     title: "Warum CheqSplit?",

@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillPl: SplitBillLocaleCopy = {
-  metaTitle:
-    "Jak działa CheqSplit | Skanuj paragony, dziel rachunki i wspólne wydatki",
-  metaDescription:
-    "Zobacz, jak działa CheqSplit: skanuj paragony, zapraszaj znajomych kodem QR lub linkiem, dziel rachunki w czasie rzeczywistym i sprawdzaj, kto komu ile oddaje.",
+  metaTitle: "Dziel rachunki i skanuj paragony ze znajomymi | CheqSplit",
+  metaDescription: "CheqSplit pomaga skanować paragony z restauracji, dzielić rachunki ze znajomymi, przypisywać pozycje i od razu sprawdzać, kto komu ile jest winien. Idealne do restauracji, podróży i wspólnych wydatków.",
   softwareDescription:
     "CheqSplit ułatwia skanowanie paragonów, dzielenie rachunków, śledzenie wspólnych wydatków i sprawdzanie, kto komu oddaje—idealny do restauracji, podróży i grup.",
-  h1: "Jak działa CheqSplit",
+  h1: "Dziel rachunki, skanuj paragony i sprawdzaj, kto komu jest winien",
   heroSubLine1: "Skanuj paragony. Udostępniaj rachunek. Dziel wydatki na żywo.",
   heroSubLine2: "Sprawdzaj, kto komu oddaje.",
   heroParagraph:
-    "CheqSplit ułatwia skanowanie paragonów, dzielenie rachunków i zarządzanie wspólnymi wydatkami ze znajomymi w kilku prostych krokach.",
+    "Skanuj paragony z restauracji, dziel rachunki ze znajomymi, wybieraj, kto korzystał z danej pozycji, i od razu sprawdzaj, kto komu ile jest winien. CheqSplit pomaga zarządzać wspólnymi wydatkami bez ręcznego liczenia.",
+  seoBlockH2: "Dziel rachunki i skanuj paragony z CheqSplit",
+  seoBlockP1: "CheqSplit to aplikacja do dzielenia rachunków w restauracjach, podczas podróży i w każdej sytuacji ze wspólnymi wydatkami. Zamiast ręcznie wpisywać każdą pozycję albo liczyć, kto ile ma zapłacić, możesz zeskanować paragon, sprawdzić wykryte pozycje, zaprosić znajomych i podzielić rachunek razem w czasie rzeczywistym.",
+  seoBlockP2: "Możesz podzielić cały rachunek po równo, przypisać konkretne pozycje wybranym osobom albo podzielić jedną pozycję procentowo. CheqSplit oblicza końcowy wynik i pokazuje, kto komu ile jest winien, dzięki czemu grupa może szybciej i bez zamieszania się rozliczyć.",
+  useCasesH2: "Kiedy używać CheqSplit",
+  useCases: [
+    { title: "Rachunki w restauracji", text: "Zeskanuj paragon, przypisz dania odpowiednim osobom, podziel podatki i napiwki oraz sprawdź, kto komu jest winien." },
+    { title: "Podróże ze znajomymi", text: "Śledź wspólne wydatki podczas podróży i trzymaj wszystko w jednym uporządkowanym miejscu." },
+    { title: "Wydatki grupowe", text: "Używaj CheqSplit do zakupów, wydarzeń, współlokatorów lub każdej sytuacji, w której kilka osób dzieli koszty." },
+  ],
   howSectionH2: "Jak skanować paragony i dzielić rachunek",
   howSectionSub:
     "Korzystaj z CheqSplit, aby zeskanować paragon, zaprosić znajomych, dzielić pozycje na żywo i wyraźnie zobaczyć wynik.",

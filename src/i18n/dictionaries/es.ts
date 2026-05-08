@@ -31,7 +31,7 @@ export const es: Dictionary = {
   heroSlide2: {
     title: "Divide cuentas de restaurante más rápido",
     description: "Escanea el recibo, asigna los artículos y ve claramente la parte de cada persona — perfecto para cenas con amigos, citas y comidas en grupo.",
-    button: "Más información",
+    button: "Aprende a dividir cuentas y escanear recibos",
   },
   features: {
     title: "Por qué CheqSplit",

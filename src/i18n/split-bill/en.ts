@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillEn: SplitBillLocaleCopy = {
-  metaTitle:
-    "How CheqSplit Works | Scan Receipts, Split Bills, and Track Shared Expenses",
-  metaDescription:
-    "Learn how CheqSplit works: scan receipts, invite friends with a QR code or link, split bills in real time, and see exactly who owes whom. Perfect for restaurants, trips, and shared expenses.",
+  metaTitle: "Split Bills and Scan Receipts with Friends | CheqSplit",
+  metaDescription: "CheqSplit helps you scan restaurant receipts, split bills with friends, assign items, and instantly see who owes whom. Perfect for restaurants, trips, and shared expenses.",
   softwareDescription:
     "CheqSplit helps you scan receipts, split bills, track shared expenses, and see who owes whom—ideal for restaurants, trips, and groups.",
-  h1: "How CheqSplit works",
+  h1: "Split bills, scan receipts, and see who owes whom",
   heroSubLine1: "Scan receipts. Share the bill. Split expenses live.",
   heroSubLine2: "See who owes whom.",
   heroParagraph:
-    "CheqSplit makes it easy to scan receipts, split bills, and manage shared expenses with friends in just a few steps.",
+    "Scan restaurant receipts, split bills with friends, choose who shared each item, and instantly see who owes whom. CheqSplit helps you manage shared expenses without manual calculations.",
+  seoBlockH2: "Split bills and scan receipts with CheqSplit",
+  seoBlockP1: "CheqSplit is a bill splitting app for restaurants, trips, and shared expenses. Instead of typing every item manually or calculating who owes what, you can scan a receipt, review the detected items, invite friends, and split the bill together in real time.",
+  seoBlockP2: "You can split the entire bill evenly, assign specific items to different people, or divide one item by percentage. CheqSplit calculates the final result and shows who owes whom, so everyone can settle faster and avoid confusion.",
+  useCasesH2: "When to use CheqSplit",
+  useCases: [
+    { title: "Restaurant bills", text: "Scan the receipt, assign dishes to the right people, split tax and tips, and see who owes whom." },
+    { title: "Trips with friends", text: "Track shared expenses during a trip and keep everything organized in one place." },
+    { title: "Group expenses", text: "Use CheqSplit for groceries, events, roommates, or any situation where several people share costs." },
+  ],
   howSectionH2: "How to scan receipts and split bills",
   howSectionSub:
     "Use CheqSplit to scan the receipt, invite friends, split items live, and see the final result clearly.",

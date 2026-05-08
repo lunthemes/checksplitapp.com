@@ -31,7 +31,7 @@ export const fr: Dictionary = {
   heroSlide2: {
     title: "Partagez l’addition au restaurant plus vite",
     description: "Scannez le reçu, attribuez les articles et voyez clairement la part de chacun — parfait pour les dîners entre amis, les rendez-vous et les repas de groupe.",
-    button: "En savoir plus",
+    button: "Découvrez comment partager l’addition et scanner les reçus",
   },
   features: {
     title: "Pourquoi choisir CheqSplit ?",

@@ -26,7 +26,7 @@ export const tr: Dictionary = {
   heroSlide2: {
     title: "Restoran hesaplarını daha hızlı bölün",
     description: "Fişi tarayın, ürünleri kişilere atayın ve herkesin payını net görün — arkadaş yemekleri, buluşmalar ve grup sofraları için ideal.",
-    button: "Daha fazla bilgi",
+    button: "Hesapları nasıl böleceğini ve fişleri nasıl tarayacağını öğren",
   },
   features: {
     title: "Neden CheqSplit?",

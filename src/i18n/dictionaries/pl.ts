@@ -26,7 +26,7 @@ export const pl: Dictionary = {
   heroSlide2: {
     title: "Dziel rachunki w restauracji szybciej",
     description: "Zeskanuj paragon, przypisz pozycje i zobacz jasno udział każdej osoby — idealne na kolacje ze znajomymi, randki i spotkania w grupie.",
-    button: "Dowiedz się więcej",
+    button: "Zobacz, jak dzielić rachunki i skanować paragony",
   },
   features: {
     title: "Dlaczego CheqSplit?",

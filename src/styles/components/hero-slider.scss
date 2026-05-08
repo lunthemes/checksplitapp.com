@@ -42,6 +42,21 @@
   align-items: stretch;
 }
 
+/**
+ * Between desktop and mobile, shrink the slider viewport so slide content
+ * doesn't visually collide with the left/right arrow controls.
+ *
+ * On mobile we keep the viewport full-width and hide the arrows entirely.
+ */
+@media (max-width: 1250px) and (min-width: 601px) {
+  .hero-slider__viewport {
+    /* 44px arrow + ~12px breathing room per side */
+    width: calc(100% - 112px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .hero-slider__viewport::-webkit-scrollbar {
   display: none;
 }
@@ -129,7 +144,11 @@
   transform: translateY(1px);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .hero-slider__arrows {
+    display: none;
+  }
+
   .hero-slider__arrow {
     height: 38px;
     width: 38px;

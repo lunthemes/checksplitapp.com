@@ -8,11 +8,22 @@ export interface SplitBillLocaleCopy {
   metaTitle: string;
   metaDescription: string;
   softwareDescription: string;
-  /** Full H1 string; must contain exactly one “CheqSplit” for gradient styling */
+  /** Full H1 string (one H1 per page). If it contains “CheqSplit”, it will be accent-styled. */
   h1: string;
   heroSubLine1: string;
   heroSubLine2: string;
   heroParagraph: string;
+  /** SEO block after “Simple steps”, before the how-to section. */
+  seoBlockH2: string;
+  seoBlockP1: string;
+  seoBlockP2: string;
+  /** Use cases section after SEO block. */
+  useCasesH2: string;
+  useCases: readonly [
+    { title: string; text: string },
+    { title: string; text: string },
+    { title: string; text: string },
+  ];
   /** H2 + paragraph below the three step cards */
   howSectionH2: string;
   howSectionSub: string;

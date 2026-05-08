@@ -31,7 +31,7 @@ export const it: Dictionary = {
   heroSlide2: {
     title: "Dividi i conti al ristorante più velocemente",
     description: "Scansiona lo scontrino, assegna gli articoli e vedi chiaramente la quota di ciascuno — perfetto per cene con amici, appuntamenti e pasti di gruppo.",
-    button: "Scopri di più",
+    button: "Scopri come dividere il conto e scansionare gli scontrini",
   },
   features: {
     title: "Perché usare CheqSplit",

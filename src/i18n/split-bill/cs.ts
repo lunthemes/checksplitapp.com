@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillCs: SplitBillLocaleCopy = {
-  metaTitle:
-    "Jak CheqSplit funguje | Skenujte účtenky, rozdělte účet a sdílené výdaje",
-  metaDescription:
-    "Podívejte se, jak CheqSplit funguje: naskenujte účtenku, pozvěte přátele přes QR kód nebo odkaz, rozdělte účet v reálném čase a jasně uvidíte, kdo komu kolik doplatí.",
+  metaTitle: "Rozdělte účet a naskenujte účtenku s přáteli | CheqSplit",
+  metaDescription: "CheqSplit vám pomůže naskenovat účtenku z restaurace, rozdělit účet mezi přátele, přiřadit položky a hned zjistit, kdo komu kolik dluží. Ideální pro restaurace, výlety i společné výdaje.",
   softwareDescription:
     "CheqSplit vám pomůže skenovat účtenky, rozdělovat účty, sledovat společné výdaje a zjistit, kdo komu doplácí—ideální do restaurací, na cesty a pro skupiny.",
-  h1: "Jak CheqSplit funguje",
+  h1: "Rozdělte účet, naskenujte účtenku a zjistěte, kdo komu dluží",
   heroSubLine1: "Skenujte účtenky. Sdílejte účet. Rozdělujte výdaje živě.",
   heroSubLine2: "Hned vidíte, kdo komu doplácí.",
   heroParagraph:
-    "CheqSplit vám pomůže snadno skenovat účtenky, rozdělovat účty a spravovat společné výdaje s přáteli v několika jednoduchých krocích.",
+    "Naskenujte účtenku z restaurace, rozdělte účet mezi přátele, vyberte, kdo měl kterou položku, a hned uvidíte, kdo komu kolik dluží. CheqSplit vám pomůže spravovat společné výdaje bez ručního počítání.",
+  seoBlockH2: "Rozdělte účet a skenujte účtenky s CheqSplit",
+  seoBlockP1: "CheqSplit je aplikace na rozdělování účtů v restauraci, na cestách i při společných výdajích. Místo ručního přepisování položek a počítání, kdo má kolik zaplatit, stačí naskenovat účtenku, zkontrolovat rozpoznané položky, pozvat přátele a rozdělit účet společně v reálném čase.",
+  seoBlockP2: "Celý účet můžete rozdělit rovnoměrně, přiřadit konkrétní položky jednotlivým lidem nebo jednu položku rozdělit procentuálně. CheqSplit spočítá konečný výsledek a ukáže, kdo komu dluží, aby se skupina mohla rychle a bez zmatků vyrovnat.",
+  useCasesH2: "Kdy se CheqSplit hodí",
+  useCases: [
+    { title: "Účty v restauraci", text: "Naskenujte účtenku, přiřaďte jídla správným lidem, rozdělte daně a spropitné a zjistěte, kdo komu dluží." },
+    { title: "Výlety s přáteli", text: "Sledujte společné výdaje během výletu a mějte vše přehledně na jednom místě." },
+    { title: "Společné výdaje", text: "Použijte CheqSplit na nákupy, akce, spolubydlení nebo jakoukoli situaci, kdy se o náklady dělí více lidí." },
+  ],
   howSectionH2: "Jak skenovat účtenky a rozdělit účet",
   howSectionSub:
     "S CheqSplitem naskenujete účtenku, pozvete přátele, rozdělíte položky živě a jasně uvidíte výsledek.",

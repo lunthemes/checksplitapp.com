@@ -26,7 +26,7 @@ export const hu: Dictionary = {
   heroSlide2: {
     title: "Osszátok fel gyorsabban az éttermi számlát",
     description: "Olvassátok be a nyugtát, rendeljétek hozzá a tételeket, és lássátok tisztán mindenki részét — ideális baráti vacsorákhoz, randikhoz és közös étkezésekhez.",
-    button: "Tudj meg többet",
+    button: "Nézd meg, hogyan oszthatod meg a számlákat és szkennelheted a blokkokat",
   },
   features: {
     title: "Miért épp a CheqSplit?",

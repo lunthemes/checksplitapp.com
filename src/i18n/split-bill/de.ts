@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillDe: SplitBillLocaleCopy = {
-  metaTitle:
-    "So funktioniert CheqSplit | Belege scannen, Rechnungen teilen und Ausgaben verwalten",
-  metaDescription:
-    "Erfahre, wie CheqSplit funktioniert: Belege scannen, Freunde per QR-Code oder Link einladen, Rechnungen live aufteilen und klar sehen, wer wem etwas zahlen muss.",
+  metaTitle: "Rechnungen teilen und Belege mit Freunden scannen | CheqSplit",
+  metaDescription: "Mit CheqSplit kannst du Restaurantbelege scannen, Rechnungen mit Freunden teilen, Positionen zuweisen und sofort sehen, wer wem wie viel schuldet. Ideal für Restaurants, Reisen und gemeinsame Ausgaben.",
   softwareDescription:
     "CheqSplit hilft dir, Belege zu scannen, Rechnungen zu teilen, gemeinsame Ausgaben zu verfolgen und zu sehen, wer wem etwas schuldet—ideal für Restaurants, Reisen und Gruppen.",
-  h1: "So funktioniert CheqSplit",
+  h1: "Rechnungen teilen, Belege scannen und sehen, wer wem etwas schuldet",
   heroSubLine1: "Belege scannen. Rechnung teilen. Ausgaben live aufteilen.",
   heroSubLine2: "Klar sehen, wer wem etwas schuldet.",
   heroParagraph:
-    "CheqSplit macht es einfach, Belege zu scannen, Rechnungen aufzuteilen und gemeinsame Ausgaben mit Freunden in wenigen Schritten zu verwalten.",
+    "Scanne Restaurantbelege, teile die Rechnung mit Freunden, wähle aus, wer welche Position hatte, und sieh sofort, wer wem wie viel schuldet. CheqSplit hilft dir, gemeinsame Ausgaben ohne manuelles Rechnen zu verwalten.",
+  seoBlockH2: "Rechnungen teilen und Belege scannen mit CheqSplit",
+  seoBlockP1: "CheqSplit ist eine App zum Teilen von Rechnungen im Restaurant, auf Reisen und bei gemeinsamen Ausgaben. Statt jede Position manuell einzutippen oder auszurechnen, wer welchen Betrag zahlen muss, kannst du den Beleg scannen, die erkannten Positionen prüfen, Freunde einladen und die Rechnung gemeinsam in Echtzeit aufteilen.",
+  seoBlockP2: "Du kannst die gesamte Rechnung gleichmäßig teilen, einzelne Positionen bestimmten Personen zuweisen oder eine Position prozentual aufteilen. CheqSplit berechnet das Endergebnis und zeigt, wer wem wie viel schuldet, damit alle schneller und ohne Verwirrung abrechnen können.",
+  useCasesH2: "Wann du CheqSplit nutzen kannst",
+  useCases: [
+    { title: "Restaurantrechnungen", text: "Scanne den Beleg, ordne Gerichte den richtigen Personen zu, teile Steuern und Trinkgeld und sieh, wer wem etwas schuldet." },
+    { title: "Reisen mit Freunden", text: "Behalte gemeinsame Ausgaben während einer Reise im Blick und organisiere alles an einem Ort." },
+    { title: "Gemeinsame Ausgaben", text: "Nutze CheqSplit für Einkäufe, Events, Wohngemeinschaften oder jede Situation, in der mehrere Personen Kosten teilen." },
+  ],
   howSectionH2: "So scannst du Belege und teilst die Rechnung",
   howSectionSub:
     "Mit CheqSplit scannst du den Beleg, lädst Freunde ein, teilst Posten live auf und siehst das Endergebnis klar.",

@@ -31,7 +31,7 @@ export const en: Dictionary = {
   heroSlide2: {
     title: "Split restaurant bills faster",
     description: "Scan the receipt, assign items, and see each person’s share clearly — perfect for dinners out with friends, dates, and group meals.",
-    button: "Learn more",
+    button: "Learn how to split bills and scan receipts",
   },
   features: {
     title: "Why CheqSplit?",

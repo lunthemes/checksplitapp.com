@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillFr: SplitBillLocaleCopy = {
-  metaTitle:
-    "Comment fonctionne CheqSplit | Scannez les reçus, partagez les additions et suivez les dépenses",
-  metaDescription:
-    "Découvrez comment fonctionne CheqSplit : scannez les reçus, invitez vos amis avec un QR code ou un lien, partagez les additions en temps réel et voyez clairement qui doit quoi.",
+  metaTitle: "Partagez l’addition et scannez les reçus entre amis | CheqSplit",
+  metaDescription: "CheqSplit vous aide à scanner les reçus de restaurant, partager l’addition entre amis, attribuer les articles et voir instantanément qui doit quoi. Idéal pour les restaurants, les voyages et les dépenses partagées.",
   softwareDescription:
     "CheqSplit vous aide à scanner les reçus, partager les additions, suivre les dépenses communes et voir qui doit quoi—idéal pour les restaurants, les voyages et les groupes.",
-  h1: "Comment fonctionne CheqSplit",
+  h1: "Partagez l’addition, scannez les reçus et voyez qui doit quoi",
   heroSubLine1: "Scannez les reçus. Partagez l’addition. Répartissez les dépenses en direct.",
   heroSubLine2: "Voyez qui doit quoi.",
   heroParagraph:
-    "CheqSplit vous aide à scanner les reçus, partager les additions et gérer les dépenses communes avec vos amis en quelques étapes simples.",
+    "Scannez les reçus de restaurant, partagez l’addition entre amis, choisissez qui a pris chaque article et voyez instantanément qui doit quoi. CheqSplit vous aide à gérer les dépenses partagées sans calculs manuels.",
+  seoBlockH2: "Partagez l’addition et scannez les reçus avec CheqSplit",
+  seoBlockP1: "CheqSplit est une application pour partager les additions au restaurant, pendant les voyages et dans toutes les situations de dépenses communes. Au lieu de saisir chaque article à la main ou de calculer qui doit payer quoi, vous pouvez scanner un reçu, vérifier les articles détectés, inviter vos amis et partager l’addition ensemble en temps réel.",
+  seoBlockP2: "Vous pouvez diviser toute l’addition à parts égales, attribuer certains articles à des personnes précises ou répartir un article en pourcentage. CheqSplit calcule le résultat final et montre qui doit quoi, pour que tout le monde puisse régler plus vite et sans confusion.",
+  useCasesH2: "Quand utiliser CheqSplit",
+  useCases: [
+    { title: "Additions au restaurant", text: "Scannez le reçu, attribuez les plats aux bonnes personnes, partagez les taxes et les pourboires, puis voyez qui doit quoi." },
+    { title: "Voyages entre amis", text: "Suivez les dépenses partagées pendant un voyage et gardez tout organisé au même endroit." },
+    { title: "Dépenses de groupe", text: "Utilisez CheqSplit pour les courses, les événements, la colocation ou toute situation où plusieurs personnes partagent des frais." },
+  ],
   howSectionH2: "Comment scanner des reçus et partager l’addition",
   howSectionSub:
     "Avec CheqSplit, scannez le reçu, invitez vos amis, partagez les postes en direct et voyez clairement le résultat final.",

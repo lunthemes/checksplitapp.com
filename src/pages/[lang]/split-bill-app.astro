@@ -218,6 +218,28 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
           ))}
         </div>
 
+        <div class="mt-12 typography">
+          <h2 class="typ-h2 typ-title-color">{copy.seoBlockH2}</h2>
+          <p class="split-bill__section-sub">{copy.seoBlockP1}</p>
+          <p class="split-bill__section-sub mt-4">{copy.seoBlockP2}</p>
+        </div>
+
+        <section class="mt-10" aria-label={copy.useCasesH2}>
+          <div class="typography">
+            <h2 class="typ-h2 typ-title-color">{copy.useCasesH2}</h2>
+          </div>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {copy.useCases.map((u) => (
+              <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <div class="typography">
+                  <h3 class="typ-h3 typ-title-color">{u.title}</h3>
+                  <p class="mt-2 text-slate-600">{u.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <div class="split-bill__how-follow typography">
           <h2 class="typ-h2 typ-title-color">{copy.howSectionH2}</h2>
           <p class="split-bill__section-sub">{copy.howSectionSub}</p>

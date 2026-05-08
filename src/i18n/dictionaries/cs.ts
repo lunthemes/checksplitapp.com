@@ -31,7 +31,7 @@ export const cs: Dictionary = {
   heroSlide2: {
     title: "Rozdělte účet v restauraci rychleji",
     description: "Naskenujte účtenku, přiřaďte položky a jasně uvidíte podíl každého — ideální pro večeře s přáteli, rande i skupinová posezení.",
-    button: "Zjistit více",
+    button: "Zjistěte, jak rozdělit účet a naskenovat účtenku",
   },
   features: {
     title: "Proč CheqSplit?",

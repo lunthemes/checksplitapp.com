@@ -1,17 +1,24 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillTr: SplitBillLocaleCopy = {
-  metaTitle:
-    "CheqSplit Nasıl Çalışır | Fişleri Tara, Hesapları Böl ve Ortak Harcamaları Takip Et",
-  metaDescription:
-    "CheqSplit’in nasıl çalıştığını görün: fişleri tarayın, arkadaşlarınızı QR kodu veya bağlantıyla davet edin, hesapları gerçek zamanlı bölün ve kimin kime ne ödeyeceğini net görün.",
+  metaTitle: "Arkadaşlarla hesap böl ve fişleri tara | CheqSplit",
+  metaDescription: "CheqSplit, restoran fişlerini taramana, hesabı arkadaşlarınla bölmene, ürünleri kişilere atamana ve kimin kime ne kadar borçlu olduğunu anında görmene yardımcı olur. Restoranlar, seyahatler ve ortak harcamalar için ideal.",
   softwareDescription:
     "CheqSplit fişleri taramayı, hesapları bölmeyi, ortak harcamaları takip etmeyi ve kimin kime ne ödeyeceğini görmeyi kolaylaştırır—restoranlar, seyahatler ve gruplar için idealdir.",
-  h1: "CheqSplit nasıl çalışır",
+  h1: "Hesabı böl, fişi tara ve kimin kime borçlu olduğunu gör",
   heroSubLine1: "Fişleri tarayın. Hesabı paylaşın. Harcamaları canlı bölün.",
   heroSubLine2: "Kimin kime ne ödeyeceğini görün.",
   heroParagraph:
-    "CheqSplit, fişleri taramayı, hesapları bölmeyi ve arkadaşlarla ortak harcamaları yönetmeyi birkaç basit adımda kolaylaştırır.",
+    "Restoran fişlerini tara, hesabı arkadaşlarınla böl, her ürünü kimin paylaştığını seç ve kimin kime ne kadar borçlu olduğunu anında gör. CheqSplit, ortak harcamaları manuel hesaplama yapmadan yönetmene yardımcı olur.",
+  seoBlockH2: "CheqSplit ile hesap böl ve fişleri tara",
+  seoBlockP1: "CheqSplit; restoranlarda, seyahatlerde ve ortak harcamaların olduğu her durumda hesap bölmek için kullanılan bir uygulamadır. Her ürünü tek tek elle girmek veya kimin ne kadar ödemesi gerektiğini hesaplamak yerine fişi tarayabilir, algılanan ürünleri kontrol edebilir, arkadaşlarını davet edebilir ve hesabı birlikte gerçek zamanlı olarak bölebilirsin.",
+  seoBlockP2: "Tüm hesabı eşit olarak bölebilir, belirli ürünleri farklı kişilere atayabilir veya tek bir ürünü yüzdeye göre paylaştırabilirsin. CheqSplit sonucu otomatik hesaplar ve kimin kime ne kadar borçlu olduğunu gösterir, böylece grup daha hızlı ve karışıklık yaşamadan ödeşebilir.",
+  useCasesH2: "CheqSplit ne zaman kullanılır?",
+  useCases: [
+    { title: "Restoran hesapları", text: "Fişi tara, yemekleri doğru kişilere ata, vergi ve bahşişi böl ve kimin kime borçlu olduğunu gör." },
+    { title: "Arkadaşlarla seyahatler", text: "Seyahat boyunca ortak harcamaları takip et ve her şeyi tek bir yerde düzenli tut." },
+    { title: "Grup harcamaları", text: "CheqSplit’i alışverişler, etkinlikler, ev arkadaşları veya birkaç kişinin maliyetleri paylaştığı her durum için kullan." },
+  ],
   howSectionH2: "Fişleri nasıl tararsın ve hesabı nasıl bölersin",
   howSectionSub:
     "CheqSplit ile fişi tarayın, arkadaşlarınızı davet edin, kalemleri canlı paylaşın ve sonucu net görün.",
