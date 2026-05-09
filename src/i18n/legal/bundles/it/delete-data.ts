@@ -1,6 +1,6 @@
 import type { DeleteDataPage } from "../../types";
 
-const mail = '<a class="font-medium text-brand-600 underline hover:text-brand-700" href="mailto:lungusterus@gmail.com">lungusterus@gmail.com</a>';
+const mail = '<a class="font-medium text-brand-600 underline hover:text-brand-700" href="mailto:support@cheqsplitapp.com">support@cheqsplitapp.com</a>';
 
 export const deleteDataIt: DeleteDataPage = {
   metaTitle: "Eliminare i Suoi dati (senza eliminare l’account) — CheqSplit",
