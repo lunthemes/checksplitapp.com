@@ -138,8 +138,6 @@ export const cs: Dictionary = {
       appStore: "Stáhnout zdarma v App Store",
       play: "Stáhnout zdarma v Google Play",
     },
-    playSoon: "Brzy",
-    playDisabledHint: "Zatím není k dispozici",
     groupAria: "Stáhnout aplikaci zdarma",
   },
   faq: {

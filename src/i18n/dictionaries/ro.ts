@@ -138,8 +138,6 @@ export const ro: Dictionary = {
       appStore: "Descarcă gratuit din App Store",
       play: "Descarcă gratuit din Google Play",
     },
-    playSoon: "Curând",
-    playDisabledHint: "În curând aici",
     groupAria: "Descarcă gratuit aplicația",
   },
   faq: {

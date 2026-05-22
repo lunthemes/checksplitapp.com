@@ -132,8 +132,6 @@ export const it: Dictionary = {
       appStore: "Scarica gratis sull’App Store",
       play: "Scarica gratis su Google Play",
     },
-    playSoon: "Presto",
-    playDisabledHint: "Non ancora disponibile",
     groupAria: "Scarica l’applicazione gratis",
   },
   faq: {

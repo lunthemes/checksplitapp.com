@@ -52,5 +52,5 @@ export const store = {
   badgeAppStore: "/logos/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg",
   badgeGooglePlay: "/logos/GetItOnGooglePlay_Badge_Web_color_English.svg",
   appStoreUrl: "https://apps.apple.com/md/app/cheqsplit/id6756801835",
-  googlePlayUrl: "#",
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.cheqsplit.app",
 } as const;

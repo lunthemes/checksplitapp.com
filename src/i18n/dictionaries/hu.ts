@@ -114,8 +114,6 @@ export const hu: Dictionary = {
       appStore: "Ingyenes letöltés App Store-ból",
       play: "Ingyenes letöltés Google Play-ből",
     },
-    playSoon: "Hamarosan",
-    playDisabledHint: "Még nem elérhető",
     groupAria: "Alkalmazás ingyenes letöltése",
   },
   faq: {

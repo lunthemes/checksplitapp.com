@@ -100,8 +100,6 @@ function renderDict(d: Dictionary): string {
   L(`- **imgAlt:** ${d.cta.imgAlt}`);
   L(`- **badgeAlts.appStore:** ${d.cta.badgeAlts.appStore}`);
   L(`- **badgeAlts.play:** ${d.cta.badgeAlts.play}`);
-  L(`- **playSoon:** ${d.cta.playSoon}`);
-  L(`- **playDisabledHint:** ${d.cta.playDisabledHint}`);
   L(`- **groupAria:** ${d.cta.groupAria}`);
 
   L("### `faq`");

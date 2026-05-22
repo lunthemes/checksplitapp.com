@@ -55,10 +55,6 @@ export interface Dictionary {
     sectionAria: string;
     imgAlt: string;
     badgeAlts: { appStore: string; play: string };
-    /** Scurt etichetă lângă Google Play (ex. «Curând») */
-    playSoon: string;
-    /** Sfat pentru accesibilitate: de ce nu e activ (ex. «Nedisponibil momentan») */
-    playDisabledHint: string;
     groupAria: string;
   };
   faq: {

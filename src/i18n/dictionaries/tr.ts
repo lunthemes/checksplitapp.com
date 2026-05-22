@@ -114,8 +114,6 @@ export const tr: Dictionary = {
       appStore: "App Store’da ücretsiz indir",
       play: "Google Play’de ücretsiz indir",
     },
-    playSoon: "Yakında",
-    playDisabledHint: "Henüz yok",
     groupAria: "Uygulamayı ücretsiz indir",
   },
   faq: {

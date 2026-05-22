@@ -114,8 +114,6 @@ export const ru: Dictionary = {
       appStore: "Скачать бесплатно в App Store",
       play: "Скачать бесплатно в Google Play",
     },
-    playSoon: "Скоро",
-    playDisabledHint: "Пока недоступно",
     groupAria: "Скачать приложение бесплатно",
   },
   faq: {
