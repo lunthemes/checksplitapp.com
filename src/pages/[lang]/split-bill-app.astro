@@ -142,10 +142,12 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
               }
             </h1>
 
-            <div class="split-bill__hero-sub">
-              <div>{copy.heroSubLine1}</div>
-              <div>{copy.heroSubLine2}</div>
-            </div>
+            {(copy.heroSubLine1 || copy.heroSubLine2) && (
+              <div class="split-bill__hero-sub">
+                {copy.heroSubLine1 && <div>{copy.heroSubLine1}</div>}
+                {copy.heroSubLine2 && <div>{copy.heroSubLine2}</div>}
+              </div>
+            )}
 
             <p class="split-bill__hero-desc">
               {copy.heroParagraph}
