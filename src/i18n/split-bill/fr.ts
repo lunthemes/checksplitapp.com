@@ -71,12 +71,12 @@ export const splitBillFr: SplitBillLocaleCopy = {
       desc: "Sélectionnez qui a commandé chaque article. Tous les participants voient les changements au fur et à mesure.",
     },
     {
-      title: "Partagez un article par pourcentage",
+      title: "Partagez un article selon un pourcentage",
       desc: "Répartissez une bouteille, un plat ou une autre dépense selon le pourcentage payé ou consommé par chacun.",
     },
     {
       title: "Voyez instantanément qui doit quoi",
-      desc: "CheqSplit calcule le montant de chaque personne et affiche clairement qui doit payer qui.",
+      desc: "CheqSplit calcule la part de chaque personne et affiche clairement qui doit quoi à qui.",
     },
   ],
   ctaTitle: "Prêt à partager l’addition sans stress ?",
