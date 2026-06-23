@@ -5,11 +5,11 @@ export const splitBillFr: SplitBillLocaleCopy = {
   metaDescription: "CheqSplit vous aide à scanner les reçus de restaurant, partager l’addition entre amis, attribuer les articles et voir instantanément qui doit quoi. Idéal pour les restaurants, les voyages et les dépenses partagées.",
   softwareDescription:
     "CheqSplit vous aide à scanner les reçus, partager les additions, suivre les dépenses communes et voir qui doit quoi—idéal pour les restaurants, les voyages et les groupes.",
-  h1: "Partagez l’addition, scannez les reçus et voyez qui doit quoi",
+  h1: "Scannez l’addition et partagez-la équitablement",
   heroSubLine1: "Scannez les reçus. Partagez l’addition. Répartissez les dépenses en direct.",
   heroSubLine2: "Voyez qui doit quoi.",
   heroParagraph:
-    "Scannez les reçus de restaurant, partagez l’addition entre amis, choisissez qui a pris chaque article et voyez instantanément qui doit quoi. CheqSplit vous aide à gérer les dépenses partagées sans calculs manuels.",
+    "Scannez le ticket, attribuez chaque article à la bonne personne et voyez immédiatement qui doit quoi.",
   seoBlockH2: "Partagez l’addition et scannez les reçus avec CheqSplit",
   seoBlockP1: "CheqSplit est une application pour partager les additions au restaurant, pendant les voyages et dans toutes les situations de dépenses communes. Au lieu de saisir chaque article à la main ou de calculer qui doit payer quoi, vous pouvez scanner un reçu, vérifier les articles détectés, inviter vos amis et partager l’addition ensemble en temps réel.",
   seoBlockP2: "Vous pouvez diviser toute l’addition à parts égales, attribuer certains articles à des personnes précises ou répartir un article en pourcentage. CheqSplit calcule le résultat final et montre qui doit quoi, pour que tout le monde puisse régler plus vite et sans confusion.",
