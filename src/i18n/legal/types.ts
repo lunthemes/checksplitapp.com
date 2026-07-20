@@ -33,7 +33,7 @@ export interface PrivacyPage {
   s7Body: string;
   s8Title: string;
   s8Intro: string;
-  /** Five entries: Firebase, Gemini, RevenueCat, Apple, OCR — `text` may contain HTML for links. */
+  /** Third-party list (Firebase, Gemini, RevenueCat, Apple, Google Play, OCR, …) — `text` may contain HTML for links. */
   s8Bullets: LabeledBullet[];
   s9Title: string;
   s9Body: string;

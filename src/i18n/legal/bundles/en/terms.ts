@@ -6,7 +6,7 @@ export const termsEn: TermsPage = {
     "Terms of Service for the CheqSplit mobile application. Please read them carefully.",
   h1: "Terms of Service",
   lastUpdatedPrefix: "Last updated:",
-  lastUpdatedDate: "March 25, 2026",
+  lastUpdatedDate: "July 20, 2026",
   welcome:
     "Welcome to CheqSplit! By using our application, you agree to these Terms of Service. Please read them carefully.",
   s1Title: "1. Acceptance of Terms",
@@ -21,7 +21,7 @@ export const termsEn: TermsPage = {
     "Split bills among multiple participants and organize multi-bill trips",
     "Share bills with others via codes or links",
     "Track balances and who owes what in shared expenses",
-    "Optional premium features sold as in-app subscriptions via Apple",
+    "Optional premium features sold as in-app subscriptions via the Apple App Store or Google Play",
   ],
   importantTitle: "Important:",
   importantBody:
@@ -44,7 +44,7 @@ export const termsEn: TermsPage = {
     "We do not provide financial, tax, or legal advice",
   ],
   s4SubscriptionsLead:
-    "Subscriptions: Paid plans are in-app purchases processed by Apple. Prices, renewal, and cancellation follow Apple’s terms and your App Store account settings. Subscription status may be validated using services such as RevenueCat, as described in our ",
+    "Subscriptions: Paid plans are in-app purchases processed by Apple (App Store) or Google (Play Store), depending on your platform. Prices, renewal, and cancellation follow the store’s terms and your account settings. Subscription status may be validated using services such as RevenueCat, as described in our ",
   s4SubscriptionsPrivacyLinkText: "Privacy Policy",
   s4SubscriptionsTail: ".",
   s5Title: "5. Accuracy of scanning and AI",
