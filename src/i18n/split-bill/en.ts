@@ -1,106 +1,176 @@
 import type { SplitBillLocaleCopy } from "./types";
 
 export const splitBillEn: SplitBillLocaleCopy = {
-  metaTitle: "Split Bills and Scan Receipts with Friends | CheqSplit",
-  metaDescription: "CheqSplit helps you scan restaurant receipts, split bills with friends, assign items, and instantly see who owes whom. Perfect for restaurants, trips, and shared expenses.",
+  metaTitle: "Restaurant Bill Splitter & Receipt Scanner | CheqSplit",
+  metaDescription:
+    "Scan a restaurant receipt, invite friends, split items in the app or browser, see who owes whom, and record when a payment is settled.",
   softwareDescription:
-    "CheqSplit helps you scan receipts, split bills, track shared expenses, and see who owes whom—ideal for restaurants, trips, and groups.",
-  h1: "Split bills, scan receipts, and see who owes whom",
-  heroSubLine1: "Scan receipts. Share the bill. Split expenses live.",
-  heroSubLine2: "See who owes whom.",
+    "CheqSplit is a restaurant bill splitter and receipt scanner that lets people join in the app or browser, select items, see who owes whom, and record settled payments.",
+  h1: "Scan and split a restaurant bill by item",
+  heroSubLine1: "",
+  heroSubLine2: "",
   heroParagraph:
-    "Scan restaurant receipts, split bills with friends, choose who shared each item, and instantly see who owes whom. CheqSplit helps you manage shared expenses without manual calculations.",
-  seoBlockH2: "Split bills and scan receipts with CheqSplit",
-  seoBlockP1: "CheqSplit is a bill splitting app for restaurants, trips, and shared expenses. Instead of typing every item manually or calculating who owes what, you can scan a receipt, review the detected items, invite friends, and split the bill together in real time.",
-  seoBlockP2: "You can split the entire bill evenly, assign specific items to different people, or divide one item by percentage. CheqSplit calculates the final result and shows who owes whom, so everyone can settle faster and avoid confusion.",
-  useCasesH2: "When to use CheqSplit",
+    "Scan the receipt, check the items, and invite everyone at the table. Friends can continue in the app or browser, select what they had, and see who owes whom.",
+  seoBlockH2: "One restaurant receipt, shared in the app or browser",
+  seoBlockP1:
+    "Everyone works from the same restaurant bill instead of calculating separate totals from a photo. Guests who do not have CheqSplit installed can continue in their browser and still take part in the split.",
+  seoBlockP2:
+    "Each person selects the dishes and drinks they consumed. When several people select the same shared item, CheqSplit divides its price equally between them and updates the balances.",
+  seoBlockP3:
+    "After the group pays each other outside CheqSplit, participants can record those settlements so the bill history reflects what has already been paid.",
+  useCasesH2: "Split the bill based on what everyone actually ordered",
   useCases: [
-    { title: "Restaurant bills", text: "Scan the receipt, assign dishes to the right people, split tax and tips, and see who owes whom." },
-    { title: "Trips with friends", text: "Track shared expenses during a trip and keep everything organized in one place." },
-    { title: "Group expenses", text: "Use CheqSplit for groceries, events, roommates, or any situation where several people share costs." },
+    {
+      title: "Different orders",
+      text: "Assign every dish or drink to the people who consumed it, so each person’s total reflects what they actually had.",
+    },
+    {
+      title: "Shared dishes and drinks",
+      text: "Everyone who shared an item can select it. CheqSplit automatically divides the item equally between those participants.",
+    },
+    {
+      title: "No app required for guests",
+      text: "Open the invitation link and continue in the browser to view the restaurant bill, select items, and follow the result.",
+    },
+    {
+      title: "Tax, service fees, and tip",
+      text: "Review Fees & Tips and add tax, service charges, or tip when they apply to the receipt.",
+    },
+    {
+      title: "Clear balances",
+      text: "CheqSplit calculates who owes whom after the restaurant bill is divided.",
+    },
+    {
+      title: "Payments recorded",
+      text: "After paying outside CheqSplit, record the payment so the shared bill reflects the settlement.",
+    },
   ],
-  howSectionH2: "How to scan receipts and split bills",
+  howSectionH2: "How to split a restaurant bill with CheqSplit",
   howSectionSub:
-    "Use CheqSplit to scan the receipt, invite friends, split items live, and see the final result clearly.",
-  stepsSectionH2: "Simple steps",
+    "Go from a printed restaurant receipt to clear per-person totals while everyone is still at the table—even when some guests do not have the app.",
+  stepsSectionH2: "How to split a restaurant bill with CheqSplit",
   steps: [
     {
-      title: "Scan receipts",
-      desc: "Point your camera at the receipt and CheqSplit quickly detects items, prices, and totals.",
+      title: "Scan and check the receipt",
+      desc: "Photograph the restaurant receipt, review the detected items and total, correct anything that needs attention, and add tax or tip when it applies.",
     },
     {
-      title: "Invite & split",
-      desc: "Invite friends to the same bill and split shared expenses together in real time.",
+      title: "Share the bill",
+      desc: "Invite friends by QR code or link. They can open the bill in CheqSplit or continue directly in their browser.",
     },
     {
-      title: "Settle live",
-      desc: "See who owes whom and settle shared expenses in seconds.",
+      title: "Select items and settle the balance",
+      desc: "Everyone selects what they had, CheqSplit shows who owes whom, and participants can record a payment after settling outside the app.",
     },
   ],
   features: [
     {
-      title: "Scan the receipt in seconds",
-      desc: "CheqSplit uses smart AI to scan receipts and extract bill items, prices, and totals automatically — so you can start splitting the bill faster.",
+      title: "Scan the restaurant receipt",
+      desc: "Take a photo of the receipt in CheqSplit. Adjust the frame, zoom, and brightness to make sure the entire bill is clear and easy to read.",
     },
     {
-      title: "Review the scanned bill",
-      desc: "Review the scanned bill, check the detected items and totals, and make sure everything looks right before you share it with the group or split the bill.",
+      title: "Check the total before starting the split",
+      desc: "Review the detected bill before starting the split.\n• Review the detected total\n• Choose the correct currency\n• Optionally give the bill a clear name\n• Compare the result with the original receipt before continuing",
     },
     {
-      title: "Edit items before sharing",
-      desc: "Add, remove, or edit items before sharing the bill. Mark items as shared, add anything missing, and remove anything that should not be included in your split.",
+      title: "Review and edit every receipt item",
+      desc: "Check the detected dishes, drinks, quantities, and prices.\n• Correct a line or add a missing item before sharing the bill\n• Open Fees & Tips to enter tax, service charge, or tip when they apply, or leave an amount at zero when they do not",
     },
     {
-      title: "Invite friends with a link or QR code",
-      desc: "Invite friends to the same bill with a QR code or link. Everyone can join instantly, review the bill, and follow the split together.",
+      title: "Invite friends by QR code or link",
+      desc: "Show the QR code or share the invitation link so everyone at the table can open the same restaurant bill.",
     },
     {
-      title: "Split items together in real time",
-      desc: "Split bill items together in real time. Everyone sees updates instantly, so selections, shares, and totals stay accurate for the whole group.",
+      title: "Continue in the browser without installing the app",
+      desc: "Guests who open the invitation link or scan the QR code can get the CheqSplit app or tap Continue in browser. They do not need the app installed to take part in this bill split.",
     },
     {
-      title: "Split one item by percentage",
-      desc: "Split any item by percentage — 20%, 50%, 33%, or any custom share — so the bill stays fair when expenses are not divided equally.",
+      title: "Split the restaurant bill online",
+      desc: "The browser participant sees the same Items and Summary tabs, the participant list, and the restaurant items. They can check the dishes or drinks they consumed directly from the browser.",
+      extra:
+        "Selections stay on the same shared bill used by participants in the CheqSplit app.",
     },
     {
-      title: "See who owes whom instantly",
-      desc: "See who owes whom instantly with clear totals for everyone. CheqSplit calculates the final result in real time, so settling shared expenses takes seconds.",
+      title: "Let everyone select what they had",
+      desc: "Each participant checks the dishes and drinks they consumed. Another participant’s avatar appears beside an item they selected. When you select the same item, your checkmark and avatar appear alongside theirs.",
+      extra:
+        "When several people select the same pizza, drink, or shared dish, CheqSplit divides that item equally between them.",
+    },
+    {
+      title: "See who owes whom",
+      desc: "Let CheqSplit calculate the resulting balances after the restaurant bill is paid.\n• Choose who paid the restaurant bill\n• See who owes the payer and how much each person owes",
+      extra: "CheqSplit calculates the result; it does not transfer money.",
+    },
+    {
+      title: "Record when a payment has been made",
+      desc: "After a participant pays their debt outside CheqSplit:\n• Open Record a Payment\n• Enter the amount\n• Optionally add a note\n• Choose who is paying and who receives the payment\n• Save the record",
+      extra:
+        "This updates the shared record. CheqSplit does not process, send, or receive the money.",
+    },
+    {
+      title: "Review how the restaurant bill was divided",
+      desc: "See how the restaurant bill was divided across the group.\n• Open the Summary tab to see the total distributed in a pie chart\n• Tap a participant’s section to view their total and the exact items included in their consumption",
+      extra:
+        "An automatically calculated share, such as 50% when two people selected the same item, appears in the participant details.",
     },
   ],
-  ctaTitle: "Ready to split bills and shared expenses without the stress?",
+  ctaTitle: "Split the restaurant bill—even when friends do not have the app",
   ctaBody:
-    "Get CheqSplit for free to scan receipts, split bills, and manage shared expenses faster with friends, trips, and group spending.",
+    "Scan the receipt, share the bill, let everyone select items in the app or browser, and keep who-owes-whom and recorded payments in one clear result.",
+  groupBridgeBefore:
+    "Need to keep this restaurant bill with hotel, taxi, or activity costs from the same group? Add the completed bill from the trip’s Bills tab with Add Bill, then continue with ",
+  groupBridgeLabel: "group expense tracking",
+  groupBridgeAfter: ".",
+  guideBridgeBefore: "Prefer a step-by-step method first? Read ",
+  guideBridgeLabel: "how to split a restaurant bill fairly",
+  guideBridgeAfter: ".",
   faq: [
     {
-      q: "What is CheqSplit and how does it work?",
-      a: "CheqSplit is a free split bill app that helps you scan receipts, invite friends, split items, and see the final result clearly. It is useful for restaurants, trips, groceries, and shared expenses.",
+      q: "Can CheqSplit scan an itemized restaurant receipt?",
+      a: "Yes. Photograph the receipt, then review the detected total, items, quantities, and prices before starting the split.",
     },
     {
-      q: "Can I scan a receipt and split it by item?",
-      a: "Yes. You can scan a receipt, review the detected items, and assign each item to the people who ordered or shared it.",
+      q: "Do all participants need the CheqSplit app?",
+      a: "No. The host creates and scans the bill in the app, but invited guests can open the link and choose Continue in browser.",
     },
     {
-      q: "Can I invite friends with a QR code or link?",
-      a: "Yes. You can invite friends with a QR code or shareable link so everyone joins the same bill and follows the split in real time.",
+      q: "Can I split a restaurant bill in the browser?",
+      a: "An invited guest can open the shared bill in the browser, select the items they consumed, view the Summary, and follow the resulting balance. Hosting and scanning a new bill require the app.",
     },
     {
-      q: "Is CheqSplit good for group trips and shared expenses?",
-      a: "Yes. CheqSplit works well for group trips, restaurants, groceries, taxis, tickets, and other shared expenses.",
+      q: "Can participants join by QR code or link?",
+      a: "Yes. Share the QR code or invitation link so everyone can open the same restaurant bill in the app or browser.",
     },
     {
-      q: "Can I use CheqSplit for restaurant bills and grocery runs?",
-      a: "Yes. CheqSplit helps you split restaurant bills, grocery receipts, and everyday group purchases fairly and clearly.",
+      q: "How do several people split one shared item?",
+      a: "Each person who shared the item selects it. CheqSplit automatically divides the price equally between all participants who selected that item.",
     },
     {
-      q: "How do I see who owes whom?",
-      a: "After items and expenses are split, CheqSplit calculates the final balances and shows who should pay whom.",
+      q: "What if the receipt scan is incorrect?",
+      a: "Review the detected bill before sharing it. Correct an item or price, add a missing line, and enter tax or tip in Fees & Tips when applicable.",
+    },
+    {
+      q: "What does Record a Payment do?",
+      a: "It records that one participant paid another outside CheqSplit. It updates the shared bill record but does not transfer or process money.",
+    },
+    {
+      q: "How can I see what each person consumed?",
+      a: "Open the Summary tab and tap a participant’s section in the chart to see their total and included items.",
+    },
+    {
+      q: "Does CheqSplit transfer money?",
+      a: "No. CheqSplit calculates balances and records settlements entered by participants. It does not send, receive, or process payments.",
+    },
+    {
+      q: "Can I add this restaurant bill to a trip?",
+      a: "Yes. Complete the itemized restaurant split, then open the Bills tab inside the trip and tap Add Bill.",
     },
   ],
   a11y: {
-    hero: "How CheqSplit works — hero",
+    hero: "Restaurant bill splitter — introduction",
     nav: "Primary",
-    stepsRegion: "Simple steps",
-    features: "How CheqSplit works — features",
+    stepsRegion: "How to split a restaurant bill",
+    features: "Restaurant bill workflow",
     faq: "Frequently asked questions",
   },
 };

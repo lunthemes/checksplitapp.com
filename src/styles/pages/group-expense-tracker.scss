@@ -1,0 +1,357 @@
+/* Group expense tracker SEO landing — reuses `.split-bill__*` nav/hero/phone from split-bill-app.scss */
+
+.get__internal-link {
+  margin-top: 18px;
+  max-width: 36rem;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgb(203 213 225);
+}
+
+.get__internal-link a {
+  color: rgb(147 197 253);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.get__internal-link a:hover {
+  color: white;
+}
+
+.get__hero-phones {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 140%;
+  max-width: none;
+  overflow: visible;
+}
+
+.get .split-bill__phones-visual {
+  min-height: 0;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .get .split-bill__phones-visual {
+    min-height: 0;
+    justify-content: flex-end;
+  }
+
+  .get__hero-phones {
+    width: 170%;
+    margin-right: -20%;
+  }
+}
+
+.get__hero-phone {
+  position: relative;
+  grid-area: 1 / 1;
+  flex: 0 0 auto;
+}
+
+/* Landscape PNG canvases: height of the visible phone follows width, so the column must not cap width. */
+.get__hero-phone--primary {
+  z-index: 2;
+  width: 100%;
+  transform: translateX(-18%);
+}
+
+.get__hero-phone--secondary {
+  z-index: 1;
+  width: 85%;
+  transform: translate(calc(12% - 30px), 0) scale(0.98);
+  transform-origin: center center;
+}
+
+@media (min-width: 900px) {
+  .get__hero-phone--primary {
+    transform: translateX(-20%);
+  }
+
+  .get__hero-phone--secondary {
+    width: 88%;
+    transform: translate(calc(14% - 30px), 0) scale(1);
+  }
+}
+
+/* Assets already include device chrome — no nested phone-shell. */
+.get__hero-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 36px rgb(0 0 0 / 0.5));
+}
+
+.get__hero-phone--secondary img {
+  filter: drop-shadow(0 12px 28px rgb(0 0 0 / 0.45));
+}
+
+.get__section {
+  background: white;
+  padding: 56px 0;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .get__section {
+    padding: 80px 0;
+  }
+}
+
+.get__section--muted {
+  background: rgb(248 250 252);
+}
+
+.get__section--faq {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.get__container {
+  margin: 0 auto;
+  max-width: 1152px;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .get__container {
+    padding: 0 24px;
+  }
+}
+
+.get__split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .get__split {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .get__split--reverse {
+    direction: rtl;
+  }
+
+  .get__split--reverse > * {
+    direction: ltr;
+  }
+}
+
+.get__copy {
+  max-width: 36rem;
+}
+
+.get {
+  overflow-x: clip;
+}
+
+.get__band {
+  background: white;
+}
+
+.get__band--muted {
+  background: rgb(248 250 252);
+}
+
+.get #how .get__band .split-bill__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .get #how .get__band .split-bill__container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.get #how .get__band:first-child .split-bill__container {
+  padding-top: 72px;
+}
+
+@media (min-width: 768px) {
+  .get #how .get__band:first-child .split-bill__container {
+    padding-top: 96px;
+  }
+}
+
+.get #how .split-bill__feature {
+  margin-top: 0;
+}
+
+.get #how .get__band:first-child .split-bill__feature {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .get #how .get__band:first-child .split-bill__feature {
+    margin-top: 48px;
+  }
+}
+
+.get__feature-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.get__feature-heading .split-bill__feature-title {
+  margin-top: 0;
+}
+
+.get__feature-heading + .split-bill__feature-desc {
+  margin-left: 0.25rem;
+}
+
+.get__step-num {
+  flex-shrink: 0;
+  margin-top: 0.12em;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.12;
+  background: none;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .get__step-num {
+    margin-top: 0.18em;
+    font-size: 28px;
+  }
+}
+
+.get__step-num--0 {
+  color: #4d8bff;
+}
+
+.get__step-num--1 {
+  color: #0ea66d;
+}
+
+.get__step-num--2 {
+  color: #b44cff;
+}
+
+.get__step-num--3 {
+  color: #b44cff;
+}
+
+.get__step-num--4 {
+  color: #ffa51f;
+}
+
+.get .split-bill__feature-media {
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+}
+
+.get .split-bill__feature-media:not(.get__feature-media--pdf) img {
+  width: min(520px, 100%);
+  max-height: none;
+  filter: none;
+}
+
+@media (min-width: 900px) {
+  .get .split-bill__feature-media:not(.get__feature-media--pdf) img {
+    width: min(600px, 100%);
+  }
+}
+
+.get__feature-media--pdf {
+  min-height: 340px;
+  padding: 16px 48px 56px 16px;
+  overflow: visible;
+}
+
+.get__feature-media--pdf img {
+  width: 100%;
+  max-width: none;
+  filter: none;
+}
+
+.get__pdf-stack {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: start;
+  width: min(230px, 62vw);
+}
+
+@media (min-width: 900px) {
+  .get__pdf-stack {
+    width: min(280px, 100%);
+  }
+}
+
+.get__feature-media--pdf .get__pdf-page {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px -20px rgb(15 23 42 / 0.45);
+  filter: none;
+}
+
+.get__pdf-page--front {
+  z-index: 2;
+  transform: translate(-26px, -14px) rotate(-2.5deg);
+}
+
+.get__pdf-page--back {
+  z-index: 1;
+  transform: translate(52px, 58px) rotate(3.5deg);
+}
+
+.get__cta-link {
+  display: inline-flex;
+  margin-top: 18px;
+  font-weight: 700;
+  color: rgb(37 99 235);
+  text-decoration: none;
+}
+
+.get__cta-link:hover {
+  text-decoration: underline;
+}
+
+.get__fits {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .get__fits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.get__fits li {
+  border-radius: 14px;
+  border: 1px solid rgb(226 232 240);
+  background: white;
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgb(51 65 85);
+}

@@ -3,19 +3,26 @@ import { site } from "../data/landing";
 import Logo from "./Logo.astro";
 import StoreBadges from "./StoreBadges.astro";
 import type { Dictionary } from "../i18n/types";
-import { localeLegalPath, localePath } from "../i18n/paths";
+import { localeLegalPath, localePath, localeSplitBillPath, localeGroupExpenseTrackerPath, localeGuidesHubPath } from "../i18n/paths";
+import { groupExpenseTrackerLocales } from "../i18n/group-expense-tracker";
+import { defaultLocale } from "../i18n/config";
 import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
   t: Dictionary;
   year: number;
   lang: SupportedLanguage;
-  /** Homepage section anchors as `${sectionBase}#features`; omit on locale homepage. */
+  /** Homepage section anchors; kept for callers, unused after destination nav. */
   sectionBase?: string;
 }
 
-const { t, year, lang, sectionBase = "" } = Astro.props;
-const hb = sectionBase;
+const { t, year, lang } = Astro.props;
+const groupHref = (groupExpenseTrackerLocales as readonly string[]).includes(
+  lang,
+)
+  ? localeGroupExpenseTrackerPath(lang)
+  : localeGroupExpenseTrackerPath(defaultLocale);
+const guidesHref = localeGuidesHubPath(lang);
 ---
 
 <footer class="border-t border-slate-200 bg-slate-50">
@@ -36,10 +43,13 @@ const hb = sectionBase;
           <p class="font-semibold text-slate-900">{t.footer.product}</p>
           <ul class="mt-2 space-y-1.5 text-slate-600">
             <li>
-              <a href={`${hb}#features`} class="hover:text-brand-600">{t.nav.features}</a>
+              <a href={localeSplitBillPath(lang)} class="hover:text-brand-600">{t.nav.restaurant}</a>
             </li>
             <li>
-              <a href={`${hb}#how`} class="hover:text-brand-600">{t.nav.how}</a>
+              <a href={groupHref} class="hover:text-brand-600">{t.nav.groupExpenses}</a>
+            </li>
+            <li>
+              <a href={guidesHref} class="hover:text-brand-600">{t.nav.guides}</a>
             </li>
           </ul>
         </div>

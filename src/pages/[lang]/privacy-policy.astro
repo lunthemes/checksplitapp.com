@@ -2,7 +2,7 @@
 import LegalPageLayout from "../../layouts/LegalPageLayout.astro";
 import PrivacyPolicyArticle from "../../components/legal/PrivacyPolicyArticle.astro";
 import { getLegalBundle } from "../../i18n/legal/registry";
-import { defaultLocale, isLocale, supportedLanguages } from "../../i18n/config";
+import { isLocale, supportedLanguages } from "../../i18n/config";
 import { localeLegalPath } from "../../i18n/paths";
 import type { SupportedLanguage } from "../../i18n/config";
 
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const raw = Astro.params.lang;
 const normalized = typeof raw === "string" ? raw.toLowerCase() : "";
 if (!isLocale(normalized)) {
-  return Astro.redirect(localeLegalPath(defaultLocale, "privacy-policy"), 301);
+  return Astro.redirect(localeLegalPath("en", "privacy-policy"), 301);
 }
 const lang = normalized as SupportedLanguage;
 const c = getLegalBundle(lang).privacy;

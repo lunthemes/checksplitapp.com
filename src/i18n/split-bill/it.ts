@@ -1,106 +1,99 @@
 import type { SplitBillLocaleCopy } from "./types";
+import { splitBillEn } from "./en";
 
 export const splitBillIt: SplitBillLocaleCopy = {
-  metaTitle: "Dividi il conto e scansiona gli scontrini con gli amici | CheqSplit",
-  metaDescription: "CheqSplit ti aiuta a scansionare gli scontrini del ristorante, dividere il conto con gli amici, assegnare gli articoli e vedere subito chi deve cosa. Perfetto per ristoranti, viaggi e spese condivise.",
-  softwareDescription:
-    "CheqSplit ti aiuta a scansionare scontrini, dividere conti, tenere traccia delle spese condivise e vedere chi deve pagare chi—ideale per ristoranti, viaggi e gruppi.",
-  h1: "Dividi il conto, scansiona gli scontrini e vedi chi deve cosa",
-  heroSubLine1: "Scansiona scontrini. Condividi il conto. Dividi le spese live.",
-  heroSubLine2: "Vedi chi deve pagare chi.",
-  heroParagraph:
-    "Scansiona gli scontrini del ristorante, dividi il conto con gli amici, scegli chi ha condiviso ogni articolo e vedi subito chi deve cosa. CheqSplit ti aiuta a gestire le spese condivise senza calcoli manuali.",
-  seoBlockH2: "Dividi il conto e scansiona gli scontrini con CheqSplit",
-  seoBlockP1: "CheqSplit è un’app per dividere i conti al ristorante, durante i viaggi e in qualsiasi situazione con spese condivise. Invece di inserire ogni articolo a mano o calcolare chi deve pagare cosa, puoi scansionare lo scontrino, controllare gli articoli rilevati, invitare gli amici e dividere il conto insieme in tempo reale.",
-  seoBlockP2: "Puoi dividere l’intero conto in parti uguali, assegnare articoli specifici a persone diverse o dividere un singolo articolo in percentuale. CheqSplit calcola il risultato finale e mostra chi deve cosa, così il gruppo può saldare più velocemente e senza confusione.",
-  useCasesH2: "Quando usare CheqSplit",
+  metaTitle: "Scansiona il conto e dividilo in base a ciò che ha ordinato ciascuno | CheqSplit",
+  metaDescription: "Tutto il conto resta in un unico posto. Una persona scansiona lo scontrino con CheqSplit, mentre gli altri entrano tramite link o codice QR e selezionano ciò che hanno ordinato direttamente dal browser.",
+  softwareDescription: "Tutto il conto resta in un unico posto. Una persona scansiona lo scontrino con CheqSplit, mentre gli altri entrano tramite link o codice QR e selezionano ciò che hanno ordinato direttamente dal browser.",
+  h1: "Scansiona il conto e dividilo in base a ciò che ha ordinato ciascuno",
+  heroSubLine1: "",
+  heroSubLine2: "",
+  heroParagraph: "",
+  seoBlockH2: "Un solo conto, condiviso nell'app o nel browser",
+  seoBlockP1: "Tutto il conto resta in un unico posto. Una persona scansiona lo scontrino con CheqSplit, mentre gli altri entrano tramite link o codice QR e selezionano ciò che hanno ordinato direttamente dal browser.",
+  seoBlockP2: "Non serve che tutti al tavolo installino l'app. CheqSplit tiene insieme voci, partecipanti, pagamenti e risultato finale.",
+  seoBlockP3: "",
+  useCasesH2: "Un modo di dividere il conto basato sugli ordini reali",
   useCases: [
-    { title: "Conti al ristorante", text: "Scansiona lo scontrino, assegna i piatti alle persone giuste, dividi tasse e mance e vedi chi deve cosa." },
-    { title: "Viaggi con amici", text: "Tieni traccia delle spese condivise durante un viaggio e mantieni tutto organizzato in un unico posto." },
-    { title: "Spese di gruppo", text: "Usa CheqSplit per spesa, eventi, coinquilini o qualsiasi situazione in cui più persone condividono i costi." },
+    { title: "Ordini individuali", text: "Assegna a ogni persona soltanto i piatti e le bevande che ha ordinato." },
+    { title: "Voci condivise", text: "Dividi una bottiglia, un piatto condiviso o un dessert solo tra chi lo ha effettivamente consumato." },
+    { title: "Servizio e mancia", text: "Aggiungi servizio, imposte e mancia in modo che la somma delle quote corrisponda al totale dello scontrino." },
   ],
-  howSectionH2: "Come scannerizzare gli scontrini e dividere il conto",
-  howSectionSub:
-    "Usa CheqSplit per scannerizzare lo scontrino, invitare amici, dividere le voci in tempo reale e vedere chiaramente il risultato finale.",
-  stepsSectionH2: "Passaggi semplici",
+  howSectionH2: "Come dividere il conto al ristorante con CheqSplit",
+  howSectionSub: "",
+  stepsSectionH2: "Come dividere il conto al ristorante con CheqSplit",
   steps: [
-    {
-      title: "Scansiona scontrini",
-      desc: "Inquadra lo scontrino con la fotocamera e CheqSplit rileva rapidamente articoli, prezzi e totali.",
-    },
-    {
-      title: "Invita e dividi",
-      desc: "Invita gli amici allo stesso conto e dividete insieme le spese condivise in tempo reale.",
-    },
-    {
-      title: "Salda subito",
-      desc: "Vedi chi deve pagare chi e salda le spese condivise in pochi secondi.",
-    },
+    { title: "Scansiona lo scontrino", desc: "Fotografa lo scontrino e CheqSplit trasforma voci e importi in un conto che puoi controllare prima di dividerlo." },
+    { title: "Controlla il conto", desc: "Confronta il totale in CheqSplit con quello stampato sullo scontrino e correggi eventuali errori prima che gli altri inizino a selezionare ciò che hanno ordinato." },
+    { title: "Dividi il conto", desc: "Correggi nome, quantità o prezzo se la scansione non ha riconosciuto perfettamente qualche dato." },
   ],
   features: [
-    {
-      title: "Scansiona lo scontrino in pochi secondi",
-      desc: "CheqSplit usa l’AI per scansionare gli scontrini ed estrarre automaticamente articoli, prezzi e totali — così puoi iniziare a dividere il conto più velocemente.",
-    },
-    {
-      title: "Controlla il conto scansionato",
-      desc: "Controlla il conto scansionato, gli articoli rilevati e i totali prima di condividerlo con il gruppo o iniziare a dividerlo.",
-    },
-    {
-      title: "Modifica gli articoli prima di condividere",
-      desc: "Aggiungi, rimuovi o modifica gli articoli prima di condividere il conto. Segna gli articoli condivisi, aggiungi ciò che manca e rimuovi ciò che non deve entrare nella divisione.",
-    },
-    {
-      title: "Invita gli amici con link o QR code",
-      desc: "Invita gli amici allo stesso conto con un QR code o un link. Tutti possono unirsi subito, controllare il conto e seguire la divisione.",
-    },
-    {
-      title: "Dividete gli articoli insieme in tempo reale",
-      desc: "Dividete gli articoli del conto insieme in tempo reale. Tutti vedono gli aggiornamenti all’istante, così scelte, quote e totali restano corretti per tutto il gruppo.",
-    },
-    {
-      title: "Dividi un articolo in percentuale",
-      desc: "Dividi qualsiasi articolo in percentuale — 20%, 50%, 33% o una quota personalizzata — così il conto resta equo anche quando le spese non si dividono in parti uguali.",
-    },
-    {
-      title: "Vedi subito chi deve pagare chi",
-      desc: "Vedi subito chi deve pagare chi, con totali chiari per ogni persona. CheqSplit calcola il risultato finale in tempo reale, così saldare le spese condivise richiede solo pochi secondi.",
-    },
+    { title: "Scansiona lo scontrino del ristorante", desc: "Fotografa lo scontrino e CheqSplit trasforma voci e importi in un conto che puoi controllare prima di dividerlo." },
+    { title: "Controlla il totale prima di iniziare", desc: "Confronta il totale in CheqSplit con quello stampato sullo scontrino e correggi eventuali errori prima che gli altri inizino a selezionare ciò che hanno ordinato." },
+    { title: "Controlla e modifica ogni voce", desc: "Correggi nome, quantità o prezzo se la scansione non ha riconosciuto perfettamente qualche dato." },
+    { title: "Invita gli amici tramite QR code o link", desc: "Condividi il QR code o il link del conto. Tutti possono aprirlo immediatamente." },
+    { title: "Continua dal browser senza installare l'app", desc: "I tuoi amici possono aprire il link direttamente nel browser. Non devono installare CheqSplit per partecipare alla divisione." },
+    { title: "Dividi il conto online", desc: "Tutti lavorano sullo stesso conto. Selezioni e modifiche restano in un unico posto, senza dover calcolare separatamente chi ha preso cosa." },
+    { title: "Ognuno seleziona ciò che ha ordinato", desc: "Ogni partecipante sceglie le proprie voci. Piatti e bevande condivisi possono essere suddivisi tra più persone." },
+    { title: "Scopri chi deve quanto e a chi", desc: "Una volta assegnate le voci, CheqSplit calcola gli importi e mostra chiaramente chi deve pagare chi." },
+    { title: "Registra i pagamenti effettuati", desc: "Segna i pagamenti già effettuati per mantenere aggiornati i saldi e vedere cosa resta ancora da pagare." },
+    { title: "Controlla come è stato diviso il conto", desc: "Puoi tornare al risultato finale in qualsiasi momento e verificare voci, importi e pagamenti di ogni persona." }
   ],
-  ctaTitle: "Pronto a dividere conti e spese condivise senza stress?",
-  ctaBody:
-    "Scarica gratis CheqSplit per scansionare scontrini, dividere conti e gestire più velocemente le spese condivise con amici, in viaggio e in gruppo.",
+  ctaTitle: "Dividi il conto anche se i tuoi amici non hanno l'app",
+  ctaBody: "Scansiona lo scontrino, condividi il link o il QR code e lascia che ognuno selezioni ciò che ha ordinato.",
+  groupBridgeBefore: "Devi tenere questo conto del ristorante insieme a hotel, taxi o attività dello stesso gruppo? Aggiungi il conto completato dalla scheda Conti del viaggio con Aggiungi conto, poi continua con ",
+  groupBridgeLabel: "il monitoraggio delle spese di gruppo",
+  groupBridgeAfter: ".",
+  guideBridgeBefore: "Preferisci prima il metodo passo dopo passo? Leggi ",
+  guideBridgeLabel: "come dividere il conto al ristorante in modo equo",
+  guideBridgeAfter: ".",
   faq: [
     {
-      q: "Che cos’è CheqSplit e come funziona?",
-      a: "CheqSplit è un’app gratuita per dividere conti e spese condivise. Ti aiuta a scansionare scontrini, invitare amici, dividere gli articoli e vedere chiaramente il risultato finale. È utile al ristorante, in viaggio, per la spesa e per le spese di gruppo.",
+      q: "CheqSplit può scansionare uno scontrino del ristorante con tutte le singole voci?",
+      a: "Sì. Fotografa lo scontrino, poi controlla il totale, le voci, le quantità e i prezzi rilevati prima di iniziare a dividere il conto.",
     },
     {
-      q: "Posso scansionare uno scontrino e dividerlo per articolo?",
-      a: "Sì. Puoi scansionare uno scontrino, controllare gli articoli rilevati e assegnare ogni articolo alle persone che lo hanno ordinato o condiviso.",
+      q: "Tutti i partecipanti devono avere l'app CheqSplit?",
+      a: "No. Chi crea il conto lo scansiona nell'app, mentre gli invitati possono aprire il link e scegliere Continua nel browser.",
     },
     {
-      q: "Posso invitare amici con un QR code o un link?",
-      a: "Sì. Puoi invitare amici con un QR code o un link condivisibile, così tutti entrano nello stesso conto e seguono la divisione in tempo reale.",
+      q: "Posso dividere un conto del ristorante dal browser?",
+      a: "Un invitato può aprire il conto condiviso nel browser, selezionare ciò che ha consumato, consultare Riepilogo e seguire il saldo risultante. Per creare e scansionare un nuovo conto serve l'app.",
     },
     {
-      q: "CheqSplit va bene per viaggi di gruppo e spese condivise?",
-      a: "Sì. CheqSplit è adatto a viaggi di gruppo, ristoranti, spesa, taxi, biglietti e altre spese condivise.",
+      q: "I partecipanti possono entrare tramite QR code o link?",
+      a: "Sì. Condividi il QR code o il link di invito in modo che tutti possano aprire lo stesso conto del ristorante nell'app o nel browser.",
     },
     {
-      q: "Posso usare CheqSplit per conti al ristorante e spesa?",
-      a: "Sì. CheqSplit ti aiuta a dividere in modo chiaro ed equo conti al ristorante, scontrini della spesa e acquisti di gruppo.",
+      q: "Come si divide una stessa voce tra più persone?",
+      a: "Ogni persona che ha condiviso quella voce la seleziona. CheqSplit divide automaticamente il prezzo in parti uguali tra tutti i partecipanti che l'hanno selezionata.",
     },
     {
-      q: "Come vedo chi deve pagare chi?",
-      a: "Dopo aver diviso articoli e spese, CheqSplit calcola i saldi finali e mostra chi deve pagare chi.",
+      q: "Cosa faccio se lo scontrino viene scansionato male?",
+      a: "Controlla il conto rilevato prima di condividerlo. Correggi una voce o un prezzo, aggiungi eventuali righe mancanti e inserisci imposte o mancia in Tasse e mancia quando necessario.",
+    },
+    {
+      q: "A cosa serve Registra pagamento?",
+      a: "Registra che un partecipante ne ha pagato un altro al di fuori di CheqSplit. Aggiorna lo storico del conto condiviso, ma non trasferisce né elabora denaro.",
+    },
+    {
+      q: "Come posso vedere cosa ha consumato ogni persona?",
+      a: "Apri la scheda Riepilogo e tocca la sezione di un partecipante nel grafico per vedere il suo totale e le voci incluse.",
+    },
+    {
+      q: "CheqSplit trasferisce denaro?",
+      a: "No. CheqSplit calcola i saldi e registra i pagamenti inseriti dai partecipanti. Non invia, riceve o elabora pagamenti.",
+    },
+    {
+      q: "Posso aggiungere questo conto del ristorante a un viaggio?",
+      a: "Sì. Completa prima la divisione del conto per voce, poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
     },
   ],
   a11y: {
-    hero: "Come funziona CheqSplit — hero",
-    nav: "Navigazione principale",
-    stepsRegion: "Passaggi semplici",
-    features: "Come funziona CheqSplit — funzioni",
+    hero: "Scansiona il conto e dividilo in base a ciò che ha ordinato ciascuno",
+    nav: splitBillEn.a11y.nav,
+    stepsRegion: "Come dividere il conto al ristorante con CheqSplit",
+    features: "Come dividere il conto al ristorante con CheqSplit",
     faq: "Domande frequenti",
   },
 };

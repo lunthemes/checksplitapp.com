@@ -1,11 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import StoreBadges from "../../components/StoreBadges.astro";
 import FAQ from "../../components/FAQ.astro";
 import CallToAction from "../../components/CallToAction.astro";
-import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
-import { site } from "../../data/landing";
+import ScreenshotFrame from "../../components/ScreenshotFrame.astro";
 import { getDictionary } from "../../i18n/dictionaries";
 import {
   getSplitBillCopy,
@@ -13,7 +13,9 @@ import {
   splitBillStepIcons,
   splitBillFeatureAssets,
 } from "../../i18n/split-bill";
-import { localePath, localeSplitBillPath } from "../../i18n/paths";
+import { localePath, localeSplitBillPath, localeGroupExpenseTrackerPath, localeRestaurantBillGuidePath } from "../../i18n/paths";
+import { groupExpenseTrackerLocales } from "../../i18n/group-expense-tracker";
+import { restaurantBillGuideLocales } from "../../i18n/guides/how-to-split-a-restaurant-bill";
 import {
   siteUrl,
   getFaqPageJsonLd,
@@ -37,6 +39,18 @@ const lang = normalized as SupportedLanguage;
 const t = getDictionary(lang);
 const copy = getSplitBillCopy(lang);
 const year = new Date().getFullYear();
+
+const groupBridgeLang = (
+  groupExpenseTrackerLocales as readonly string[]
+).includes(lang)
+  ? lang
+  : defaultLocale;
+
+const guideBridgeLang = (
+  restaurantBillGuideLocales as readonly string[]
+).includes(lang)
+  ? lang
+  : defaultLocale;
 
 const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
 const siteRoot = new URL("/", siteBase);
@@ -67,6 +81,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
   ...asset,
   title: copy.features[i]!.title,
   desc: copy.features[i]!.desc,
+  extra: copy.features[i]!.extra,
 }));
 ---
 
@@ -83,34 +98,8 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
   softwareJsonLd={softwareJsonLd}
   faqJsonLd={faqJsonLd}
 >
+  <Header lang={lang} t={t} hrefForLang={localeSplitBillPath} />
   <main class="split-bill">
-    <header class="split-bill__nav" aria-label={copy.a11y.nav}>
-      <div class="split-bill__nav-inner">
-        <a class="split-bill__brand" href={localePath(lang)}>
-          <img
-            src={site.logoIcon}
-            alt=""
-            width="40"
-            height="40"
-            loading="eager"
-            decoding="async"
-          />
-          <span>CheqSplit</span>
-        </a>
-        <nav class="split-bill__nav-links" aria-label={copy.a11y.nav}>
-          <a href="#features">{t.nav.features}</a>
-          <a href="#how">{t.nav.how}</a>
-          <a href="#faq">{t.nav.faq}</a>
-        </nav>
-        <div class="split-bill__nav-actions">
-          <LanguageSwitcher current={lang} hrefForLang={localeSplitBillPath} />
-          <a class="split-bill__nav-cta" href={localePath(lang) + "#download"}>
-            {t.header.download}
-          </a>
-        </div>
-      </div>
-    </header>
-
     <section class="split-bill__hero" aria-label={copy.a11y.hero}>
       <div class="split-bill__hero-bg" aria-hidden="true">
         <img
@@ -128,7 +117,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
       <div class="split-bill__hero-container">
         <div class="split-bill__hero-grid">
           <div class="split-bill__hero-copy typography">
-            <h1 class="split-bill__hero-title">
+            <h1 class="split-bill__hero-title typ-h1">
               {
                 h1HasAccent ? (
                   <>
@@ -149,9 +138,11 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
               </div>
             )}
 
-            <p class="split-bill__hero-desc">
-              {copy.heroParagraph}
-            </p>
+            {copy.heroParagraph && (
+              <p class="split-bill__hero-desc">
+                {copy.heroParagraph}
+              </p>
+            )}
 
             <div class="split-bill__hero-badges">
               <StoreBadges
@@ -166,19 +157,17 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
           <div class="split-bill__phones-visual" aria-hidden="true">
             <div class="split-bill__phones-wrap">
               <div class="split-bill__phones">
-                {splitBillHeroScreens.map((src, idx) => (
-                  <div class:list={["split-bill__hero-phone", `split-bill__hero-phone--${idx}`]}>
-                    <div class="split-bill__phone-shell">
-                      <div class="split-bill__phone-notch"></div>
-                      <img
-                        src={src}
-                        alt=""
-                        width="360"
-                        height="780"
-                        loading={idx === 0 ? "eager" : "lazy"}
-                        decoding="async"
-                      />
-                    </div>
+                {splitBillHeroScreens.map((screen, idx) => (
+                  <div class:list={["split-bill__hero-phone", `split-bill__hero-phone--${idx}`, screen.variant === "browser" && "split-bill__hero-phone--browser"]}>
+                    <ScreenshotFrame
+                      src={screen.src}
+                      alt=""
+                      width={screen.width}
+                      height={screen.height}
+                      variant={screen.variant}
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      sizes={idx === 0 ? "(max-width: 768px) 92vw, 640px" : idx === 1 ? "(max-width: 768px) 80vw, 520px" : "(max-width: 768px) 72vw, 500px"}
+                    />
                   </div>
                 ))}
               </div>
@@ -191,11 +180,14 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
     <section
       class="split-bill__light"
       id="how"
-      aria-label={`${copy.stepsSectionH2} — ${copy.howSectionH2}`}
+      aria-label={copy.howSectionH2}
     >
       <div class="split-bill__container">
         <div class="split-bill__section-heading typography">
-          <h2 class="typ-h2 typ-title-color">{copy.stepsSectionH2}</h2>
+          <h2 class="typ-h2 typ-title-color">{copy.howSectionH2}</h2>
+          {copy.howSectionSub && (
+            <p class="split-bill__section-sub">{copy.howSectionSub}</p>
+          )}
         </div>
 
         <div class="split-bill__steps" aria-label={copy.a11y.stepsRegion}>
@@ -220,8 +212,15 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
 
         <div class="mt-12 typography">
           <h2 class="typ-h2 typ-title-color">{copy.seoBlockH2}</h2>
-          <p class="split-bill__section-sub">{copy.seoBlockP1}</p>
-          <p class="split-bill__section-sub mt-4">{copy.seoBlockP2}</p>
+          {copy.seoBlockP1 && (
+            <p class="split-bill__section-sub">{copy.seoBlockP1}</p>
+          )}
+          {copy.seoBlockP2 && (
+            <p class="split-bill__section-sub mt-4">{copy.seoBlockP2}</p>
+          )}
+          {copy.seoBlockP3 && (
+            <p class="split-bill__section-sub mt-4">{copy.seoBlockP3}</p>
+          )}
         </div>
 
         <section class="mt-10" aria-label={copy.useCasesH2}>
@@ -240,10 +239,36 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
           </div>
         </section>
 
-        <div class="split-bill__how-follow typography">
-          <h2 class="typ-h2 typ-title-color">{copy.howSectionH2}</h2>
-          <p class="split-bill__section-sub">{copy.howSectionSub}</p>
-        </div>
+        {
+          copy.groupBridgeLabel ? (
+            <p class="mt-8 text-base leading-relaxed text-slate-600">
+              {copy.groupBridgeBefore}
+              <a
+                class="font-semibold text-brand-600 underline-offset-2 hover:underline"
+                href={localeGroupExpenseTrackerPath(groupBridgeLang)}
+              >
+                {copy.groupBridgeLabel}
+              </a>
+              {copy.groupBridgeAfter}
+            </p>
+          ) : null
+        }
+
+        {
+          copy.guideBridgeLabel ? (
+            <p class="mt-3 text-base leading-relaxed text-slate-600">
+              {copy.guideBridgeBefore}
+              <a
+                class="font-semibold text-brand-600 underline-offset-2 hover:underline"
+                href={localeRestaurantBillGuidePath(guideBridgeLang)}
+              >
+                {copy.guideBridgeLabel}
+              </a>
+              {copy.guideBridgeAfter}
+            </p>
+          ) : null
+        }
+
       </div>
     </section>
 
@@ -252,56 +277,44 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
       id="features"
       aria-label={copy.a11y.features}
     >
-      <div class="split-bill__container split-bill__container--narrow">
-        {featureRows.map((f, idx) => (
-          <div
-            class:list={[
-              "split-bill__feature",
-              idx % 2 === 0 && "split-bill__feature--reverse",
-            ]}
-          >
-            <div class="split-bill__feature-card">
-              <div class="split-bill__feature-icon" aria-hidden="true">
-                {f.icon ? (
-                  <img src={f.icon} alt="" width="56" height="56" loading="lazy" decoding="async" />
-                ) : (
-                  <span>✦</span>
-                )}
+      {featureRows.map((f, idx) => (
+        <div class:list={["get__band", idx % 2 === 0 && "get__band--muted"]}>
+          <div class="split-bill__container">
+            <div
+              class:list={[
+                "split-bill__feature",
+                idx % 2 === 0 && "split-bill__feature--reverse",
+              ]}
+            >
+              <div class="split-bill__feature-card">
+                <div class="split-bill__feature-icon" aria-hidden="true">
+                  {f.icon ? (
+                    <img src={f.icon} alt="" width="56" height="56" loading="lazy" decoding="async" />
+                  ) : (
+                    <span>✦</span>
+                  )}
+                </div>
+                <div class="typography">
+                  <h2 class="split-bill__feature-title">{f.title}</h2>
+                  <p class="split-bill__feature-desc">{f.desc}</p>
+                  {f.extra ? <p class="split-bill__feature-extra">{f.extra}</p> : null}
+                </div>
               </div>
-              <div class="typography">
-                <h2 class="split-bill__feature-title">{f.title}</h2>
-                <div class="split-bill__feature-desc">{f.desc}</div>
+              <div class:list={["split-bill__feature-media", f.variant === "browser" && "split-bill__feature-media--browser"]}>
+                <ScreenshotFrame
+                  src={f.img}
+                  alt={f.imageAlt}
+                  width={f.width}
+                  height={f.height}
+                  variant={f.variant}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 90vw, 520px"
+                />
               </div>
-            </div>
-            <div class="split-bill__feature-media" aria-hidden="true">
-              <img
-                src={f.img}
-                alt=""
-                width="1200"
-                height="900"
-                loading="lazy"
-                decoding="async"
-                style={
-                  [
-                    "mediaImgWidthPx" in f && f.mediaImgWidthPx != null
-                      ? `width: ${f.mediaImgWidthPx}px`
-                      : "",
-                    "mediaImgMaxHeightPx" in f && f.mediaImgMaxHeightPx != null
-                      ? `max-height: ${f.mediaImgMaxHeightPx}px`
-                      : "",
-                    ("mediaImgWidthPx" in f && f.mediaImgWidthPx != null) ||
-                    ("mediaImgMaxHeightPx" in f && f.mediaImgMaxHeightPx != null)
-                      ? "height: auto; object-fit: unset"
-                      : "",
-                  ]
-                    .filter(Boolean)
-                    .join("; ") || undefined
-                }
-              />
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
 
     <CallToAction
@@ -313,7 +326,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
     <section class="split-bill__light" aria-label={copy.a11y.faq}>
       <div class="split-bill__container">
         <FAQ
-          t={t}
+          t={{ ...t, faq: { ...t.faq, title: copy.a11y.faq } }}
           items={faqItems}
           sectionClass="pt-[10px] pb-[10px]"
         />
@@ -323,14 +336,3 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
 
   <Footer t={t} year={year} lang={lang} sectionBase={localePath(lang)} />
 </Layout>
-
-<script is:inline>
-  const nav = document.querySelector(".split-bill__nav");
-  if (nav) {
-    const onScroll = () => {
-      nav.classList.toggle("split-bill__nav--scrolled", window.scrollY > 8);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-</script>

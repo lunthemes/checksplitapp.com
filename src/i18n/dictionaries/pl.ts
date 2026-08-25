@@ -12,8 +12,16 @@ export const pl: Dictionary = {
     softwareDescription:
       "CheqSplit pomaga dzielić wydatki, skanować paragony, śledzić wspólne koszty i sprawdzać, kto komu ile jest winien, po spotkaniach, w podróży i w grupie.",
   },
-  nav: { features: "Funkcje", how: "Jak to działa", useCases: "Zastosowania", faq: "FAQ" },
-  header: { download: "Pobierz aplikację za darmo" },
+  nav: {
+    features: "Funkcje",
+    how: "Jak to działa",
+    useCases: "Zastosowania",
+    faq: "FAQ",
+    restaurant: "Rachunek w restauracji",
+    groupExpenses: "Wydatki grupowe",
+    guides: "Poradniki",
+  },
+  header: { download: "Pobierz za darmo" },
   hero: {
     title: "Dzielcie wydatki, skanujcie paragony i pozwólcie aplikacji zająć się resztą",
     body: "CheqSplit ułatwia dzielenie wydatków, skanowanie paragonów, śledzenie wspólnych kosztów i rozliczanie, kto komu ile jest winien – w restauracji, na wyjeździe, na zakupach, w grupie. Aplikację pobierzesz bezpłatnie.",
@@ -28,11 +36,22 @@ export const pl: Dictionary = {
     description: "Zeskanuj paragon, przypisz pozycje i zobacz jasno udział każdej osoby — idealne na kolacje ze znajomymi, randki i spotkania w grupie.",
     button: "Zobacz, jak dzielić rachunki i skanować paragony",
   },
+  workflows: {
+    title: "Wybierz, co chcesz podzielić",
+    restaurantTitle: "Rachunek z restauracji",
+    restaurantText:
+      "Zeskanuj paragon, sprawdź pozycje, zaproś stolik i przypisz każdą pozycję osobom, które ją zamówiły lub dzieliły.",
+    restaurantCta: "Podziel rachunek z restauracji",
+    groupTitle: "Wydatki grupowe lub wyjazdowe",
+    groupText:
+      "Utwórz wyjazd dla grupy, zaproś uczestników i dodawaj wydatki na bieżąco. Użyj Dodaj Wydatek na taksówkę, hotel lub bilety. Użyj Add Bill w karcie Rachunki dla szczegółowego paragonu z restauracji. Zachowaj wspólną historię i sprawdzaj, kto komu ile jest winien.",
+    groupCta: "Śledź wydatki grupy",
+  },
   features: {
     title: "Dlaczego CheqSplit?",
     items: [
       {
-        title: "Skan paragonu w chwilę",
+        title: "Zeskanuj paragon w kilka sekund",
         desc: "Wczytaj pozycje, podatki i sumę – zamiast przepisywać wszystko ręcznie.",
       },
       {
@@ -52,13 +71,13 @@ export const pl: Dictionary = {
   how: {
     title: "Jak działa CheqSplit",
     subtitle:
-      "Pięć kroków: dzielić wydatki, skanować paragony, śledzić wspólne rachunki i szybko wiedzieć, kto komu ile – od startu wycieczki po czytelny raport zatwierdzalny w grupie.",
+      "Pięć kroków: dzielić wydatki, skanować paragony, śledzić wspólne rachunki i szybko wiedzieć, kto komu ile – od startu wyjazdu po czytelny raport zatwierdzalny w grupie.",
     stepPill: (n) => `KROK ${n}`,
     steps: [
       {
-        label: "Utwórz wycieczkę w kilka sekund",
+        label: "Utwórz wyjazd w kilka sekund",
         body: "Daj nazwę, zaproś znajomych linkiem lub kodem QR i od razu dziel wspólne koszty.",
-        imageAlt: "CheqSplit: wycieczka grupowa",
+        imageAlt: "CheqSplit: wyjazd grupowy",
         bullets: [
           "Błyskawiczny start",
           "Zaproszenie linkiem albo QR",
@@ -86,7 +105,7 @@ export const pl: Dictionary = {
         ],
       },
       {
-        label: "Sprawdź, kto, komu, ile winien",
+        label: "Sprawdź, kto komu i ile jest winien",
         body: "CheqSplit sumuje wydatki, pokazuje udział każdej osoby i kto, komu, ile powinien przelać.",
         imageAlt: "CheqSplit: podsumowanie sald",
         bullets: [
@@ -96,9 +115,9 @@ export const pl: Dictionary = {
         ],
       },
       {
-        label: "Zachowaj wycieczkę i raport",
+        label: "Zachowaj wyjazd i raport",
         body: "Archiwizuj zakończone wyjazdy albo eksportuj do PDF, z kosztami, streszczeniem i czytelnym wykresem.",
-        imageAlt: "CheqSplit: raport wycieczki",
+        imageAlt: "CheqSplit: raport wyjazdu",
         bullets: [
           "Archiwum dawnych wycieczek",
           "Pełen PDF, szczegółowo",
@@ -132,22 +151,22 @@ export const pl: Dictionary = {
     title: "Najczęściej zadawane pytania",
     items: [
       { q: "Co to CheqSplit?", a: "Bezpłatna aplikacja do dzielenia rachunków i wspólnych wydatków. Skanujesz, przypisujesz linie, widzisz, kto komu ile jest winien, w jednym miejscu." },
-      { q: "Czy da się dzielić rachunek do pozycji z paragonu?", a: "Tak. Każdą linię możesz dodać do właściwej osoby – płacisz tylko za to, z czego skorzystałeś." },
-      { q: "Czy to się sprawdza na wycieczkach w kilka osób?", a: "Tak. Utwórz wycieczkę, dodawaj wydatki, wrzucaj zdjęcia paragonów, a na końcu wyciągnij z tego czytelną listę, kto komu ile jest winien." },
+      { q: "Czy można podzielić rachunek według pozycji z paragonu?", a: "Tak. Każdą linię możesz dodać do właściwej osoby – płacisz tylko za to, z czego skorzystałeś." },
+      { q: "Czy aplikacja sprawdza się podczas wyjazdów grupowych?", a: "Tak. Utwórz wyjazd, dodawaj wydatki, wrzucaj zdjęcia paragonów, a na końcu wyciągnij z tego czytelną listę, kto komu ile jest winien." },
       { q: "Czy działa tylko w restauracji?", a: "Nie, zawsze wtedy, gdy kilka osób łączy w jednym koszty – w barze, sklepie, w podróży, na wspólnym zamówieniu." },
-      { q: "A bez internetu?", a: "Część danych możesz mieć lokalnie, ale wspólna wycieczka i sync z ekipą wymaga połączenia z siecią." },
-      { q: "Jak zaprosić kogoś do wycieczki?", a: "W CheqSplit utwórz wycieczkę, wprowadź wydatki, wyślij link do wycieczki – osoba, która dołącza, też zobaczy, jak wyglądają wspólne sumy i jej udział." },
+      { q: "A bez internetu?", a: "Część danych możesz mieć lokalnie, ale wspólny wyjazd i sync z ekipą wymaga połączenia z siecią." },
+      { q: "Jak zaprosić kogoś do wyjazdu?", a: "W CheqSplit utwórz wycieczkę, wprowadź wydatki, wyślij link do wyjazdu – osoba, która dołącza, też zobaczy, jak wyglądają wspólne sumy i jej udział." },
     ],
   },
   footer: {
-    tagline: "Dziel wspólne koszty w prosty, otwarty sposób – szybko, jasno, bez domysłów.",
+    tagline: "Dziel wspólne wydatki sprawiedliwie, bez zgadywania i żmudnych obliczeń.",
     product: "Produkt",
     company: "Firma",
     legal: "Informacje prawne",
-    about: "O nas",
+    about: "Pomoc",
     contact: "Kontakt",
     privacy: "Polityka prywatności",
-    terms: "Regulamin",
+    terms: "Warunki korzystania",
     deleteAccount: "Usuń konto",
     deleteData: "Usuń swoje dane",
     rights: "Wszelkie prawa zastrzeżone.",

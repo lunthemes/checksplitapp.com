@@ -22,15 +22,15 @@ interface Props {
   /** Main locale URL for hreflang="x-default" (e.g. English homepage) */
   xDefaultUrl?: string;
   /** JSON-LD string for SoftwareApplication (locale-specific description) */
-  softwareJsonLd: string;
+  softwareJsonLd?: string;
   /** JSON-LD string for FAQPage (locale-matched) */
-  faqJsonLd: string;
+  faqJsonLd?: string;
 }
 
 const {
   title,
-  description = "CheqSplit helps you scan receipts, split bills by item, track group expenses, and see who owes whom. Perfect for trips, restaurants, roommates, families, and shared shopping.",
-  ogDescription = "Scan receipts, split bills by item, track group expenses, and instantly see who owes whom. Perfect for trips, restaurants, roommates, and families.",
+  description = "CheqSplit helps you scan restaurant receipts, split bills by item, track group expenses in a trip, and see who owes whom.",
+  ogDescription = "Scan restaurant receipts, split bills by item, track group expenses, and see who owes whom.",
   twitterDescription = "The easy way to split receipts and shared expenses without awkward math.",
   canonicalUrl = siteUrl,
   ogImageUrl = "https://cheqsplitapp.com/og-image.png",
@@ -43,6 +43,11 @@ const {
 } = Astro.props;
 
 const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImageUrl, siteUrl).href;
+
+const usableJsonLd = (raw?: string) => {
+  const t = raw?.trim() ?? "";
+  return t.length > 0 && t !== "{}";
+};
 ---
 
 <!doctype html>
@@ -102,11 +107,28 @@ const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImage
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script is:inline type="application/ld+json" set:html={softwareJsonLd} />
-    <script is:inline type="application/ld+json" set:html={faqJsonLd} />
+    {usableJsonLd(softwareJsonLd) && (
+      <script is:inline type="application/ld+json" set:html={softwareJsonLd ?? ""} />
+    )}
+    {usableJsonLd(faqJsonLd) && (
+      <script is:inline type="application/ld+json" set:html={faqJsonLd ?? ""} />
+    )}
   </head>
   <body class="min-h-dvh font-sans antialiased text-slate-900 bg-white">
     <slot />
+    <dialog class="lightbox" id="screenshot-lightbox" aria-label="Screenshot">
+      <div class="lightbox__frame">
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <img class="lightbox__img" alt="" />
+      </div>
+    </dialog>
     <script is:inline>
       (function () {
         document.addEventListener("click", function (e) {
@@ -116,6 +138,57 @@ const fullOgImage = ogImageUrl.startsWith("http") ? ogImageUrl : new URL(ogImage
           if (!link || !window.gtag) return;
           const name = link.getAttribute("data-ga-event");
           if (name) window.gtag("event", name);
+        });
+      })();
+    </script>
+    <script is:inline>
+      (function () {
+        const dialog = document.getElementById("screenshot-lightbox");
+        if (!dialog || typeof dialog.showModal !== "function") return;
+        const img = dialog.querySelector(".lightbox__img");
+        if (!img) return;
+
+        const close = function () {
+          if (dialog.open) dialog.close();
+        };
+
+        const openFrom = function (thumb) {
+          img.src = thumb.currentSrc || thumb.src;
+          img.alt = thumb.getAttribute("alt") || "";
+          dialog.showModal();
+        };
+
+        document.addEventListener("click", function (e) {
+          const el = e.target;
+          if (!el || !("closest" in el)) return;
+          if (el.closest("[data-lightbox-close]")) {
+            close();
+            return;
+          }
+          const thumb = el.closest("img[data-lightbox]");
+          if (thumb) {
+            e.preventDefault();
+            openFrom(thumb);
+          }
+        });
+
+        dialog.addEventListener("click", function (e) {
+          if (e.target === dialog) close();
+        });
+
+        dialog.addEventListener("close", function () {
+          img.removeAttribute("src");
+          img.alt = "";
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key !== "Enter" && e.key !== " ") return;
+          const el = e.target;
+          if (!(el instanceof HTMLImageElement) || !el.hasAttribute("data-lightbox")) {
+            return;
+          }
+          e.preventDefault();
+          openFrom(el);
         });
       })();
     </script>

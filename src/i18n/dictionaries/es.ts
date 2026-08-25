@@ -17,8 +17,11 @@ export const es: Dictionary = {
     how: "Cómo funciona",
     useCases: "Casos de uso",
     faq: "Preguntas frecuentes",
+    restaurant: "Cuenta del restaurante",
+    groupExpenses: "Gastos de grupo",
+    guides: "Guías",
   },
-  header: { download: "Descargar la app gratis" },
+  header: { download: "Descarga gratis" },
   hero: {
     title: "Divide los gastos, escanea los recibos y deja que la app se encargue del resto",
     body: "Con CheqSplit escaneas recibos, sigues los gastos compartidos y ves al instante quién debe cuánto a quién, tras una cena, un viaje, la compra o cualquier plan en grupo. La app es gratis para descargar.",
@@ -33,6 +36,17 @@ export const es: Dictionary = {
     description: "Escanea el recibo, asigna los artículos y ve claramente la parte de cada persona — perfecto para cenas con amigos, citas y comidas en grupo.",
     button: "Aprende a dividir cuentas y escanear recibos",
   },
+  workflows: {
+    title: "Elige qué quieres dividir",
+    restaurantTitle: "Una cuenta de restaurante",
+    restaurantText:
+      "Escanea el ticket, revisa los conceptos, invita a la mesa y asigna cada concepto a quienes lo pidieron o lo compartieron.",
+    restaurantCta: "Dividir una cuenta de restaurante",
+    groupTitle: "Gastos de grupo o de viaje",
+    groupText:
+      "Crea un viaje para el grupo, invita a los participantes y añade los gastos a medida que surjan. Usa Agregar Gasto para un taxi, hotel o entradas. Usa Agregar Factura en la pestaña Cuentas para un ticket de restaurante detallado. Mantén un historial compartido y ve quién debe a quién.",
+    groupCta: "Seguir los gastos de grupo",
+  },
   features: {
     title: "Por qué CheqSplit",
     items: [
@@ -41,11 +55,11 @@ export const es: Dictionary = {
         desc: "Carga en segundos los ítems, el IVA y el total del ticket, sin teclear todo a mano.",
       },
       {
-        title: "Dividir línea a línea",
+        title: "Reparte la cuenta por conceptos",
         desc: "Cada apunte del recibo va a quien corresponde, en vez de repartir todo a ciegas por mitades.",
       },
       {
-        title: "Tus gastos, un solo hilo",
+        title: "Todos los gastos en un solo lugar",
         desc: "Restaurante, viaje, compra: lo que aporta el grupo, con orden, en un solo lugar.",
       },
       {
@@ -91,7 +105,7 @@ export const es: Dictionary = {
         ],
       },
       {
-        label: "Mira, quién debe a quién",
+        label: "Mira quién debe a quién",
         body: "CheqSplit suma el total, lo que corresponde a cada uno y quién debería transferir dinero a quién.",
         imageAlt: "CheqSplit: resumen de saldos, quién debe a quién",
         bullets: [
@@ -163,14 +177,14 @@ export const es: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Dividir gastos en grupo, con claridad y sin sorpresas: justo, sencillo, al instante.",
+    tagline: "Reparte los gastos de grupo de forma justa y sin complicaciones.",
     product: "Producto",
     company: "Empresa",
-    legal: "Aviso legal",
-    about: "Acerca de",
+    legal: "Legal",
+    about: "Ayuda",
     contact: "Contacto",
     privacy: "Política de privacidad",
-    terms: "Términos del servicio",
+    terms: "Términos de servicio",
     deleteAccount: "Eliminar cuenta",
     deleteData: "Eliminar tus datos",
     rights: "Todos los derechos reservados.",

@@ -1,6 +1,3 @@
 ---
-import { defaultLocale } from "../i18n/config";
-import { localeLegalPath } from "../i18n/paths";
-
-return Astro.redirect(localeLegalPath(defaultLocale, "privacy-policy"), 301);
+return Astro.redirect("/en/privacy-policy/", 301);
 ---

@@ -17,8 +17,11 @@ export const cs: Dictionary = {
     how: "Jak to funguje",
     useCases: "Použití",
     faq: "FAQ",
+    restaurant: "Účet v restauraci",
+    groupExpenses: "Skupinové výdaje",
+    guides: "Návody",
   },
-  header: { download: "Stáhnout aplikaci zdarma" },
+  header: { download: "Stáhnout zdarma" },
   hero: {
     title: "Rozdělte výdaje, skenujte účtenky a zbytek nechte na aplikaci",
     body: "Rozdělte výdaje, skenujte účtenky a sledujte, co skupina utratila - a vždy budete vědět, kdo komu dluží po večeři, výletu, nákupu nebo společném večeru. Aplikaci si stáhnete zdarma.",
@@ -32,6 +35,17 @@ export const cs: Dictionary = {
     title: "Rozdělte účet v restauraci rychleji",
     description: "Naskenujte účtenku, přiřaďte položky a jasně uvidíte podíl každého — ideální pro večeře s přáteli, rande i skupinová posezení.",
     button: "Zjistěte, jak rozdělit účet a naskenovat účtenku",
+  },
+  workflows: {
+    title: "Vyberte, co chcete rozdělit",
+    restaurantTitle: "Účet z restaurace",
+    restaurantText:
+      "Naskenujte účtenku, zkontrolujte položky, pozvěte stůl a přiřaďte každou položku lidem, kteří ji objednali nebo sdíleli.",
+    restaurantCta: "Rozdělit účet z restaurace",
+    groupTitle: "Skupinové nebo cestovní výdaje",
+    groupText:
+      "Vytvořte cestu pro skupinu, pozvěte účastníky a přidávejte výdaje průběžně. Použijte Add Expense na taxi, hotel nebo vstupenky. Použijte Add Bill na kartě Bills pro podrobnou restauranční účtenku. Mějte jednu společnou historii a sledujte, kdo komu dluží.",
+    groupCta: "Sledovat skupinové výdaje",
   },
   features: {
     title: "Proč CheqSplit?",
@@ -71,7 +85,7 @@ export const cs: Dictionary = {
         ],
       },
       {
-        label: "Rozdělte účet po řádcích",
+        label: "Rozdělte účet podle položek",
         body: "Každý vidí stejný účet na svém telefonu a v reálném čase označí své položky.",
         imageAlt: "CheqSplit: sken účtenky a rozdělení účtu po položkách",
         bullets: [
@@ -101,19 +115,19 @@ export const cs: Dictionary = {
         ],
       },
       {
-        label: "Uložte cestu i report",
+        label: "Uložte cestu i přehled",
         body: "Dokončené cesty archivujte nebo exportujte detailní PDF se souhrny, tabulkami a grafy.",
-        imageAlt: "CheqSplit: report cesty se souhrnem výdajů",
+        imageAlt: "CheqSplit: přehled cesty se souhrnem výdajů",
         bullets: [
           "Archiv dokončených cest",
-          "Kompletní PDF report",
+          "Kompletní PDF přehled",
           "Částky, tabulky a grafy",
         ],
       },
     ],
   },
   useCases: {
-    title: "Vytvořeno pro reálné sdílené výdaje",
+    title: "Pro skutečné společné výdaje",
     intro:
       "Kdykoli dělíte výdaje s ostatními, CheqSplit se hodí: účty v restauraci, skupinové cesty, nákupy se spolubydlícími, rodinné výdaje i společné nákupy s přáteli. Naskenujte účtenku, přiřaďte položky, přidejte poplatky nebo slevy a získejte jasné vyrovnání, se kterým všichni souhlasí - bez počítání na ubrousek.",
     items: [
@@ -170,14 +184,14 @@ export const cs: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Dělte skupinové výdaje férově, rychle a bez dohadů.",
+    tagline: "Rozdělte společné výdaje spravedlivě a bez zbytečného počítání.",
     product: "Produkt",
     company: "Společnost",
-    legal: "Právní",
-    about: "O nás",
+    legal: "Právní informace",
+    about: "Podpora",
     contact: "Kontakt",
     privacy: "Zásady ochrany osobních údajů",
-    terms: "Podmínky služby",
+    terms: "Podmínky používání",
     deleteAccount: "Smazat účet",
     deleteData: "Smazat vaše data",
     rights: "Všechna práva vyhrazena.",

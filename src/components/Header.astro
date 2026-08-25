@@ -2,13 +2,21 @@
 import Logo from "./Logo.astro";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 import type { Dictionary } from "../i18n/types";
-import { localePath } from "../i18n/paths";
+import {
+  localePath,
+  localeSplitBillPath,
+  localeGroupExpenseTrackerPath,
+  localeGuidesHubPath,
+  normalizePagePath,
+} from "../i18n/paths";
+import { groupExpenseTrackerLocales } from "../i18n/group-expense-tracker";
+import { defaultLocale } from "../i18n/config";
 import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
   lang: SupportedLanguage;
   t: Dictionary;
-  /** When set (e.g. `/en/`), nav targets homepage anchors as `${sectionBase}#features`. */
+  /** When set (e.g. `/en/`), download CTA targets `${sectionBase}#download`. */
   sectionBase?: string;
   /** Override language-switch targets (e.g. stay on same legal page per locale). */
   hrefForLang?: (lang: SupportedLanguage) => string;
@@ -16,6 +24,28 @@ export interface Props {
 
 const { lang, t, sectionBase = "", hrefForLang } = Astro.props;
 const hb = sectionBase;
+const groupHref = (groupExpenseTrackerLocales as readonly string[]).includes(
+  lang,
+)
+  ? localeGroupExpenseTrackerPath(lang)
+  : localeGroupExpenseTrackerPath(defaultLocale);
+const guidesHref = localeGuidesHubPath(lang);
+const restaurantHref = localeSplitBillPath(lang);
+const currentPath = normalizePagePath(Astro.url.pathname);
+
+const navItems = [
+  { href: restaurantHref, label: t.nav.restaurant, match: "exact" as const },
+  { href: groupHref, label: t.nav.groupExpenses, match: "exact" as const },
+  { href: guidesHref, label: t.nav.guides, match: "prefix" as const },
+];
+
+const isNavActive = (href: string, match: "exact" | "prefix") => {
+  const target = normalizePagePath(href);
+  if (match === "prefix") {
+    return currentPath === target || currentPath.startsWith(target);
+  }
+  return currentPath === target;
+};
 ---
 
 <header
@@ -33,10 +63,20 @@ const hb = sectionBase;
       class="site-header__nav"
       aria-label={t.a11y.primaryNav}
     >
-      <a href={`${hb}#features`} class="hover:text-brand-600">{t.nav.features}</a>
-      <a href={`${hb}#how`} class="hover:text-brand-600">{t.nav.how}</a>
-      <a href={`${hb}#use-cases`} class="hover:text-brand-600">{t.nav.useCases}</a>
-      <a href={`${hb}#faq`} class="hover:text-brand-600">{t.nav.faq}</a>
+      {
+        navItems.map((item) => {
+          const active = isNavActive(item.href, item.match);
+          return (
+            <a
+              href={item.href}
+              class="site-header__link"
+              aria-current={active ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
     </nav>
     <div class="site-header__actions">
       <LanguageSwitcher current={lang} hrefForLang={hrefForLang} />
@@ -68,26 +108,20 @@ const hb = sectionBase;
             class="site-header__menu-links"
             aria-label={t.a11y.primaryNav}
           >
-            <a
-              href={`${hb}#features`}
-              class=""
-              >{t.nav.features}</a
-            >
-            <a
-              href={`${hb}#how`}
-              class=""
-              >{t.nav.how}</a
-            >
-            <a
-              href={`${hb}#use-cases`}
-              class=""
-              >{t.nav.useCases}</a
-            >
-            <a
-              href={`${hb}#faq`}
-              class=""
-              >{t.nav.faq}</a
-            >
+            {
+              navItems.map((item) => {
+                const active = isNavActive(item.href, item.match);
+                return (
+                  <a
+                    href={item.href}
+                    class="site-header__link"
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })
+            }
           </nav>
           <div class="site-header__menu-footer">
             <a

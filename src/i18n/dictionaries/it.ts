@@ -17,8 +17,11 @@ export const it: Dictionary = {
     how: "Come funziona",
     useCases: "Casi d'uso",
     faq: "Domande frequenti",
+    restaurant: "Conto al ristorante",
+    groupExpenses: "Spese di gruppo",
+    guides: "Guide",
   },
-  header: { download: "Scarica gratis l’app" },
+  header: { download: "Scarica gratis" },
   hero: {
     title: "Dividete le spese, scansionate gli scontrini e lasciate che l’app faccia il resto",
     body: "Con CheqSplit puoi scansionare gli scontrini, tenere sotto controllo le spese condivise e vedere in un attimo cosa resta da saldare, dopo cena, in gita, a casa o in viaggio con amici e famiglia. L’app si scarica gratuitamente.",
@@ -33,11 +36,22 @@ export const it: Dictionary = {
     description: "Scansiona lo scontrino, assegna gli articoli e vedi chiaramente la quota di ciascuno — perfetto per cene con amici, appuntamenti e pasti di gruppo.",
     button: "Scopri come dividere il conto e scansionare gli scontrini",
   },
+  workflows: {
+    title: "Scegli cosa stai dividendo",
+    restaurantTitle: "Un conto del ristorante",
+    restaurantText:
+      "Scansiona lo scontrino, controlla le voci, invita il tavolo e assegna ogni voce a chi l'ha ordinata o condivisa.",
+    restaurantCta: "Dividi un conto del ristorante",
+    groupTitle: "Spese di gruppo o di viaggio",
+    groupText:
+      "Crea un viaggio per il gruppo, invita i partecipanti e aggiungi le spese man mano. Usa Aggiungi spesa per taxi, hotel o biglietti. Usa Aggiungi conto nella scheda Conti per uno scontrino dettagliato del ristorante. Tieni uno storico condiviso e vedi chi deve quanto e a chi.",
+    groupCta: "Segui le spese di gruppo",
+  },
   features: {
     title: "Perché usare CheqSplit",
     items: [
       {
-        title: "Scontrino in pochi secondi",
+        title: "Scansiona lo scontrino in pochi secondi",
         desc: "Scansiona e recupera voci, IVA e totale senza riscrivere tutto a mano.",
       },
       {
@@ -45,7 +59,7 @@ export const it: Dictionary = {
         desc: "Assegna ogni voce a chi l'ha ordinata, invece di spaccare il conto a metà a occhio.",
       },
       {
-        title: "Tutte le uscite, un solo filo",
+        title: "Tutte le spese in un unico posto",
         desc: "Ristorante, spesa, viaggi: tutto ciò che il gruppo paga insieme, in un'unica linea del tempo.",
       },
       {
@@ -91,7 +105,7 @@ export const it: Dictionary = {
         ],
       },
       {
-        label: "Trova, chi, quanto, a chi",
+        label: "Scopri chi deve quanto e a chi",
         body: "CheqSplit calcola totali, quota per persona e a chi, in concreto, inviare i soldi.",
         imageAlt: "CheqSplit: riepilogo saldi, chi deve a chi",
         bullets: [
@@ -101,9 +115,9 @@ export const it: Dictionary = {
         ],
       },
       {
-        label: "Tieni viaggio e report a portata",
+        label: "Conserva il viaggio e il riepilogo",
         body: "Archivia i viaggi conclusi o esporta un PDF dettagliato con uscite, totali e un grafico chiaro.",
-        imageAlt: "CheqSplit: report uscita o viaggio",
+        imageAlt: "CheqSplit: riepilogo uscita o viaggio",
         bullets: [
           "Archivio di viaggi conclusi",
           "Report PDF con tutto il dettaglio",
@@ -120,7 +134,7 @@ export const it: Dictionary = {
       { title: "Ristorante e locali", desc: "Scomponi il conto, dividi per piatto, chiudi l'uscita in modo equo." },
       { title: "Viaggi in gruppo", desc: "Voli, soggiorno, pasti: un unico registro per chi ha messo i soldi e per chi deve ancora restituire." },
       { title: "Casa e famiglia", desc: "Spesa, regali, piccoli acconti in comune, senza dimenticare nessuno." },
-      { title: "Acquisti insieme", desc: "Regali, scorte, progetti divisi, con cifre e quote sempre visibili." },
+      { title: "Acquisti di gruppo", desc: "Regali, scorte, progetti divisi, con cifre e quote sempre visibili." },
     ],
   },
   cta: {
@@ -150,7 +164,7 @@ export const it: Dictionary = {
         a: "Sì. Crei un viaggio, aggiungi le spese, inviti le persone, carichi scontrini e, al termine, ottieni un resoconto con i saldi tra le persone.",
       },
       {
-        q: "È adatto al solo ristorante?",
+        q: "Serve solo al ristorante?",
         a: "Anche supermercato, bar, gite, ovunque mettiate soldi in comune, non serve solo il ristorante.",
       },
       {
@@ -164,11 +178,11 @@ export const it: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Dividi le spese in modo chiaro, senza tabelle improvvisate e senza fraintendimenti a fine serata.",
+    tagline: "Dividi le spese di gruppo in modo equo, senza calcoli complicati.",
     product: "Prodotto",
     company: "Azienda",
     legal: "Note legali",
-    about: "Informazioni",
+    about: "Assistenza",
     contact: "Contatti",
     privacy: "Informativa sulla privacy",
     terms: "Termini di servizio",

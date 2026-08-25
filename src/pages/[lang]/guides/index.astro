@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import GuideHero from "../../../components/GuideHero.astro";
+import { getDictionary } from "../../../i18n/dictionaries";
+import { getGuidesHubCopy, guidesHubLocales } from "../../../i18n/guides";
+import {
+  localePath,
+  localeGuidesHubPath,
+  localeRestaurantBillGuidePath,
+  localeTripExpensesGuidePath,
+} from "../../../i18n/paths";
+import { siteUrl } from "../../../data/structured-data";
+import { isLocale } from "../../../i18n/config";
+import type { SupportedLanguage } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return guidesHubLocales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang: langParam } = Astro.params;
+const normalized =
+  typeof langParam === "string" ? langParam.toLowerCase() : "";
+if (
+  !isLocale(normalized) ||
+  !(guidesHubLocales as readonly string[]).includes(normalized)
+) {
+  return Astro.redirect(localeGuidesHubPath("en"));
+}
+const lang = normalized as SupportedLanguage;
+
+const t = getDictionary(lang);
+const copy = getGuidesHubCopy(lang);
+const year = new Date().getFullYear();
+const sectionBase = localePath(lang);
+
+const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
+const siteRoot = new URL("/", siteBase);
+const canonicalUrl = new URL(localeGuidesHubPath(lang), siteRoot).href;
+const xDefaultUrl = new URL(localeGuidesHubPath("en"), siteRoot).href;
+const alternatePages = guidesHubLocales.map((l) => ({
+  href: new URL(localeGuidesHubPath(l), siteRoot).href,
+  hreflang: l,
+}));
+const HERO_BG = "/backgrounds/split-bill-app.png";
+---
+
+<Layout
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  ogDescription={copy.metaDescription}
+  twitterDescription={copy.metaDescription}
+  canonicalUrl={canonicalUrl}
+  lang={lang}
+  alternatePages={alternatePages}
+  xDefaultUrl={xDefaultUrl}
+  preloadHeroImage={HERO_BG}
+>
+  <Header lang={lang} t={t} sectionBase={sectionBase} hrefForLang={localeGuidesHubPath} />
+
+  <main class="guide">
+    <GuideHero title={copy.h1} lead={copy.intro} backgroundSrc={HERO_BG} />
+
+    <div class="typography guide__body mx-auto max-w-3xl">
+      <ul class="grid gap-4">
+        <li>
+          <a
+            class="guide__card block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-brand-200 hover:shadow-md"
+            href={localeRestaurantBillGuidePath(lang)}
+          >
+            <div class="guide__card-title">
+              <img
+                class="guide__card-icon"
+                src="/app-icons/split-bill-app/scan-bill.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
+              />
+              <h2 class="typ-h3 typ-title-color">{copy.restaurantTitle}</h2>
+            </div>
+            <p class="mt-2 text-slate-600 leading-relaxed">{copy.restaurantText}</p>
+            <span class="mt-4 inline-block font-semibold text-brand-600">{copy.restaurantCta}</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="guide__card block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-brand-200 hover:shadow-md"
+            href={localeTripExpensesGuidePath(lang)}
+          >
+            <div class="guide__card-title">
+              <img
+                class="guide__card-icon"
+                src="/app-icons/trip.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
+              />
+              <h2 class="typ-h3 typ-title-color">{copy.tripTitle}</h2>
+            </div>
+            <p class="mt-2 text-slate-600 leading-relaxed">{copy.tripText}</p>
+            <span class="mt-4 inline-block font-semibold text-brand-600">{copy.tripCta}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <Footer t={t} year={year} lang={lang} sectionBase={sectionBase} />
+</Layout>

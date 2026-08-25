@@ -1,106 +1,99 @@
 import type { SplitBillLocaleCopy } from "./types";
+import { splitBillEn } from "./en";
 
 export const splitBillTr: SplitBillLocaleCopy = {
-  metaTitle: "Arkadaşlarla hesap böl ve fişleri tara | CheqSplit",
-  metaDescription: "CheqSplit, restoran fişlerini taramana, hesabı arkadaşlarınla bölmene, ürünleri kişilere atamana ve kimin kime ne kadar borçlu olduğunu anında görmene yardımcı olur. Restoranlar, seyahatler ve ortak harcamalar için ideal.",
-  softwareDescription:
-    "CheqSplit fişleri taramayı, hesapları bölmeyi, ortak harcamaları takip etmeyi ve kimin kime ne ödeyeceğini görmeyi kolaylaştırır—restoranlar, seyahatler ve gruplar için idealdir.",
-  h1: "Hesabı böl, fişi tara ve kimin kime borçlu olduğunu gör",
-  heroSubLine1: "Fişleri tarayın. Hesabı paylaşın. Harcamaları canlı bölün.",
-  heroSubLine2: "Kimin kime ne ödeyeceğini görün.",
-  heroParagraph:
-    "Restoran fişlerini tara, hesabı arkadaşlarınla böl, her ürünü kimin paylaştığını seç ve kimin kime ne kadar borçlu olduğunu anında gör. CheqSplit, ortak harcamaları manuel hesaplama yapmadan yönetmene yardımcı olur.",
-  seoBlockH2: "CheqSplit ile hesap böl ve fişleri tara",
-  seoBlockP1: "CheqSplit; restoranlarda, seyahatlerde ve ortak harcamaların olduğu her durumda hesap bölmek için kullanılan bir uygulamadır. Her ürünü tek tek elle girmek veya kimin ne kadar ödemesi gerektiğini hesaplamak yerine fişi tarayabilir, algılanan ürünleri kontrol edebilir, arkadaşlarını davet edebilir ve hesabı birlikte gerçek zamanlı olarak bölebilirsin.",
-  seoBlockP2: "Tüm hesabı eşit olarak bölebilir, belirli ürünleri farklı kişilere atayabilir veya tek bir ürünü yüzdeye göre paylaştırabilirsin. CheqSplit sonucu otomatik hesaplar ve kimin kime ne kadar borçlu olduğunu gösterir, böylece grup daha hızlı ve karışıklık yaşamadan ödeşebilir.",
-  useCasesH2: "CheqSplit ne zaman kullanılır?",
+  metaTitle: "Restoran fişini tarayın ve kalemlere göre bölüşün | CheqSplit",
+  metaDescription: "Tüm hesap tek yerde kalır. Bir kişi fişi CheqSplit ile tarar; diğerleri bağlantı veya QR kod üzerinden katılıp kendi siparişlerini doğrudan tarayıcıdan seçer.",
+  softwareDescription: "Tüm hesap tek yerde kalır. Bir kişi fişi CheqSplit ile tarar; diğerleri bağlantı veya QR kod üzerinden katılıp kendi siparişlerini doğrudan tarayıcıdan seçer.",
+  h1: "Restoran fişini tarayın ve kalemlere göre bölüşün",
+  heroSubLine1: "",
+  heroSubLine2: "",
+  heroParagraph: "",
+  seoBlockH2: "Tek bir restoran hesabını uygulamada veya tarayıcıda birlikte paylaşın",
+  seoBlockP1: "Tüm hesap tek yerde kalır. Bir kişi fişi CheqSplit ile tarar; diğerleri bağlantı veya QR kod üzerinden katılıp kendi siparişlerini doğrudan tarayıcıdan seçer.",
+  seoBlockP2: "Masadaki herkesin uygulamayı yüklemesi gerekmez. CheqSplit kalemleri, katılımcıları, ödemeleri ve son hesabı tek yerde tutar.",
+  seoBlockP3: "",
+  useCasesH2: "Gerçekte kimin ne sipariş ettiğine göre hesap bölüşme",
   useCases: [
-    { title: "Restoran hesapları", text: "Fişi tara, yemekleri doğru kişilere ata, vergi ve bahşişi böl ve kimin kime borçlu olduğunu gör." },
-    { title: "Arkadaşlarla seyahatler", text: "Seyahat boyunca ortak harcamaları takip et ve her şeyi tek bir yerde düzenli tut." },
-    { title: "Grup harcamaları", text: "CheqSplit’i alışverişler, etkinlikler, ev arkadaşları veya birkaç kişinin maliyetleri paylaştığı her durum için kullan." },
+    { title: "Kişisel siparişler", text: "Her kişiye yalnızca kendi sipariş ettiği yemek ve içecekleri atayın." },
+    { title: "Paylaşılan kalemler", text: "Bir şişeyi, ortak tabağı veya tatlıyı yalnızca paylaşan kişiler arasında bölüştürün." },
+    { title: "Ücretler ve bahşiş", text: "Servis ücreti, vergi ve bahşişi ekleyerek payların toplamının fişteki tutarla eşleşmesini sağlayın." },
   ],
-  howSectionH2: "Fişleri nasıl tararsın ve hesabı nasıl bölersin",
-  howSectionSub:
-    "CheqSplit ile fişi tarayın, arkadaşlarınızı davet edin, kalemleri canlı paylaşın ve sonucu net görün.",
-  stepsSectionH2: "Basit adımlar",
+  howSectionH2: "CheqSplit ile restoran hesabı nasıl bölüşülür?",
+  howSectionSub: "",
+  stepsSectionH2: "CheqSplit ile restoran hesabı nasıl bölüşülür?",
   steps: [
-    {
-      title: "Fişleri tara",
-      desc: "Kameranı fişe tut, CheqSplit ürünleri, fiyatları ve toplamları hızlıca algılasın.",
-    },
-    {
-      title: "Davet et ve böl",
-      desc: "Arkadaşlarını aynı hesaba davet et ve ortak harcamaları birlikte gerçek zamanlı bölün.",
-    },
-    {
-      title: "Anında kapat",
-      desc: "Kimin kime ne ödeyeceğini gör ve ortak harcamaları saniyeler içinde kapat.",
-    },
+    { title: "Fişi tara", desc: "Fişin fotoğrafını çekin. CheqSplit kalemleri ve tutarları, bölüşmeden önce kontrol edebileceğiniz bir hesaba dönüştürür." },
+    { title: "Hesabı kontrol et", desc: "CheqSplit'teki toplamı fişteki toplamla karşılaştırın ve herkes siparişini seçmeye başlamadan önce olası hataları düzeltin." },
+    { title: "Hesabı bölüş", desc: "Tarama bir adı, miktarı veya fiyatı yanlış algıladıysa gerekli düzeltmeleri yapın." },
   ],
   features: [
-    {
-      title: "Fişi saniyeler içinde tara",
-      desc: "CheqSplit, fişleri taramak ve ürünleri, fiyatları ve toplamları otomatik olarak çıkarmak için akıllı AI kullanır — böylece hesabı daha hızlı bölmeye başlayabilirsiniz.",
-    },
-    {
-      title: "Taranan hesabı kontrol et",
-      desc: "Taranan hesabı, algılanan ürünleri ve toplamları kontrol et; sonra gruba paylaş veya hesabı bölmeye başla.",
-    },
-    {
-      title: "Paylaşmadan önce ürünleri düzenle",
-      desc: "Hesabı paylaşmadan önce ürünleri ekle, sil veya düzenle. Ortak ürünleri işaretle, eksik olanları ekle ve bölüşüme dahil edilmemesi gerekenleri çıkar.",
-    },
-    {
-      title: "Arkadaşlarını link veya QR kodu ile davet et",
-      desc: "Arkadaşlarını aynı hesaba QR kodu veya link ile davet et. Herkes hemen katılabilir, hesabı kontrol edebilir ve bölüşümü takip edebilir.",
-    },
-    {
-      title: "Ürünleri birlikte gerçek zamanlı bölün",
-      desc: "Hesaptaki ürünleri birlikte gerçek zamanlı bölün. Herkes güncellemeleri anında görür; seçimler, paylar ve toplamlar tüm grup için doğru kalır.",
-    },
-    {
-      title: "Bir ürünü yüzdeyle böl",
-      desc: "Herhangi bir ürünü yüzdeyle böl — 20%, 50%, 33% veya özel bir pay — böylece harcamalar eşit bölünmediğinde bile hesap adil kalır.",
-    },
-    {
-      title: "Kimin kime ne ödeyeceğini anında gör",
-      desc: "Herkes için net toplamlarla kimin kime ne ödeyeceğini anında gör. CheqSplit sonucu gerçek zamanlı hesaplar, böylece ortak harcamaları kapatmak saniyeler sürer.",
-    },
+    { title: "Restoran fişini tara", desc: "Fişin fotoğrafını çekin. CheqSplit kalemleri ve tutarları, bölüşmeden önce kontrol edebileceğiniz bir hesaba dönüştürür." },
+    { title: "Bölüşmeye başlamadan toplamı kontrol et", desc: "CheqSplit'teki toplamı fişteki toplamla karşılaştırın ve herkes siparişini seçmeye başlamadan önce olası hataları düzeltin." },
+    { title: "Her kalemi kontrol et ve düzenle", desc: "Tarama bir adı, miktarı veya fiyatı yanlış algıladıysa gerekli düzeltmeleri yapın." },
+    { title: "Arkadaşlarını QR kod veya bağlantıyla davet et", desc: "Hesabın QR kodunu veya bağlantısını paylaşın. Herkes ortak hesabı hemen açabilir." },
+    { title: "Uygulamayı yüklemeden tarayıcıdan devam et", desc: "Arkadaşlarınız bağlantıyı doğrudan tarayıcıda açabilir. Hesabı bölüşmek için CheqSplit'i yüklemeleri gerekmez." },
+    { title: "Restoran hesabını online bölüş", desc: "Herkes aynı hesap üzerinde çalışır. Seçimler ve değişiklikler tek yerde tutulur; kimin ne yediğini ayrıca hesaplamanız gerekmez." },
+    { title: "Herkes ne yediğini seçsin", desc: "Her katılımcı kendi kalemlerini seçer. Ortak yemek ve içecekler birden fazla kişi arasında bölüştürülebilir." },
+    { title: "Kimin kime ne kadar borcu olduğunu gör", desc: "Kalemler atandıktan sonra CheqSplit tutarları hesaplar ve kimin kime ne kadar ödemesi gerektiğini açıkça gösterir." },
+    { title: "Yapılan ödemeleri kaydet", desc: "Tamamlanan ödemeleri işaretleyerek bakiyeleri güncel tutun ve geriye hangi borçların kaldığını görün." },
+    { title: "Hesabın nasıl bölündüğünü incele", desc: "Daha sonra sonuca dönüp herkesin kalemlerini, tutarlarını ve ödemelerini kontrol edebilirsiniz." }
   ],
-  ctaTitle: "Hesapları ve ortak harcamaları stressiz bölmeye hazır mısınız?",
-  ctaBody:
-    "CheqSplit’i ücretsiz indir; fişleri tara, hesapları böl ve arkadaşlarla, seyahatlerde ve gruplarda ortak harcamaları daha hızlı yönet.",
+  ctaTitle: "Arkadaşlarında uygulama olmasa bile hesabı bölüş",
+  ctaBody: "Fişi tara, bağlantıyı veya QR kodu paylaş ve herkes kendi siparişlerini seçsin.",
+  groupBridgeBefore: "Bu restoran hesabını aynı grubun otel, taksi veya aktiviteleriyle birlikte tutmanız mı gerekiyor? Tamamlanan hesabı seyahatin Faturalar sekmesinden Add Bill ile ekleyin, ardından ",
+  groupBridgeLabel: "grup harcamalarını takip",
+  groupBridgeAfter: " etmeye devam edin.",
+  guideBridgeBefore: "Önce adım adım yöntemi mi tercih edersiniz? Okuyun: ",
+  guideBridgeLabel: "restoran hesabı adil şekilde nasıl bölüşülür",
+  guideBridgeAfter: ".",
   faq: [
     {
-      q: "CheqSplit nedir ve nasıl çalışır?",
-      a: "CheqSplit, hesapları ve ortak harcamaları bölmek için kullanılan ücretsiz bir uygulamadır. Fişleri taramana, arkadaşlarını davet etmene, ürünleri bölmene ve sonucu net görmene yardımcı olur. Restoranlar, seyahatler, market alışverişleri ve grup harcamaları için uygundur.",
+      q: "CheqSplit kalemlere ayrılmış restoran fişini tarayabilir mi?",
+      a: "Evet. Fişin fotoğrafını çekin ve bölüşmeye başlamadan önce algılanan toplamı, kalemleri, miktarları ve fiyatları kontrol edin.",
     },
     {
-      q: "Bir fişi tarayıp ürünlere göre bölebilir miyim?",
-      a: "Evet. Fişi tarayabilir, algılanan ürünleri kontrol edebilir ve her ürünü onu sipariş eden veya paylaşan kişilere atayabilirsin.",
+      q: "Tüm katılımcıların CheqSplit uygulamasına ihtiyacı var mı?",
+      a: "Hayır. Hesabı oluşturan kişi uygulamada hesabı oluşturup tarar; davet edilen kişiler ise bağlantıyı açıp Tarayıcıda devam et seçeneğini kullanabilir.",
     },
     {
-      q: "Arkadaşlarımı QR kodu veya link ile davet edebilir miyim?",
-      a: "Evet. Arkadaşlarını QR kodu veya paylaşılabilir link ile davet edebilirsin. Böylece herkes aynı hesaba katılır ve bölüşümü gerçek zamanlı takip eder.",
+      q: "Restoran hesabını tarayıcıdan bölüşebilir miyim?",
+      a: "Davet edilen kişi ortak hesabı tarayıcıda açabilir, tükettiği kalemleri seçebilir, Summary bölümünü görüntüleyebilir ve oluşan bakiyeyi takip edebilir. Yeni bir hesap oluşturmak ve taramak için uygulama gerekir.",
     },
     {
-      q: "CheqSplit grup seyahatleri ve ortak harcamalar için uygun mu?",
-      a: "Evet. CheqSplit grup seyahatleri, restoranlar, market alışverişleri, taksiler, biletler ve diğer ortak harcamalar için uygundur.",
+      q: "Katılımcılar QR kod veya bağlantıyla katılabilir mi?",
+      a: "Evet. Herkesin aynı restoran hesabını uygulamada veya tarayıcıda açabilmesi için QR kodu ya da davet bağlantısını paylaşın.",
     },
     {
-      q: "CheqSplit’i restoran hesapları ve market alışverişleri için kullanabilir miyim?",
-      a: "Evet. CheqSplit restoran hesaplarını, market fişlerini ve grup alışverişlerini net ve adil şekilde bölmene yardımcı olur.",
+      q: "Bir ortak kalemi birkaç kişi nasıl bölüşür?",
+      a: "Kalemi paylaşan herkes onu seçer. CheqSplit fiyatı, o kalemi seçen tüm katılımcılar arasında otomatik olarak eşit bölüştürür.",
     },
     {
-      q: "Kimin kime ne ödeyeceğini nasıl görürüm?",
-      a: "Ürünler ve harcamalar bölündükten sonra CheqSplit son bakiyeleri hesaplar ve kimin kime ödeme yapması gerektiğini gösterir.",
+      q: "Fiş yanlış taranırsa ne yapmalıyım?",
+      a: "Paylaşmadan önce algılanan hesabı kontrol edin. Yanlış kalemi veya fiyatı düzeltin, eksik satırı ekleyin ve gerekiyorsa vergi ya da bahşişi Ücretler ve Bahşiş bölümüne girin.",
+    },
+    {
+      q: "Ödeme Kaydet ne işe yarar?",
+      a: "Bir katılımcının başka bir katılımcıya CheqSplit dışında ödeme yaptığını kaydeder. Ortak hesap kaydını günceller ancak para transferi veya ödeme işlemi yapmaz.",
+    },
+    {
+      q: "Her kişinin ne tükettiğini nasıl görebilirim?",
+      a: "Summary sekmesini açın ve grafikte ilgili katılımcının bölümüne dokunarak toplam tutarını ve dahil edilen kalemleri görün.",
+    },
+    {
+      q: "CheqSplit para transferi yapar mı?",
+      a: "Hayır. CheqSplit bakiyeleri hesaplar ve katılımcıların girdiği ödeme kayıtlarını tutar. Para göndermez, almaz veya ödeme işlemez.",
+    },
+    {
+      q: "Bu restoran hesabını bir seyahate ekleyebilir miyim?",
+      a: "Evet. Önce restoran hesabının kalemlere göre bölüşümünü tamamlayın, ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
     },
   ],
   a11y: {
-    hero: "CheqSplit nasıl çalışır — kahraman bölüm",
-    nav: "Ana navigasyon",
-    stepsRegion: "Basit adımlar",
-    features: "CheqSplit nasıl çalışır — özellikler",
-    faq: "Sıkça sorulan sorular",
+    hero: "Restoran fişini tarayın ve kalemlere göre bölüşün",
+    nav: splitBillEn.a11y.nav,
+    stepsRegion: "CheqSplit ile restoran hesabı nasıl bölüşülür?",
+    features: "CheqSplit ile restoran hesabı nasıl bölüşülür?",
+    faq: "Sık sorulan sorular",
   },
 };

@@ -1,0 +1,425 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import StoreBadges from "../../components/StoreBadges.astro";
+import FAQ from "../../components/FAQ.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { getDictionary } from "../../i18n/dictionaries";
+import {
+  getGroupExpenseTrackerCopy,
+  groupExpenseTrackerLocales,
+  getAssets,
+  getFeatureIcons,
+} from "../../i18n/group-expense-tracker";
+import {
+  localePath,
+  localeSplitBillPath,
+  localeGroupExpenseTrackerPath,
+  localeTripExpensesGuidePath,
+} from "../../i18n/paths";
+import {
+  siteUrl,
+  getFaqPageJsonLd,
+  getSoftwareApplicationJsonLd,
+} from "../../data/structured-data";
+import { isLocale } from "../../i18n/config";
+import type { SupportedLanguage } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return groupExpenseTrackerLocales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang: langParam } = Astro.params;
+const normalized =
+  typeof langParam === "string" ? langParam.toLowerCase() : "";
+if (
+  !isLocale(normalized) ||
+  !(groupExpenseTrackerLocales as readonly string[]).includes(normalized)
+) {
+  return Astro.redirect(localeGroupExpenseTrackerPath("en"));
+}
+const lang = normalized as SupportedLanguage;
+
+const t = getDictionary(lang);
+const copy = getGroupExpenseTrackerCopy(lang);
+const year = new Date().getFullYear();
+
+const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
+const siteRoot = new URL("/", siteBase);
+const canonicalUrl = new URL(localeGroupExpenseTrackerPath(lang), siteRoot).href;
+
+const alternatePages = groupExpenseTrackerLocales.map((l) => ({
+  href: new URL(localeGroupExpenseTrackerPath(l), siteRoot).href,
+  hreflang: l,
+}));
+const xDefaultUrl = new URL(localeGroupExpenseTrackerPath("en"), siteRoot).href;
+
+const softwareJsonLd = JSON.stringify(
+  getSoftwareApplicationJsonLd(copy.softwareDescription, canonicalUrl),
+);
+const faqItems = [...copy.faq];
+const faqJsonLd = JSON.stringify(getFaqPageJsonLd(faqItems));
+
+const hrefForLang = (l: SupportedLanguage) =>
+  (groupExpenseTrackerLocales as readonly string[]).includes(l)
+    ? localeGroupExpenseTrackerPath(l)
+    : localeSplitBillPath(l);
+
+const stepRows = copy.steps.map((step, idx) => ({
+  ...step,
+  number: idx + 1,
+  icon: [
+    getFeatureIcons.invite,
+    getFeatureIcons.addExpense,
+    getFeatureIcons.participants,
+    getFeatureIcons.history,
+    getFeatureIcons.balances,
+  ][idx],
+  img: [
+    getAssets.createInvite,
+    getAssets.addExpense,
+    getAssets.selectedParticipants,
+    getAssets.history,
+    getAssets.balances,
+  ][idx],
+}));
+---
+
+<Layout
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  ogDescription={copy.metaDescription}
+  twitterDescription={copy.metaDescription}
+  canonicalUrl={canonicalUrl}
+  preloadHeroImage={getAssets.heroPrimary}
+  lang={lang}
+  alternatePages={alternatePages}
+  xDefaultUrl={xDefaultUrl}
+  softwareJsonLd={softwareJsonLd}
+  faqJsonLd={faqJsonLd}
+>
+  <Header lang={lang} t={t} hrefForLang={hrefForLang} />
+  <main class="get">
+    <section class="split-bill__hero" aria-label={copy.a11y.hero}>
+      <div class="split-bill__hero-bg" aria-hidden="true">
+        <img
+          src={getAssets.heroBg}
+          alt=""
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="split-bill__hero-overlay" aria-hidden="true" />
+      <div class="split-bill__hero-arcs" aria-hidden="true"></div>
+
+      <div class="split-bill__hero-container">
+        <div class="split-bill__hero-grid">
+          <div class="split-bill__hero-copy typography">
+            <h1 class="split-bill__hero-title">{copy.h1}</h1>
+            <p class="split-bill__hero-desc">{copy.heroText}</p>
+            <div class="split-bill__hero-badges">
+              <StoreBadges
+                variant="hero"
+                appStoreAlt={t.cta.badgeAlts.appStore}
+                playAlt={t.cta.badgeAlts.play}
+                groupAria={t.cta.groupAria}
+              />
+            </div>
+            <p class="get__internal-link">
+              {copy.secondaryCta ? (
+                <>
+                  <a href="#how">{copy.secondaryCta}</a>
+                  {" · "}
+                </>
+              ) : null}
+              {copy.internalRestaurantBefore}
+              <a href={localeSplitBillPath(lang)}>{copy.internalRestaurantLabel}</a>
+              {copy.internalRestaurantAfter}
+            </p>
+            {
+              copy.guideBridgeLabel ? (
+                <p class="get__internal-link">
+                  {copy.guideBridgeBefore}
+                  <a href={localeTripExpensesGuidePath(lang)}>{copy.guideBridgeLabel}</a>
+                  {copy.guideBridgeAfter}
+                </p>
+              ) : null
+            }
+          </div>
+
+          <div class="split-bill__phones-visual">
+            <div class="get__hero-phones">
+              <div class="get__hero-phone get__hero-phone--primary">
+                <img
+                  src={getAssets.heroPrimary}
+                  alt="Expenses tab for Weekend in Prague with taxi, hotel, and museum tickets"
+                  width="3200"
+                  height="2400"
+                  loading="eager"
+                  decoding="async"
+                  data-lightbox
+                />
+              </div>
+              <div class="get__hero-phone get__hero-phone--secondary">
+                <img
+                  src={getAssets.heroSecondary}
+                  alt="Trip overview with group participants Nina, Leo, Sam, and Maya"
+                  width="3200"
+                  height="2400"
+                  loading="eager"
+                  decoding="async"
+                  data-lightbox
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="split-bill__light"
+      id="how"
+      aria-label={`${copy.a11y.timeline} — ${copy.a11y.how}`}
+    >
+      <div class="get__band">
+        <div class="split-bill__container">
+          <div class="split-bill__section-heading typography">
+            <h2 class="typ-h2 typ-title-color">{copy.howH2}</h2>
+          </div>
+
+          <div class="split-bill__feature">
+            <div class="split-bill__feature-card">
+              <div class="split-bill__feature-icon" aria-hidden="true">
+                <img
+                  src={getFeatureIcons.timeline}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="typography">
+                <h2 class="split-bill__feature-title">{copy.timelineH2}</h2>
+                <div class="split-bill__feature-desc">{copy.timelineText}</div>
+              </div>
+            </div>
+            <div class="split-bill__feature-media">
+              <img
+                src={getAssets.history}
+                alt="Expenses tab listing taxi, hotel, and museum tickets for Weekend in Prague"
+                width="3200"
+                height="2400"
+                loading="lazy"
+                decoding="async"
+                data-lightbox
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {
+        stepRows.map((step, idx) => (
+          <div class:list={["get__band", idx % 2 === 0 && "get__band--muted"]}>
+            <div class="split-bill__container split-bill__container--narrow">
+              <div
+                class:list={[
+                  "split-bill__feature",
+                  idx % 2 === 0 && "split-bill__feature--reverse",
+                ]}
+              >
+                <div class="split-bill__feature-card">
+                  <div class="split-bill__feature-icon" aria-hidden="true">
+                    <img
+                      src={step.icon}
+                      alt=""
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="typography">
+                    <div class="get__feature-heading">
+                      <span class:list={["get__step-num", `get__step-num--${idx}`]} aria-hidden="true">
+                        {step.number}
+                      </span>
+                      <h2 class="split-bill__feature-title">{step.title}</h2>
+                    </div>
+                    <div class="split-bill__feature-desc">{step.text}</div>
+                  </div>
+                </div>
+                <div class="split-bill__feature-media">
+                  <img
+                    src={step.img}
+                    alt={step.imageAlt}
+                    width="3200"
+                    height="2400"
+                    loading="lazy"
+                    decoding="async"
+                    data-lightbox
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+
+      <div class="get__band">
+        <div class="split-bill__container">
+          <div class="split-bill__feature">
+            <div class="split-bill__feature-card">
+              <div class="split-bill__feature-icon" aria-hidden="true">
+                <img
+                  src={getFeatureIcons.subset}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="typography">
+                <h2 class="split-bill__feature-title">{copy.subsetH2}</h2>
+                <div class="split-bill__feature-desc">{copy.subsetText}</div>
+              </div>
+            </div>
+            <div class="split-bill__feature-media">
+              <img
+                src={getAssets.selectedParticipants}
+                alt="Selecting Custom participants on a taxi expense"
+                width="3200"
+                height="2400"
+                loading="lazy"
+                decoding="async"
+                data-lightbox
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="get__band get__band--muted">
+        <div class="split-bill__container">
+          <div class="split-bill__feature split-bill__feature--reverse">
+            <div class="split-bill__feature-card">
+              <div class="split-bill__feature-icon" aria-hidden="true">
+                <img
+                  src={getFeatureIcons.receipt}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="typography">
+                <h2 class="split-bill__feature-title">{copy.receiptBridgeH2}</h2>
+                <div class="split-bill__feature-desc">{copy.receiptBridgeText}</div>
+                <a class="get__cta-link" href={localeSplitBillPath(lang)}>
+                  {copy.receiptBridgeCta}
+                </a>
+              </div>
+            </div>
+            <div class="split-bill__feature-media">
+              <img
+                src={getAssets.receiptBridge}
+                alt="Bills tab with Add Bill on a CheqSplit trip"
+                width="3200"
+                height="2400"
+                loading="lazy"
+                decoding="async"
+                data-lightbox
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="get__band" id="report">
+        <div class="split-bill__container">
+          <div class="split-bill__feature">
+            <div class="split-bill__feature-card">
+              <div class="split-bill__feature-icon" aria-hidden="true">
+                <img
+                  src={getFeatureIcons.report}
+                  alt=""
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="typography">
+                <h2 class="split-bill__feature-title">{copy.reportH2}</h2>
+                <div class="split-bill__feature-desc">{copy.reportText}</div>
+              </div>
+            </div>
+            <div class="split-bill__feature-media get__feature-media--pdf">
+              <div class="get__pdf-stack">
+                <img
+                  class="get__pdf-page get__pdf-page--front"
+                  src={getAssets.report}
+                  alt="CheqSplit PDF report — page 1 with participants, balances, and chart"
+                  width="1700"
+                  height="2200"
+                  loading="lazy"
+                  decoding="async"
+                  data-lightbox
+                />
+                <img
+                  class="get__pdf-page get__pdf-page--back"
+                  src={getAssets.reportPage2}
+                  alt="CheqSplit PDF report — page 2 with expenses and who owes whom"
+                  width="1700"
+                  height="2200"
+                  loading="lazy"
+                  decoding="async"
+                  data-lightbox
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {
+      copy.fitsH2 ? (
+        <section class="get__section get__section--muted" aria-label={copy.a11y.fits}>
+          <div class="get__container">
+            <SectionHeader title={copy.fitsH2} />
+            {copy.fits.some((item) => item) ? (
+              <ul class="get__fits">
+                {copy.fits.filter(Boolean).map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </section>
+      ) : null
+    }
+
+    <CallToAction t={t} title={copy.ctaTitle} body={copy.ctaBody} />
+
+    <section class="get__section get__section--faq" aria-label={copy.a11y.faq}>
+      <div class="get__container">
+        <FAQ
+          t={{ ...t, faq: { ...t.faq, title: copy.faqH2 } }}
+          items={faqItems}
+          sectionClass="pt-[10px] pb-[10px]"
+        />
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t} year={year} lang={lang} sectionBase={localePath(lang)} />
+</Layout>

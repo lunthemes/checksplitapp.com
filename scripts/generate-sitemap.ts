@@ -20,6 +20,23 @@ const splitBillUrls = supportedLanguages.map(
     `  <url><loc>${SITE}/${lang}/split-bill-app/</loc><priority>0.85</priority></url>`,
 );
 
+const groupExpenseUrls = supportedLanguages.map(
+  (lang) =>
+    `  <url><loc>${SITE}/${lang}/group-expense-tracker/</loc><priority>0.85</priority></url>`,
+);
+const guidesHubUrls = supportedLanguages.map(
+  (lang) =>
+    `  <url><loc>${SITE}/${lang}/guides/</loc><priority>0.65</priority></url>`,
+);
+const restaurantGuideUrls = supportedLanguages.map(
+  (lang) =>
+    `  <url><loc>${SITE}/${lang}/guides/how-to-split-a-restaurant-bill/</loc><priority>0.7</priority></url>`,
+);
+const tripGuideUrls = supportedLanguages.map(
+  (lang) =>
+    `  <url><loc>${SITE}/${lang}/guides/how-to-split-trip-expenses/</loc><priority>0.7</priority></url>`,
+);
+
 const LEGAL_SLUGS = [
   "privacy-policy",
   "terms-of-service",
@@ -44,7 +61,7 @@ const legalUrls = supportedLanguages.flatMap((lang) =>
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${[...homeUrls, ...splitBillUrls, ...legalUrls].join("\n")}
+${[...homeUrls, ...splitBillUrls, ...groupExpenseUrls, ...guidesHubUrls, ...restaurantGuideUrls, ...tripGuideUrls, ...legalUrls].join("\n")}
 </urlset>
 `;
 
@@ -55,6 +72,23 @@ const redirects = [
     (lang) => `/${lang}/split-bill-app /${lang}/split-bill-app/ 301`,
   ),
   "/split-bill-app /split-bill-app/ 301",
+  ...supportedLanguages.map(
+    (lang) =>
+      `/${lang}/group-expense-tracker /${lang}/group-expense-tracker/ 301`,
+  ),
+  "/group-expense-tracker /en/group-expense-tracker/ 301",
+  ...supportedLanguages.map(
+    (lang) =>
+      `/${lang}/guides/how-to-split-a-restaurant-bill /${lang}/guides/how-to-split-a-restaurant-bill/ 301`,
+  ),
+  "/guides/how-to-split-a-restaurant-bill /en/guides/how-to-split-a-restaurant-bill/ 301",
+  ...supportedLanguages.map(
+    (lang) =>
+      `/${lang}/guides/how-to-split-trip-expenses /${lang}/guides/how-to-split-trip-expenses/ 301`,
+  ),
+  "/guides/how-to-split-trip-expenses /en/guides/how-to-split-trip-expenses/ 301",
+  ...supportedLanguages.map((lang) => `/${lang}/guides /${lang}/guides/ 301`),
+  "/guides /en/guides/ 301",
   "/privacy-policy /en/privacy-policy/ 301",
   "/terms-of-service /en/terms-of-service/ 301",
   "/delete-account /en/delete-account/ 301",
@@ -65,8 +99,8 @@ const redirects = [
 writeFileSync(join(distDir, "sitemap.xml"), xml, "utf8");
 writeFileSync(join(distDir, "_redirects"), redirects + "\n", "utf8");
 
-const n = supportedLanguages.length * 2 + legalUrls.length;
+const n = supportedLanguages.length * 6 + legalUrls.length;
 console.log(`[generate-sitemap] wrote dist/sitemap.xml (${n} URLs)`);
 const redirectRules =
-  1 + supportedLanguages.length * 2 + 1 + LEGAL_SLUGS.length;
+  1 + supportedLanguages.length * 2 + 1 + 8 + LEGAL_SLUGS.length;
 console.log(`[generate-sitemap] wrote dist/_redirects (${redirectRules} rules)`);

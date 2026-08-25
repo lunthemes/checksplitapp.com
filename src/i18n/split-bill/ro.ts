@@ -1,106 +1,99 @@
 import type { SplitBillLocaleCopy } from "./types";
+import { splitBillEn } from "./en";
 
 export const splitBillRo: SplitBillLocaleCopy = {
-  metaTitle: "Împarte nota și scanează bonuri cu prietenii | CheqSplit",
-  metaDescription: "CheqSplit te ajută să scanezi bonuri de la restaurant, să împarți nota cu prietenii, să atribui produsele și să vezi instant cine cui datorează. Ideal pentru restaurante, călătorii și cheltuieli comune.",
-  softwareDescription:
-    "CheqSplit te ajută să scanezi bonuri, să împarți nota, să urmărești cheltuieli comune și să vezi cine cui are de achitat—ideal pentru restaurante, călătorii și grupuri.",
-  h1: "Împarte nota, scanează bonuri și vezi cine cui datorează",
-  heroSubLine1: "Scanezi bonuri. Partajezi nota. Împarți cheltuielile live.",
-  heroSubLine2: "Vezi cine cui are de achitat.",
-  heroParagraph:
-    "Scanează bonuri de la restaurant, împarte nota cu prietenii, alege cine a consumat fiecare produs și vezi instant cine cui datorează. CheqSplit te ajută să gestionezi cheltuielile comune fără calcule manuale.",
-  seoBlockH2: "Împarte nota și scanează bonuri cu CheqSplit",
-  seoBlockP1: "CheqSplit este o aplicație pentru împărțirea notelor de plată la restaurant, în călătorii și în orice situație cu cheltuieli comune. În loc să introduci manual fiecare produs sau să calculezi cine cât are de achitat, poți scana bonul, verifica produsele detectate, invita prietenii și împărți nota împreună în timp real.",
-  seoBlockP2: "Poți împărți toată nota egal, poți atribui produse anumitor persoane sau poți împărți un produs pe procente. CheqSplit calculează rezultatul final și arată clar cine cui datorează, ca grupul să se poată achita rapid și fără confuzii.",
-  useCasesH2: "Când să folosești CheqSplit",
+  metaTitle: "Scanează și împarte nota de plată pe produse | CheqSplit",
+  metaDescription: "Păstrează întreaga notă într-un singur loc. O persoană scanează bonul în CheqSplit, iar ceilalți pot intra prin link sau cod QR și își pot selecta produsele direct din browser.",
+  softwareDescription: "Păstrează întreaga notă într-un singur loc. O persoană scanează bonul în CheqSplit, iar ceilalți pot intra prin link sau cod QR și își pot selecta produsele direct din browser.",
+  h1: "Scanează și împarte nota de plată pe produse",
+  heroSubLine1: "",
+  heroSubLine2: "",
+  heroParagraph: "",
+  seoBlockH2: "Un singur bon de restaurant, împărțit în aplicație sau în browser",
+  seoBlockP1: "Păstrează întreaga notă într-un singur loc. O persoană scanează bonul în CheqSplit, iar ceilalți pot intra prin link sau cod QR și își pot selecta produsele direct din browser.",
+  seoBlockP2: "Nu este nevoie ca fiecare persoană de la masă să instaleze aplicația. CheqSplit păstrează produsele, participanții, plățile și rezultatul final în aceeași notă.",
+  seoBlockP3: "",
+  useCasesH2: "Un mod de a împărți nota care ține cont de comenzile reale",
   useCases: [
-    { title: "Note la restaurant", text: "Scanează bonul, atribuie preparatele persoanelor potrivite, împarte taxele și bacșișul și vezi cine cui datorează." },
-    { title: "Călătorii cu prietenii", text: "Ține evidența cheltuielilor comune din timpul călătoriei și păstrează totul organizat într-un singur loc." },
-    { title: "Cheltuieli de grup", text: "Folosește CheqSplit pentru cumpărături, evenimente, colegi de apartament sau orice situație în care mai multe persoane împart costuri." },
+    { title: "Produse individuale", text: "Atribuie fiecărei persoane mâncarea și băuturile pe care le-a comandat." },
+    { title: "Produse împărțite", text: "Împarte o sticlă, un platou sau un desert doar între persoanele care au consumat din el." },
+    { title: "Taxe și bacșiș", text: "Adaugă taxele, serviciul și bacșișul separat, astfel încât totalul împărțit să corespundă notei." },
   ],
-  howSectionH2: "Cum să scanezi bonuri și să împarți nota",
-  howSectionSub:
-    "Folosește CheqSplit ca să scanezi bonul, să inviți prieteni, să împarți articolele în timp real și să vezi clar rezultatul final.",
-  stepsSectionH2: "Pași simpli",
+  howSectionH2: "Cum împarți o notă de plată la restaurant cu CheqSplit",
+  howSectionSub: "",
+  stepsSectionH2: "Cum împarți o notă de plată la restaurant cu CheqSplit",
   steps: [
-    {
-      title: "Scanează bonuri",
-      desc: "Îndreaptă camera spre bon, iar CheqSplit detectează rapid articolele, prețurile și totalurile.",
-    },
-    {
-      title: "Invită și împarte",
-      desc: "Invită prietenii la aceeași notă și împărțiți cheltuielile comune împreună, în timp real.",
-    },
-    {
-      title: "Închide totul rapid",
-      desc: "Vezi cine cui are de achitat și rezolvați cheltuielile comune în câteva secunde.",
-    },
+    { title: "Scanează bonul", desc: "Fotografiază bonul, iar CheqSplit transformă produsele și sumele într-o notă pe care o poți verifica înainte de împărțire." },
+    { title: "Verifică nota", desc: "Compară totalul din CheqSplit cu totalul tipărit pe bon. Corectează orice produs sau sumă înainte ca participanții să înceapă să-și aleagă comenzile." },
+    { title: "Împarte nota", desc: "Corectează denumirile, cantitățile sau prețurile dacă scanarea nu a recunoscut perfect bonul." },
   ],
   features: [
-    {
-      title: "Scanează bonul în câteva secunde",
-      desc: "CheqSplit folosește AI pentru a scana bonurile și a extrage automat articolele, prețurile și totalurile — ca să poți începe mai repede împărțirea notei.",
-    },
-    {
-      title: "Verifică nota scanată",
-      desc: "Verifică nota scanată, articolele detectate și totalurile înainte să o partajezi cu grupul sau să începi împărțirea.",
-    },
-    {
-      title: "Editează articolele înainte de partajare",
-      desc: "Adaugă, șterge sau modifică articolele înainte de a partaja nota. Marchează articolele comune, adaugă ce lipsește și elimină ce nu trebuie inclus în împărțire.",
-    },
-    {
-      title: "Invită prietenii prin link sau cod QR",
-      desc: "Invită prietenii la aceeași notă cu un cod QR sau un link. Fiecare se poate alătura imediat, poate verifica nota și poate urmări împărțirea.",
-    },
-    {
-      title: "Împărțiți articolele împreună în timp real",
-      desc: "Împărțiți articolele din notă în timp real. Toți văd actualizările instant, astfel încât selecțiile, părțile și totalurile rămân corecte pentru întregul grup.",
-    },
-    {
-      title: "Împarte un articol procentual",
-      desc: "Împarte orice articol procentual — 20%, 50%, 33% sau orice altă parte personalizată — ca nota să rămână corectă atunci când cheltuielile nu se împart egal.",
-    },
-    {
-      title: "Vezi instant cine cui are de achitat",
-      desc: "Vezi instant cine cui are de achitat, cu totaluri clare pentru fiecare. CheqSplit calculează rezultatul final în timp real, astfel încât cheltuielile comune se rezolvă în câteva secunde.",
-    },
+    { title: "Scanează bonul de la restaurant", desc: "Fotografiază bonul, iar CheqSplit transformă produsele și sumele într-o notă pe care o poți verifica înainte de împărțire." },
+    { title: "Verifică totalul înainte să începi împărțirea", desc: "Compară totalul din CheqSplit cu totalul tipărit pe bon. Corectează orice produs sau sumă înainte ca participanții să înceapă să-și aleagă comenzile." },
+    { title: "Verifică și editează fiecare produs de pe bon", desc: "Corectează denumirile, cantitățile sau prețurile dacă scanarea nu a recunoscut perfect bonul." },
+    { title: "Invită prietenii prin cod QR sau link", desc: "Distribuie codul QR sau linkul notei. Fiecare persoană poate intra imediat și vedea nota comună." },
+    { title: "Continuă în browser fără să instalezi aplicația", desc: "Prietenii pot deschide linkul direct în browser. Nu trebuie să instaleze CheqSplit pentru a participa la împărțirea notei." },
+    { title: "Împarte nota de plată online", desc: "Toată lumea lucrează cu aceeași notă. Modificările și selecțiile rămân împreună, astfel încât nu trebuie să calculați separat cine a consumat ce." },
+    { title: "Lasă fiecare persoană să selecteze ce a consumat", desc: "Fiecare participant își alege propriile produse. Produsele consumate în comun pot fi împărțite între mai multe persoane." },
+    { title: "Vezi cine cui datorează", desc: "După ce produsele au fost atribuite, CheqSplit calculează sumele și arată clar cine trebuie să plătească și cui." },
+    { title: "Marchează plata ca efectuată", desc: "Marchează plățile efectuate pentru a păstra situația actualizată și pentru a vedea ce datorii au mai rămas." },
+    { title: "Vezi cum a fost împărțită nota", desc: "Poți reveni la rezultatul final și verifica produsele, sumele și plățile fiecărei persoane." }
   ],
-  ctaTitle: "Ești gata să împarți notele și cheltuielile comune fără stres?",
-  ctaBody:
-    "Descarcă gratuit CheqSplit ca să scanezi bonuri, să împarți note și să gestionezi mai rapid cheltuielile comune cu prietenii, în călătorii sau în grup.",
+  ctaTitle: "Împarte nota de plată chiar dacă prietenii nu au aplicația",
+  ctaBody: "Scanează bonul, distribuie nota prin link sau cod QR și lasă fiecare persoană să selecteze ce a consumat.",
+  groupBridgeBefore: "Trebuie să ții această notă de restaurant împreună cu hotelul, taxiul sau activitățile aceluiași grup? Adaugă nota finalizată din fila Note a călătoriei cu Adaugă Notă, apoi continuă cu ",
+  groupBridgeLabel: "evidența cheltuielilor de grup",
+  groupBridgeAfter: ".",
+  guideBridgeBefore: "Preferi mai întâi metoda pas cu pas? Citește ",
+  guideBridgeLabel: "cum împarți corect o notă de plată la restaurant",
+  guideBridgeAfter: ".",
   faq: [
     {
-      q: "Ce este CheqSplit și cum funcționează?",
-      a: "CheqSplit este o aplicație gratuită pentru împărțirea notelor și a cheltuielilor comune. Te ajută să scanezi bonuri, să inviți prieteni, să împarți articolele și să vezi clar rezultatul final. Este utilă la restaurant, în călătorii, la cumpărături și pentru cheltuieli de grup.",
+      q: "Poate CheqSplit să scaneze un bon de restaurant cu produse separate?",
+      a: "Da. Fotografiază bonul, apoi verifică totalul, produsele, cantitățile și prețurile detectate înainte să începi împărțirea.",
     },
     {
-      q: "Pot scana un bon și îl pot împărți pe articole?",
-      a: "Da. Poți scana bonul, verifica articolele detectate și atribui fiecare articol persoanelor care l-au comandat sau l-au împărțit.",
+      q: "Toți participanții trebuie să aibă aplicația CheqSplit?",
+      a: "Nu. Gazda creează și scanează nota în aplicație, iar invitații pot deschide linkul și alege Continuă în browser.",
     },
     {
-      q: "Pot invita prietenii cu un cod QR sau link?",
-      a: "Da. Poți invita prietenii cu un cod QR sau un link de partajare, astfel încât toți să intre în aceeași notă și să urmărească împărțirea în timp real.",
+      q: "Pot împărți o notă de restaurant în browser?",
+      a: "Un invitat poate deschide nota comună în browser, selecta produsele pe care le-a consumat, vedea Rezumat și urmări soldul rezultat. Pentru a crea și scana o notă nouă este necesară aplicația.",
     },
     {
-      q: "Este CheqSplit potrivit pentru călătorii de grup și cheltuieli comune?",
-      a: "Da. CheqSplit este potrivit pentru călătorii de grup, restaurante, cumpărături, taxiuri, bilete și alte cheltuieli comune.",
+      q: "Participanții se pot conecta prin cod QR sau link?",
+      a: "Da. Distribuie codul QR sau linkul de invitație pentru ca toată lumea să poată deschide aceeași notă de restaurant în aplicație sau în browser.",
     },
     {
-      q: "Pot folosi CheqSplit pentru note de restaurant și cumpărături?",
-      a: "Da. CheqSplit te ajută să împarți clar și corect notele de la restaurant, bonurile de cumpărături și achizițiile făcute în grup.",
+      q: "Cum împart mai multe persoane un produs consumat în comun?",
+      a: "Fiecare persoană care a consumat din acel produs îl selectează. CheqSplit împarte automat prețul în mod egal între toți participanții care l-au selectat.",
     },
     {
-      q: "Cum văd cine cui are de achitat?",
-      a: "După ce articolele și cheltuielile sunt împărțite, CheqSplit calculează balanțele finale și arată cine trebuie să achite cui.",
+      q: "Ce fac dacă bonul a fost scanat incorect?",
+      a: "Verifică nota detectată înainte să o distribui. Corectează produsul sau prețul, adaugă o poziție lipsă și introdu taxele sau bacșișul în Taxe și Bacșiș, dacă este cazul.",
+    },
+    {
+      q: "Ce face opțiunea „Înregistrează plata”?",
+      a: "Înregistrează faptul că un participant i-a plătit altuia în afara CheqSplit. Actualizează istoricul notei comune, dar nu transferă și nu procesează bani.",
+    },
+    {
+      q: "Cum pot vedea ce a consumat fiecare persoană?",
+      a: "Deschide fila Rezumat și apasă pe secțiunea unui participant din grafic pentru a vedea totalul și produsele incluse.",
+    },
+    {
+      q: "CheqSplit transferă bani?",
+      a: "Nu. CheqSplit calculează soldurile și înregistrează plățile introduse de participanți. Nu trimite, nu primește și nu procesează plăți.",
+    },
+    {
+      q: "Pot adăuga această notă de restaurant într-o călătorie?",
+      a: "Da. Finalizează împărțirea notei pe produse, apoi deschide fila Note din călătorie și apasă Adaugă Notă.",
     },
   ],
   a11y: {
-    hero: "Cum funcționează CheqSplit — hero",
-    nav: "Navigare principală",
-    stepsRegion: "Pași simpli",
-    features: "Cum funcționează CheqSplit — funcții",
+    hero: "Scanează și împarte nota de plată pe produse",
+    nav: splitBillEn.a11y.nav,
+    stepsRegion: "Cum împarți o notă de plată la restaurant cu CheqSplit",
+    features: "Cum împarți o notă de plată la restaurant cu CheqSplit",
     faq: "Întrebări frecvente",
   },
 };

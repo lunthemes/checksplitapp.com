@@ -17,8 +17,11 @@ export const fr: Dictionary = {
     how: "Fonctionnement",
     useCases: "Cas d'usage",
     faq: "FAQ",
+    restaurant: "Addition au restaurant",
+    groupExpenses: "Dépenses de groupe",
+    guides: "Guides",
   },
-  header: { download: "Télécharger l’app gratuitement" },
+  header: { download: "Télécharger gratuitement" },
   hero: {
     title: "Partagez les dépenses, scannez les reçus et laissez l’application s’occuper du reste",
     body: "Scannez le ticket, suivez les dépenses partagées et gardez une vision simple de qui doit combien à qui – sortie au resto, week-end, courses à plusieurs, soirée entre amis. L’application se télécharge gratuitement.",
@@ -33,6 +36,17 @@ export const fr: Dictionary = {
     description: "Scannez le reçu, attribuez les articles et voyez clairement la part de chacun — parfait pour les dîners entre amis, les rendez-vous et les repas de groupe.",
     button: "Découvrez comment partager l’addition et scanner les reçus",
   },
+  workflows: {
+    title: "Choisissez ce que vous partagez",
+    restaurantTitle: "Une addition de restaurant",
+    restaurantText:
+      "Scannez le ticket, vérifiez les articles, invitez la table et attribuez chaque article aux personnes qui l'ont commandé ou partagé.",
+    restaurantCta: "Partager une addition",
+    groupTitle: "Dépenses de groupe ou de voyage",
+    groupText:
+      "Créez un voyage pour le groupe, invitez les participants et ajoutez les dépenses au fur et à mesure. Utilisez Ajouter une dépense pour un taxi, un hôtel ou des billets. Utilisez Ajouter une addition dans l'onglet Additions pour un ticket de restaurant détaillé. Conservez un historique partagé et voyez qui doit combien à qui.",
+    groupCta: "Suivre les dépenses de groupe",
+  },
   features: {
     title: "Pourquoi choisir CheqSplit ?",
     items: [
@@ -45,7 +59,7 @@ export const fr: Dictionary = {
         desc: "Vous affectez chaque poste du ticket aux bonnes personnes, plutôt que de tout couper en parts égales.",
       },
       {
-        title: "Tout le groupe, un seul fil",
+        title: "Toutes les dépenses du groupe au même endroit",
         desc: "Restaurants, courses, billets, nuits d'hôtel : l'essentiel de ce que vous payez ensemble, au même endroit.",
       },
       {
@@ -91,7 +105,7 @@ export const fr: Dictionary = {
         ],
       },
       {
-        label: "Voyez, qui doit quoi à qui",
+        label: "Voyez qui doit quoi à qui",
         body: "CheqSplit totalise, détaille chaque part et indique, qui doit envoyer de l’argent à qui.",
         imageAlt: "CheqSplit : résumé des soldes par personne",
         bullets: [
@@ -118,7 +132,7 @@ export const fr: Dictionary = {
       "Dès que vous partagez l'addition, un weekend ou le caddie, CheqSplit s'adapte : resto, coloc, famille, sorties entre amis. Vous scannez, vous affectez chaque poste, vous tenez compte des remises ou des pourboires, et vous finissez avec un règlement clair, sans ressaisir tout sur une feuille de calcul.",
     items: [
       {
-        title: "Restaurants & bars",
+        title: "Restaurants et bars",
         desc: "Détaillez l'addition, partagez par plat, et chacun règle ce qu'il a pris.",
       },
       { title: "Voyages de groupe", desc: "Billets, hébergement, repas : un seul fil pour le budget du tour." },
@@ -170,14 +184,14 @@ export const fr: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Le moyen le plus simple de partager des dépenses de groupe, sans mauvaise surprise sur le total.",
+    tagline: "Partagez les dépenses de groupe équitablement, sans calculs compliqués.",
     product: "Produit",
     company: "Entreprise",
     legal: "Mentions légales",
-    about: "À propos",
+    about: "Assistance",
     contact: "Contact",
     privacy: "Politique de confidentialité",
-    terms: "Conditions d’utilisation",
+    terms: "Conditions d'utilisation",
     deleteAccount: "Supprimer le compte",
     deleteData: "Supprimer vos données",
     rights: "Tous droits réservés.",

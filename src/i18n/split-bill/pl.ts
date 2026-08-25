@@ -1,106 +1,99 @@
 import type { SplitBillLocaleCopy } from "./types";
+import { splitBillEn } from "./en";
 
 export const splitBillPl: SplitBillLocaleCopy = {
-  metaTitle: "Dziel rachunki i skanuj paragony ze znajomymi | CheqSplit",
-  metaDescription: "CheqSplit pomaga skanować paragony z restauracji, dzielić rachunki ze znajomymi, przypisywać pozycje i od razu sprawdzać, kto komu ile jest winien. Idealne do restauracji, podróży i wspólnych wydatków.",
-  softwareDescription:
-    "CheqSplit ułatwia skanowanie paragonów, dzielenie rachunków, śledzenie wspólnych wydatków i sprawdzanie, kto komu oddaje—idealny do restauracji, podróży i grup.",
-  h1: "Dziel rachunki, skanuj paragony i sprawdzaj, kto komu jest winien",
-  heroSubLine1: "Skanuj paragony. Udostępniaj rachunek. Dziel wydatki na żywo.",
-  heroSubLine2: "Sprawdzaj, kto komu oddaje.",
-  heroParagraph:
-    "Skanuj paragony z restauracji, dziel rachunki ze znajomymi, wybieraj, kto korzystał z danej pozycji, i od razu sprawdzaj, kto komu ile jest winien. CheqSplit pomaga zarządzać wspólnymi wydatkami bez ręcznego liczenia.",
-  seoBlockH2: "Dziel rachunki i skanuj paragony z CheqSplit",
-  seoBlockP1: "CheqSplit to aplikacja do dzielenia rachunków w restauracjach, podczas podróży i w każdej sytuacji ze wspólnymi wydatkami. Zamiast ręcznie wpisywać każdą pozycję albo liczyć, kto ile ma zapłacić, możesz zeskanować paragon, sprawdzić wykryte pozycje, zaprosić znajomych i podzielić rachunek razem w czasie rzeczywistym.",
-  seoBlockP2: "Możesz podzielić cały rachunek po równo, przypisać konkretne pozycje wybranym osobom albo podzielić jedną pozycję procentowo. CheqSplit oblicza końcowy wynik i pokazuje, kto komu ile jest winien, dzięki czemu grupa może szybciej i bez zamieszania się rozliczyć.",
-  useCasesH2: "Kiedy używać CheqSplit",
+  metaTitle: "Zeskanuj rachunek i podziel go według zamówionych pozycji | CheqSplit",
+  metaDescription: "Cały rachunek pozostaje w jednym miejscu. Jedna osoba skanuje paragon w CheqSplit, a pozostali otwierają go przez link lub kod QR i wybierają swoje pozycje bezpośrednio w przeglądarce.",
+  softwareDescription: "Cały rachunek pozostaje w jednym miejscu. Jedna osoba skanuje paragon w CheqSplit, a pozostali otwierają go przez link lub kod QR i wybierają swoje pozycje bezpośrednio w przeglądarce.",
+  h1: "Zeskanuj rachunek i podziel go według zamówionych pozycji",
+  heroSubLine1: "",
+  heroSubLine2: "",
+  heroParagraph: "",
+  seoBlockH2: "Jeden rachunek, dostępny w aplikacji lub przeglądarce",
+  seoBlockP1: "Cały rachunek pozostaje w jednym miejscu. Jedna osoba skanuje paragon w CheqSplit, a pozostali otwierają go przez link lub kod QR i wybierają swoje pozycje bezpośrednio w przeglądarce.",
+  seoBlockP2: "Nie każdy przy stole musi instalować aplikację. CheqSplit przechowuje pozycje, uczestników, płatności i końcowe rozliczenie razem.",
+  seoBlockP3: "",
+  useCasesH2: "Podział rachunku zgodny z tym, co każdy naprawdę zamówił",
   useCases: [
-    { title: "Rachunki w restauracji", text: "Zeskanuj paragon, przypisz dania odpowiednim osobom, podziel podatki i napiwki oraz sprawdź, kto komu jest winien." },
-    { title: "Podróże ze znajomymi", text: "Śledź wspólne wydatki podczas podróży i trzymaj wszystko w jednym uporządkowanym miejscu." },
-    { title: "Wydatki grupowe", text: "Używaj CheqSplit do zakupów, wydarzeń, współlokatorów lub każdej sytuacji, w której kilka osób dzieli koszty." },
+    { title: "Własne pozycje", text: "Przypisz każdej osobie tylko te dania i napoje, które zamówiła." },
+    { title: "Wspólne pozycje", text: "Butelkę, wspólne danie lub deser podziel tylko między osoby, które z nich korzystały." },
+    { title: "Opłaty i napiwek", text: "Dodaj opłatę serwisową, podatki i napiwek tak, aby suma udziałów zgadzała się z rachunkiem." },
   ],
-  howSectionH2: "Jak skanować paragony i dzielić rachunek",
-  howSectionSub:
-    "Korzystaj z CheqSplit, aby zeskanować paragon, zaprosić znajomych, dzielić pozycje na żywo i wyraźnie zobaczyć wynik.",
-  stepsSectionH2: "Proste kroki",
+  howSectionH2: "Jak podzielić rachunek w restauracji z CheqSplit",
+  howSectionSub: "",
+  stepsSectionH2: "Jak podzielić rachunek w restauracji z CheqSplit",
   steps: [
-    {
-      title: "Skanuj paragony",
-      desc: "Skieruj aparat na paragon, a CheqSplit szybko rozpozna pozycje, ceny i sumy.",
-    },
-    {
-      title: "Zaproś i podziel",
-      desc: "Zaproś znajomych do tego samego rachunku i dzielcie wspólne wydatki razem w czasie rzeczywistym.",
-    },
-    {
-      title: "Rozliczaj na bieżąco",
-      desc: "Sprawdzaj, kto komu oddaje, i rozliczaj wspólne wydatki w kilka sekund.",
-    },
+    { title: "Zeskanuj paragon", desc: "Zrób zdjęcie paragonu, a CheqSplit przeniesie pozycje i kwoty do czytelnego rachunku, który możesz sprawdzić przed podziałem." },
+    { title: "Sprawdź rachunek", desc: "Porównaj sumę w CheqSplit z kwotą na paragonie i popraw ewentualne błędy, zanim uczestnicy zaczną wybierać swoje zamówienia." },
+    { title: "Podziel rachunek", desc: "Popraw nazwę, ilość lub cenę, jeśli skanowanie nie rozpoznało czegoś prawidłowo." },
   ],
   features: [
-    {
-      title: "Zeskanuj paragon w kilka sekund",
-      desc: "CheqSplit używa inteligentnej AI do skanowania paragonów i automatycznego rozpoznawania pozycji, cen i sum — dzięki temu szybciej zaczniesz dzielić rachunek.",
-    },
-    {
-      title: "Sprawdź zeskanowany rachunek",
-      desc: "Sprawdź zeskanowany rachunek, wykryte pozycje i sumy, zanim udostępnisz go grupie lub zaczniesz go dzielić.",
-    },
-    {
-      title: "Edytuj pozycje przed udostępnieniem",
-      desc: "Dodawaj, usuwaj lub edytuj pozycje przed udostępnieniem rachunku. Oznaczaj pozycje wspólne, dodawaj brakujące i usuwaj te, które nie powinny wejść do podziału.",
-    },
-    {
-      title: "Zaproś znajomych linkiem lub kodem QR",
-      desc: "Zaproś znajomych do tego samego rachunku za pomocą kodu QR lub linku. Każdy może dołączyć od razu, sprawdzić rachunek i śledzić podział.",
-    },
-    {
-      title: "Dzielcie pozycje razem w czasie rzeczywistym",
-      desc: "Dzielcie pozycje z rachunku razem w czasie rzeczywistym. Wszyscy widzą zmiany od razu, więc wybory, udziały i sumy pozostają dokładne dla całej grupy.",
-    },
-    {
-      title: "Podziel jedną pozycję procentowo",
-      desc: "Podziel dowolną pozycję procentowo — 20%, 50%, 33% lub według własnego udziału — aby rachunek był sprawiedliwy nawet wtedy, gdy wydatki nie dzielą się po równo.",
-    },
-    {
-      title: "Od razu sprawdzaj, kto komu oddaje",
-      desc: "Od razu sprawdzaj, kto komu oddaje, z jasnymi sumami dla każdej osoby. CheqSplit oblicza wynik końcowy w czasie rzeczywistym, więc rozliczenie wspólnych wydatków zajmuje tylko kilka sekund.",
-    },
+    { title: "Zeskanuj paragon z restauracji", desc: "Zrób zdjęcie paragonu, a CheqSplit przeniesie pozycje i kwoty do czytelnego rachunku, który możesz sprawdzić przed podziałem." },
+    { title: "Sprawdź sumę przed rozpoczęciem podziału", desc: "Porównaj sumę w CheqSplit z kwotą na paragonie i popraw ewentualne błędy, zanim uczestnicy zaczną wybierać swoje zamówienia." },
+    { title: "Sprawdź i popraw każdą pozycję", desc: "Popraw nazwę, ilość lub cenę, jeśli skanowanie nie rozpoznało czegoś prawidłowo." },
+    { title: "Zaproś znajomych kodem QR lub linkiem", desc: "Udostępnij kod QR albo link do rachunku. Każdy może od razu go otworzyć." },
+    { title: "Korzystaj w przeglądarce bez instalowania aplikacji", desc: "Znajomi mogą otworzyć link bezpośrednio w przeglądarce. Nie muszą instalować CheqSplit, aby wziąć udział w podziale." },
+    { title: "Podziel rachunek online", desc: "Wszyscy korzystają z tego samego rachunku. Wybory i zmiany są zapisane w jednym miejscu, więc nie trzeba osobno liczyć, kto co zamówił." },
+    { title: "Każdy wybiera to, co zamówił", desc: "Każdy uczestnik zaznacza swoje pozycje. Wspólne dania i napoje można podzielić między kilka osób." },
+    { title: "Sprawdź, kto komu ile jest winien", desc: "Po przypisaniu pozycji CheqSplit oblicza kwoty i jasno pokazuje, kto powinien komu zapłacić." },
+    { title: "Zapisuj wykonane płatności", desc: "Oznaczaj dokonane płatności, aby saldo było zawsze aktualne i było wiadomo, co pozostało do zapłaty." },
+    { title: "Sprawdź, jak podzielono rachunek", desc: "Do końcowego rozliczenia można wrócić później i sprawdzić pozycje, kwoty oraz płatności każdego uczestnika." }
   ],
-  ctaTitle: "Chcesz dzielić rachunki i wspólne wydatki bez stresu?",
-  ctaBody:
-    "Pobierz za darmo CheqSplit, aby skanować paragony, dzielić rachunki i szybciej zarządzać wspólnymi wydatkami ze znajomymi, w podróży i w grupie.",
+  ctaTitle: "Podziel rachunek, nawet jeśli znajomi nie mają aplikacji",
+  ctaBody: "Zeskanuj paragon, udostępnij link lub kod QR i pozwól każdemu wybrać to, co zamówił.",
+  groupBridgeBefore: "Chcesz trzymać ten rachunek z restauracji razem z hotelem, taksówką lub atrakcjami tej samej grupy? Dodaj ukończony rachunek z karty Rachunki wyjazdu przez Add Bill, a następnie kontynuuj ",
+  groupBridgeLabel: "śledzenie wydatków grupy",
+  groupBridgeAfter: ".",
+  guideBridgeBefore: "Wolisz najpierw metodę krok po kroku? Przeczytaj, ",
+  guideBridgeLabel: "jak sprawiedliwie podzielić rachunek w restauracji",
+  guideBridgeAfter: ".",
   faq: [
     {
-      q: "Czym jest CheqSplit i jak działa?",
-      a: "CheqSplit to bezpłatna aplikacja do dzielenia rachunków i wspólnych wydatków. Pomaga skanować paragony, zapraszać znajomych, dzielić pozycje i jasno widzieć wynik końcowy. Sprawdza się w restauracji, podróży, na zakupach i przy wydatkach grupowych.",
+      q: "Czy CheqSplit może zeskanować szczegółowy paragon z restauracji?",
+      a: "Tak. Zrób zdjęcie paragonu, a przed rozpoczęciem podziału sprawdź wykrytą sumę, pozycje, ilości i ceny.",
     },
     {
-      q: "Czy mogę zeskanować paragon i podzielić go według pozycji?",
-      a: "Tak. Możesz zeskanować paragon, sprawdzić wykryte pozycje i przypisać każdą pozycję osobom, które ją zamówiły lub dzieliły.",
+      q: "Czy wszyscy uczestnicy muszą mieć aplikację CheqSplit?",
+      a: "Nie. Gospodarz tworzy i skanuje rachunek w aplikacji, ale zaproszeni goście mogą otworzyć link i wybrać Kontynuuj w przeglądarce.",
     },
     {
-      q: "Czy mogę zaprosić znajomych kodem QR lub linkiem?",
-      a: "Tak. Możesz zaprosić znajomych kodem QR lub linkiem, aby wszyscy dołączyli do tego samego rachunku i śledzili podział w czasie rzeczywistym.",
+      q: "Czy mogę podzielić rachunek z restauracji w przeglądarce?",
+      a: "Zaproszony uczestnik może otworzyć wspólny rachunek w przeglądarce, wybrać pozycje, które zamówił, sprawdzić Summary i śledzić wynikowe saldo. Utworzenie i zeskanowanie nowego rachunku wymaga aplikacji.",
     },
     {
-      q: "Czy CheqSplit nadaje się na wyjazdy grupowe i wspólne wydatki?",
-      a: "Tak. CheqSplit sprawdza się przy wyjazdach grupowych, restauracjach, zakupach, taksówkach, biletach i innych wspólnych wydatkach.",
+      q: "Czy uczestnicy mogą dołączyć przez kod QR lub link?",
+      a: "Tak. Udostępnij kod QR lub link z zaproszeniem, aby wszyscy mogli otworzyć ten sam rachunek z restauracji w aplikacji albo przeglądarce.",
     },
     {
-      q: "Czy mogę używać CheqSplit do rachunków w restauracji i zakupów?",
-      a: "Tak. CheqSplit pomaga jasno i sprawiedliwie dzielić rachunki z restauracji, paragony ze sklepu i zakupy grupowe.",
+      q: "Jak kilka osób dzieli jedną wspólną pozycję?",
+      a: "Każda osoba, która dzieliła daną pozycję, zaznacza ją. CheqSplit automatycznie rozdziela cenę po równo między wszystkich uczestników, którzy ją wybrali.",
     },
     {
-      q: "Jak zobaczę, kto komu oddaje?",
-      a: "Po podziale pozycji i wydatków CheqSplit oblicza końcowe salda i pokazuje, kto powinien komu zapłacić.",
+      q: "Co zrobić, jeśli paragon został błędnie zeskanowany?",
+      a: "Sprawdź wykryty rachunek przed jego udostępnieniem. Popraw pozycję lub cenę, dodaj brakujący wiersz i w razie potrzeby wpisz podatek lub napiwek w Opłaty i Napiwek.",
+    },
+    {
+      q: "Co robi Zapisz Płatność?",
+      a: "Zapisuje, że jeden uczestnik zapłacił drugiemu poza CheqSplit. Aktualizuje historię wspólnego rachunku, ale nie przekazuje ani nie przetwarza pieniędzy.",
+    },
+    {
+      q: "Jak sprawdzić, co zamówiła każda osoba?",
+      a: "Otwórz kartę Summary i wybierz sekcję danego uczestnika na wykresie, aby zobaczyć jego łączną kwotę oraz przypisane pozycje.",
+    },
+    {
+      q: "Czy CheqSplit przelewa pieniądze?",
+      a: "Nie. CheqSplit oblicza salda i zapisuje rozliczenia wprowadzone przez uczestników. Nie wysyła, nie odbiera ani nie przetwarza płatności.",
+    },
+    {
+      q: "Czy mogę dodać ten rachunek z restauracji do wyjazdu?",
+      a: "Tak. Najpierw zakończ podział rachunku według pozycji, następnie otwórz kartę Rachunki w wyjeździe i wybierz Add Bill.",
     },
   ],
   a11y: {
-    hero: "Jak działa CheqSplit — nagłówek",
-    nav: "Nawigacja główna",
-    stepsRegion: "Proste kroki",
-    features: "Jak działa CheqSplit — funkcje",
-    faq: "Najczęściej zadawane pytania",
+    hero: "Zeskanuj rachunek i podziel go według zamówionych pozycji",
+    nav: splitBillEn.a11y.nav,
+    stepsRegion: "Jak podzielić rachunek w restauracji z CheqSplit",
+    features: "Jak podzielić rachunek w restauracji z CheqSplit",
+    faq: "Najczęstsze pytania",
   },
 };

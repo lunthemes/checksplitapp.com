@@ -1,0 +1,72 @@
+img[data-lightbox] {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  width: auto;
+  max-width: min(96vw, 1120px);
+  max-height: 92vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgb(15 23 42 / 0.78);
+}
+
+.lightbox__frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__img {
+  display: block;
+  max-width: min(96vw, 1120px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.35);
+  background: rgb(15 23 42);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding-bottom: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: white;
+  color: rgb(15 23 42);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  background: rgb(241 245 249);
+  outline: 2px solid rgb(37 99 235);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .lightbox__close {
+    top: 8px;
+    right: 8px;
+  }
+}

@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
+import WorkflowChooser from "../../components/WorkflowChooser.astro";
 import FeatureBar from "../../components/FeatureBar.astro";
 import HowItWorks from "../../components/HowItWorks.astro";
 import UseCases from "../../components/UseCases.astro";
@@ -73,6 +74,7 @@ const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
   <Header lang={lang} t={t} />
   <main>
     <Hero t={t} lang={lang} />
+    <WorkflowChooser t={t} lang={lang} />
     <FeatureBar t={t} items={featureItems} />
     <HowItWorks t={t} howSteps={howSteps} />
     <UseCases t={t} items={useCaseItems} />

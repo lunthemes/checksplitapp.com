@@ -22,6 +22,9 @@ export interface Dictionary {
     how: string;
     useCases: string;
     faq: string;
+    restaurant: string;
+    groupExpenses: string;
+    guides: string;
   };
   header: { download: string };
   hero: {
@@ -33,6 +36,15 @@ export interface Dictionary {
     title: string;
     description: string;
     button: string;
+  };
+  workflows: {
+    title: string;
+    restaurantTitle: string;
+    restaurantText: string;
+    restaurantCta: string;
+    groupTitle: string;
+    groupText: string;
+    groupCta: string;
   };
   features: {
     title: string;

@@ -24,6 +24,7 @@ const { t, items, sectionClass = "py-20 md:py-24" } = Astro.props;
     />
     <div
       class="mt-10 grid grid-cols-1 items-start gap-3 md:grid-cols-2"
+      data-faq-accordion
     >
       {items.map((item) => (
         <FaqItem question={item.q} answer={item.a} />
@@ -31,3 +32,16 @@ const { t, items, sectionClass = "py-20 md:py-24" } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll("[data-faq-accordion]").forEach((root) => {
+    root.querySelectorAll("details").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        root.querySelectorAll("details").forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  });
+</script>

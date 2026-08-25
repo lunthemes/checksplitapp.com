@@ -2,46 +2,44 @@ import type { FaqEntry } from "../types";
 
 export type SplitBillStepCopy = { title: string; desc: string };
 
-export type SplitBillFeatureText = { title: string; desc: string };
+export type SplitBillFeatureText = {
+  title: string;
+  desc: string;
+  extra?: string;
+};
+
+export type SplitBillUseCase = { title: string; text: string };
+
+export type SplitBillScreenVariant = "device" | "browser";
 
 export interface SplitBillLocaleCopy {
   metaTitle: string;
   metaDescription: string;
   softwareDescription: string;
-  /** Full H1 string (one H1 per page). If it contains “CheqSplit”, it will be accent-styled. */
   h1: string;
   heroSubLine1: string;
   heroSubLine2: string;
   heroParagraph: string;
-  /** SEO block after “Simple steps”, before the how-to section. */
   seoBlockH2: string;
   seoBlockP1: string;
   seoBlockP2: string;
-  /** Use cases section after SEO block. */
+  seoBlockP3: string;
   useCasesH2: string;
-  useCases: readonly [
-    { title: string; text: string },
-    { title: string; text: string },
-    { title: string; text: string },
-  ];
-  /** H2 + paragraph below the three step cards */
+  useCases: readonly SplitBillUseCase[];
   howSectionH2: string;
   howSectionSub: string;
-  /** H2 above the three step cards */
   stepsSectionH2: string;
   steps: readonly [SplitBillStepCopy, SplitBillStepCopy, SplitBillStepCopy];
-  features: readonly [
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-    SplitBillFeatureText,
-  ];
+  features: readonly SplitBillFeatureText[];
   ctaTitle: string;
   ctaBody: string;
-  faq: readonly [FaqEntry, FaqEntry, FaqEntry, FaqEntry, FaqEntry, FaqEntry];
+  groupBridgeBefore: string;
+  groupBridgeLabel: string;
+  groupBridgeAfter: string;
+  guideBridgeBefore: string;
+  guideBridgeLabel: string;
+  guideBridgeAfter: string;
+  faq: readonly FaqEntry[];
   a11y: {
     hero: string;
     nav: string;

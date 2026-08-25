@@ -17,8 +17,11 @@ export const de: Dictionary = {
     how: "So funktioniert's",
     useCases: "Einsatzbereiche",
     faq: "FAQ",
+    restaurant: "Restaurantrechnung",
+    groupExpenses: "Gruppenausgaben",
+    guides: "Ratgeber",
   },
-  header: { download: "App kostenlos laden" },
+  header: { download: "Kostenlos herunterladen" },
   hero: {
     title: "Teilt Ausgaben, scannt Belege und lasst die App den Rest erledigen",
     body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe. Die App kannst du kostenlos herunterladen.",
@@ -33,6 +36,17 @@ export const de: Dictionary = {
     description: "Scanne den Beleg, ordne die Artikel zu und sieh klar den Anteil jeder Person — ideal für Abendessen mit Freunden, Dates und Gruppenessen.",
     button: "So teilst du Rechnungen und scannst Belege",
   },
+  workflows: {
+    title: "Wählt, was ihr aufteilen wollt",
+    restaurantTitle: "Eine Restaurantrechnung",
+    restaurantText:
+      "Scannt den Beleg, prüft die Positionen, ladet den Tisch ein und ordnet jede Position den Personen zu, die sie bestellt oder geteilt haben.",
+    restaurantCta: "Restaurantrechnung aufteilen",
+    groupTitle: "Gruppen- oder Reiseausgaben",
+    groupText:
+      "Erstellt eine Reise für die Gruppe, ladet Teilnehmer ein und erfasst Ausgaben, sobald sie anfallen. Nutzt Ausgabe hinzufügen für Taxi, Hotel oder Tickets. Nutzt Rechnung Hinzufügen im Tab Rechnungen für einen detaillierten Restaurantbeleg. Behaltet eine gemeinsame Übersicht und seht, wer wem etwas schuldet.",
+    groupCta: "Gruppenausgaben verfolgen",
+  },
   features: {
     title: "Warum CheqSplit?",
     items: [
@@ -41,11 +55,11 @@ export const de: Dictionary = {
         desc: "Scanne den Kassenzettel: Positionen, Steuern, Summe – ohne alles abzutippen.",
       },
       {
-        title: "Pro Zeile teilen",
+        title: "Nach Positionen aufteilen",
         desc: "Weise jede Position der Person zu, die wirklich bestellt hat – statt alles pauschal zu teilen.",
       },
       {
-        title: "Alles an einem Ort",
+        title: "Alle Gruppenausgaben an einem Ort",
         desc: "Restaurant, Wochenende, Einkauf, gemeinsame Kosten – alles in einer Zeitleiste.",
       },
       {
@@ -170,11 +184,11 @@ export const de: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Gruppenkosten leichter teilen: fair, klar, ohne doppelte Mathe-Runden.",
+    tagline: "Teilt gemeinsame Ausgaben fair auf – ganz ohne Rätselraten.",
     product: "Produkt",
     company: "Unternehmen",
     legal: "Rechtliches",
-    about: "Über uns",
+    about: "Support",
     contact: "Kontakt",
     privacy: "Datenschutzerklärung",
     terms: "Nutzungsbedingungen",

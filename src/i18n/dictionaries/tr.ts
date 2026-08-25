@@ -12,8 +12,16 @@ export const tr: Dictionary = {
     softwareDescription:
       "CheqSplit, masrafları bölüşmeye, fişleri taramaya, ortak harcamaları takip etmeye ve kimin kime ne kadar borçlu olduğunu net görmeye yardımcı olur: yemek, grup seyahatleri, alışveriş, günlük planlar.",
   },
-  nav: { features: "Özellikler", how: "Nasıl çalışır", useCases: "Kullanım alanları", faq: "S.S.S." },
-  header: { download: "Uygulamayı ücretsiz indir" },
+  nav: {
+    features: "Özellikler",
+    how: "Nasıl çalışır",
+    useCases: "Kullanım alanları",
+    faq: "S.S.S.",
+    restaurant: "Restoran hesabı",
+    groupExpenses: "Grup harcamaları",
+    guides: "Rehberler",
+  },
+  header: { download: "Ücretsiz indir" },
   hero: {
     title: "Harcamaları paylaşın, fişleri tarayın ve gerisini uygulamaya bırakın",
     body: "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak giderleri izlemenize ve kimin kime ne kadar borçlu olduğunu anında görmenize yardımcı olur: restoranda, yolculukta, market alışverişinde, grup içinde. Uygulamayı ücretsiz indirebilirsiniz.",
@@ -27,6 +35,17 @@ export const tr: Dictionary = {
     title: "Restoran hesaplarını daha hızlı bölün",
     description: "Fişi tarayın, ürünleri kişilere atayın ve herkesin payını net görün — arkadaş yemekleri, buluşmalar ve grup sofraları için ideal.",
     button: "Hesapları nasıl böleceğini ve fişleri nasıl tarayacağını öğren",
+  },
+  workflows: {
+    title: "Neyi bölüştüğünüzü seçin",
+    restaurantTitle: "Bir restoran hesabı",
+    restaurantText:
+      "Fişi tarayın, kalemleri kontrol edin, masayı davet edin ve her kalemi sipariş eden veya paylaşan kişilere atayın.",
+    restaurantCta: "Restoran hesabını bölüş",
+    groupTitle: "Grup veya seyahat harcamaları",
+    groupText:
+      "Grup için bir seyahat oluşturun, katılımcıları davet edin ve harcamaları oluştukça ekleyin. Taksi, otel veya biletler için Masraf Ekle'yi kullanın. Kalemlere ayrılmış restoran fişi için Faturalar sekmesindeki Add Bill'i kullanın. Ortak bir geçmiş tutun ve kimin kime borcu olduğunu görün.",
+    groupCta: "Grup harcamalarını takip et",
   },
   features: {
     title: "Neden CheqSplit?",
@@ -54,7 +73,7 @@ export const tr: Dictionary = {
         ],
       },
       {
-        label: "Hesabı, kaleme göre böl",
+        label: "Hesabı kalemlere göre böl",
         body: "Hepiniz aynı fişi telefonda görürsünüz; anlık olarak, kime ne ait, işaretlersiniz.",
         imageAlt: "CheqSplit: fiş taraması",
         bullets: [
@@ -74,7 +93,7 @@ export const tr: Dictionary = {
         ],
       },
       {
-        label: "Kimin, kime ne borçlu, gör",
+        label: "Kimin kime ne kadar borçlu olduğunu gör",
         body: "CheqSplit toplamı ve kişi başı harcamaları hesaplar; kimin kime ne kadar göndermesi gerektiğini gösterir.",
         imageAlt: "CheqSplit: bakiyeler",
         bullets: [
@@ -128,17 +147,17 @@ export const tr: Dictionary = {
     ],
   },
   footer: {
-    tagline: "Grupta masrafları paylaşmak: kolay, adil, net.",
+    tagline: "Grup harcamalarını zahmetsizce ve adil şekilde bölüşün.",
     product: "Ürün",
     company: "Şirket",
     legal: "Yasal",
-    about: "Hakkında",
+    about: "Destek",
     contact: "İletişim",
-    privacy: "Gizlilik politikası",
-    terms: "Hizmet şartları",
+    privacy: "Gizlilik Politikası",
+    terms: "Kullanım Koşulları",
     deleteAccount: "Hesabı sil",
-    deleteData: "Verilerinizi silin",
-    rights: "Tüm haklar saklıdır.",
+    deleteData: "Verilerini sil",
+    rights: "Tüm hakları saklıdır.",
   },
   a11y: {
     keyFeatures: "Ana özellikler",

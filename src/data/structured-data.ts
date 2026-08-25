@@ -34,3 +34,24 @@ export function getFaqPageJsonLd(faqItems: readonly FaqEntry[]) {
     })),
   };
 }
+
+export function getHowToJsonLd(opts: {
+  name: string;
+  description: string;
+  url: string;
+  steps: readonly { title: string; desc: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    step: opts.steps.map((s, i) => ({
+      "@type": "HowToStep" as const,
+      position: i + 1,
+      name: s.title,
+      text: s.desc,
+    })),
+  };
+}

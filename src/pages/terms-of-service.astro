@@ -1,6 +1,3 @@
 ---
-import { defaultLocale } from "../i18n/config";
-import { localeLegalPath } from "../i18n/paths";
-
-return Astro.redirect(localeLegalPath(defaultLocale, "terms-of-service"), 301);
+return Astro.redirect("/en/terms-of-service/", 301);
 ---

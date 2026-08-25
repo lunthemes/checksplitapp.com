@@ -1,0 +1,202 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import FAQ from "../../../components/FAQ.astro";
+import GuideHero from "../../../components/GuideHero.astro";
+import CallToAction from "../../../components/CallToAction.astro";
+import { getDictionary } from "../../../i18n/dictionaries";
+import {
+  getRestaurantBillGuideCopy,
+  restaurantBillGuideLocales,
+} from "../../../i18n/guides/how-to-split-a-restaurant-bill";
+import {
+  localePath,
+  localeSplitBillPath,
+  localeRestaurantBillGuidePath,
+  localeGuidesHubPath,
+} from "../../../i18n/paths";
+import {
+  siteUrl,
+  getFaqPageJsonLd,
+  getHowToJsonLd,
+} from "../../../data/structured-data";
+import { isLocale } from "../../../i18n/config";
+import type { SupportedLanguage } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return restaurantBillGuideLocales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang: langParam } = Astro.params;
+const normalized =
+  typeof langParam === "string" ? langParam.toLowerCase() : "";
+if (
+  !isLocale(normalized) ||
+  !(restaurantBillGuideLocales as readonly string[]).includes(normalized)
+) {
+  return Astro.redirect(localeRestaurantBillGuidePath("en"));
+}
+const lang = normalized as SupportedLanguage;
+
+const t = getDictionary(lang);
+const copy = getRestaurantBillGuideCopy(lang);
+const year = new Date().getFullYear();
+const sectionBase = localePath(lang);
+
+const siteBase = (import.meta.env.SITE as string | undefined) ?? siteUrl;
+const siteRoot = new URL("/", siteBase);
+const canonicalUrl = new URL(
+  localeRestaurantBillGuidePath(lang),
+  siteRoot,
+).href;
+
+const alternatePages = restaurantBillGuideLocales.map((l) => ({
+  href: new URL(localeRestaurantBillGuidePath(l), siteRoot).href,
+  hreflang: l,
+}));
+const xDefaultUrl = new URL(
+  localeRestaurantBillGuidePath("en"),
+  siteRoot,
+).href;
+
+const howToJsonLd = JSON.stringify(
+  getHowToJsonLd({
+    name: copy.h1,
+    description: copy.answer,
+    url: canonicalUrl,
+    steps: copy.steps,
+  }),
+);
+const faqJsonLd = JSON.stringify(getFaqPageJsonLd(copy.faq));
+
+const hrefForLang = (l: SupportedLanguage) =>
+  (restaurantBillGuideLocales as readonly string[]).includes(l)
+    ? localeRestaurantBillGuidePath(l)
+    : localePath(l);
+
+const faqDict = {
+  ...t,
+  faq: { ...t.faq, title: copy.faqH2 },
+};
+
+const HERO_BG = "/backgrounds/split-bill-app.png";
+---
+
+<Layout
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  ogDescription={copy.metaDescription}
+  twitterDescription={copy.metaDescription}
+  canonicalUrl={canonicalUrl}
+  preloadHeroImage={HERO_BG}
+  lang={lang}
+  alternatePages={alternatePages}
+  xDefaultUrl={xDefaultUrl}
+  softwareJsonLd={howToJsonLd}
+  faqJsonLd={faqJsonLd}
+>
+  <Header lang={lang} t={t} sectionBase={sectionBase} hrefForLang={hrefForLang} />
+
+  <main class="guide">
+    <GuideHero
+      title={copy.h1}
+      lead={copy.answer}
+      crumbHref={localeGuidesHubPath(lang)}
+      crumbLabel={copy.crumbGuides}
+      crumbCurrent={copy.crumbCurrent}
+      backgroundSrc={HERO_BG}
+    />
+
+    <article class="typography guide__body">
+      <section class="guide__editorial" aria-labelledby="choice-heading">
+        <h2 class="typ-h2 typ-title-color" id="choice-heading">{copy.choiceH2}</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">{copy.choiceBody}</p>
+      </section>
+
+      <h2 class="typ-h2 typ-title-color mt-12" id="method">{copy.stepsH2}</h2>
+      <ol class="mt-6 space-y-5">
+        {
+          copy.steps.map((step, i) => (
+            <li class="guide__step">
+              <div class="guide__step-heading">
+                <span
+                  class:list={["guide__step-num", `get__step-num--${i}`]}
+                  aria-hidden="true"
+                >
+                  {i + 1}
+                </span>
+                <h3 class="typ-h3 typ-title-color">{step.title}</h3>
+              </div>
+              <p class="guide__step-desc">{step.desc}</p>
+            </li>
+          ))
+        }
+      </ol>
+
+      <section class="guide__example mt-12" aria-labelledby="example-heading">
+        <h2 class="typ-h2 typ-title-color" id="example-heading">{copy.exampleH2}</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">{copy.exampleIntro}</p>
+        <div class="guide__table-wrap">
+          <table class="guide__table">
+            <caption class="guide__table-caption">{copy.exampleReceiptCaption}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{copy.colItem}</th>
+                <th scope="col" class="guide__table-num">{copy.colAmount}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {copy.exampleReceiptRows.map((row) => (
+                <tr>
+                  <th scope="row">{row.item}</th>
+                  <td class="guide__table-num">{row.amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="guide__table-wrap">
+          <table class="guide__table">
+            <caption class="guide__table-caption">{copy.exampleShareCaption}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{copy.colPerson}</th>
+                <th scope="col" class="guide__table-num">{copy.colDue}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {copy.exampleShareRows.map((row) => (
+                <tr>
+                  <th scope="row">{row.person}</th>
+                  <td class="guide__table-num">{row.amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-slate-600 leading-relaxed">{copy.exampleNote}</p>
+      </section>
+
+      <section
+        class="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8"
+        aria-labelledby="product-heading"
+      >
+        <h2 class="typ-h2 typ-title-color" id="product-heading">{copy.productH2}</h2>
+        <p class="mt-3 text-slate-600 leading-relaxed">{copy.productBody}</p>
+        <a
+          class="mt-5 inline-flex text-base font-semibold text-brand-600 underline-offset-2 hover:underline"
+          href={localeSplitBillPath(lang)}
+        >
+          {copy.productCta}
+        </a>
+      </section>
+    </article>
+
+    <FAQ t={faqDict} items={[...copy.faq]} sectionClass="py-12 md:py-16" />
+
+    <CallToAction t={t} title={copy.ctaTitle} body={copy.ctaBody} />
+  </main>
+
+  <Footer t={t} year={year} lang={lang} sectionBase={sectionBase} />
+</Layout>

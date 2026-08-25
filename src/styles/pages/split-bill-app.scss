@@ -1,5 +1,6 @@
 .split-bill {
   position: relative;
+  overflow-x: clip;
 }
 
 .split-bill__hero {
@@ -196,6 +197,8 @@
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -1.2px;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 @media (min-width: 768px) {
@@ -234,88 +237,87 @@
 .split-bill__phones-visual {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
-  min-height: 300px;
+  min-height: 360px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .split-bill__phones-visual {
     justify-content: flex-end;
-    min-height: 400px;
+    min-height: 520px;
   }
 }
 
 .split-bill__phones-wrap {
   display: flex;
   width: 100%;
-  max-width: 640px;
+  max-width: 680px;
   margin-inline: auto;
-  padding: 20px 0 12px;
-  overflow: visible;
+  padding: 8px 0 4px;
+  overflow: hidden;
 }
 
 .split-bill__phones {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-  justify-content: center;
-  width: fit-content;
-  max-width: 100%;
-  margin-inline: auto;
-  padding: 0 12px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  min-height: 340px;
 }
 
 @media (min-width: 768px) {
   .split-bill__phones {
+    min-height: 500px;
     margin-inline: 0;
     margin-left: auto;
-    padding-right: 0;
   }
 }
 
 .split-bill__hero-phone {
   position: relative;
+  grid-area: 1 / 1;
   flex: 0 0 auto;
 }
 
-/* Scară în sus spre dreapta; următorii intră desubt (z-index mai mic = în spate) */
+/* PNG canvases include wide transparent side padding — overlap the visible phones, not the file edges. */
 .split-bill__hero-phone--0 {
   z-index: 3;
-  width: min(220px, 48vw);
-  transform: translateY(0);
+  width: min(560px, 92vw);
+  transform: translate(-22%, -14px);
 }
 
 .split-bill__hero-phone--1 {
   z-index: 2;
-  width: min(164px, 36vw);
-  margin-left: min(-84px, -26vw);
-  transform: translateY(-12px);
+  width: min(480px, 80vw);
+  transform: translate(2%, 8px);
 }
 
 .split-bill__hero-phone--2 {
   z-index: 1;
-  width: min(124px, 28vw);
-  margin-left: min(-64px, -20vw);
-  transform: translateY(-28px);
+  width: min(420px, 72vw);
+  transform: translate(26%, 16px) scale(0.82);
+  transform-origin: top center;
 }
 
 @media (min-width: 768px) {
   .split-bill__hero-phone--0 {
-    width: 268px;
+    width: min(640px, 100%);
+    transform: translate(-24%, -18px);
   }
 
   .split-bill__hero-phone--1 {
-    width: 200px;
-    margin-left: -96px;
-    transform: translateY(-14px);
+    width: min(520px, 88%);
+    transform: translate(2%, -8px);
   }
 
   .split-bill__hero-phone--2 {
-    width: 152px;
-    margin-left: -78px;
-    transform: translateY(-32px);
+    width: min(500px, 92%);
+    transform: translate(28%, 4px) scale(0.8);
+    transform-origin: top center;
   }
 }
 
@@ -432,6 +434,22 @@
 #features > .split-bill__container.split-bill__container--narrow {
   padding-top: 30px;
   padding-bottom: 60px;
+}
+
+#features .get__band .split-bill__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  #features .get__band .split-bill__container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+#features .split-bill__feature {
+  margin-top: 0;
 }
 
 /* (dedup) .split-bill__hero-grid is defined above with responsive 1fr / 1fr 1fr */
@@ -625,6 +643,7 @@
   line-height: 1.6;
   color: rgb(71 85 105);
   max-width: 520px;
+  white-space: pre-line;
 }
 
 @media (min-width: 768px) {
@@ -639,19 +658,127 @@
 }
 
 .split-bill__feature-media {
-  border-radius: 22px;
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
   background: transparent;
   border: 0;
   box-shadow: none;
 }
 
-.split-bill__feature-media img {
+.split-bill__feature-media .split-bill__device-shot {
   display: block;
-  width: 255px;
+  width: min(520px, 100%);
   max-width: 100%;
-  max-height: 430px;
+  max-height: min(430px, 70vh);
   height: auto;
-  object-fit: unset;
+  object-fit: contain;
   margin-inline: auto;
+  filter: drop-shadow(0 18px 40px rgb(15 23 42 / 0.18));
+}
+
+.split-bill__feature-extra {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(71 85 105);
+  max-width: 520px;
+}
+
+.split-bill__device-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.split-bill__hero-phone .split-bill__device-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(560px, 68vh);
+  object-fit: contain;
+  filter: drop-shadow(0 16px 36px rgb(0 0 0 / 0.45));
+}
+
+.split-bill__hero-phone--1 .split-bill__device-shot {
+  max-height: min(500px, 62vh);
+}
+
+.split-bill__hero-phone--2 .split-bill__device-shot {
+  max-height: min(460px, 58vh);
+}
+
+.split-bill__hero-phone--browser .split-bill__browser {
+  width: 100%;
+  filter: drop-shadow(0 16px 36px rgb(0 0 0 / 0.45));
+}
+
+.split-bill__hero-phone .split-bill__phone-notch {
+  display: none;
+}
+
+.split-bill__browser {
+  width: min(168px, 42vw);
+  margin-inline: auto;
+  padding: 8px 8px 10px;
+  border-radius: 20px;
+  background: rgb(15 23 42);
+  box-shadow: 0 22px 44px -24px rgb(15 23 42 / 0.55);
+}
+
+.split-bill__hero-phone--browser .split-bill__browser {
+  width: 100%;
+}
+
+.split-bill__browser-bar {
+  display: flex;
+  gap: 6px;
+  padding: 4px 6px 10px;
+}
+
+.split-bill__browser-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgb(100 116 139);
+}
+
+.split-bill__browser-bar span:nth-child(1) {
+  background: rgb(248 113 113);
+}
+
+.split-bill__browser-bar span:nth-child(2) {
+  background: rgb(250 204 21);
+}
+
+.split-bill__browser-bar span:nth-child(3) {
+  background: rgb(74 222 128);
+}
+
+.split-bill__browser img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 12px;
+  background: rgb(15 23 42);
+}
+
+.split-bill__feature-media--browser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.split-bill__feature-media--browser .split-bill__browser {
+  width: min(176px, 48%);
+}
+
+@media (min-width: 768px) {
+  .split-bill__feature-media--browser .split-bill__browser {
+    width: 176px;
+  }
+}
+
+.split-bill {
+  overflow-x: clip;
 }

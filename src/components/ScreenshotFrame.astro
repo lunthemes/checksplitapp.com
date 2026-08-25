@@ -1,0 +1,59 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  variant: "device" | "browser";
+  loading?: "eager" | "lazy";
+  sizes: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  variant,
+  loading = "lazy",
+  sizes,
+} = Astro.props;
+
+const srcset = `${src} ${width}w`;
+---
+
+{
+  variant === "browser" ? (
+    <div class="split-bill__browser">
+      <div class="split-bill__browser-bar" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img
+        src={src}
+        srcset={srcset}
+        sizes={sizes}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        decoding="async"
+        data-lightbox
+      />
+    </div>
+  ) : (
+    <img
+      class="split-bill__device-shot"
+      src={src}
+      srcset={srcset}
+      sizes={sizes}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      decoding="async"
+      data-lightbox
+    />
+  )
+}

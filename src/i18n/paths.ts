@@ -53,6 +53,46 @@ export function localeSplitBillPath(lang: SupportedLanguage): string {
   return normalizePagePath(`${b}${lang}/split-bill-app/`);
 }
 
+/** SEO landing: group / trip expense tracker (trailing slash). */
+export function localeGroupExpenseTrackerPath(lang: SupportedLanguage): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return normalizePagePath(`/${lang}/group-expense-tracker/`);
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return normalizePagePath(`${b}${lang}/group-expense-tracker/`);
+}
+
+/** Guide: how to split a restaurant bill (trailing slash). */
+export function localeRestaurantBillGuidePath(lang: SupportedLanguage): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return normalizePagePath(`/${lang}/guides/how-to-split-a-restaurant-bill/`);
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return normalizePagePath(`${b}${lang}/guides/how-to-split-a-restaurant-bill/`);
+}
+
+/** Guide: how to split trip / group expenses (trailing slash). */
+export function localeTripExpensesGuidePath(lang: SupportedLanguage): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return normalizePagePath(`/${lang}/guides/how-to-split-trip-expenses/`);
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return normalizePagePath(`${b}${lang}/guides/how-to-split-trip-expenses/`);
+}
+
+/** Guides hub (trailing slash). */
+export function localeGuidesHubPath(lang: SupportedLanguage): string {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return normalizePagePath(`/${lang}/guides/`);
+  }
+  const b = base.endsWith("/") ? base : `${base}/`;
+  return normalizePagePath(`${b}${lang}/guides/`);
+}
+
 /** Legal/support marketing pages under `/[lang]/…/` */
 export type LegalSlug =
   | "privacy-policy"

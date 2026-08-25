@@ -73,6 +73,7 @@ const ctaBody = bodyOverride ?? t.cta.body;
               height="1402"
               loading="lazy"
               decoding="async"
+              data-lightbox
             />
           </div>
         </div>
@@ -88,12 +89,13 @@ const ctaBody = bodyOverride ?? t.cta.body;
             >
               <img
                 src={ctaPhoneScreen}
-                alt=""
-                class="absolute max-xl:inset-0 max-xl:h-full max-xl:w-full max-xl:object-contain max-xl:object-bottom xl:left-0 xl:top-0 xl:h-[120%] xl:w-full xl:object-cover xl:object-top [transform:translateZ(0)]"
+                alt={t.cta.imgAlt}
+                class="pointer-events-auto absolute max-xl:inset-0 max-xl:h-full max-xl:w-full max-xl:object-contain max-xl:object-bottom xl:left-0 xl:top-0 xl:h-[120%] xl:w-full xl:object-cover xl:object-top [transform:translateZ(0)]"
                 width="1122"
                 height="1402"
                 loading="lazy"
                 decoding="async"
+                data-lightbox
               />
             </div>
           </div>

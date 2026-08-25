@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  lead: string;
+  leadFollow?: string;
+  crumbHref?: string;
+  crumbLabel?: string;
+  crumbCurrent?: string;
+  backgroundSrc?: string;
+}
+
+const {
+  title,
+  lead,
+  leadFollow,
+  crumbHref,
+  crumbLabel,
+  crumbCurrent,
+  backgroundSrc = "/backgrounds/split-bill-app.png",
+} = Astro.props;
+---
+
+<section class="split-bill__hero guide__hero" aria-label={title}>
+  <div class="split-bill__hero-bg" aria-hidden="true">
+    <img
+      src={backgroundSrc}
+      alt=""
+      width="1920"
+      height="1080"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+  <div class="split-bill__hero-overlay" aria-hidden="true" />
+  <div class="split-bill__hero-arcs" aria-hidden="true"></div>
+
+  <div class="split-bill__hero-container">
+    <div class="guide__hero-copy typography">
+      {
+        crumbLabel && crumbHref ? (
+          <p class="guide__hero-crumb">
+            <a href={crumbHref}>{crumbLabel}</a>
+            {crumbCurrent ? (
+              <>
+                <span aria-hidden="true">/</span>
+                {crumbCurrent}
+              </>
+            ) : null}
+          </p>
+        ) : null
+      }
+      <h1 class="split-bill__hero-title typ-h1">{title}</h1>
+      <p class="split-bill__hero-desc">{lead}</p>
+      {leadFollow ? <p class="split-bill__hero-desc">{leadFollow}</p> : null}
+    </div>
+  </div>
+</section>

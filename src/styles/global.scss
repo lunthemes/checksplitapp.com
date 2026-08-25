@@ -1,9 +1,12 @@
 @use "./components/header";
+@use "./components/lightbox";
 @use "./components/language-switcher";
 @use "./components/hero";
 @use "./components/hero-slider";
 @use "./typography";
 @use "./pages/split-bill-app";
+@use "./pages/group-expense-tracker";
+@use "./pages/guides";
 
 @tailwind base;
 @tailwind components;
