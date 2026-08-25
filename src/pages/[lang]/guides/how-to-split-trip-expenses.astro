@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import FAQ from "../../../components/FAQ.astro";
 import GuideHero from "../../../components/GuideHero.astro";
 import CallToAction from "../../../components/CallToAction.astro";
+import EmphasizedText from "../../../components/EmphasizedText.astro";
 import { getDictionary } from "../../../i18n/dictionaries";
 import {
   getTripExpensesGuideCopy,
@@ -75,7 +76,7 @@ const faqDict = {
   faq: { ...t.faq, title: copy.faqH2 },
 };
 
-const HERO_BG = "/backgrounds/split-bill-app.png";
+const HERO_BG = "/backgrounds/split-bill-app.webp";
 ---
 
 <Layout
@@ -102,12 +103,13 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
       crumbLabel={copy.crumbGuides}
       crumbCurrent={copy.crumbCurrent}
       backgroundSrc={HERO_BG}
+      lang={lang}
     />
 
     <article class="typography guide__body">
       <section class="guide__editorial" aria-labelledby="rules-heading">
         <h2 class="typ-h2 typ-title-color" id="rules-heading">{copy.rulesH2}</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">{copy.rulesBody}</p>
+        <p class="mt-4 text-slate-600 leading-relaxed"><EmphasizedText text={copy.rulesBody} lang={lang} /></p>
       </section>
 
       <h2 class="typ-h2 typ-title-color mt-12" id="method">{copy.stepsH2}</h2>
@@ -124,7 +126,7 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
                 </span>
                 <h3 class="typ-h3 typ-title-color">{step.title}</h3>
               </div>
-              <p class="guide__step-desc">{step.desc}</p>
+              <p class="guide__step-desc"><EmphasizedText text={step.desc} lang={lang} /></p>
             </li>
           ))
         }
@@ -132,7 +134,7 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
 
       <section class="guide__example mt-12" aria-labelledby="example-heading">
         <h2 class="typ-h2 typ-title-color" id="example-heading">{copy.exampleH2}</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">{copy.exampleIntro}</p>
+        <p class="mt-4 text-slate-600 leading-relaxed"><EmphasizedText text={copy.exampleIntro} lang={lang} /></p>
         <div class="guide__table-wrap">
           <table class="guide__table">
             <caption class="guide__table-caption">{copy.exampleExpenseCaption}</caption>
@@ -148,8 +150,8 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
               {copy.exampleExpenseRows.map((row) => (
                 <tr>
                   <th scope="row">{row.expense}</th>
-                  <td>{row.payer}</td>
-                  <td>{row.participants}</td>
+                  <td><EmphasizedText text={row.payer} lang={lang} /></td>
+                  <td><EmphasizedText text={row.participants} lang={lang} /></td>
                   <td class="guide__table-num">{row.amount}</td>
                 </tr>
               ))}
@@ -170,28 +172,28 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
             <tbody>
               {copy.exampleBalanceRows.map((row) => (
                 <tr>
-                  <th scope="row">{row.person}</th>
+                  <th scope="row"><EmphasizedText text={row.person} lang={lang} /></th>
                   <td class="guide__table-num">{row.paid}</td>
                   <td class="guide__table-num">{row.share}</td>
-                  <td>{row.net}</td>
+                  <td><EmphasizedText text={row.net} lang={lang} /></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p class="mt-4 text-slate-600 leading-relaxed">{copy.exampleSettle}</p>
-        <p class="mt-3 text-slate-600 leading-relaxed">{copy.exampleNote}</p>
+        <p class="mt-4 text-slate-600 leading-relaxed"><EmphasizedText text={copy.exampleSettle} lang={lang} /></p>
+        <p class="mt-3 text-slate-600 leading-relaxed"><EmphasizedText text={copy.exampleNote} lang={lang} /></p>
       </section>
 
       <p class="mt-8 text-base leading-relaxed text-slate-600">
-        {copy.receiptNoteBefore}
+        {copy.receiptNoteBefore ? <EmphasizedText text={copy.receiptNoteBefore} lang={lang} /> : null}
         <a
           class="font-semibold text-brand-600 underline-offset-2 hover:underline"
           href={localeRestaurantBillGuidePath(lang)}
         >
           {copy.receiptNoteLabel}
         </a>
-        {copy.receiptNoteAfter}
+        <EmphasizedText text={copy.receiptNoteAfter} lang={lang} />
       </p>
 
       <section
@@ -199,7 +201,7 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
         aria-labelledby="product-heading"
       >
         <h2 class="typ-h2 typ-title-color" id="product-heading">{copy.productH2}</h2>
-        <p class="mt-3 text-slate-600 leading-relaxed">{copy.productBody}</p>
+        <p class="mt-3 text-slate-600 leading-relaxed"><EmphasizedText text={copy.productBody} lang={lang} /></p>
         <a
           class="mt-5 inline-flex text-base font-semibold text-brand-600 underline-offset-2 hover:underline"
           href={localeGroupExpenseTrackerPath(lang)}
@@ -209,9 +211,9 @@ const HERO_BG = "/backgrounds/split-bill-app.png";
       </section>
     </article>
 
-    <FAQ t={faqDict} items={[...copy.faq]} sectionClass="py-12 md:py-16" />
+    <FAQ t={faqDict} items={[...copy.faq]} lang={lang} sectionClass="py-12 md:py-16" />
 
-    <CallToAction t={t} title={copy.ctaTitle} body={copy.ctaBody} />
+    <CallToAction t={t} title={copy.ctaTitle} body={copy.ctaBody} lang={lang} />
   </main>
 
   <Footer t={t} year={year} lang={lang} sectionBase={sectionBase} />

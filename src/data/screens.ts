@@ -1,17 +1,17 @@
 /**
- * Screenshot-uri din `public/screens/` (PNG cu rama de iPhone).
- * Dacă schimbi un asset, păstrează același nume (ex. `home-trip.png`, `pdf-report.png`).
+ * Screenshot-uri din `public/screens/` (WebP cu rama de iPhone).
+ * Dacă schimbi un asset, păstrează același nume (ex. `home-trip.webp`, `pdf-report.webp`).
  */
 const SCREENS = {
-  home: "home.png",
-  overview: "overview.png",
-  homeTrip: "home-trip.png",
-  liveSplit: "live-split.png",
-  allExpenses: "all-expenses.png",
-  whoOwes: "who-owes.png",
-  pdfReport: "pdf-report.png",
+  home: "home.webp",
+  overview: "overview.webp",
+  homeTrip: "home-trip.webp",
+  liveSplit: "live-split.webp",
+  allExpenses: "all-expenses.webp",
+  whoOwes: "who-owes.webp",
+  pdfReport: "pdf-report.webp",
   /** Ilustrație CTA (telefon deja compus / înclinat în asset). */
-  cta: "CTA.png",
+  cta: "CTA.webp",
 } as const;
 
 export function screenUrl(name: string): string {

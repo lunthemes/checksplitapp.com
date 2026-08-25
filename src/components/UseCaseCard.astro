@@ -1,4 +1,7 @@
 ---
+import EmphasizedText from "./EmphasizedText.astro";
+import type { SupportedLanguage } from "../i18n/config";
+
 interface Props {
   title: string;
   desc: string;
@@ -6,9 +9,10 @@ interface Props {
   /** Small decorative icons: prefer empty for screen readers. */
   iconAlt?: string;
   ring: string;
+  lang: SupportedLanguage;
 }
 
-const { title, desc, iconSrc, iconAlt = "", ring } = Astro.props;
+const { title, desc, iconSrc, iconAlt = "", ring, lang } = Astro.props;
 ---
 
 <article
@@ -30,5 +34,5 @@ const { title, desc, iconSrc, iconAlt = "", ring } = Astro.props;
     />
   </div>
   <h3 class="typ-h3 typ-title-color">{title}</h3>
-  <p class="mt-1 text-sm text-slate-600">{desc}</p>
+  <p class="mt-1 text-sm text-slate-600"><EmphasizedText text={desc} lang={lang} /></p>
 </article>

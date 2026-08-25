@@ -1,4 +1,7 @@
 ---
+import EmphasizedText from "./EmphasizedText.astro";
+import type { SupportedLanguage } from "../i18n/config";
+
 interface Props {
   title: string;
   lead: string;
@@ -7,6 +10,7 @@ interface Props {
   crumbLabel?: string;
   crumbCurrent?: string;
   backgroundSrc?: string;
+  lang: SupportedLanguage;
 }
 
 const {
@@ -16,7 +20,8 @@ const {
   crumbHref,
   crumbLabel,
   crumbCurrent,
-  backgroundSrc = "/backgrounds/split-bill-app.png",
+  backgroundSrc = "/backgrounds/split-bill-app.webp",
+  lang,
 } = Astro.props;
 ---
 
@@ -50,8 +55,10 @@ const {
         ) : null
       }
       <h1 class="split-bill__hero-title typ-h1">{title}</h1>
-      <p class="split-bill__hero-desc">{lead}</p>
-      {leadFollow ? <p class="split-bill__hero-desc">{leadFollow}</p> : null}
+      <p class="split-bill__hero-desc"><EmphasizedText text={lead} lang={lang} /></p>
+      {leadFollow ? (
+        <p class="split-bill__hero-desc"><EmphasizedText text={leadFollow} lang={lang} /></p>
+      ) : null}
     </div>
   </div>
 </section>

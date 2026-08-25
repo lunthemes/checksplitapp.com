@@ -1,6 +1,7 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import StoreBadges from "./StoreBadges.astro";
+import EmphasizedText from "./EmphasizedText.astro";
 import { heroPhoneScreens } from "../data/screens";
 import { localeSplitBillPath } from "../i18n/paths";
 import type { Dictionary } from "../i18n/types";
@@ -13,7 +14,7 @@ export interface Props {
 
 const { t, lang } = Astro.props;
 
-const HERO_BG = "/backgrounds/home-hero.png";
+const HERO_BG = "/backgrounds/home-hero.webp";
 const SLIDE2_VIDEO = "/videos/hero-restaurants.mp4";
 
 const heroPhones = [
@@ -66,7 +67,7 @@ const heroPhones = [
         <div class="hero__grid">
           <div>
             <SectionHeader as="h1" align="left" title={t.hero.title} />
-            <p class="mt-4 text-lg text-slate-600">{t.hero.body}</p>
+            <p class="mt-4 text-lg text-slate-600"><EmphasizedText text={t.hero.body} lang={lang} /></p>
             <div class="mt-8">
               <StoreBadges
                 variant="hero"
@@ -115,7 +116,7 @@ const heroPhones = [
               {t.heroSlide2.title}
             </div>
             <p class="hero-slide2__body">
-              {t.heroSlide2.description}
+              <EmphasizedText text={t.heroSlide2.description} lang={lang} />
             </p>
             <a class="hero-slide2__learn" href={localeSplitBillPath(lang)}>
               {t.heroSlide2.button} <span aria-hidden="true">→</span>

@@ -1,13 +1,17 @@
 ---
+import EmphasizedText from "./EmphasizedText.astro";
+import type { SupportedLanguage } from "../i18n/config";
+
 export interface Props {
   title: string;
   subtitle?: string;
   as?: "h1" | "h2" | "h3";
   class?: string;
   align?: "left" | "center";
+  lang?: SupportedLanguage;
 }
 
-const { title, subtitle, as: Tag = "h2", class: className = "", align = "center" } =
+const { title, subtitle, as: Tag = "h2", class: className = "", align = "center", lang } =
   Astro.props;
 ---
 
@@ -35,7 +39,7 @@ const { title, subtitle, as: Tag = "h2", class: className = "", align = "center"
         align === "left" && "max-w-2xl",
       ]}
     >
-      {subtitle}
+      {lang ? <EmphasizedText text={subtitle} lang={lang} /> : subtitle}
     </p>
   )}
 </div>

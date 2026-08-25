@@ -1,14 +1,17 @@
 ---
 import SectionHeader from "./SectionHeader.astro";
 import UseCaseCard from "./UseCaseCard.astro";
+import EmphasizedText from "./EmphasizedText.astro";
 import type { Dictionary } from "../i18n/types";
+import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
   t: Dictionary;
   items: { title: string; desc: string; icon: string; ring: string }[];
+  lang: SupportedLanguage;
 }
 
-const { t, items } = Astro.props;
+const { t, items, lang } = Astro.props;
 ---
 
 <section
@@ -23,7 +26,7 @@ const { t, items } = Astro.props;
     <p
       class="mx-auto mt-4 max-w-3xl text-pretty text-center text-sm leading-relaxed text-slate-600 md:mt-5 md:text-base"
     >
-      {t.useCases.intro}
+      <EmphasizedText text={t.useCases.intro} lang={lang} />
     </p>
     <div
       class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-10 lg:grid-cols-4"
@@ -34,6 +37,7 @@ const { t, items } = Astro.props;
           desc={u.desc}
           iconSrc={u.icon}
           ring={u.ring}
+          lang={lang}
         />
       ))}
     </div>

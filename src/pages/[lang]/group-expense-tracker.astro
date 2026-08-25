@@ -6,6 +6,7 @@ import StoreBadges from "../../components/StoreBadges.astro";
 import FAQ from "../../components/FAQ.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import SectionHeader from "../../components/SectionHeader.astro";
+import EmphasizedText from "../../components/EmphasizedText.astro";
 import { getDictionary } from "../../i18n/dictionaries";
 import {
   getGroupExpenseTrackerCopy,
@@ -120,7 +121,7 @@ const stepRows = copy.steps.map((step, idx) => ({
         <div class="split-bill__hero-grid">
           <div class="split-bill__hero-copy typography">
             <h1 class="split-bill__hero-title">{copy.h1}</h1>
-            <p class="split-bill__hero-desc">{copy.heroText}</p>
+            <p class="split-bill__hero-desc"><EmphasizedText text={copy.heroText} lang={lang} /></p>
             <div class="split-bill__hero-badges">
               <StoreBadges
                 variant="hero"
@@ -136,16 +137,16 @@ const stepRows = copy.steps.map((step, idx) => ({
                   {" · "}
                 </>
               ) : null}
-              {copy.internalRestaurantBefore}
+              <EmphasizedText text={copy.internalRestaurantBefore} lang={lang} />
               <a href={localeSplitBillPath(lang)}>{copy.internalRestaurantLabel}</a>
-              {copy.internalRestaurantAfter}
+              <EmphasizedText text={copy.internalRestaurantAfter} lang={lang} />
             </p>
             {
               copy.guideBridgeLabel ? (
                 <p class="get__internal-link">
-                  {copy.guideBridgeBefore}
+                  <EmphasizedText text={copy.guideBridgeBefore} lang={lang} />
                   <a href={localeTripExpensesGuidePath(lang)}>{copy.guideBridgeLabel}</a>
-                  {copy.guideBridgeAfter}
+                  <EmphasizedText text={copy.guideBridgeAfter} lang={lang} />
                 </p>
               ) : null
             }
@@ -157,8 +158,8 @@ const stepRows = copy.steps.map((step, idx) => ({
                 <img
                   src={getAssets.heroPrimary}
                   alt="Expenses tab for Weekend in Prague with taxi, hotel, and museum tickets"
-                  width="3200"
-                  height="2400"
+                  width="1600"
+                  height="1200"
                   loading="eager"
                   decoding="async"
                   data-lightbox
@@ -168,8 +169,8 @@ const stepRows = copy.steps.map((step, idx) => ({
                 <img
                   src={getAssets.heroSecondary}
                   alt="Trip overview with group participants Nina, Leo, Sam, and Maya"
-                  width="3200"
-                  height="2400"
+                  width="1600"
+                  height="1200"
                   loading="eager"
                   decoding="async"
                   data-lightbox
@@ -206,15 +207,15 @@ const stepRows = copy.steps.map((step, idx) => ({
               </div>
               <div class="typography">
                 <h2 class="split-bill__feature-title">{copy.timelineH2}</h2>
-                <div class="split-bill__feature-desc">{copy.timelineText}</div>
+                <div class="split-bill__feature-desc"><EmphasizedText text={copy.timelineText} lang={lang} /></div>
               </div>
             </div>
             <div class="split-bill__feature-media">
               <img
                 src={getAssets.history}
                 alt="Expenses tab listing taxi, hotel, and museum tickets for Weekend in Prague"
-                width="3200"
-                height="2400"
+                width="1600"
+                height="1200"
                 loading="lazy"
                 decoding="async"
                 data-lightbox
@@ -252,15 +253,15 @@ const stepRows = copy.steps.map((step, idx) => ({
                       </span>
                       <h2 class="split-bill__feature-title">{step.title}</h2>
                     </div>
-                    <div class="split-bill__feature-desc">{step.text}</div>
+                    <div class="split-bill__feature-desc"><EmphasizedText text={step.text} lang={lang} /></div>
                   </div>
                 </div>
                 <div class="split-bill__feature-media">
                   <img
                     src={step.img}
                     alt={step.imageAlt}
-                    width="3200"
-                    height="2400"
+                    width="1600"
+                    height="1200"
                     loading="lazy"
                     decoding="async"
                     data-lightbox
@@ -288,15 +289,15 @@ const stepRows = copy.steps.map((step, idx) => ({
               </div>
               <div class="typography">
                 <h2 class="split-bill__feature-title">{copy.subsetH2}</h2>
-                <div class="split-bill__feature-desc">{copy.subsetText}</div>
+                <div class="split-bill__feature-desc"><EmphasizedText text={copy.subsetText} lang={lang} /></div>
               </div>
             </div>
             <div class="split-bill__feature-media">
               <img
                 src={getAssets.selectedParticipants}
                 alt="Selecting Custom participants on a taxi expense"
-                width="3200"
-                height="2400"
+                width="1600"
+                height="1200"
                 loading="lazy"
                 decoding="async"
                 data-lightbox
@@ -322,7 +323,7 @@ const stepRows = copy.steps.map((step, idx) => ({
               </div>
               <div class="typography">
                 <h2 class="split-bill__feature-title">{copy.receiptBridgeH2}</h2>
-                <div class="split-bill__feature-desc">{copy.receiptBridgeText}</div>
+                <div class="split-bill__feature-desc"><EmphasizedText text={copy.receiptBridgeText} lang={lang} /></div>
                 <a class="get__cta-link" href={localeSplitBillPath(lang)}>
                   {copy.receiptBridgeCta}
                 </a>
@@ -332,8 +333,8 @@ const stepRows = copy.steps.map((step, idx) => ({
               <img
                 src={getAssets.receiptBridge}
                 alt="Bills tab with Add Bill on a CheqSplit trip"
-                width="3200"
-                height="2400"
+                width="1600"
+                height="1200"
                 loading="lazy"
                 decoding="async"
                 data-lightbox
@@ -359,7 +360,7 @@ const stepRows = copy.steps.map((step, idx) => ({
               </div>
               <div class="typography">
                 <h2 class="split-bill__feature-title">{copy.reportH2}</h2>
-                <div class="split-bill__feature-desc">{copy.reportText}</div>
+                <div class="split-bill__feature-desc"><EmphasizedText text={copy.reportText} lang={lang} /></div>
               </div>
             </div>
             <div class="split-bill__feature-media get__feature-media--pdf">
@@ -399,7 +400,7 @@ const stepRows = copy.steps.map((step, idx) => ({
             {copy.fits.some((item) => item) ? (
               <ul class="get__fits">
                 {copy.fits.filter(Boolean).map((item) => (
-                  <li>{item}</li>
+                  <li><EmphasizedText text={item} lang={lang} /></li>
                 ))}
               </ul>
             ) : null}
@@ -408,13 +409,14 @@ const stepRows = copy.steps.map((step, idx) => ({
       ) : null
     }
 
-    <CallToAction t={t} title={copy.ctaTitle} body={copy.ctaBody} />
+    <CallToAction t={t} lang={lang} title={copy.ctaTitle} body={copy.ctaBody} />
 
     <section class="get__section get__section--faq" aria-label={copy.a11y.faq}>
       <div class="get__container">
         <FAQ
           t={{ ...t, faq: { ...t.faq, title: copy.faqH2 } }}
           items={faqItems}
+          lang={lang}
           sectionClass="pt-[10px] pb-[10px]"
         />
       </div>

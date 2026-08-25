@@ -2,6 +2,7 @@
 import type { SupportPage } from "../../i18n/legal/types";
 import type { SupportedLanguage } from "../../i18n/config";
 import { localeLegalPath } from "../../i18n/paths";
+import EmphasizedText from "../EmphasizedText.astro";
 
 interface Props {
   c: SupportPage;
@@ -18,7 +19,7 @@ const tp = (slug: Parameters<typeof localeLegalPath>[1]) => localeLegalPath(lang
   </header>
 
   <div class="space-y-10 text-base leading-relaxed">
-    <p>{c.thankYou}</p>
+    <p><EmphasizedText text={c.thankYou} lang={lang} /></p>
 
     <section class="space-y-4" aria-labelledby="contact-email">
       <h2 id="contact-email" class="text-xl font-semibold text-slate-900">{c.contactTitle}</h2>
@@ -27,7 +28,7 @@ const tp = (slug: Parameters<typeof localeLegalPath>[1]) => localeLegalPath(lang
           >support@cheqsplitapp.com</a
         >
       </p>
-      <p class="text-sm text-slate-600">{c.contactNote}</p>
+      <p class="text-sm text-slate-600"><EmphasizedText text={c.contactNote} lang={lang} /></p>
     </section>
 
     <section class="space-y-4" aria-labelledby="faq-support">
@@ -35,15 +36,15 @@ const tp = (slug: Parameters<typeof localeLegalPath>[1]) => localeLegalPath(lang
       <ul class="list-disc space-y-4 pl-6">
         <li>
           <strong>{c.faqScanTitle}</strong>
-          {c.faqScanBody}
+          {c.faqScanBody ? <EmphasizedText text={c.faqScanBody} lang={lang} /> : null}
         </li>
         <li>
           <strong>{c.faqJoinTitle}</strong>
-          {c.faqJoinBody}
+          {c.faqJoinBody ? <EmphasizedText text={c.faqJoinBody} lang={lang} /> : null}
         </li>
         <li>
           <strong>{c.faqSubTitle}</strong>
-          {c.faqSubBody}
+          {c.faqSubBody ? <EmphasizedText text={c.faqSubBody} lang={lang} /> : null}
         </li>
       </ul>
     </section>

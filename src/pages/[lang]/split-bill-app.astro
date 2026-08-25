@@ -6,6 +6,7 @@ import StoreBadges from "../../components/StoreBadges.astro";
 import FAQ from "../../components/FAQ.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import ScreenshotFrame from "../../components/ScreenshotFrame.astro";
+import EmphasizedText from "../../components/EmphasizedText.astro";
 import { getDictionary } from "../../i18n/dictionaries";
 import {
   getSplitBillCopy,
@@ -68,7 +69,7 @@ const softwareJsonLd = JSON.stringify(
 const faqItems = [...copy.faq];
 const faqJsonLd = JSON.stringify(getFaqPageJsonLd(faqItems));
 
-const HERO_BG = "/backgrounds/split-bill-app.png";
+const HERO_BG = "/backgrounds/split-bill-app.webp";
 
 const MARKER = "CheqSplit";
 const h1Full = copy.h1;
@@ -133,14 +134,14 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
 
             {(copy.heroSubLine1 || copy.heroSubLine2) && (
               <div class="split-bill__hero-sub">
-                {copy.heroSubLine1 && <div>{copy.heroSubLine1}</div>}
-                {copy.heroSubLine2 && <div>{copy.heroSubLine2}</div>}
+                {copy.heroSubLine1 && <div><EmphasizedText text={copy.heroSubLine1} lang={lang} /></div>}
+                {copy.heroSubLine2 && <div><EmphasizedText text={copy.heroSubLine2} lang={lang} /></div>}
               </div>
             )}
 
             {copy.heroParagraph && (
               <p class="split-bill__hero-desc">
-                {copy.heroParagraph}
+                <EmphasizedText text={copy.heroParagraph} lang={lang} />
               </p>
             )}
 
@@ -186,7 +187,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
         <div class="split-bill__section-heading typography">
           <h2 class="typ-h2 typ-title-color">{copy.howSectionH2}</h2>
           {copy.howSectionSub && (
-            <p class="split-bill__section-sub">{copy.howSectionSub}</p>
+            <p class="split-bill__section-sub"><EmphasizedText text={copy.howSectionSub} lang={lang} /></p>
           )}
         </div>
 
@@ -204,7 +205,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
                 />
               </div>
               <h3 class="typ-h3 typ-title-color split-bill__step-title">{s.title}</h3>
-              <div class="split-bill__step-desc">{s.desc}</div>
+              <div class="split-bill__step-desc"><EmphasizedText text={s.desc} lang={lang} /></div>
               {idx < 2 && <div class="split-bill__step-arrow" aria-hidden="true">→</div>}
             </div>
           ))}
@@ -213,13 +214,13 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
         <div class="mt-12 typography">
           <h2 class="typ-h2 typ-title-color">{copy.seoBlockH2}</h2>
           {copy.seoBlockP1 && (
-            <p class="split-bill__section-sub">{copy.seoBlockP1}</p>
+            <p class="split-bill__section-sub"><EmphasizedText text={copy.seoBlockP1} lang={lang} /></p>
           )}
           {copy.seoBlockP2 && (
-            <p class="split-bill__section-sub mt-4">{copy.seoBlockP2}</p>
+            <p class="split-bill__section-sub mt-4"><EmphasizedText text={copy.seoBlockP2} lang={lang} /></p>
           )}
           {copy.seoBlockP3 && (
-            <p class="split-bill__section-sub mt-4">{copy.seoBlockP3}</p>
+            <p class="split-bill__section-sub mt-4"><EmphasizedText text={copy.seoBlockP3} lang={lang} /></p>
           )}
         </div>
 
@@ -232,7 +233,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
               <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <div class="typography">
                   <h3 class="typ-h3 typ-title-color">{u.title}</h3>
-                  <p class="mt-2 text-slate-600">{u.text}</p>
+                  <p class="mt-2 text-slate-600"><EmphasizedText text={u.text} lang={lang} /></p>
                 </div>
               </div>
             ))}
@@ -242,14 +243,14 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
         {
           copy.groupBridgeLabel ? (
             <p class="mt-8 text-base leading-relaxed text-slate-600">
-              {copy.groupBridgeBefore}
+              <EmphasizedText text={copy.groupBridgeBefore} lang={lang} />
               <a
                 class="font-semibold text-brand-600 underline-offset-2 hover:underline"
                 href={localeGroupExpenseTrackerPath(groupBridgeLang)}
               >
                 {copy.groupBridgeLabel}
               </a>
-              {copy.groupBridgeAfter}
+              <EmphasizedText text={copy.groupBridgeAfter} lang={lang} />
             </p>
           ) : null
         }
@@ -257,14 +258,14 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
         {
           copy.guideBridgeLabel ? (
             <p class="mt-3 text-base leading-relaxed text-slate-600">
-              {copy.guideBridgeBefore}
+              <EmphasizedText text={copy.guideBridgeBefore} lang={lang} />
               <a
                 class="font-semibold text-brand-600 underline-offset-2 hover:underline"
                 href={localeRestaurantBillGuidePath(guideBridgeLang)}
               >
                 {copy.guideBridgeLabel}
               </a>
-              {copy.guideBridgeAfter}
+              <EmphasizedText text={copy.guideBridgeAfter} lang={lang} />
             </p>
           ) : null
         }
@@ -296,8 +297,8 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
                 </div>
                 <div class="typography">
                   <h2 class="split-bill__feature-title">{f.title}</h2>
-                  <p class="split-bill__feature-desc">{f.desc}</p>
-                  {f.extra ? <p class="split-bill__feature-extra">{f.extra}</p> : null}
+                  <p class="split-bill__feature-desc"><EmphasizedText text={f.desc} lang={lang} /></p>
+                  {f.extra ? <p class="split-bill__feature-extra"><EmphasizedText text={f.extra} lang={lang} /></p> : null}
                 </div>
               </div>
               <div class:list={["split-bill__feature-media", f.variant === "browser" && "split-bill__feature-media--browser"]}>
@@ -319,6 +320,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
 
     <CallToAction
       t={t}
+      lang={lang}
       title={copy.ctaTitle}
       body={copy.ctaBody}
     />
@@ -328,6 +330,7 @@ const featureRows = splitBillFeatureAssets.map((asset, i) => ({
         <FAQ
           t={{ ...t, faq: { ...t.faq, title: copy.a11y.faq } }}
           items={faqItems}
+          lang={lang}
           sectionClass="pt-[10px] pb-[10px]"
         />
       </div>

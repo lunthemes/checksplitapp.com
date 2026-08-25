@@ -64,7 +64,7 @@ const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
   twitterDescription={t.meta.twitterDescription}
   canonicalUrl={canonicalUrl}
   ogImageUrl="https://cheqsplitapp.com/og-image.png"
-  preloadHeroImage="/backgrounds/home-hero.png"
+  preloadHeroImage="/backgrounds/home-hero.webp"
   lang={lang}
   alternatePages={alternatePages}
   xDefaultUrl={xDefaultUrl}
@@ -75,11 +75,11 @@ const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
   <main>
     <Hero t={t} lang={lang} />
     <WorkflowChooser t={t} lang={lang} />
-    <FeatureBar t={t} items={featureItems} />
-    <HowItWorks t={t} howSteps={howSteps} />
-    <UseCases t={t} items={useCaseItems} />
-    <CallToAction t={t} />
-    <FAQ t={t} items={t.faq.items} />
+    <FeatureBar t={t} items={featureItems} lang={lang} />
+    <HowItWorks t={t} howSteps={howSteps} lang={lang} />
+    <UseCases t={t} items={useCaseItems} lang={lang} />
+    <CallToAction t={t} lang={lang} />
+    <FAQ t={t} items={t.faq.items} lang={lang} />
   </main>
   <Footer t={t} year={year} lang={lang} />
 </Layout>

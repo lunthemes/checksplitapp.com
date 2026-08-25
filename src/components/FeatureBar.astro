@@ -2,6 +2,7 @@
 import FeatureCard from "./FeatureCard.astro";
 import SectionHeader from "./SectionHeader.astro";
 import type { Dictionary } from "../i18n/types";
+import type { SupportedLanguage } from "../i18n/config";
 
 export interface Props {
   t: Dictionary;
@@ -11,9 +12,10 @@ export interface Props {
     icon: string;
     iconBg: string;
   }[];
+  lang: SupportedLanguage;
 }
 
-const { t, items } = Astro.props;
+const { t, items, lang } = Astro.props;
 ---
 
 <section
@@ -34,6 +36,7 @@ const { t, items } = Astro.props;
         iconSrc={f.icon}
         iconAlt=""
         iconBg={f.iconBg}
+        lang={lang}
       />
     ))}
   </div>

@@ -1,0 +1,21 @@
+---
+import { emphasizeCopy } from "../i18n/emphasize-copy";
+import type { SupportedLanguage } from "../i18n/config";
+
+interface Props {
+  text: string;
+  lang: SupportedLanguage;
+  class?: string;
+}
+
+const { text, lang, class: className } = Astro.props;
+const html = emphasizeCopy(text, lang);
+---
+
+{
+  className ? (
+    <span class={className} set:html={html} />
+  ) : (
+    <span class="contents" set:html={html} />
+  )
+}

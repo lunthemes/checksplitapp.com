@@ -42,8 +42,8 @@ export const useCaseVisuals = [
 ] as const;
 
 export const site = {
-  /** Pictogramă (fără text) — plasează fișierul la `public/logos/icon.png`. */
-  logoIcon: "/logos/icon.png",
+  /** Pictogramă (fără text) — plasează fișierul la `public/logos/icon.webp`. */
+  logoIcon: "/logos/icon.webp",
   name: "CheqSplit",
 } as const;
 

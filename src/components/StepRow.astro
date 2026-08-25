@@ -1,4 +1,7 @@
 ---
+import EmphasizedText from "./EmphasizedText.astro";
+import type { SupportedLanguage } from "../i18n/config";
+
 interface Theme {
   section: string;
   pill: string;
@@ -14,9 +17,10 @@ interface Props {
   image: { src: string; alt: string };
   reverse: boolean;
   theme: Theme;
+  lang: SupportedLanguage;
 }
 
-const { stepPill, label, body, items, image, reverse, theme } = Astro.props;
+const { stepPill, label, body, items, image, reverse, theme, lang } = Astro.props;
 const phoneSize = "max-w-[min(100%,280px)] sm:max-w-[320px] md:max-w-[352px] lg:max-w-[384px]";
 ---
 
@@ -76,7 +80,7 @@ const phoneSize = "max-w-[min(100%,280px)] sm:max-w-[320px] md:max-w-[352px] lg:
       {label}
     </h3>
     <p class="mt-3 max-w-prose text-base text-slate-600 sm:mt-4 sm:text-lg">
-      {body}
+      <EmphasizedText text={body} lang={lang} />
     </p>
     <ul class="mt-6 space-y-3.5 sm:mt-7">
       {items.map((it) => (
@@ -88,7 +92,7 @@ const phoneSize = "max-w-[min(100%,280px)] sm:max-w-[320px] md:max-w-[352px] lg:
             ]}
             aria-hidden="true"
           >✓</span>
-          {it}
+          <EmphasizedText text={it} lang={lang} />
         </li>
       ))}
     </ul>

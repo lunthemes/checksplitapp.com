@@ -1,10 +1,14 @@
 ---
+import { emphasizeCopy } from "../i18n/emphasize-copy";
+import type { SupportedLanguage } from "../i18n/config";
+
 interface Props {
   question: string;
   answer: string;
+  lang: SupportedLanguage;
 }
 
-const { question, answer } = Astro.props;
+const { question, answer, lang } = Astro.props;
 ---
 
 <details
@@ -13,7 +17,7 @@ const { question, answer } = Astro.props;
   <summary
     class="flex cursor-pointer list-none items-center justify-between gap-2 text-left font-medium text-slate-900"
   >
-    {question}
+    <span class="contents" set:html={emphasizeCopy(question, lang)} />
     <span
       class="inline-flex shrink-0 text-slate-400 transition duration-200 group-open:rotate-180"
       aria-hidden="true"
@@ -31,5 +35,5 @@ const { question, answer } = Astro.props;
       </svg>
     </span>
   </summary>
-  <p class="mt-2 text-sm text-slate-600">{answer}</p>
+  <p class="mt-2 text-sm text-slate-600" set:html={emphasizeCopy(answer, lang)} />
 </details>
