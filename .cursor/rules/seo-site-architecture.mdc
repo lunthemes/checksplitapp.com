@@ -1,0 +1,60 @@
+---
+description: CheqSplit SEO site architecture (revised 21 Aug 2026) — trip vs restaurant, product-truth, build order
+alwaysApply: true
+---
+
+# CheqSplit SEO & site architecture (revised 21 Aug 2026)
+
+Planning source of truth. Prefer this over ad-hoc SEO landers.
+
+## Product-truth rule
+
+Only claim confirmed workflows:
+
+1. Create trip + invite participants  
+2. Scan restaurant receipt  
+3. Review/edit detected items  
+4. Invite bill participants by link/QR  
+5. Assign items (shared/percentage where shown)  
+6. Collaborative real-time bill split  
+7. Add trip expenses (payer + selected participants)  
+8. Expense history + who owes whom  
+9. Archive trip + PDF report (as shown on site)
+
+Do **not** invent audience/scenario pages without a matching workflow. Exclude unverified: payments, banking, currency conversion, recurring bills, reminders, budgeting, web calculator.
+
+## Do not create
+
+- Synonym landers: `split-bill-by-item`, receipt-scanner, split-check variants  
+- Roommate / grocery / couples pages until evidence + distinct workflow  
+- Comparison / calculator pages for now  
+- A **second** page that duplicates the ongoing multi-expense ledger (do not ship both `/trip-expense-splitter/` and `/group-expense-tracker/`)
+
+Restaurant/receipt commercial intent stays on **`/[lang]/split-bill-app/`** only.
+
+## Intent boundaries
+
+| Page | Owns |
+|---|---|
+| `/[lang]/` | Two-workflow router: one receipt **or** ongoing group/trip expenses |
+| `/[lang]/split-bill-app/` | One restaurant receipt, live item split |
+| `/[lang]/group-expense-tracker/` | Ongoing multi-expense ledger (SEO primary). In-product language may still say create trip, invite, expense history, balances, PDF — one page only |
+| Guides | Method only; link to the matching product page |
+
+**SEO vs product wording:** Prefer search language “group expense tracker” in URL/title/H1/meta. On-page steps and screenshots can show the real trip UI (create trip, participants, etc.). Do not create a separate trip-named commercial URL that cannibalizes this page.
+
+## Build order (do not skip)
+
+1. **Phase 0** — Product truth + foundation: map claims to current app; single homepage H1; trailing-slash 301s; 404; analytics store clicks; CWV/hero video; schema accuracy.  
+2. **Phase 1** — Revise homepage (two-workflow router) + revise `split-bill-app` (restaurant-only depth).  
+3. **Phase 2** — Create **`/en/group-expense-tracker/`** (first new commercial page; trip screens inside); publish before nav links.  
+4. **Phase 3** — Add Product nav (restaurant + group/trip expenses) after that page is live.  
+5. **Phase 4** — Guides: restaurant then trip/group expenses; `/en/guides/` hub only after both.  
+6. Evidence review → then localization.
+
+## Copy / claims
+
+- Prefer “see who owes whom” over “settle” (no payment rails).  
+- Destinations before navigation/footer links.  
+- One unique title/H1/hero per page; self-canonical; hreflang only for complete translations.  
+- Real app screens + consistent fictional demo data (“Weekend in Prague”); no fake UI.

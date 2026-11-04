@@ -19,12 +19,12 @@ export const groupExpenseTrackerPl: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Zaproś grupę do wyjazdu",
-      text: "Po utworzeniu i nazwaniu wyjazdu zaproś uczestników za pomocą linku lub kodu QR.",
+      text: "Na ekranie głównym wybierz Utwórz grupę, nadaj jej nazwę, wybierz walutę i zaproś uczestników przez link lub kod QR.",
       imageAlt: "Zaproś grupę do wyjazdu",
     },
     {
       title: "Dodaj każdy wydatek",
-      text: "Otwórz kartę Wydatki i wybierz Dodaj Wydatek. Wpisz opis i kwotę, wskaż, kto zapłacił, oraz wybierz uczestników danego wydatku.",
+      text: "Otwórz Wydatki i wybierz Dodaj wydatek. Wpisz opis, kwotę i walutę, opcjonalnie wybierz kategorię oraz płatnika, a następnie Wszyscy lub wybór własny dla uczestników. Każdy uczestnik może dodać wydatek.",
       imageAlt: "Dodaj każdy wydatek",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerPl: GroupExpenseTrackerCopy = {
   subsetH2: "Dopasuj sposób podziału do konkretnego wydatku",
   subsetText: "Nie każdy koszt dotyczy całej grupy. Taksówkę przypisz tylko pasażerom, bilety osobom, które z nich korzystały, a prawdziwie wspólne wydatki całej grupie. W przypadku szczegółowego rachunku z restauracji użyj karty Rachunki i Add Bill.",
   receiptBridgeH2: "Dodaj do wyjazdu rachunek z restauracji podzielony według pozycji",
-  receiptBridgeText: "Jeśli grupa ma szczegółowy rachunek z restauracji, najpierw podziel go według pozycji, uwzględniając opłaty i napiwek. Następnie otwórz kartę Rachunki w wyjeździe i wybierz Add Bill.",
+  receiptBridgeText: "W grupie otwórz Paragony i wybierz Dodaj paragon, aby go zeskanować lub przesłać. Sprawdź rozpoznane pozycje i sumę; paragon automatycznie łączy się z grupą. Następnie podziel go według pozycji lub po równo.",
   receiptBridgeCta: "Zobacz, jak działa dzielenie rachunku",
   reportH2: "Zachowaj zestawienie, do którego grupa może później wrócić",
   reportText: "Zarchiwizuj wyjazd i wyeksportuj raport PDF z wydatkami, sumami, tabelami i wykresem. Takie zestawienie łatwiej sprawdzić niż końcowe rozliczenie odtwarzane z pamięci.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerPl: GroupExpenseTrackerCopy = {
     },
     {
       q: "Czy mogę zeskanować paragon jako wydatek na wyjeździe?",
-      a: "Do szczegółowego podziału według pozycji użyj procesu dla paragonu z restauracji, uwzględniając podatek i napiwek. Następnie otwórz kartę Rachunki w wyjeździe i wybierz Add Bill.",
+      a: "W grupie otwórz Paragony i wybierz Dodaj paragon, aby go zeskanować lub przesłać. Sprawdź rozpoznane pozycje i sumę; paragon automatycznie łączy się z grupą. Następnie podziel go według pozycji lub po równo.",
     },
     {
       q: "Skąd wiadomo, kto powinien komu zapłacić?",

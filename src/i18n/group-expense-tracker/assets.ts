@@ -1,6 +1,6 @@
 /**
  * Assets under `public/screens/group-expense-tracker/`.
- * Demo trip: Weekend in Prague (Nina, Leo, Sam, Maya).
+ * Demo group: Weekend in Rome (Jordan, Maria, Sam, Alex, John).
  * Frame_* screenshots keep transparency; encoded as WebP without cropping.
  */
 const base = "/screens/group-expense-tracker";
@@ -18,16 +18,16 @@ export const getFeatureIcons = {
 } as const;
 
 export const getAssets = {
-  heroPrimary: `${base}/Frame_11.webp`,
-  heroSecondary: `${base}/Frame_3.webp`,
-  createInvite: `${base}/Frame_10.webp`,
-  addExpense: `${base}/Frame_4.webp`,
-  selectedParticipants: `${base}/Frame_2.webp`,
-  history: `${base}/Frame_11.webp`,
-  balances: `${base}/Frame_8.webp`,
+  heroPrimary: `${base}/Frame_11.webp?v=20261029-gap3`,
+  heroSecondary: `${base}/Frame_3.webp?v=20261029-gap3`,
+  createInvite: `${base}/Frame_10.webp?v=20261029-gap3`,
+  addExpense: `${base}/Frame_4.webp?v=20261029-gap3`,
+  selectedParticipants: `${base}/Frame_2.webp?v=20261029-gap3`,
+  history: `${base}/Frame_11.webp?v=20261029-gap3`,
+  balances: `${base}/Frame_8.webp?v=20261029-gap3`,
   /** PDF page previews (export uses native share sheet — not in-app UI). */
   report: `${base}/group-expense-pdf-report.webp`,
   reportPage2: `${base}/group-expense-pdf-report-p2.webp`,
-  receiptBridge: `${base}/Frame_6.webp`,
+  receiptBridge: `${base}/Frame_6.webp?v=20261029-gap3`,
   heroBg: "/backgrounds/split-bill-app.webp",
 } as const;

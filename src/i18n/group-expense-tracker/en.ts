@@ -22,12 +22,12 @@ export const groupExpenseTrackerEn: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Invite the group to the trip",
-      text: "After creating and naming the trip, invite participants by link or QR code.",
+      text: "On the home screen, tap Create group, name the group, choose its currency, and invite participants by link or QR code.",
       imageAlt: "Invite participants to a CheqSplit trip by link or QR code",
     },
     {
       title: "Add each expense",
-      text: "Open the Expenses tab and tap Add Expense. Enter the description and amount, choose who paid, and select who shares the expense. Any participant can add an expense.",
+      text: "Open Expenses and tap Add Expense. Enter the description, amount and currency, optionally choose a category, select the payer, then choose Everyone or Custom for the participants. Any participant can add an expense.",
       imageAlt: "Add Expense form with description, amount, payer, and who shares the cost",
     },
     {
@@ -38,7 +38,7 @@ export const groupExpenseTrackerEn: GroupExpenseTrackerCopy = {
     {
       title: "Follow the shared expense history",
       text: "Every added expense appears in the Expenses tab with its amount, payer and participants.",
-      imageAlt: "Expenses tab listing taxi, hotel, and museum tickets for Weekend in Prague",
+      imageAlt: "Expenses tab listing shared costs for Weekend in Rome",
     },
     {
       title: "See who owes whom",
@@ -51,7 +51,7 @@ export const groupExpenseTrackerEn: GroupExpenseTrackerCopy = {
     "Not every cost belongs to everyone. Add a taxi for four people without charging the two who walked. Record a meal as a regular expense when only the total matters and select only the diners involved. If you need to split an itemized restaurant receipt, use the Bills tab and Add Bill.",
   receiptBridgeH2: "Bring an itemized restaurant bill into the trip",
   receiptBridgeText:
-    "When the cost is an itemized restaurant receipt, use the restaurant receipt flow for the itemized split, including tax and tip. Then open the Bills tab on the trip and tap Add Bill.",
+    "In the group, open Bills and tap Add Bill to scan or upload a receipt. Review the detected items and total; the bill is linked to the group automatically. Then start splitting by item or choose Split equally.",
   receiptBridgeCta: "See how receipt splitting works",
   reportH2: "Keep a record the group can return to",
   reportText:
@@ -75,7 +75,7 @@ export const groupExpenseTrackerEn: GroupExpenseTrackerCopy = {
     },
     {
       q: "Can I scan a receipt for a trip expense?",
-      a: "Use the restaurant receipt flow for the itemized split, including tax and tip. Then open the Bills tab on the trip and tap Add Bill.",
+      a: "In the group, open Bills and tap Add Bill to scan or upload a receipt. Review the detected items and total; the bill is linked to the group automatically. Then start splitting by item or choose Split equally.",
     },
     {
       q: "How do I know who should pay whom?",

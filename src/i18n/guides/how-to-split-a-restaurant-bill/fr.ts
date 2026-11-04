@@ -11,7 +11,7 @@ export const restaurantBillGuideFr: RestaurantBillGuideCopy = {
   steps: [
     { title: "Vérifiez le ticket", desc: "Confirmez chaque ligne et le total final avant de commencer à répartir les montants." },
     { title: "Attribuez les commandes individuelles", desc: "Attribuez à chacun uniquement les plats et boissons qu'il a commandés. Commencez par les lignes les plus évidentes." },
-    { title: "Répartissez les articles partagés", desc: "Incluez uniquement les personnes qui ont partagé un plat ou une bouteille. Répartissez à parts égales ou selon une proportion convenue." },
+    { title: "Répartissez les articles partagés", desc: "Une ligne peut contenir plusieurs unités, comme deux pizzas. Choisissez celles consommées ; les articles ou unités partagés sont répartis à parts égales entre les participants qui les ont sélectionnés. Utilisez le partage égal lorsqu’il est proposé et convient au groupe." },
     { title: "Vérifiez les montants restants", desc: "Recherchez les lignes non attribuées, les erreurs de scan ainsi que les taxes ou pourboires encore non répartis." },
     { title: "Affichez le résultat", desc: "Chacun doit pouvoir vérifier sa part et son solde final afin que tout le monde valide le calcul avant de quitter la table." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideFr: RestaurantBillGuideCopy = {
     },
     {
       q: "Comment faut-il répartir un article partagé ?",
-      a: "Entre les personnes concernées — à parts égales ou selon un pourcentage convenu lorsque les parts ne sont pas identiques.",
+      a: "Une ligne peut contenir plusieurs unités, comme deux pizzas. Choisissez celles consommées ; les articles ou unités partagés sont répartis à parts égales entre les participants qui les ont sélectionnés. Utilisez le partage égal lorsqu’il est proposé et convient au groupe.",
     },
     {
       q: "Pourquoi les totaux ne correspondent-ils parfois pas ?",

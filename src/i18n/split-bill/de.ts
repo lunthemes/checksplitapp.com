@@ -11,12 +11,12 @@ export const splitBillDe: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Eine Rechnung – gemeinsam in der App oder im Browser",
   seoBlockP1: "Die gesamte Rechnung bleibt an einem Ort. Eine Person scannt den Beleg mit CheqSplit, die anderen öffnen ihn über einen Link oder QR-Code und wählen ihre Positionen direkt im Browser aus.",
-  seoBlockP2: "Nicht jeder am Tisch muss die App installieren. CheqSplit hält Positionen, Teilnehmer, Zahlungen und die endgültige Aufteilung in einer gemeinsamen Rechnung zusammen.",
+  seoBlockP2: "Wähle die Speisen und Getränke, die du hattest. Enthält eine Zeile mehrere Einheiten, öffne sie und wähle die einzelnen konsumierten Einheiten. Bei gemeinsamen Gerichten wählen die beteiligten Personen den Artikel oder die Einheiten aus; CheqSplit berechnet die Anteile.",
   seoBlockP3: "",
   useCasesH2: "Rechnung nach den tatsächlichen Bestellungen aufteilen",
   useCases: [
     { title: "Eigene Positionen", text: "Ordnet jeder Person nur die Speisen und Getränke zu, die sie tatsächlich bestellt hat." },
-    { title: "Gemeinsame Positionen", text: "Teilt eine Flasche, eine gemeinsame Platte oder ein Dessert nur unter den Personen auf, die davon hatten." },
+    { title: "Gemeinsame Positionen", text: "Eine Belegzeile kann mehrere Einheiten enthalten, etwa zwei Pizzen. Wähle deine Einheiten; gemeinsame Artikel oder Einheiten werden gleichmäßig unter den Personen aufgeteilt, die sie ausgewählt haben. Nutze die gleichmäßige Aufteilung, wenn sie angeboten wird und zur Gruppe passt." },
     { title: "Gebühren und Trinkgeld", text: "Berücksichtigt Servicegebühren, Steuern und Trinkgeld, damit die aufgeteilten Beträge genau der Rechnungssumme entsprechen." },
   ],
   howSectionH2: "So teilt ihr eine Restaurantrechnung mit CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillDe: SplitBillLocaleCopy = {
     { title: "Freunde per QR-Code oder Link einladen", desc: "Teilt den QR-Code oder Rechnungslink. Jeder kann die gemeinsame Rechnung sofort öffnen." },
     { title: "Im Browser weitermachen – ohne App-Installation", desc: "Freunde können den Link direkt im Browser öffnen. Für die Teilnahme an der Aufteilung müssen sie CheqSplit nicht installieren." },
     { title: "Restaurantrechnung online aufteilen", desc: "Alle arbeiten mit derselben Rechnung. Auswahl und Änderungen bleiben an einem Ort, sodass niemand separat ausrechnen muss, wer was hatte." },
-    { title: "Jeder wählt aus, was er hatte", desc: "Jeder Teilnehmer markiert seine eigenen Positionen. Gemeinsam bestellte Speisen und Getränke können mehreren Personen zugeordnet werden." },
+    { title: "Jeder wählt aus, was er hatte", desc: "Wähle die Speisen und Getränke, die du hattest. Enthält eine Zeile mehrere Einheiten, öffne sie und wähle die einzelnen konsumierten Einheiten. Bei gemeinsamen Gerichten wählen die beteiligten Personen den Artikel oder die Einheiten aus; CheqSplit berechnet die Anteile." },
+    {
+      title: "Wähle einzelne Portionen",
+      desc: "Eine Belegzeile kann mehrere Einheiten enthalten, etwa zwei Pizzen. Wähle deine Einheiten; gemeinsame Artikel oder Einheiten werden gleichmäßig unter den Personen aufgeteilt, die sie ausgewählt haben. Nutze die gleichmäßige Aufteilung, wenn sie angeboten wird und zur Gruppe passt.",
+    },
     { title: "Seht, wer wem wie viel schuldet", desc: "Nach der Zuordnung berechnet CheqSplit die Beträge und zeigt übersichtlich, wer wem wie viel zahlen muss." },
-    { title: "Zahlungen festhalten", desc: "Markiert bereits erfolgte Zahlungen, damit die Salden aktuell bleiben und ihr seht, was noch offen ist." },
-    { title: "Nachvollziehen, wie die Rechnung aufgeteilt wurde", desc: "Ihr könnt das Ergebnis später erneut öffnen und Positionen, Beträge und Zahlungen jeder Person prüfen." }
+    { title: "Zahlungen festhalten", desc: "Öffne nach einer Zahlung an einen anderen Teilnehmer außerhalb von CheqSplit Zahlung erfassen. Bestätige den Empfänger, gib den Betrag und optional eine Notiz ein und speichere. Die Zahlung wird von dir an den ausgewählten Empfänger erfasst." },
+    { title: "Nachvollziehen, wie die Rechnung aufgeteilt wurde", desc: "Die Teilnehmerdetails zeigen enthaltene Artikel, ausgewählte Einheiten und berechnete Anteile, damit sich die Aufteilung mit dem tatsächlichen Verzehr vergleichen lässt." }
   ],
   ctaTitle: "Teilt die Restaurantrechnung – auch wenn eure Freunde die App nicht haben",
   ctaBody: "Scannt den Beleg, teilt den Link oder QR-Code und lasst jeden auswählen, was er hatte.",
-  groupBridgeBefore: "Soll diese Restaurantrechnung zusammen mit Hotel, Taxi oder Aktivitäten derselben Gruppe bleiben? Fügt die abgeschlossene Rechnung im Tab Rechnungen der Reise mit Rechnung Hinzufügen hinzu und macht weiter mit der ",
+  groupBridgeBefore: "Um einen Restaurantbeleg zusammen mit Hotel-, Taxi- oder Aktivitätskosten zu erfassen, öffne Belege in der Gruppe und tippe zum Scannen oder Hochladen auf Beleg hinzufügen. Prüfe den Beleg, teile ihn nach Positionen oder gleichmäßig auf und fahre fort mit ",
   groupBridgeLabel: "Erfassung von Gruppenausgaben",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Liegt euch zuerst eine Schritt-für-Schritt-Methode? Lest, ",
@@ -66,7 +70,7 @@ export const splitBillDe: SplitBillLocaleCopy = {
     },
     {
       q: "Wie teilen mehrere Personen eine gemeinsame Position?",
-      a: "Jede Person, die die Position geteilt hat, wählt sie aus. CheqSplit teilt den Preis automatisch gleichmäßig unter allen Teilnehmern auf, die diese Position ausgewählt haben.",
+      a: "Eine Belegzeile kann mehrere Einheiten enthalten, etwa zwei Pizzen. Wähle deine Einheiten; gemeinsame Artikel oder Einheiten werden gleichmäßig unter den Personen aufgeteilt, die sie ausgewählt haben. Nutze die gleichmäßige Aufteilung, wenn sie angeboten wird und zur Gruppe passt.",
     },
     {
       q: "Was kann ich tun, wenn der Beleg falsch erkannt wurde?",
@@ -86,7 +90,7 @@ export const splitBillDe: SplitBillLocaleCopy = {
     },
     {
       q: "Kann ich diese Restaurantrechnung zu einer Reise hinzufügen?",
-      a: "Ja. Schließt zuerst die Aufteilung der Restaurantrechnung nach Positionen ab. Öffnet danach in der Reise den Tab Rechnungen und tippt auf Rechnung Hinzufügen.",
+      a: "Um einen Beleg in einer Gruppe zu erfassen, beginne in dieser Gruppe: Öffne Belege und tippe auf Beleg hinzufügen, dann scanne den Beleg oder lade ihn hoch. Prüfe Positionen und Gesamtbetrag und teile nach Positionen oder gleichmäßig auf. Der Beleg wird dabei automatisch verknüpft.",
     },
   ],
   a11y: {

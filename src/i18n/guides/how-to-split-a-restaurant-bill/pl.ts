@@ -11,7 +11,7 @@ export const restaurantBillGuidePl: RestaurantBillGuideCopy = {
   steps: [
     { title: "Sprawdź paragon", desc: "Potwierdź każdą pozycję oraz końcową sumę, zanim zaczniecie dzielić kwoty." },
     { title: "Przypisz indywidualne zamówienia", desc: "Każdej osobie przypisz tylko dania i napoje, które zamówiła. Zacznij od oczywistych pozycji." },
-    { title: "Podziel wspólne pozycje", desc: "Uwzględnij wyłącznie osoby, które dzieliły dane danie lub butelkę. Podziel koszt po równo albo według uzgodnionych proporcji." },
+    { title: "Podziel wspólne pozycje", desc: "Wiersz może zawierać kilka sztuk, na przykład dwie pizze. Wybierz swoje sztuki; wspólne pozycje lub sztuki są dzielone po równo między uczestników, którzy je wybrali. Użyj podziału po równo, gdy jest dostępny i odpowiada grupie." },
     { title: "Sprawdź pozostałe kwoty", desc: "Poszukaj nieprzypisanych pozycji, błędów skanowania oraz podatku lub napiwku, które nie zostały jeszcze uwzględnione." },
     { title: "Pokaż wynik", desc: "Każdy powinien zobaczyć swoją część oraz końcowe saldo, aby wszyscy mogli zaakceptować rozliczenie jeszcze przy stole." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuidePl: RestaurantBillGuideCopy = {
     },
     {
       q: "Jak podzielić wspólną pozycję?",
-      a: "Między osoby, które ją dzieliły — po równo albo według uzgodnionych proporcji, jeśli udziały nie były jednakowe.",
+      a: "Wiersz może zawierać kilka sztuk, na przykład dwie pizze. Wybierz swoje sztuki; wspólne pozycje lub sztuki są dzielone po równo między uczestników, którzy je wybrali. Użyj podziału po równo, gdy jest dostępny i odpowiada grupie.",
     },
     {
       q: "Dlaczego czasami sumy się nie zgadzają?",

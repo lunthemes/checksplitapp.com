@@ -19,12 +19,12 @@ export const groupExpenseTrackerEs: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Invita al grupo al viaje",
-      text: "Después de crear el viaje y ponerle un nombre, invita a los participantes mediante un enlace o código QR.",
+      text: "En la pantalla de inicio, toca Crear grupo, ponle un nombre, elige su moneda e invita a los participantes mediante enlace o código QR.",
       imageAlt: "Invita al grupo al viaje",
     },
     {
       title: "Añade cada gasto",
-      text: "Abre la pestaña Gastos y pulsa Agregar Gasto. Introduce la descripción y el importe, indica quién pagó y selecciona quién participó en ese gasto.",
+      text: "Abre Gastos y toca Añadir gasto. Introduce descripción, importe y moneda, elige una categoría opcional y quién pagó, y después Todos o Personalizado para los participantes. Cualquier participante puede añadir un gasto.",
       imageAlt: "Añade cada gasto",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerEs: GroupExpenseTrackerCopy = {
   subsetH2: "Usa el reparto adecuado para cada gasto",
   subsetText: "No todos los gastos corresponden a todo el grupo. Asigna el taxi solo a quienes viajaron en él, las entradas a quienes participaron y los gastos realmente comunes a todo el grupo. Para una cuenta detallada de restaurante, utiliza la pestaña Cuentas y Agregar Factura.",
   receiptBridgeH2: "Añade al viaje una cuenta de restaurante dividida por conceptos",
-  receiptBridgeText: "Cuando tengáis una cuenta de restaurante detallada, utiliza primero el reparto por conceptos para asignar lo que tomó cada uno, incluidos los cargos y la propina. Después abre la pestaña Cuentas del viaje y pulsa Agregar Factura.",
+  receiptBridgeText: "En el grupo, abre Recibos y toca Añadir recibo para escanear o subir uno. Revisa los artículos y el total detectados; el recibo se vincula automáticamente al grupo. Después divide por artículo o a partes iguales.",
   receiptBridgeCta: "Ver cómo funciona el reparto del ticket",
   reportH2: "Mantén un registro que el grupo pueda consultar más adelante",
   reportText: "Archiva el viaje y exporta un informe PDF con gastos, totales, tablas y gráfico. Es mucho más fácil de revisar que intentar reconstruir las cuentas de memoria.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerEs: GroupExpenseTrackerCopy = {
     },
     {
       q: "¿Puedo escanear un ticket para un gasto de viaje?",
-      a: "Utiliza el flujo para tickets de restaurante para hacer el reparto por conceptos, incluidos los impuestos y la propina. Después abre la pestaña Cuentas del viaje y pulsa Agregar Factura.",
+      a: "En el grupo, abre Recibos y toca Añadir recibo para escanear o subir uno. Revisa los artículos y el total detectados; el recibo se vincula automáticamente al grupo. Después divide por artículo o a partes iguales.",
     },
     {
       q: "¿Cómo sé quién debe pagar a quién?",

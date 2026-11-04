@@ -11,12 +11,12 @@ export const tripExpensesGuideEn: TripExpensesGuideCopy = {
     "Recording each cost this way means the group never has to sit down for a final-day accounting session to reconstruct who paid for what.",
   rulesH2: "Agree on the expense rules before the trip",
   rulesBody:
-    "Before the first payment, agree which costs the whole group shares and which belong only to some people. Hotel nights often go to everyone; a taxi or museum ticket may not. Record the payer separately from the participants, because the person who paid is not always in the split. Add each expense while the amount and the people involved are still clear. If you spend in more than one currency, agree how to record those amounts—CheqSplit does not convert currencies. Clear rules at the start keep the shared record consistent until you review who owes whom.",
+    "Before the first payment, agree which costs everyone shares and which include only selected people. Record the payer separately from the participants and add each expense promptly. Choose a group currency for balances. For expenses in another currency, check the reference rate and date, enter a manual rate, or use the amount actually debited by your bank in the group currency. Clear rules keep the shared record consistent.",
   stepsH2: "How to split trip expenses in 5 steps",
   steps: [
     {
-      title: "Create the trip early",
-      desc: "Name the trip, include the people involved, and add any costs that already exist so the group starts from one record.",
+      title: "Create a group for your trip",
+      desc: "On the home screen, tap Create group, name the group, choose its currency, and invite participants by link or QR code.",
     },
     {
       title: "Record the payer",
@@ -28,7 +28,7 @@ export const tripExpensesGuideEn: TripExpensesGuideCopy = {
     },
     {
       title: "Add expenses as they happen",
-      desc: "Enter amounts while they are still fresh. In CheqSplit, open the Expenses tab and tap Add Expense. Any participant can add an expense.",
+      desc: "Open Expenses and tap Add Expense. Enter the description, amount and currency, optionally choose a category, select the payer, then choose Everyone or Custom for the participants. Any participant can add an expense.",
     },
     {
       title: "Review balances",
@@ -72,12 +72,12 @@ export const tripExpensesGuideEn: TripExpensesGuideCopy = {
     "Shares: hotel €100 each; taxi €15 each for the three riders; tickets €20 each. Dana did not take the taxi, so Dana’s share is €120 instead of €135. CheqSplit can calculate these balances; it does not transfer the money.",
   productH2: "Track shared trip expenses with CheqSplit",
   productBody:
-    "CheqSplit lets you create a trip for the group, record the payer and participants for each expense, keep the shared history visible, and see who owes whom. Add a taxi, hotel, or tickets from the Expenses tab with Add Expense. Add an itemized restaurant receipt from the Bills tab with Add Bill. Archive the trip and export a PDF report when you are done. It calculates balances; it does not transfer money or convert currencies.",
+    "Create a group from the home screen with Create group, choose its currency, and invite participants. Add hotel, taxi or ticket costs from Expenses with Add Expense, choosing the amount, currency, payer and Everyone or Custom participants; category is optional. From Bills, Add Bill opens receipt scanning or upload. Review the items, then split by item or equally. For another currency, use the reference rate and date, a manual rate or the actual bank debit in the group currency. Review balances, export a PDF report or archive the group. CheqSplit does not transfer money.",
   productCta: "Track group and trip expenses with CheqSplit",
   receiptNoteBefore: "When a trip expense is an itemized restaurant bill, use the ",
   receiptNoteLabel: "receipt split method",
   receiptNoteAfter:
-    " for the itemized split, including tax and tip. Then open the Bills tab on the trip and tap Add Bill.",
+    " directly from the group’s Bills tab with Add Bill. Scan or upload the receipt, review the items and total, then split by item or equally; the bill is linked to the group automatically.",
   faqH2: "Trip expense splitting FAQ",
   faq: [
     {
@@ -90,11 +90,11 @@ export const tripExpensesGuideEn: TripExpensesGuideCopy = {
     },
     {
       q: "How should a restaurant bill be handled?",
-      a: "Use the restaurant receipt flow for the itemized split, including tax and tip. Then open the Bills tab on the trip and tap Add Bill.",
+      a: "In the group, open Bills and tap Add Bill to scan or upload a receipt. Review the detected items and total; the bill is linked to the group automatically. Then start splitting by item or choose Split equally.",
     },
     {
       q: "Does CheqSplit convert currencies?",
-      a: "No. Currency conversion is not a verified CheqSplit capability. Record amounts as they appear on the expense.",
+      a: "Yes. Group expenses can use another currency. Check the reference exchange rate and date, enter a manual rate, or enter the actual bank debit in the group currency. CheqSplit uses the converted amount for group balances; it does not transfer money.",
     },
   ],
   ctaTitle: "Keep the trip in one shared record",

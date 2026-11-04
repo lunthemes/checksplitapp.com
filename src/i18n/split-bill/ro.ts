@@ -11,12 +11,12 @@ export const splitBillRo: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Un singur bon de restaurant, împărțit în aplicație sau în browser",
   seoBlockP1: "Păstrează întreaga notă într-un singur loc. O persoană scanează bonul în CheqSplit, iar ceilalți pot intra prin link sau cod QR și își pot selecta produsele direct din browser.",
-  seoBlockP2: "Nu este nevoie ca fiecare persoană de la masă să instaleze aplicația. CheqSplit păstrează produsele, participanții, plățile și rezultatul final în aceeași notă.",
+  seoBlockP2: "Selectează preparatele și băuturile consumate. Dacă un rând conține mai multe unități, deschide-l și alege unitățile consumate. Pentru un preparat comun, selectați produsul sau unitățile împreună cu persoanele implicate; CheqSplit calculează cotele.",
   seoBlockP3: "",
   useCasesH2: "Un mod de a împărți nota care ține cont de comenzile reale",
   useCases: [
     { title: "Produse individuale", text: "Atribuie fiecărei persoane mâncarea și băuturile pe care le-a comandat." },
-    { title: "Produse împărțite", text: "Împarte o sticlă, un platou sau un desert doar între persoanele care au consumat din el." },
+    { title: "Produse împărțite", text: "Un rând al bonului poate conține mai multe unități, de exemplu două pizza. Alege unitățile consumate; produsele sau unitățile comune se împart egal între participanții care le-au selectat. Folosește opțiunea de împărțire egală când este disponibilă și potrivită grupului." },
     { title: "Taxe și bacșiș", text: "Adaugă taxele, serviciul și bacșișul separat, astfel încât totalul împărțit să corespundă notei." },
   ],
   howSectionH2: "Cum împarți o notă de plată la restaurant cu CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillRo: SplitBillLocaleCopy = {
     { title: "Invită prietenii prin cod QR sau link", desc: "Distribuie codul QR sau linkul notei. Fiecare persoană poate intra imediat și vedea nota comună." },
     { title: "Continuă în browser fără să instalezi aplicația", desc: "Prietenii pot deschide linkul direct în browser. Nu trebuie să instaleze CheqSplit pentru a participa la împărțirea notei." },
     { title: "Împarte nota de plată online", desc: "Toată lumea lucrează cu aceeași notă. Modificările și selecțiile rămân împreună, astfel încât nu trebuie să calculați separat cine a consumat ce." },
-    { title: "Lasă fiecare persoană să selecteze ce a consumat", desc: "Fiecare participant își alege propriile produse. Produsele consumate în comun pot fi împărțite între mai multe persoane." },
+    { title: "Lasă fiecare persoană să selecteze ce a consumat", desc: "Selectează preparatele și băuturile consumate. Dacă un rând conține mai multe unități, deschide-l și alege unitățile consumate. Pentru un preparat comun, selectați produsul sau unitățile împreună cu persoanele implicate; CheqSplit calculează cotele." },
+    {
+      title: "Alege porțiile individuale",
+      desc: "Un rând al bonului poate conține mai multe unități, de exemplu două pizza. Alege unitățile consumate; produsele sau unitățile comune se împart egal între participanții care le-au selectat. Folosește opțiunea de împărțire egală când este disponibilă și potrivită grupului.",
+    },
     { title: "Vezi cine cui datorează", desc: "După ce produsele au fost atribuite, CheqSplit calculează sumele și arată clar cine trebuie să plătească și cui." },
-    { title: "Marchează plata ca efectuată", desc: "Marchează plățile efectuate pentru a păstra situația actualizată și pentru a vedea ce datorii au mai rămas." },
-    { title: "Vezi cum a fost împărțită nota", desc: "Poți reveni la rezultatul final și verifica produsele, sumele și plățile fiecărei persoane." }
+    { title: "Marchează plata ca efectuată", desc: "După ce plătești altui participant în afara CheqSplit, deschide Înregistrează plata. Confirmă destinatarul, introdu suma și opțional o notă, apoi salvează. Plata se înregistrează de la tine către destinatarul selectat." },
+    { title: "Vezi cum a fost împărțită nota", desc: "Detaliile participantului arată produsele incluse, unitățile selectate și cotele calculate, pentru a verifica împărțirea după consum." }
   ],
   ctaTitle: "Împarte nota de plată chiar dacă prietenii nu au aplicația",
   ctaBody: "Scanează bonul, distribuie nota prin link sau cod QR și lasă fiecare persoană să selecteze ce a consumat.",
-  groupBridgeBefore: "Trebuie să ții această notă de restaurant împreună cu hotelul, taxiul sau activitățile aceluiași grup? Adaugă nota finalizată din fila Note a călătoriei cu Adaugă Notă, apoi continuă cu ",
+  groupBridgeBefore: "Pentru a păstra un bon de restaurant alături de cazare, taxi sau activități, deschide Bonuri în grup și apasă Adaugă bon pentru a-l scana sau încărca. După verificare, împarte pe produse sau egal, apoi continuă cu ",
   groupBridgeLabel: "evidența cheltuielilor de grup",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Preferi mai întâi metoda pas cu pas? Citește ",
@@ -66,7 +70,7 @@ export const splitBillRo: SplitBillLocaleCopy = {
     },
     {
       q: "Cum împart mai multe persoane un produs consumat în comun?",
-      a: "Fiecare persoană care a consumat din acel produs îl selectează. CheqSplit împarte automat prețul în mod egal între toți participanții care l-au selectat.",
+      a: "Un rând al bonului poate conține mai multe unități, de exemplu două pizza. Alege unitățile consumate; produsele sau unitățile comune se împart egal între participanții care le-au selectat. Folosește opțiunea de împărțire egală când este disponibilă și potrivită grupului.",
     },
     {
       q: "Ce fac dacă bonul a fost scanat incorect?",
@@ -86,7 +90,7 @@ export const splitBillRo: SplitBillLocaleCopy = {
     },
     {
       q: "Pot adăuga această notă de restaurant într-o călătorie?",
-      a: "Da. Finalizează împărțirea notei pe produse, apoi deschide fila Note din călătorie și apasă Adaugă Notă.",
+      a: "Pentru a include un bon într-un grup, începe din grupul respectiv: deschide Bonuri și apasă Adaugă bon, apoi scanează sau încarcă bonul. Verifică produsele și totalul, apoi împarte pe produse sau egal. Bonul se asociază automat în acest flux.",
     },
   ],
   a11y: {

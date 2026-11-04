@@ -7,13 +7,13 @@ export const tripExpensesGuideDe: TripExpensesGuideCopy = {
   answer: "Erstellt eine gemeinsame Reise, erfasst bei jeder Ausgabe, wer bezahlt hat und wer beteiligt war, und prüft die Salden vor dem Ende der Reise.",
   answerFollow: "Wenn ihr jede Ausgabe direkt eintragt, müsst ihr am Ende der Reise nicht alle Abrechnungen mühsam rekonstruieren.",
   rulesH2: "Regeln für die Ausgaben vor der Reise festlegen",
-  rulesBody: "Legt vor der ersten Zahlung fest, welche Kosten die ganze Gruppe teilt und welche nur bestimmte Personen betreffen. Die Unterkunft wird oft von allen geteilt, ein Taxi oder Museumsticket dagegen vielleicht nur von einigen. Erfasst Zahler und Beteiligte getrennt, denn die Person, die bezahlt, muss nicht automatisch Teil der Aufteilung sein. Tragt Ausgaben ein, solange Betrag und Teilnehmer noch frisch im Gedächtnis sind. Wenn ihr mehrere Währungen verwendet, vereinbart vorher, wie ihr sie erfassen wollt – CheqSplit rechnet Währungen nicht um. Klare Regeln von Anfang an sorgen für eine konsistente Übersicht bis zur Schlussabrechnung.",
+  rulesBody: "Vereinbart vor der ersten Zahlung, welche Kosten alle und welche nur einzelne Personen tragen. Erfasst den Zahler getrennt von den Teilnehmern und tragt Ausgaben zeitnah ein. Wählt eine Gruppenwährung für die Salden. Prüft bei Ausgaben in anderen Währungen Referenzkurs und Datum, gebt einen manuellen Kurs ein oder verwendet den tatsächlich von der Bank abgebuchten Betrag in der Gruppenwährung. Klare Regeln sorgen für eine einheitliche Übersicht.",
   stepsH2: "Reisekosten in 5 Schritten aufteilen",
   steps: [
-    { title: "Reise frühzeitig anlegen", desc: "Gebt der Reise einen Namen, fügt die beteiligten Personen hinzu und tragt bereits entstandene Kosten ein, damit die Gruppe mit einer gemeinsamen Übersicht startet." },
+    { title: "Erstelle eine Gruppe für deine Reise", desc: "Tippe auf der Startseite auf Gruppe erstellen, gib der Gruppe einen Namen, wähle ihre Währung und lade Teilnehmer per Link oder QR-Code ein." },
     { title: "Festhalten, wer bezahlt hat", desc: "Gebt bei jeder Ausgabe eindeutig an, wer bezahlt hat – bei Tickets, Unterkunft, Transport, Restaurant oder einer Aktivität für die Gruppe." },
     { title: "Teilnehmer auswählen", desc: "Wählt alle nur dann aus, wenn die Kosten tatsächlich alle betreffen. Bei Taxi, Aktivität oder Restaurant markiert ihr nur die beteiligten Personen." },
-    { title: "Ausgaben zeitnah hinzufügen", desc: "Tragt Beträge ein, solange ihr euch noch gut daran erinnert. Öffnet in CheqSplit den Tab Ausgaben und tippt auf Ausgabe hinzufügen. Jeder Teilnehmer kann eine Ausgabe hinzufügen." },
+    { title: "Ausgaben zeitnah hinzufügen", desc: "Öffne Ausgaben und tippe auf Ausgabe hinzufügen. Gib Beschreibung, Betrag und Währung ein, wähle optional eine Kategorie und den Zahler. Wähle für die Teilnehmer Alle oder Benutzerdefiniert. Jeder Teilnehmer kann Ausgaben hinzufügen." },
     { title: "Salden prüfen", desc: "Prüft vor Abschluss oder Export der Reise die gemeinsame Historie und wer wem wie viel schuldet. Ergänzt zuerst alle fehlenden Ausgaben." }
   ],
   exampleH2: "Beispiel: Wochenendtrip unter vier Freunden aufteilen",
@@ -49,11 +49,11 @@ export const tripExpensesGuideDe: TripExpensesGuideCopy = {
   exampleSettle: "Blair zahlt Alex €90, Casey zahlt €135 und Dana €40. Zusammen ergeben diese drei Zahlungen €265 – genau den Betrag, den Alex zurückbekommen soll.",
   exampleNote: "Anteile: Hotel €100 pro Person; Taxi €15 pro Person für die drei Mitfahrer; Tickets €20 pro Person. Dana ist nicht Taxi gefahren, deshalb beträgt ihr Anteil €120 statt €135. CheqSplit berechnet diese Salden, überweist aber kein Geld.",
   productH2: "Gemeinsame Reisekosten mit CheqSplit verfolgen",
-  productBody: "Mit CheqSplit erstellt ihr eine Reise, erfasst für jede Ausgabe Zahler und Teilnehmer, behaltet die gemeinsame Historie im Blick und seht jederzeit, wer wem etwas schuldet. Taxi, Hotel oder Tickets fügt ihr unter Ausgaben mit Ausgabe hinzufügen hinzu, eine detaillierte Restaurantrechnung unter Rechnungen mit Rechnung Hinzufügen. Nach der Reise könnt ihr sie archivieren und einen PDF-Bericht exportieren. CheqSplit berechnet Salden, überweist aber kein Geld und rechnet keine Währungen um.",
+  productBody: "Erstelle auf der Startseite eine Gruppe, wähle ihre Währung und lade Teilnehmer ein. Erfasse Hotel, Taxi oder Tickets unter Ausgaben mit Ausgabe hinzufügen: Betrag, Währung, Zahler und Teilnehmer über Alle oder Benutzerdefiniert; die Kategorie ist optional. Unter Belege öffnet Beleg hinzufügen den Scan oder Upload. Prüfe die Positionen und teile sie nach Positionen oder gleichmäßig auf. Nutze für andere Währungen Referenzkurs und Datum, einen manuellen Kurs oder die tatsächliche Bankabbuchung in der Gruppenwährung. Prüfe Salden, exportiere einen PDF-Bericht oder archiviere die Gruppe. CheqSplit überweist kein Geld.",
   productCta: "Gruppen- und Reisekosten mit CheqSplit verfolgen",
   receiptNoteBefore: "Handelt es sich bei einer Reiseausgabe um eine detaillierte Restaurantrechnung, verwendet zunächst ",
   receiptNoteLabel: "die Aufteilung nach Positionen",
-  receiptNoteAfter: " einschließlich Gebühren und Trinkgeld. Öffnet anschließend den Tab Rechnungen der Reise und tippt auf Rechnung Hinzufügen.",
+  receiptNoteAfter: " direkt über Belege und Beleg hinzufügen in der Gruppe. Scanne den Beleg oder lade ihn hoch, prüfe Positionen und Gesamtbetrag und teile ihn nach Positionen oder gleichmäßig auf; er wird automatisch mit der Gruppe verknüpft.",
   faqH2: "Häufige Fragen zum Aufteilen von Reisekosten",
   faq: [
     {
@@ -66,11 +66,11 @@ export const tripExpensesGuideDe: TripExpensesGuideCopy = {
     },
     {
       q: "Wie sollte eine Restaurantrechnung behandelt werden?",
-      a: "Verwendet für die detaillierte Aufteilung den Ablauf für Restaurantbelege, einschließlich Steuern und Trinkgeld. Öffnet danach in der Reise den Tab Rechnungen und tippt auf Rechnung Hinzufügen.",
+      a: "Öffne in der Gruppe Belege und tippe auf Beleg hinzufügen, um einen Beleg zu scannen oder hochzuladen. Prüfe erkannte Positionen und Gesamtbetrag; der Beleg wird automatisch mit der Gruppe verknüpft. Teile ihn anschließend nach Positionen oder gleichmäßig auf.",
     },
     {
       q: "Rechnet CheqSplit Währungen um?",
-      a: "Nein. Eine Währungsumrechnung ist keine bestätigte Funktion von CheqSplit. Erfasst die Beträge so, wie sie bei der jeweiligen Ausgabe angegeben sind.",
+      a: "Ja. Gruppenausgaben können in einer anderen Währung erfasst werden. Prüfe Referenzkurs und Datum, gib einen manuellen Kurs oder die tatsächliche Bankabbuchung in der Gruppenwährung ein. CheqSplit verwendet den umgerechneten Betrag für die Gruppensalden; es überweist kein Geld.",
     },
   ],
   ctaTitle: "Die gesamte Reise in einer gemeinsamen Übersicht",

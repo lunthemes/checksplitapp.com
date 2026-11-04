@@ -11,12 +11,12 @@ export const splitBillIt: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Un solo conto, condiviso nell'app o nel browser",
   seoBlockP1: "Tutto il conto resta in un unico posto. Una persona scansiona lo scontrino con CheqSplit, mentre gli altri entrano tramite link o codice QR e selezionano ciò che hanno ordinato direttamente dal browser.",
-  seoBlockP2: "Non serve che tutti al tavolo installino l'app. CheqSplit tiene insieme voci, partecipanti, pagamenti e risultato finale.",
+  seoBlockP2: "Seleziona i piatti e le bevande consumati. Se una riga contiene più unità, aprila e scegli le singole unità consumate. Per un piatto condiviso, le persone coinvolte selezionano la voce o le unità condivise; CheqSplit calcola le quote.",
   seoBlockP3: "",
   useCasesH2: "Un modo di dividere il conto basato sugli ordini reali",
   useCases: [
     { title: "Ordini individuali", text: "Assegna a ogni persona soltanto i piatti e le bevande che ha ordinato." },
-    { title: "Voci condivise", text: "Dividi una bottiglia, un piatto condiviso o un dessert solo tra chi lo ha effettivamente consumato." },
+    { title: "Voci condivise", text: "Una riga può contenere più unità, per esempio due pizze. Scegli quelle consumate; le voci o unità condivise vengono divise in parti uguali tra i partecipanti che le hanno selezionate. Usa la divisione in parti uguali quando è disponibile e adatta al gruppo." },
     { title: "Servizio e mancia", text: "Aggiungi servizio, imposte e mancia in modo che la somma delle quote corrisponda al totale dello scontrino." },
   ],
   howSectionH2: "Come dividere il conto al ristorante con CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillIt: SplitBillLocaleCopy = {
     { title: "Invita gli amici tramite QR code o link", desc: "Condividi il QR code o il link del conto. Tutti possono aprirlo immediatamente." },
     { title: "Continua dal browser senza installare l'app", desc: "I tuoi amici possono aprire il link direttamente nel browser. Non devono installare CheqSplit per partecipare alla divisione." },
     { title: "Dividi il conto online", desc: "Tutti lavorano sullo stesso conto. Selezioni e modifiche restano in un unico posto, senza dover calcolare separatamente chi ha preso cosa." },
-    { title: "Ognuno seleziona ciò che ha ordinato", desc: "Ogni partecipante sceglie le proprie voci. Piatti e bevande condivisi possono essere suddivisi tra più persone." },
+    { title: "Ognuno seleziona ciò che ha ordinato", desc: "Seleziona i piatti e le bevande consumati. Se una riga contiene più unità, aprila e scegli le singole unità consumate. Per un piatto condiviso, le persone coinvolte selezionano la voce o le unità condivise; CheqSplit calcola le quote." },
+    {
+      title: "Scegli le singole porzioni",
+      desc: "Una riga può contenere più unità, per esempio due pizze. Scegli quelle consumate; le voci o unità condivise vengono divise in parti uguali tra i partecipanti che le hanno selezionate. Usa la divisione in parti uguali quando è disponibile e adatta al gruppo.",
+    },
     { title: "Scopri chi deve quanto e a chi", desc: "Una volta assegnate le voci, CheqSplit calcola gli importi e mostra chiaramente chi deve pagare chi." },
-    { title: "Registra i pagamenti effettuati", desc: "Segna i pagamenti già effettuati per mantenere aggiornati i saldi e vedere cosa resta ancora da pagare." },
-    { title: "Controlla come è stato diviso il conto", desc: "Puoi tornare al risultato finale in qualsiasi momento e verificare voci, importi e pagamenti di ogni persona." }
+    { title: "Registra i pagamenti effettuati", desc: "Dopo aver pagato un altro partecipante fuori da CheqSplit, apri Registra un pagamento. Conferma il destinatario, inserisci l’importo e una nota facoltativa, poi salva. Il pagamento viene registrato da te al destinatario selezionato." },
+    { title: "Controlla come è stato diviso il conto", desc: "I dettagli del partecipante mostrano le voci incluse, le unità selezionate e le quote calcolate, per verificare la divisione in base ai consumi." }
   ],
   ctaTitle: "Dividi il conto anche se i tuoi amici non hanno l'app",
   ctaBody: "Scansiona lo scontrino, condividi il link o il QR code e lascia che ognuno selezioni ciò che ha ordinato.",
-  groupBridgeBefore: "Devi tenere questo conto del ristorante insieme a hotel, taxi o attività dello stesso gruppo? Aggiungi il conto completato dalla scheda Conti del viaggio con Aggiungi conto, poi continua con ",
+  groupBridgeBefore: "Per tenere uno scontrino del ristorante insieme a hotel, taxi o attività, apri Scontrini nel gruppo e tocca Aggiungi scontrino per scansionarlo o caricarlo. Dopo la verifica, dividi per voce o in parti uguali, poi prosegui con ",
   groupBridgeLabel: "il monitoraggio delle spese di gruppo",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Preferisci prima il metodo passo dopo passo? Leggi ",
@@ -66,7 +70,7 @@ export const splitBillIt: SplitBillLocaleCopy = {
     },
     {
       q: "Come si divide una stessa voce tra più persone?",
-      a: "Ogni persona che ha condiviso quella voce la seleziona. CheqSplit divide automaticamente il prezzo in parti uguali tra tutti i partecipanti che l'hanno selezionata.",
+      a: "Una riga può contenere più unità, per esempio due pizze. Scegli quelle consumate; le voci o unità condivise vengono divise in parti uguali tra i partecipanti che le hanno selezionate. Usa la divisione in parti uguali quando è disponibile e adatta al gruppo.",
     },
     {
       q: "Cosa faccio se lo scontrino viene scansionato male?",
@@ -86,7 +90,7 @@ export const splitBillIt: SplitBillLocaleCopy = {
     },
     {
       q: "Posso aggiungere questo conto del ristorante a un viaggio?",
-      a: "Sì. Completa prima la divisione del conto per voce, poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
+      a: "Per includere uno scontrino in un gruppo, parti da quel gruppo: apri Scontrini e tocca Aggiungi scontrino, poi scansionalo o caricalo. Verifica le voci e il totale, quindi dividi per voce o in parti uguali. Lo scontrino viene collegato automaticamente durante questa procedura.",
     },
   ],
   a11y: {

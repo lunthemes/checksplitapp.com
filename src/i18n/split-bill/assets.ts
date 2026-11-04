@@ -22,8 +22,8 @@ const BROWSER = { variant: "browser" as const, width: 588, height: 1280 };
 /** Hero: scan, live item split, who owes whom. Decorative (empty alt). */
 export const splitBillHeroScreens: readonly SplitBillHeroScreen[] = [
   { src: "/screens/split-bill-app/bill_1.webp", ...DEVICE },
-  { src: "/screens/split-bill-app/bill_5.webp", ...DEVICE },
-  { src: "/screens/split-bill-app/bill_6.webp", ...DEVICE },
+  { src: "/screens/split-bill-app/bill_5.webp?v=20261029", ...DEVICE },
+  { src: "/screens/split-bill-app/bill_6.webp?v=20261029", ...DEVICE },
 ];
 
 export const splitBillStepIcons = [
@@ -41,57 +41,63 @@ export const splitBillFeatureAssets: readonly SplitBillFeatureAsset[] = [
   },
   {
     icon: "/app-icons/split-bill-app/review.svg",
-    img: "/screens/split-bill-app/bill_2.webp",
+    img: "/screens/split-bill-app/bill_2.webp?v=20261029",
     imageAlt: "Reviewing the detected restaurant bill total and currency",
     ...DEVICE,
   },
   {
     icon: "/app-icons/split-bill-app/edit-items.svg",
-    img: "/screens/split-bill-app/bill_3.webp",
+    img: "/screens/split-bill-app/bill_3.webp?v=20261029",
     imageAlt:
       "Reviewing restaurant bill items, prices, and Fees & Tips before sharing",
     ...DEVICE,
   },
   {
     icon: "/app-icons/split-bill-app/qr-invite.svg",
-    img: "/screens/split-bill-app/bill_8.webp",
+    img: "/screens/split-bill-app/bill_8.webp?v=20261029",
     imageAlt: "QR code and shareable link for a CheqSplit restaurant bill",
     ...DEVICE,
   },
   {
     icon: "/app-icons/split-bill-app/invite-split.svg",
-    img: "/screens/split-bill-app/bill_10.webp",
+    img: "/screens/split-bill-app/bill_10.webp?v=20261029",
     imageAlt:
       "CheqSplit invitation page with Get the free app on the App Store and Continue in browser",
     ...BROWSER,
   },
   {
     icon: "/app-icons/split-bill-app/split-live.svg",
-    img: "/screens/split-bill-app/bill_11.webp",
+    img: "/screens/split-bill-app/bill_11.webp?v=20261029",
     imageAlt: "Selecting restaurant bill items in the CheqSplit browser view",
     ...BROWSER,
   },
   {
     icon: "/app-icons/split-bill-app/cta-check.svg",
-    img: "/screens/split-bill-app/bill_5.webp",
+    img: "/screens/split-bill-app/bill_5.webp?v=20261029",
     imageAlt: "Friends selecting their items on a shared restaurant bill",
     ...DEVICE,
   },
   {
+    icon: "/app-icons/split-item.svg",
+    img: "/screens/split-bill-app/choose-receipt-portions.webp?v=20261029",
+    imageAlt: "Choosing one of two pizza portions in the CheqSplit iPhone app",
+    ...DEVICE,
+  },
+  {
     icon: "/app-icons/split-bill-app/settle-up.svg",
-    img: "/screens/split-bill-app/bill_6.webp",
+    img: "/screens/split-bill-app/bill_6.webp?v=20261029",
     imageAlt: "Who Owes Whom balances after a restaurant bill split",
     ...DEVICE,
   },
   {
     icon: "/app-icons/split-bill-app/settle-up.svg",
-    img: "/screens/split-bill-app/bill_9.webp",
+    img: "/screens/split-bill-app/bill_9.webp?v=20261029",
     imageAlt: "Recording an external payment between two bill participants",
     ...DEVICE,
   },
   {
     icon: "/app-icons/split-bill-app/review.svg",
-    img: "/screens/split-bill-app/bill_7.webp",
+    img: "/screens/split-bill-app/bill_7.webp?v=20261029",
     imageAlt:
       "Summary tab with a spending chart and one participant’s consumed items",
     ...DEVICE,

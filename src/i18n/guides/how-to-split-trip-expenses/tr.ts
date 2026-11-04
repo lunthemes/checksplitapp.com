@@ -7,13 +7,13 @@ export const tripExpensesGuideTr: TripExpensesGuideCopy = {
   answer: "Tek bir seyahat oluşturun, her harcamada kimin ödediğini ve kimlerin katıldığını kaydedin ve seyahat bitmeden önce bakiyeleri kontrol edin.",
   answerFollow: "Her harcamayı gerçekleştiğinde kaydederseniz seyahat sonunda tüm hesabı baştan çıkarmanız gerekmez.",
   rulesH2: "Seyahatten önce harcama kurallarında anlaşın",
-  rulesBody: "İlk ödeme yapılmadan önce hangi masrafların tüm grup tarafından, hangilerinin yalnızca bazı kişiler tarafından paylaşılacağını belirleyin. Konaklama çoğu zaman herkesi kapsar; taksi veya müze bileti ise yalnızca bazı katılımcılara ait olabilir. Ödemeyi yapan kişi ile masrafa katılanları ayrı kaydedin; parayı ödeyen kişi her zaman o paylaşımın içinde olmayabilir. Tutar ve katılımcılar hâlâ aklınızdayken harcamaları ekleyin. Birden fazla para birimi kullanıyorsanız bunları nasıl kaydedeceğinize baştan karar verin — CheqSplit döviz dönüşümü yapmaz. Başta belirlenen açık kurallar, son hesaplaşmaya kadar tutarlı bir kayıt sağlar.",
+  rulesBody: "İlk ödemeden önce hangi masrafların herkese, hangilerinin yalnızca belirli kişilere ait olduğunu kararlaştırın. Ödeyeni katılımcılardan ayrı kaydedin ve harcamaları geciktirmeden ekleyin. Bakiyeler için grup para birimini seçin. Farklı para birimindeki harcamalarda referans kuru ve tarihi kontrol edin, manuel kur girin veya bankanın grup para biriminde gerçekten tahsil ettiği tutarı kullanın. Açık kurallar tutarlı bir kayıt sağlar.",
   stepsH2: "Seyahat harcamalarını 5 adımda bölüşün",
   steps: [
-    { title: "Seyahati erkenden oluşturun", desc: "Seyahate bir ad verin, katılımcıları ekleyin ve önceden oluşmuş masrafları girin; böylece tüm grup tek bir kayıttan başlasın." },
+    { title: "Seyahatiniz için grup oluşturun", desc: "Ana ekranda Grup oluştur seçeneğine dokunun, gruba ad verin, para birimini seçin ve katılımcıları bağlantı veya QR koduyla davet edin." },
     { title: "Kimin ödediğini kaydedin", desc: "Bilet, konaklama, ulaşım, restoran veya grup adına ödenmiş bir etkinlik olsun, her harcamada kimin ödediğini açıkça belirtin." },
     { title: "Katılımcıları seçin", desc: "Yalnızca masraf gerçekten herkes tarafından paylaşılıyorsa tüm grubu dahil edin. Taksi, etkinlik veya restoran için yalnızca ilgili kişileri seçin." },
-    { title: "Harcamaları geciktirmeden ekleyin", desc: "Tutarları hâlâ hatırlıyorken kaydedin. CheqSplit'te Masraflar sekmesini açıp Masraf Ekle'e dokunun. Her katılımcı harcama ekleyebilir." },
+    { title: "Harcamaları geciktirmeden ekleyin", desc: "Harcamalar sekmesini açıp Harcama ekle seçeneğine dokunun. Açıklama, tutar ve para birimini girin, isteğe bağlı kategori ve ödeyeni seçin; katılımcılar için Herkes veya Özel seçeneğini kullanın. Her katılımcı harcama ekleyebilir." },
     { title: "Bakiyeleri kontrol edin", desc: "Seyahati kapatmadan veya dışa aktarmadan önce ortak geçmişi ve kimin kime ne kadar borcu olduğunu kontrol edin. Önce eksik harcamaları tamamlayın." }
   ],
   exampleH2: "Örnek: dört arkadaşın hafta sonu seyahatini bölüşme",
@@ -49,11 +49,11 @@ export const tripExpensesGuideTr: TripExpensesGuideCopy = {
   exampleSettle: "Blair Alex'e €90, Casey €135 ve Dana €40 öder. Bu üç ödeme toplam €265 eder; bu da Alex'in alması gereken tutarla aynıdır.",
   exampleNote: "Paylar: otel kişi başı €100; taksi üç yolcu için kişi başı €15; biletler kişi başı €20. Dana taksiye binmediği için payı €135 yerine €120 olur. CheqSplit bu bakiyeleri hesaplar ancak para transferi yapmaz.",
   productH2: "Ortak seyahat harcamalarını CheqSplit ile takip edin",
-  productBody: "CheqSplit ile bir seyahat oluşturabilir, her harcamanın ödeyenini ve katılımcılarını kaydedebilir, ortak geçmişi görebilir ve kimin kime ne kadar borcu olduğunu takip edebilirsiniz. Taksi, otel ve biletleri Masraflar sekmesinden Masraf Ekle ile; ayrıntılı restoran fişini Faturalar sekmesinden Add Bill ile ekleyin. Seyahat bitince arşivleyin ve PDF raporu dışa aktarın. CheqSplit bakiyeleri hesaplar ancak para transferi veya döviz dönüşümü yapmaz.",
+  productBody: "Ana ekrandan grup oluşturun, para birimini seçin ve katılımcıları davet edin. Harcamalar sekmesinde Harcama ekle ile otel, taksi veya biletleri kaydedin: tutar, para birimi, ödeyen ve Herkes veya Özel ile katılımcılar; kategori isteğe bağlıdır. Fişler sekmesindeki Fiş ekle tarama veya yüklemeyi açar. Kalemleri kontrol edip kalemlere göre veya eşit bölün. Diğer para birimleri için tarihli referans kuru, manuel kur veya grup para birimindeki gerçek banka tahsilatını kullanın. Bakiyeleri inceleyin, PDF raporu dışa aktarın veya grubu arşivleyin. CheqSplit para transferi yapmaz.",
   productCta: "Grup ve seyahat harcamalarını CheqSplit ile takip et",
   receiptNoteBefore: "Seyahat harcamalarından biri kalemlere ayrılmış restoran hesabıysa önce ",
   receiptNoteLabel: "fiş bölüşme yöntemini",
-  receiptNoteAfter: ", servis ve bahşiş dahil olacak şekilde kullanın. Ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
+  receiptNoteAfter: " doğrudan grubun Fişler sekmesindeki Fiş ekle ile. Fişi tarayın veya yükleyin, kalemleri ve toplamı kontrol edin, ardından kalemlere göre veya eşit bölün; fiş gruba otomatik bağlanır.",
   faqH2: "Seyahat harcamalarını bölüşme hakkında sık sorulan sorular",
   faq: [
     {
@@ -66,11 +66,11 @@ export const tripExpensesGuideTr: TripExpensesGuideCopy = {
     },
     {
       q: "Restoran hesabı nasıl ele alınmalı?",
-      a: "Kalemlere göre bölüşüm için restoran fişi akışını kullanın; vergi ve bahşişi de dahil edin. Ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
+      a: "Grupta Fişler sekmesini açıp Fiş ekle seçeneğine dokunarak fişi tarayın veya yükleyin. Algılanan kalemleri ve toplamı kontrol edin; fiş gruba otomatik bağlanır. Ardından kalemlere göre veya eşit bölün.",
     },
     {
       q: "CheqSplit para birimlerini dönüştürüyor mu?",
-      a: "Hayır. Döviz dönüşümü, doğrulanmış bir CheqSplit özelliği değildir. Tutarları harcamada göründüğü şekliyle kaydedin.",
+      a: "Evet. Grup harcamaları farklı para biriminde olabilir. Referans kuru ve tarihi kontrol edin, manuel kur veya grup para birimindeki gerçek banka tahsilatını girin. CheqSplit grup bakiyeleri için çevrilmiş tutarı kullanır; para transferi yapmaz.",
     },
   ],
   ctaTitle: "Tüm seyahat tek bir ortak kayıtta",

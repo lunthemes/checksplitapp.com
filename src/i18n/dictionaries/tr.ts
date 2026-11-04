@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const tr: Dictionary = {
   meta: {
-    title: "CheqSplit: masrafları bölüş, fişleri tara, ortak harcamaları takip et",
+    title: "Arkadaşlarla masraf paylaşma uygulaması | CheqSplit",
     description:
-      "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak harcamaları izlemenize ve yemekten, seyahatten, alışverişten veya grup planlarından sonra kimin kime ne kadar borçlu olduğunu net göstermenize yardımcı olur.",
+      "Restoran fişlerini tara, ortak harcamaları kaydet ve arkadaşlarınla bakiyeleri takip et.",
     ogDescription:
       "Adil paylaş: fiş taraması, kalemler, net bakiyeler. Restoran, geziler, ev arkadaşları, arkadaş grupları.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const tr: Dictionary = {
   },
   header: { download: "Ücretsiz indir" },
   hero: {
-    title: "Harcamaları paylaşın, fişleri tarayın ve gerisini uygulamaya bırakın",
-    body: "CheqSplit, masrafları paylaşmanıza, fişleri taramanıza, ortak giderleri izlemenize ve kimin kime ne kadar borçlu olduğunu anında görmenize yardımcı olur: restoranda, yolculukta, market alışverişinde, grup içinde. Uygulamayı ücretsiz indirebilirsiniz.",
+    title: "Masrafları arkadaşlarınla paylaş, kimin kime borcu olduğunu gör",
+    body: "Restoran fişlerini tara, ortak harcamaları kaydet ve arkadaşlarınla bakiyeleri takip et. Önceki gruplardan kişileri davet et, masrafları grup sohbetinde veya özel sohbette konuş.",
     alts: [
-      "CheqSplit gezi ekranı",
-      "CheqSplit uygulaması: ortak harcama",
+      "Geçerli grubu gösteren CheqSplit ana ekranı",
+      "Katılımcı katkılarını gösteren grup özeti",
       "Hesap böl, fiş satırları CheqSplit",
     ],
   },
@@ -44,7 +44,7 @@ export const tr: Dictionary = {
     restaurantCta: "Restoran hesabını bölüş",
     groupTitle: "Grup veya seyahat harcamaları",
     groupText:
-      "Grup için bir seyahat oluşturun, katılımcıları davet edin ve harcamaları oluştukça ekleyin. Taksi, otel veya biletler için Masraf Ekle'yi kullanın. Kalemlere ayrılmış restoran fişi için Faturalar sekmesindeki Add Bill'i kullanın. Ortak bir geçmiş tutun ve kimin kime borcu olduğunu görün.",
+      "Ortak harcamaları tek grupta tutun: ödeyeni ve katılımcıları kaydedin, Fişler sekmesinden fiş ekleyin ve Özette kimin kime borçlu olduğunu görün. CheqSplit bakiyeleri hesaplar; para transferi yapmaz.",
     groupCta: "Grup harcamalarını takip et",
   },
   features: {
@@ -63,9 +63,9 @@ export const tr: Dictionary = {
     stepPill: (n) => `ADIM ${n}`,
     steps: [
       {
-        label: "Birkaç saniyede geziyi aç",
-        body: "İsim ver, arkadaşlarını link veya QR ile davet et, ortak harcamaları anında bölüştürmeye başla.",
-        imageAlt: "CheqSplit: gezi ekranı",
+        label: "Seyahatiniz için grup oluşturun",
+        body: "Ana ekranda Grup oluştur seçeneğine dokunun, gruba ad verin, para birimini seçin ve katılımcıları bağlantı veya QR koduyla davet edin.",
+        imageAlt: "Geçerli grubu gösteren CheqSplit ana ekranı",
         bullets: [
           "Hemen başlarsın",
           "Link veya QR ile davet",
@@ -84,7 +84,7 @@ export const tr: Dictionary = {
       },
       {
         label: "Ortak giderleri ekle",
-        body: "Kimin ödediğini ve tutarı kiminle paylaşacağınızı belirtin.",
+        body: "Harcamalar sekmesini açıp Harcama ekle seçeneğine dokunun. Açıklama, tutar ve para birimini girin, isteğe bağlı kategori ve ödeyeni seçin; katılımcılar için Herkes veya Özel seçeneğini kullanın. Her katılımcı harcama ekleyebilir.",
         imageAlt: "CheqSplit: paylaşılan gider",
         bullets: [
           "Her üye gideri ekler",
@@ -140,7 +140,7 @@ export const tr: Dictionary = {
     items: [
       { q: "CheqSplit nedir?", a: "Ücretsiz ortak masraf ve hesap uygulaması: fiş taraması, satırları kişilere atama, kimin kime ne kadar borçlu olduğunu tek ekranda görmek." },
       { q: "Fişi satır satır bölebiliyor musunuz?", a: "Evet. Her kalemi tüketene göre ayrı ayrı paylaşabilirsiniz." },
-      { q: "Arkadaşlarla tatile uygun mu?", a: "Evet. Gezi açar, gider eklersiniz, kişileri ve fişleri eklersiniz; sonda anlaşılır bir rapor alırsınız." },
+      { q: "Arkadaşlarla tatile uygun mu?", a: "Ortak harcamaları tek grupta tutun: ödeyeni ve katılımcıları kaydedin, Fişler sekmesinden fiş ekleyin ve Özette kimin kime borçlu olduğunu görün. CheqSplit bakiyeleri hesaplar; para transferi yapmaz." },
       { q: "Sadece restoran için mi?", a: "Hayır. Kafe, market, gezi, ortak alışveriş, birkaç kişinin aynı kasadan ödediği her senaryo için uygundur." },
       { q: "Çevrimdışı çalışıyor mu?", a: "Bazı veriler cihazda kalabilir, ancak geziyi paylaşmak ve grup ile senkron kalmak için internet gerekir." },
       { q: "Birini geziye nasıl davet ederim?", a: "Bir gezi oluşturun, harcamaları girin, davet bağlantısını paylaşın; katılan aynı bakiyeleri sizinle birlikte görür." },

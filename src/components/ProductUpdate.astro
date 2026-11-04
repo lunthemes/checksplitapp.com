@@ -1,0 +1,72 @@
+---
+import type { SupportedLanguage } from "../i18n/config";
+import { productUpdateCopy } from "../i18n/product-update";
+import { localeGroupExpenseTrackerPath, localeSplitBillPath } from "../i18n/paths";
+interface Props { lang: SupportedLanguage; variant: "home" | "group" | "restaurant"; }
+const { lang, variant } = Astro.props;
+const c = productUpdateCopy[lang];
+const cards = [
+  { title: c.chatTitle, body: c.chatBody, image: "group-chat" },
+  { title: c.inviteTitle, body: c.inviteBody, image: "invite-friends" },
+  { title: c.friendsTitle, body: c.friendsBody, image: "friend-balances" },
+];
+---
+<section class:list={["product-update", `product-update--${variant}`]} aria-labelledby={`product-update-${variant}`}>
+  <div class="product-update__container typography">
+    {variant === "restaurant" ? (
+      <>
+        <div class="product-update__example">
+          <h2 id={`product-update-${variant}`} class="typ-h2 typ-title-color">{c.receiptExampleTitle}</h2>
+          <p>{c.receiptExampleBody}</p>
+        </div>
+        <div class="product-update__note">
+          <h3>{c.browserTitle}</h3>
+          <p>{c.browserBody}</p>
+          <a href={localeGroupExpenseTrackerPath(lang)}>{c.groupLink} →</a>
+        </div>
+      </>
+    ) : (
+      <>
+        <h2 id={`product-update-${variant}`} class="typ-h2 typ-title-color product-update__heading">{c.sectionTitle}</h2>
+        <div class="product-update__grid">
+          {cards.map(card => (
+            <article class="product-update__card">
+              <div class="product-update__copy"><h3>{card.title}</h3><p>{card.body}</p></div>
+              <img src={`/screens/product-update/${card.image}.webp?v=20261104`} alt={card.title} width="608" height="1254" loading="lazy" decoding="async" data-lightbox />
+            </article>
+          ))}
+        </div>
+        {variant === "group" && (
+          <div class="product-update__details">
+            <article class="product-update__example"><h2 class="typ-h2 typ-title-color">{c.groupExampleTitle}</h2><p>{c.groupExampleBody}</p></article>
+            <article class="product-update__note"><h2 class="typ-h2 typ-title-color">{c.fxTitle}</h2><p>{c.fxBody}</p></article>
+          </div>
+        )}
+        {variant === "home" && <a class="product-update__link" href={localeGroupExpenseTrackerPath(lang)}>{c.groupLink} →</a>}
+        {variant === "group" && <a class="product-update__link" href={localeSplitBillPath(lang)}>{c.receiptLink} →</a>}
+      </>
+    )}
+    <p class="product-update__payment-note">{c.paymentNote}</p>
+  </div>
+</section>
+<style>
+  .product-update { padding: clamp(3rem, 6vw, 6rem) 1.25rem; background: #f4f7fb; color:#233648; }
+  .product-update__container { max-width:1200px; margin-inline:auto; }
+  .product-update__heading { text-align:center; margin-bottom:2.5rem; }
+  .product-update__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.75rem; }
+  .product-update__card { display:flex; flex-direction:column; align-items:center; padding:1.5rem 1.25rem 0; border-radius:1.5rem; background:linear-gradient(145deg,#eef6f5,#e9eaf7); overflow:hidden; }
+  .product-update__copy { width:100%; margin-bottom:1.5rem; }
+  .product-update h3 { font-size:clamp(1.25rem,2vw,1.5rem); line-height:1.35; font-weight:700; margin:0 0 .75rem; color:#263e52; }
+  .product-update p { font-size:1.0625rem; line-height:1.75; margin:.75rem 0 0; overflow-wrap:anywhere; }
+  .product-update__card img { width:min(100%,260px); height:auto; display:block; margin-top:auto; cursor:zoom-in; }
+  .product-update__details { margin-top:2.5rem; display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+  .product-update__example,.product-update__note { padding:clamp(1.5rem,3vw,2.5rem); border-radius:1.25rem; }
+  .product-update__example { background:#e8f3ef; border:1px solid #d0e8df; }
+  .product-update__note { background:#eaeaf6; border:1px solid #dcdcf0; }
+  .product-update--restaurant .product-update__note { margin-top:1.5rem; }
+  .product-update a { color:#4142a0; font-weight:700; text-decoration:underline; text-underline-offset:.2em; }
+  .product-update__link { display:inline-block; margin-top:1.75rem; }
+  .product-update__payment-note { color:#526476; max-width:850px; }
+  @media(max-width:900px) { .product-update__grid { gap:1rem; }.product-update__card{padding:1.25rem .9rem 0;} }
+  @media(max-width:700px) { .product-update__grid,.product-update__details { grid-template-columns:1fr; }.product-update__card{padding:1.5rem 1.25rem 0;} .product-update__card img{width:min(100%,270px);} }
+</style>

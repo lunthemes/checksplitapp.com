@@ -15,7 +15,7 @@ export const splitBillEn: SplitBillLocaleCopy = {
   seoBlockP1:
     "Everyone works from the same restaurant bill instead of calculating separate totals from a photo. Guests who do not have CheqSplit installed can continue in their browser and still take part in the split.",
   seoBlockP2:
-    "Each person selects the dishes and drinks they consumed. When several people select the same shared item, CheqSplit divides its price equally between them and updates the balances.",
+    "Select the dishes and drinks you had. If a line contains several units, open it and choose the individual units you consumed. For a shared dish, select the relevant item or units with the people who shared them; CheqSplit calculates the shares.",
   seoBlockP3:
     "After the group pays each other outside CheqSplit, participants can record those settlements so the bill history reflects what has already been paid.",
   useCasesH2: "Split the bill based on what everyone actually ordered",
@@ -26,7 +26,7 @@ export const splitBillEn: SplitBillLocaleCopy = {
     },
     {
       title: "Shared dishes and drinks",
-      text: "Everyone who shared an item can select it. CheqSplit automatically divides the item equally between those participants.",
+      text: "A receipt line can contain several units, such as two pizzas. Choose the units you had; shared items or units are divided equally between the participants who selected them. Use the equal-split option when it is offered and suits the group.",
     },
     {
       title: "No app required for guests",
@@ -92,9 +92,11 @@ export const splitBillEn: SplitBillLocaleCopy = {
     },
     {
       title: "Let everyone select what they had",
-      desc: "Each participant checks the dishes and drinks they consumed. Another participant’s avatar appears beside an item they selected. When you select the same item, your checkmark and avatar appear alongside theirs.",
-      extra:
-        "When several people select the same pizza, drink, or shared dish, CheqSplit divides that item equally between them.",
+      desc: "Select the dishes and drinks you had. If a line contains several units, open it and choose the individual units you consumed. For a shared dish, select the relevant item or units with the people who shared them; CheqSplit calculates the shares.",
+    },
+    {
+      title: "Choose individual portions",
+      desc: "A receipt line can contain several units, such as two pizzas. Choose the units you had; shared items or units are divided equally between the participants who selected them. Use the equal-split option when it is offered and suits the group.",
     },
     {
       title: "See who owes whom",
@@ -103,22 +105,22 @@ export const splitBillEn: SplitBillLocaleCopy = {
     },
     {
       title: "Record when a payment has been made",
-      desc: "After a participant pays their debt outside CheqSplit:\n• Open Record a Payment\n• Enter the amount\n• Optionally add a note\n• Choose who is paying and who receives the payment\n• Save the record",
+      desc: "After paying another participant outside CheqSplit, open Record a Payment. Confirm who you are paying, enter the amount and an optional note, then save. The payment is recorded from you to the selected recipient.",
       extra:
         "This updates the shared record. CheqSplit does not process, send, or receive the money.",
     },
     {
       title: "Review how the restaurant bill was divided",
-      desc: "See how the restaurant bill was divided across the group.\n• Open the Summary tab to see the total distributed in a pie chart\n• Tap a participant’s section to view their total and the exact items included in their consumption",
+      desc: "Participant details show the included items, selected units and calculated shares, so you can check the split against what each person consumed.",
       extra:
-        "An automatically calculated share, such as 50% when two people selected the same item, appears in the participant details.",
+        "Participant details show the included items, selected units and calculated shares, so you can check the split against what each person consumed.",
     },
   ],
   ctaTitle: "Split the restaurant bill—even when friends do not have the app",
   ctaBody:
     "Scan the receipt, share the bill, let everyone select items in the app or browser, and keep who-owes-whom and recorded payments in one clear result.",
   groupBridgeBefore:
-    "Need to keep this restaurant bill with hotel, taxi, or activity costs from the same group? Add the completed bill from the trip’s Bills tab with Add Bill, then continue with ",
+    "To keep a restaurant bill with hotel, taxi or activity costs, open Bills in the group and tap Add Bill to scan or upload it. After reviewing the receipt, split by item or equally, then continue with ",
   groupBridgeLabel: "group expense tracking",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Prefer a step-by-step method first? Read ",
@@ -143,7 +145,7 @@ export const splitBillEn: SplitBillLocaleCopy = {
     },
     {
       q: "How do several people split one shared item?",
-      a: "Each person who shared the item selects it. CheqSplit automatically divides the price equally between all participants who selected that item.",
+      a: "A receipt line can contain several units, such as two pizzas. Choose the units you had; shared items or units are divided equally between the participants who selected them. Use the equal-split option when it is offered and suits the group.",
     },
     {
       q: "What if the receipt scan is incorrect?",
@@ -163,7 +165,7 @@ export const splitBillEn: SplitBillLocaleCopy = {
     },
     {
       q: "Can I add this restaurant bill to a trip?",
-      a: "Yes. Complete the itemized restaurant split, then open the Bills tab inside the trip and tap Add Bill.",
+      a: "To include a receipt in a group, start from that group: open Bills and tap Add Bill, then scan or upload the receipt. Review the items and total, then split by item or equally. The receipt is linked automatically during this flow.",
     },
   ],
   a11y: {

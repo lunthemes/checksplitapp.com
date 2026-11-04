@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const hu: Dictionary = {
   meta: {
-    title: "CheqSplit: oszd a költségeket, szkenneld a blokkot, kövesd a közös kiadásokat",
+    title: "Közös költségek megosztása barátokkal | CheqSplit",
     description:
-      "A CheqSplit segít a költségek megosztásában, blokk vagy nyugta beolvasásában, közös kiadások követésében, és hogy egyértelműen lásd, ki kinek mennyivel tartozik – étteremben, utazáson, bevásárláskor, baráti vagy családi körben.",
+      "Olvassátok be az éttermi nyugtákat, vezessétek a közös kiadásokat, és kövessétek az egyenlegeket.",
     ogDescription:
       "Méltányosan oszd a költségeket: blokk beolvasás, tételek, egyenleg. Éttermek, utazások, bérlőtársak, baráti kör.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const hu: Dictionary = {
   },
   header: { download: "Letöltés ingyen" },
   hero: {
-    title: "Osszátok meg a költségeket, szkenneljétek be a nyugtákat, a többit pedig bízzátok az alkalmazásra",
-    body: "A CheqSplit segít a költségek megosztásában, a blokkok beolvasásában és a közös kiadások követésében, hogy tisztán lásd, ki kinek mennyivel tartozik — étteremben, utazáson, bevásárláskor, baráti vagy családi környezetben. Az alkalmazás ingyenesen letölthető.",
+    title: "Osszátok meg a kiadásokat, és lássátok, ki kinek tartozik",
+    body: "Olvassátok be az éttermi nyugtákat, vezessétek a közös kiadásokat, és kövessétek az egyenlegeket. Hívjatok meg barátokat korábbi csoportokból, és beszéljétek meg a költségeket csoportos vagy privát csevegésben.",
     alts: [
-      "CheqSplit: csoportos utazás képernyő",
-      "CheqSplit: közös kiadások",
+      "A CheqSplit kezdőképernyője az aktuális csoporttal",
+      "Csoportáttekintés a résztvevők befizetéseivel",
       "Számlamegosztás, tétel sorok CheqSplit",
     ],
   },
@@ -44,7 +44,7 @@ export const hu: Dictionary = {
     restaurantCta: "Éttermi számla felosztása",
     groupTitle: "Csoportos vagy utazási kiadások",
     groupText:
-      "Hozz létre egy utazást a csoportnak, hívd meg a résztvevőket, és add hozzá a kiadásokat menet közben. Taxihoz, szálláshoz vagy jegyekhez használd a Kiadás Hozzáadása lehetőséget. Tételes éttermi nyugtához használd az Add Bill lehetőséget a Számlák fülön. Tartsd egy közös nyilvántartásban, és lásd, ki kinek tartozik.",
+      "Tartsd a közös kiadásokat egy csoportban: rögzítsd a fizetőt és a résztvevőket, adj hozzá nyugtákat a Nyugták lapon, és nézd meg az Összesítésben, ki kinek tartozik. A CheqSplit egyenlegeket számol; pénzt nem utal.",
     groupCta: "Csoportos kiadások követése",
   },
   features: {
@@ -63,9 +63,9 @@ export const hu: Dictionary = {
     stepPill: (n) => `LÉPÉS ${n}`,
     steps: [
       {
-        label: "Hozz létre utazást pár másodperc alatt",
-        body: "Nevezd el, hívd meg a barátaidat linkkel vagy QR-kóddal, és rögtön kezd el osztani a közös kiadásokat.",
-        imageAlt: "CheqSplit: csoportos túra",
+        label: "Hozz létre csoportot az utazáshoz",
+        body: "A kezdőképernyőn koppints a Csoport létrehozása gombra, nevezd el a csoportot, válassz pénznemet, majd hívj meg résztvevőket hivatkozással vagy QR-kóddal.",
+        imageAlt: "A CheqSplit kezdőképernyője az aktuális csoporttal",
         bullets: [
           "Gyors indulás",
           "Meghívó linkkel vagy QR-kóddal",
@@ -84,7 +84,7 @@ export const hu: Dictionary = {
       },
       {
         label: "Rögzítsd a közös kiadásokat",
-        body: "Jelöld, ki fizetett, és kik közt kell elosztani az összeget.",
+        body: "Nyisd meg a Kiadások lapot, és koppints a Kiadás hozzáadása gombra. Add meg a leírást, összeget és pénznemet, opcionálisan a kategóriát, válaszd ki a fizetőt, majd a Mindenki vagy Egyéni lehetőséget a résztvevőkhöz. Bárki hozzáadhat kiadást.",
         imageAlt: "CheqSplit: közös költség",
         bullets: [
           "Mindenki rögzítheti a saját tételét",
@@ -140,7 +140,7 @@ export const hu: Dictionary = {
     items: [
       { q: "Mi a CheqSplit?", a: "Ingyenes alkalmazás közös számlákhoz: blokk beolvasás, tételes bontás, mindenki látja az egyenleget, ki kinek mennyit." },
       { q: "Lehet tételsoronként osztani a blokkot?", a: "Igen. A tételek emberekhez rendelhetők, mindenki azt fizeti, amit ténylegesen fogyasztott." },
-      { q: "Működik csoportos utazáshoz is?", a: "Igen. Létrehozol egy utazást, hozzáadsz kiadásokat, meghívod a társakat, a végén egy tiszta összegzést kapsz, ki kinek mennyivel tartozik." },
+      { q: "Működik csoportos utazáshoz is?", a: "Tartsd a közös kiadásokat egy csoportban: rögzítsd a fizetőt és a résztvevőket, adj hozzá nyugtákat a Nyugták lapon, és nézd meg az Összesítésben, ki kinek tartozik. A CheqSplit egyenlegeket számol; pénzt nem utal." },
       { q: "Csak étteremhez jó?", a: "Bárhol, ahol több ember osztja a költséget: kocsma, bevásárlás, rövid vagy hosszabb utazás, közös vásárlás – a lényeg, hogy ne egyedül fizesd." },
       { q: "Használható hálózat nélkül is?", a: "Bizonyos adat helyben is marad, de a közös utazást és a többiekkel való szinkront internethez kell kötni." },
       { q: "Hogyan hívok meg valakit?", a: "Indíts utazást, vegyél fel tételeket, oszd meg a meghívó linket, a belépő ugyanazt az egyenleget látja, amit te." },

@@ -11,7 +11,7 @@ export const restaurantBillGuideCs: RestaurantBillGuideCopy = {
   steps: [
     { title: "Zkontrolujte účtenku", desc: "Než začnete cokoli dělit, ověřte každou položku i konečný součet." },
     { title: "Přiřaďte jednotlivé objednávky", desc: "Každému přiřaďte pouze jídlo a pití, které si objednal. Začněte jednoznačnými položkami." },
-    { title: "Rozdělte společné položky", desc: "Zahrňte pouze ty, kteří sdíleli společný talíř nebo láhev. Rozdělte částku rovnoměrně nebo podle dohodnutého poměru." },
+    { title: "Rozdělte společné položky", desc: "Řádek může obsahovat více kusů, například dvě pizzy. Vyberte své kusy; společné položky nebo kusy se rozdělí rovným dílem mezi účastníky, kteří je vybrali. Rovnoměrné rozdělení použijte, pokud je nabízeno a skupině vyhovuje." },
     { title: "Zkontrolujte zbývající částky", desc: "Vyhledejte nepřiřazené položky, chyby skenování a daň či spropitné, které ještě nebyly započítány." },
     { title: "Ukažte výsledek", desc: "Každý by měl vidět svůj podíl a výsledný zůstatek, aby všichni s rozdělením souhlasili ještě u stolu." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideCs: RestaurantBillGuideCopy = {
     },
     {
       q: "Jak rozdělit společnou položku?",
-      a: "Mezi osoby, které ji sdílely — rovným dílem nebo podle dohodnutého procenta, pokud nebyly podíly stejné.",
+      a: "Řádek může obsahovat více kusů, například dvě pizzy. Vyberte své kusy; společné položky nebo kusy se rozdělí rovným dílem mezi účastníky, kteří je vybrali. Rovnoměrné rozdělení použijte, pokud je nabízeno a skupině vyhovuje.",
     },
     {
       q: "Proč se někdy výsledné částky neshodují?",

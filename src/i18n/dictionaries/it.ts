@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const it: Dictionary = {
   meta: {
-    title: "CheqSplit: dividi le spese, scansiona scontrini, traccia le spese di gruppo",
+    title: "App per dividere le spese con gli amici | CheqSplit",
     description:
-      "Dividi le spese, scansiona gli scontrini e tieni d'occhio le uscite in comune. CheqSplit ti mostra in modo chiaro chi deve quanto a chi, al ristorante, in viaggio, alla spesa o in qualsiasi piano a più persone.",
+      "Scansiona gli scontrini, registra le spese condivise e controlla i saldi con gli amici.",
     ogDescription:
       "Dividi in modo equo: scontrino in app, spese condivise, saldi chiari. Cene, gite, convivenza, famiglia e compagnia.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const it: Dictionary = {
   },
   header: { download: "Scarica gratis" },
   hero: {
-    title: "Dividete le spese, scansionate gli scontrini e lasciate che l’app faccia il resto",
-    body: "Con CheqSplit puoi scansionare gli scontrini, tenere sotto controllo le spese condivise e vedere in un attimo cosa resta da saldare, dopo cena, in gita, a casa o in viaggio con amici e famiglia. L’app si scarica gratuitamente.",
+    title: "Dividi le spese con gli amici e scopri chi deve a chi",
+    body: "Scansiona gli scontrini, registra le spese condivise e controlla i saldi con gli amici. Invita persone dei gruppi precedenti e parla delle spese nella chat del gruppo o in privato.",
     alts: [
-      "CheqSplit: viaggio di gruppo e spese condivise",
-      "App CheqSplit: elenco spese di gruppo",
+      "Schermata iniziale di CheqSplit con il gruppo attuale",
+      "Panoramica del gruppo con i contributi dei partecipanti",
       "CheqSplit: scontrino, divisione per riga",
     ],
   },
@@ -44,7 +44,7 @@ export const it: Dictionary = {
     restaurantCta: "Dividi un conto del ristorante",
     groupTitle: "Spese di gruppo o di viaggio",
     groupText:
-      "Crea un viaggio per il gruppo, invita i partecipanti e aggiungi le spese man mano. Usa Aggiungi spesa per taxi, hotel o biglietti. Usa Aggiungi conto nella scheda Conti per uno scontrino dettagliato del ristorante. Tieni uno storico condiviso e vedi chi deve quanto e a chi.",
+      "Tieni le spese condivise in un gruppo: indica chi ha pagato e i partecipanti, aggiungi scontrini da Scontrini e controlla chi deve quanto a chi nel Riepilogo. CheqSplit calcola i saldi; non trasferisce denaro.",
     groupCta: "Segui le spese di gruppo",
   },
   features: {
@@ -75,9 +75,9 @@ export const it: Dictionary = {
     stepPill: (n) => `PASSO ${n}`,
     steps: [
       {
-        label: "Crea un viaggio in pochi secondi",
-        body: "Mettici un nome, invita gli amici con link o QR e inizia subito a spartire le spese comuni.",
-        imageAlt: "CheqSplit: viaggio di gruppo",
+        label: "Crea un gruppo per il viaggio",
+        body: "Dalla schermata iniziale, tocca Crea gruppo, assegna un nome, scegli la valuta e invita i partecipanti tramite link o codice QR.",
+        imageAlt: "Schermata iniziale di CheqSplit con il gruppo attuale",
         bullets: [
           "Subito in movimento",
           "Invito via link o QR",
@@ -96,7 +96,7 @@ export const it: Dictionary = {
       },
       {
         label: "Aggiungi le spese condivise",
-        body: "Indica chi ha pagato e tra quali persone va diviso ciascun importo.",
+        body: "Apri Spese e tocca Aggiungi spesa. Inserisci descrizione, importo e valuta, scegli facoltativamente una categoria e chi ha pagato, poi Tutti o Personalizzato per i partecipanti. Ogni partecipante può aggiungere una spesa.",
         imageAlt: "CheqSplit: spese condivise, mobile",
         bullets: [
           "Ogni partecipante mette le sue voci",
@@ -161,7 +161,7 @@ export const it: Dictionary = {
       },
       {
         q: "Va bene per vacanze o gite a più persone?",
-        a: "Sì. Crei un viaggio, aggiungi le spese, inviti le persone, carichi scontrini e, al termine, ottieni un resoconto con i saldi tra le persone.",
+        a: "Tieni le spese condivise in un gruppo: indica chi ha pagato e i partecipanti, aggiungi scontrini da Scontrini e controlla chi deve quanto a chi nel Riepilogo. CheqSplit calcola i saldi; non trasferisce denaro.",
       },
       {
         q: "Serve solo al ristorante?",

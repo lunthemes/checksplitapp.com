@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const cs: Dictionary = {
   meta: {
-    title: "CheqSplit: Rozdělte výdaje, skenujte účtenky a sledujte společné účty",
+    title: "Aplikace na dělení výdajů s přáteli | CheqSplit",
     description:
-      "Rozdělte výdaje, skenujte účtenky a sledujte sdílené účty. CheqSplit hned ukáže, kdo komu dluží po restauraci, výletu, nákupu i dalších skupinových plánech.",
+      "Skenujte účtenky, zaznamenávejte společné výdaje a sledujte zůstatky s přáteli.",
     ogDescription:
       "Rozdělte výdaje férově: skenujte účtenky, sledujte společné výdaje a mějte jasno, kdo komu dluží. Ideální pro restaurace, skupinové cesty, spolubydlení i rodinu.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const cs: Dictionary = {
   },
   header: { download: "Stáhnout zdarma" },
   hero: {
-    title: "Rozdělte výdaje, skenujte účtenky a zbytek nechte na aplikaci",
-    body: "Rozdělte výdaje, skenujte účtenky a sledujte, co skupina utratila - a vždy budete vědět, kdo komu dluží po večeři, výletu, nákupu nebo společném večeru. Aplikaci si stáhnete zdarma.",
+    title: "Rozdělte výdaje s přáteli a zjistěte, kdo komu dluží",
+    body: "Skenujte účtenky, zaznamenávejte společné výdaje a sledujte zůstatky s přáteli. Zvěte lidi z předchozích skupin a řešte náklady ve skupinovém nebo soukromém chatu.",
     alts: [
-      "CheqSplit: skupinový výlet a sdílené výdaje",
-      "Mobilní aplikace CheqSplit pro sdílené výdaje",
+      "Hlavní obrazovka CheqSplit s aktuální skupinou",
+      "Přehled skupiny s příspěvky účastníků",
       "CheqSplit: rozdělení účtu po položkách a řádky účtenky",
     ],
   },
@@ -44,7 +44,7 @@ export const cs: Dictionary = {
     restaurantCta: "Rozdělit účet z restaurace",
     groupTitle: "Skupinové nebo cestovní výdaje",
     groupText:
-      "Vytvořte cestu pro skupinu, pozvěte účastníky a přidávejte výdaje průběžně. Použijte Add Expense na taxi, hotel nebo vstupenky. Použijte Add Bill na kartě Bills pro podrobnou restauranční účtenku. Mějte jednu společnou historii a sledujte, kdo komu dluží.",
+      "Uchovávejte společné výdaje v jedné skupině: zaznamenejte plátce a účastníky, přidejte účtenky v záložce Účtenky a v Přehledu zkontrolujte, kdo komu dluží. CheqSplit počítá zůstatky; nepřevádí peníze.",
     groupCta: "Sledovat skupinové výdaje",
   },
   features: {
@@ -75,9 +75,9 @@ export const cs: Dictionary = {
     stepPill: (n) => `KROK ${n}`,
     steps: [
       {
-        label: "Založte cestu během pár sekund",
-        body: "Přidejte název, pozvěte lidi přes odkaz nebo QR kód a hned začněte dělit společné výdaje.",
-        imageAlt: "CheqSplit: skupinová cesta a sdílené výdaje",
+        label: "Vytvořte skupinu pro cestu",
+        body: "Na hlavní obrazovce klepněte na Vytvořit skupinu, pojmenujte ji, zvolte měnu a pozvěte účastníky odkazem nebo QR kódem.",
+        imageAlt: "Hlavní obrazovka CheqSplit s aktuální skupinou",
         bullets: [
           "Rychlý start",
           "Pozvánky přes odkaz nebo QR",
@@ -96,7 +96,7 @@ export const cs: Dictionary = {
       },
       {
         label: "Přidávejte společné výdaje",
-        body: "Zaznamenejte, kdo zaplatil a mezi koho se má částka rozdělit.",
+        body: "Otevřete Výdaje a klepněte na Přidat výdaj. Zadejte popis, částku a měnu, případně kategorii, vyberte plátce a potom Všichni nebo Vlastní pro účastníky. Výdaj může přidat každý účastník.",
         imageAlt: "CheqSplit: mobilní obrazovka se společnými skupinovými výdaji",
         bullets: [
           "Výdaje od všech účastníků",
@@ -167,7 +167,7 @@ export const cs: Dictionary = {
       },
       {
         q: "Hodí se CheqSplit na skupinové cesty?",
-        a: "Ano. Založte cestu, přidávejte společné výdaje, pozvěte skupinu, připojte účtenky a na konci exportujte přehled, kdo komu dluží.",
+        a: "Uchovávejte společné výdaje v jedné skupině: zaznamenejte plátce a účastníky, přidejte účtenky v záložce Účtenky a v Přehledu zkontrolujte, kdo komu dluží. CheqSplit počítá zůstatky; nepřevádí peníze.",
       },
       {
         q: "Můžu CheqSplit používat v restauraci i při nákupech potravin?",

@@ -11,7 +11,7 @@ export const restaurantBillGuideIt: RestaurantBillGuideCopy = {
   steps: [
     { title: "Controlla lo scontrino", desc: "Verifica ogni voce e il totale finale prima di iniziare a dividere gli importi." },
     { title: "Assegna gli ordini individuali", desc: "Assegna a ogni persona solo i piatti e le bevande che ha ordinato. Inizia dalle voci più evidenti." },
-    { title: "Dividi le voci condivise", desc: "Includi solo le persone che hanno condiviso il piatto o la bottiglia. Dividi in parti uguali oppure secondo una percentuale concordata." },
+    { title: "Dividi le voci condivise", desc: "Una riga può contenere più unità, per esempio due pizze. Scegli quelle consumate; le voci o unità condivise vengono divise in parti uguali tra i partecipanti che le hanno selezionate. Usa la divisione in parti uguali quando è disponibile e adatta al gruppo." },
     { title: "Controlla gli importi rimasti", desc: "Verifica se ci sono voci non assegnate, errori di scansione o servizio e mancia non ancora inclusi." },
     { title: "Mostra il risultato", desc: "Ognuno deve poter vedere la propria quota e il saldo finale, così tutti possono verificare il conto prima di lasciare il tavolo." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideIt: RestaurantBillGuideCopy = {
     },
     {
       q: "Come va divisa una voce condivisa?",
-      a: "Tra le persone coinvolte, in parti uguali oppure secondo una percentuale concordata quando le quote non sono uguali.",
+      a: "Una riga può contenere più unità, per esempio due pizze. Scegli quelle consumate; le voci o unità condivise vengono divise in parti uguali tra i partecipanti che le hanno selezionate. Usa la divisione in parti uguali quando è disponibile e adatta al gruppo.",
     },
     {
       q: "Perché a volte i totali non coincidono?",

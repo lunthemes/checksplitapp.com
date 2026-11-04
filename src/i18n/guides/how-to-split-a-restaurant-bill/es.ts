@@ -11,7 +11,7 @@ export const restaurantBillGuideEs: RestaurantBillGuideCopy = {
   steps: [
     { title: "Comprueba el ticket", desc: "Confirma cada concepto y el total final antes de empezar a repartir los importes." },
     { title: "Asigna los pedidos individuales", desc: "Asigna a cada persona únicamente los platos y bebidas que ha pedido. Empieza por los platos más evidentes." },
-    { title: "Reparte las consumiciones compartidas", desc: "Incluye únicamente a quienes hayan compartido el plato o la botella. Divide a partes iguales o según el porcentaje acordado." },
+    { title: "Reparte las consumiciones compartidas", desc: "Una línea puede contener varias unidades, como dos pizzas. Elige las que consumiste; los artículos o unidades compartidos se reparten a partes iguales entre los participantes que los seleccionaron. Usa el reparto igual cuando se ofrezca y convenga al grupo." },
     { title: "Comprueba los importes pendientes", desc: "Busca conceptos sin asignar, errores de escaneo y cualquier impuesto o propina que todavía no se haya incluido." },
     { title: "Muestra el resultado", desc: "Cada persona debe poder ver su parte y el saldo resultante para que todos estén de acuerdo antes de marcharse." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideEs: RestaurantBillGuideCopy = {
     },
     {
       q: "¿Cómo debe repartirse una consumición compartida?",
-      a: "Entre las personas que lo hayan compartido, a partes iguales o según un porcentaje acordado cuando las cantidades no sean iguales.",
+      a: "Una línea puede contener varias unidades, como dos pizzas. Elige las que consumiste; los artículos o unidades compartidos se reparten a partes iguales entre los participantes que los seleccionaron. Usa el reparto igual cuando se ofrezca y convenga al grupo.",
     },
     {
       q: "¿Por qué a veces no coinciden los totales?",

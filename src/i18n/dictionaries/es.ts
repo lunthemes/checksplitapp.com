@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const es: Dictionary = {
   meta: {
-    title: "CheqSplit: divide gastos, escanea recibos y controla cuentas compartidas",
+    title: "App para dividir gastos con amigos | CheqSplit",
     description:
-      "Con CheqSplit dividir gastos, escanear recibos y seguir lo que paga el grupo es más sencillo: verás con claridad quién debe cuánto a quién, ya sea en un restaurante, de viaje, de compras o en un plan con amigos.",
+      "Escanea recibos de restaurantes, registra gastos compartidos y consulta los saldos con tus amigos.",
     ogDescription:
       "Divide gastos con criterio: recibos escaneados, gastos compartidos, saldos claros. Restaurantes, viajes, piso compartido, familia.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const es: Dictionary = {
   },
   header: { download: "Descarga gratis" },
   hero: {
-    title: "Divide los gastos, escanea los recibos y deja que la app se encargue del resto",
-    body: "Con CheqSplit escaneas recibos, sigues los gastos compartidos y ves al instante quién debe cuánto a quién, tras una cena, un viaje, la compra o cualquier plan en grupo. La app es gratis para descargar.",
+    title: "Divide gastos con amigos y consulta quién debe a quién",
+    body: "Escanea recibos de restaurantes, registra gastos compartidos y consulta los saldos con tus amigos. Invita a personas de grupos anteriores y habla de los gastos en el chat del grupo o en privado.",
     alts: [
-      "CheqSplit: viaje y gasto compartido en grupo",
-      "App CheqSplit con gasto compartido",
+      "Pantalla de inicio de CheqSplit con el grupo actual",
+      "Resumen del grupo con las aportaciones de los participantes",
       "CheqSplit: dividir la cuenta, líneas del recibo",
     ],
   },
@@ -44,7 +44,7 @@ export const es: Dictionary = {
     restaurantCta: "Dividir una cuenta de restaurante",
     groupTitle: "Gastos de grupo o de viaje",
     groupText:
-      "Crea un viaje para el grupo, invita a los participantes y añade los gastos a medida que surjan. Usa Agregar Gasto para un taxi, hotel o entradas. Usa Agregar Factura en la pestaña Cuentas para un ticket de restaurante detallado. Mantén un historial compartido y ve quién debe a quién.",
+      "Reúne los gastos compartidos en un grupo: registra quién pagó y los participantes, añade recibos desde Recibos y consulta quién debe a quién en Resumen. CheqSplit calcula saldos; no transfiere dinero.",
     groupCta: "Seguir los gastos de grupo",
   },
   features: {
@@ -75,9 +75,9 @@ export const es: Dictionary = {
     stepPill: (n) => `PASO ${n}`,
     steps: [
       {
-        label: "Crea un viaje en unos segundos",
-        body: "Ponle nombre, invita a tu gente por enlace o código QR y pasa a dividir los gastos compartidos al instante.",
-        imageAlt: "CheqSplit: viaje en grupo",
+        label: "Crea un grupo para tu viaje",
+        body: "En la pantalla de inicio, toca Crear grupo, ponle un nombre, elige su moneda e invita a los participantes mediante enlace o código QR.",
+        imageAlt: "Pantalla de inicio de CheqSplit con el grupo actual",
         bullets: [
           "Puesta en marcha inmediata",
           "Invitación por enlace o QR",
@@ -96,7 +96,7 @@ export const es: Dictionary = {
       },
       {
         label: "Añade los gastos compartidos",
-        body: "Indica quién pagó y con quiénes conviene repartir cada importe.",
+        body: "Abre Gastos y toca Añadir gasto. Introduce descripción, importe y moneda, elige una categoría opcional y quién pagó, y después Todos o Personalizado para los participantes. Cualquier participante puede añadir un gasto.",
         imageAlt: "CheqSplit: móvil, gastos de grupo",
         bullets: [
           "Gastos aportados por todos",
@@ -160,7 +160,7 @@ export const es: Dictionary = {
       },
       {
         q: "¿Sirve para un viaje con amigos o familia?",
-        a: "Sí. Crea un viaje, añade gastos compartidos, invita a la gente, adjunta recibos y, al cierre, obtén un resumen con quién debe a quién.",
+        a: "Reúne los gastos compartidos en un grupo: registra quién pagó y los participantes, añade recibos desde Recibos y consulta quién debe a quién en Resumen. CheqSplit calcula saldos; no transfiere dinero.",
       },
       {
         q: "¿Solo es para restaurantes?",

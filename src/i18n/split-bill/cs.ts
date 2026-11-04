@@ -11,12 +11,12 @@ export const splitBillCs: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Jedna účtenka, sdílená v aplikaci nebo v prohlížeči",
   seoBlockP1: "Celý účet zůstává na jednom místě. Jeden člověk naskenuje účtenku v CheqSplit a ostatní se připojí přes odkaz nebo QR kód a vyberou si své položky přímo v prohlížeči.",
-  seoBlockP2: "Aplikaci nemusí mít nainstalovanou každý u stolu. CheqSplit uchová položky, účastníky, platby i konečný výsledek pohromadě.",
+  seoBlockP2: "Vyberte jídla a nápoje, které jste měli. Pokud řádek obsahuje více kusů, otevřete jej a vyberte jednotlivé spotřebované kusy. U společného jídla zúčastnění vyberou položku nebo sdílené kusy; CheqSplit vypočítá podíly.",
   seoBlockP3: "",
   useCasesH2: "Rozdělení účtu podle toho, co si kdo skutečně objednal",
   useCases: [
     { title: "Vlastní položky", text: "Přiřaďte každému jen jídlo a pití, které si objednal." },
-    { title: "Sdílené položky", text: "Láhev, společný talíř nebo dezert rozdělte pouze mezi ty, kteří je sdíleli." },
+    { title: "Sdílené položky", text: "Řádek může obsahovat více kusů, například dvě pizzy. Vyberte své kusy; společné položky nebo kusy se rozdělí rovným dílem mezi účastníky, kteří je vybrali. Rovnoměrné rozdělení použijte, pokud je nabízeno a skupině vyhovuje." },
     { title: "Poplatky a spropitné", text: "Přidejte servisní poplatek, daň a spropitné tak, aby rozdělená částka odpovídala celkové částce na účtence." },
   ],
   howSectionH2: "Jak rozdělit účet v restauraci s CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillCs: SplitBillLocaleCopy = {
     { title: "Pozvěte přátele pomocí QR kódu nebo odkazu", desc: "Sdílejte QR kód nebo odkaz na účet. Každý se může okamžitě připojit." },
     { title: "Pokračujte v prohlížeči bez instalace aplikace", desc: "Přátelé mohou odkaz otevřít přímo v prohlížeči. Pro rozdělení účtu si CheqSplit instalovat nemusí." },
     { title: "Rozdělte účet online", desc: "Všichni pracují se stejným účtem. Výběry i změny zůstávají na jednom místě, takže nemusíte zvlášť počítat, kdo měl co." },
-    { title: "Každý si vybere, co měl", desc: "Každý účastník označí své položky. Společné jídlo nebo pití lze rozdělit mezi více lidí." },
+    { title: "Každý si vybere, co měl", desc: "Vyberte jídla a nápoje, které jste měli. Pokud řádek obsahuje více kusů, otevřete jej a vyberte jednotlivé spotřebované kusy. U společného jídla zúčastnění vyberou položku nebo sdílené kusy; CheqSplit vypočítá podíly." },
+    {
+      title: "Vyberte jednotlivé porce",
+      desc: "Řádek může obsahovat více kusů, například dvě pizzy. Vyberte své kusy; společné položky nebo kusy se rozdělí rovným dílem mezi účastníky, kteří je vybrali. Rovnoměrné rozdělení použijte, pokud je nabízeno a skupině vyhovuje.",
+    },
     { title: "Podívejte se, kdo komu dluží", desc: "Po přiřazení položek CheqSplit spočítá částky a přehledně ukáže, kdo má komu zaplatit." },
-    { title: "Zaznamenejte provedenou platbu", desc: "Označujte uskutečněné platby, abyste vždy viděli aktuální stav a zbývající dluhy." },
-    { title: "Zkontrolujte, jak byl účet rozdělen", desc: "K výsledku se můžete kdykoli vrátit a zkontrolovat položky, částky i platby jednotlivých lidí." }
+    { title: "Zaznamenejte provedenou platbu", desc: "Po zaplacení jinému účastníkovi mimo CheqSplit otevřete Zaznamenat platbu. Potvrďte příjemce, zadejte částku a případnou poznámku a uložte. Platba se zaznamená od vás vybranému příjemci." },
+    { title: "Zkontrolujte, jak byl účet rozdělen", desc: "Podrobnosti účastníka ukazují zahrnuté položky, vybrané kusy a vypočtené podíly, abyste mohli rozdělení porovnat se skutečnou spotřebou." }
   ],
   ctaTitle: "Rozdělte účet, i když vaši přátelé aplikaci nemají",
   ctaBody: "Naskenujte účtenku, nasdílejte odkaz nebo QR kód a nechte každého vybrat, co měl.",
-  groupBridgeBefore: "Potřebujete tento účet z restaurace evidovat spolu s hotelem, taxíkem nebo aktivitami stejné skupiny? Přidejte dokončený účet z karty Bills v cestě pomocí Add Bill a pokračujte v ",
+  groupBridgeBefore: "Chcete-li mít účtenku z restaurace spolu s hotelem, taxi nebo aktivitami, otevřete ve skupině Účtenky a klepněte na Přidat účtenku pro skenování nebo nahrání. Po kontrole rozdělte podle položek nebo rovným dílem a pokračujte na ",
   groupBridgeLabel: "sledování skupinových výdajů",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Chcete nejdřív postup krok za krokem? Přečtěte si, ",
@@ -66,7 +70,7 @@ export const splitBillCs: SplitBillLocaleCopy = {
     },
     {
       q: "Jak rozdělí několik lidí jednu společnou položku?",
-      a: "Každý, kdo danou položku sdílel, ji označí. CheqSplit automaticky rozdělí cenu rovným dílem mezi všechny účastníky, kteří ji vybrali.",
+      a: "Řádek může obsahovat více kusů, například dvě pizzy. Vyberte své kusy; společné položky nebo kusy se rozdělí rovným dílem mezi účastníky, kteří je vybrali. Rovnoměrné rozdělení použijte, pokud je nabízeno a skupině vyhovuje.",
     },
     {
       q: "Co když byla účtenka naskenována nesprávně?",
@@ -86,7 +90,7 @@ export const splitBillCs: SplitBillLocaleCopy = {
     },
     {
       q: "Mohu tento účet z restaurace přidat do cesty?",
-      a: "Ano. Dokončete rozdělení účtu podle položek, potom v cestě otevřete kartu Bills a klepněte na Add Bill.",
+      a: "Chcete-li účtenku zahrnout do skupiny, začněte v této skupině: otevřete Účtenky a klepněte na Přidat účtenku, poté ji naskenujte nebo nahrajte. Zkontrolujte položky a součet a rozdělte podle položek nebo rovným dílem. Účtenka se při tomto postupu propojí se skupinou automaticky.",
     },
   ],
   a11y: {

@@ -19,12 +19,12 @@ export const groupExpenseTrackerIt: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Invita il gruppo al viaggio",
-      text: "Dopo aver creato e nominato il viaggio, invita i partecipanti tramite link o QR code.",
+      text: "Dalla schermata iniziale, tocca Crea gruppo, assegna un nome, scegli la valuta e invita i partecipanti tramite link o codice QR.",
       imageAlt: "Invita il gruppo al viaggio",
     },
     {
       title: "Aggiungi ogni spesa",
-      text: "Apri la scheda Spese e tocca Aggiungi spesa. Inserisci descrizione e importo, indica chi ha pagato e seleziona chi ha partecipato alla spesa.",
+      text: "Apri Spese e tocca Aggiungi spesa. Inserisci descrizione, importo e valuta, scegli facoltativamente una categoria e chi ha pagato, poi Tutti o Personalizzato per i partecipanti. Ogni partecipante può aggiungere una spesa.",
       imageAlt: "Aggiungi ogni spesa",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerIt: GroupExpenseTrackerCopy = {
   subsetH2: "Usa la divisione giusta per ogni spesa",
   subsetText: "Non tutte le spese riguardano tutto il gruppo. Assegna il taxi solo a chi lo ha preso, i biglietti a chi ha partecipato e le vere spese comuni a tutto il gruppo. Per un conto dettagliato del ristorante, usa la scheda Conti e Aggiungi conto.",
   receiptBridgeH2: "Aggiungi al viaggio un conto del ristorante diviso per voce",
-  receiptBridgeText: "Se il gruppo ha un conto dettagliato del ristorante, usa prima la divisione per voce per assegnare ciò che ha ordinato ciascuno, compresi servizio e mancia. Poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
+  receiptBridgeText: "Nel gruppo, apri Scontrini e tocca Aggiungi scontrino per scansionare o caricare uno scontrino. Verifica le voci e il totale rilevati; lo scontrino viene collegato automaticamente al gruppo. Poi dividi per voce o in parti uguali.",
   receiptBridgeCta: "Scopri come funziona la divisione dello scontrino",
   reportH2: "Conserva un riepilogo che il gruppo possa consultare anche dopo",
   reportText: "Archivia il viaggio ed esporta un riepilogo PDF con spese, totali, tabelle e grafico. È molto più facile da verificare rispetto a un conteggio finale ricostruito a memoria.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerIt: GroupExpenseTrackerCopy = {
     },
     {
       q: "Posso scansionare uno scontrino come spesa di viaggio?",
-      a: "Usa il flusso per lo scontrino del ristorante per dividere le singole voci, comprese imposte e mancia. Poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
+      a: "Nel gruppo, apri Scontrini e tocca Aggiungi scontrino per scansionare o caricare uno scontrino. Verifica le voci e il totale rilevati; lo scontrino viene collegato automaticamente al gruppo. Poi dividi per voce o in parti uguali.",
     },
     {
       q: "Come faccio a sapere chi deve pagare chi?",

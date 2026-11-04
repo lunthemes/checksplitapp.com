@@ -19,12 +19,12 @@ export const groupExpenseTrackerCs: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Pozvěte skupinu do cesty",
-      text: "Po vytvoření a pojmenování cesty pozvěte účastníky pomocí odkazu nebo QR kódu.",
+      text: "Na hlavní obrazovce klepněte na Vytvořit skupinu, pojmenujte ji, zvolte měnu a pozvěte účastníky odkazem nebo QR kódem.",
       imageAlt: "Pozvěte skupinu do cesty",
     },
     {
       title: "Přidejte každý výdaj",
-      text: "Otevřete kartu Expenses a klepněte na Add Expense. Zadejte popis a částku, vyberte, kdo zaplatil, a označte účastníky výdaje.",
+      text: "Otevřete Výdaje a klepněte na Přidat výdaj. Zadejte popis, částku a měnu, případně kategorii, vyberte plátce a potom Všichni nebo Vlastní pro účastníky. Výdaj může přidat každý účastník.",
       imageAlt: "Přidejte každý výdaj",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerCs: GroupExpenseTrackerCopy = {
   subsetH2: "Pro každý výdaj použijte správné rozdělení",
   subsetText: "Ne každý výdaj patří celé skupině. Taxi přiřaďte jen těm, kteří jeli, vstupenky jen účastníkům a skutečně společné náklady celé skupině. U podrobného účtu z restaurace použijte kartu Bills a Add Bill.",
   receiptBridgeH2: "Přidejte do cesty účet z restaurace rozdělený podle položek",
-  receiptBridgeText: "Když má skupina podrobný účet z restaurace, nejprve jej rozdělte podle jednotlivých položek včetně poplatků a spropitného. Potom v cestě otevřete kartu Bills a klepněte na Add Bill.",
+  receiptBridgeText: "Ve skupině otevřete Účtenky a klepněte na Přidat účtenku pro skenování nebo nahrání. Zkontrolujte rozpoznané položky a celkovou částku; účtenka se automaticky propojí se skupinou. Potom ji rozdělte podle položek nebo rovným dílem.",
   receiptBridgeCta: "Podívejte se, jak funguje rozdělení účtenky",
   reportH2: "Uchovejte záznam, ke kterému se skupina může vrátit",
   reportText: "Cestu archivujte a exportujte PDF přehled s výdaji, součty, tabulkami a grafem. Výsledek se kontroluje mnohem snadněji než závěrečné počítání zpaměti.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerCs: GroupExpenseTrackerCopy = {
     },
     {
       q: "Mohu naskenovat účtenku jako výdaj na cestě?",
-      a: "Pro rozdělení podle jednotlivých položek použijte postup pro restauranční účtenku včetně daně a spropitného. Potom v cestě otevřete kartu Bills a klepněte na Add Bill.",
+      a: "Ve skupině otevřete Účtenky a klepněte na Přidat účtenku pro skenování nebo nahrání. Zkontrolujte rozpoznané položky a celkovou částku; účtenka se automaticky propojí se skupinou. Potom ji rozdělte podle položek nebo rovným dílem.",
     },
     {
       q: "Jak zjistím, kdo má komu zaplatit?",

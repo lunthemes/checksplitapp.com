@@ -7,13 +7,13 @@ export const tripExpensesGuideIt: TripExpensesGuideCopy = {
   answer: "Crea un unico viaggio, registra chi ha pagato e chi ha partecipato a ogni spesa e controlla i saldi prima della fine del viaggio.",
   answerFollow: "Registrando ogni spesa man mano, il gruppo non dovrà rifare tutti i conti alla fine del viaggio.",
   rulesH2: "Stabilite le regole per le spese prima di partire",
-  rulesBody: "Prima ancora del primo pagamento, stabilite quali costi riguardano tutto il gruppo e quali soltanto alcune persone. L'alloggio spesso viene diviso tra tutti, mentre un taxi o un biglietto per il museo può riguardare solo alcuni partecipanti. Registra separatamente chi ha pagato e chi partecipa alla spesa, perché chi anticipa i soldi non deve necessariamente essere incluso nella divisione. Aggiungi ogni spesa mentre importo e partecipanti sono ancora facili da ricordare. Se usate più valute, decidete in anticipo come registrarle: CheqSplit non effettua conversioni di valuta. Regole chiare fin dall'inizio mantengono lo storico coerente fino al saldo finale.",
+  rulesBody: "Prima del primo pagamento, concordate quali costi dividere tra tutti e quali riguardano solo alcune persone. Registrate separatamente chi paga e i partecipanti e aggiungete subito ogni spesa. Scegliete una valuta di gruppo per i saldi. Per spese in un’altra valuta, controllate il tasso di riferimento e la data, inserite un tasso manuale oppure l’importo effettivamente addebitato dalla banca nella valuta del gruppo. Regole chiare mantengono coerente il registro.",
   stepsH2: "Come dividere le spese di viaggio in 5 passaggi",
   steps: [
-    { title: "Crea il viaggio in anticipo", desc: "Dagli un nome, aggiungi le persone coinvolte e inserisci le spese già sostenute, così tutto il gruppo parte da un unico storico." },
+    { title: "Crea un gruppo per il viaggio", desc: "Dalla schermata iniziale, tocca Crea gruppo, assegna un nome, scegli la valuta e invita i partecipanti tramite link o codice QR." },
     { title: "Registra chi ha pagato", desc: "Indica chiaramente chi ha pagato ogni spesa: biglietti, alloggio, trasporti, ristorante o un'attività anticipata per il gruppo." },
     { title: "Seleziona i partecipanti", desc: "Includi tutti solo quando la spesa riguarda davvero l'intero gruppo. Per un taxi, un'attività o un ristorante, seleziona soltanto le persone coinvolte." },
-    { title: "Aggiungi le spese subito", desc: "Inserisci gli importi mentre li ricordi ancora bene. In CheqSplit apri la scheda Spese e tocca Aggiungi spesa. Qualsiasi partecipante può aggiungere una spesa." },
+    { title: "Aggiungi le spese subito", desc: "Apri Spese e tocca Aggiungi spesa. Inserisci descrizione, importo e valuta, scegli facoltativamente una categoria e chi ha pagato, poi Tutti o Personalizzato per i partecipanti. Ogni partecipante può aggiungere una spesa." },
     { title: "Controlla i saldi", desc: "Prima di chiudere o esportare il viaggio, verifica lo storico condiviso e chi deve quanto e a chi. Aggiungi prima eventuali spese mancanti." }
   ],
   exampleH2: "Esempio: dividere le spese di un weekend tra quattro amici",
@@ -49,11 +49,11 @@ export const tripExpensesGuideIt: TripExpensesGuideCopy = {
   exampleSettle: "Blair paga €90 ad Alex, Casey gli paga €135 e Dana €40. I tre pagamenti totalizzano €265, esattamente quanto Alex deve ricevere.",
   exampleNote: "Quote: hotel €100 a persona; taxi €15 a persona per i tre passeggeri; biglietti €20 a persona. Dana non ha preso il taxi, quindi la sua quota è €120 invece di €135. CheqSplit calcola questi saldi, ma non trasferisce denaro.",
   productH2: "Tieni sotto controllo le spese condivise del viaggio con CheqSplit",
-  productBody: "CheqSplit ti permette di creare un viaggio, registrare chi ha pagato e i partecipanti di ogni spesa, tenere visibile lo storico condiviso e vedere chi deve quanto e a chi. Aggiungi taxi, hotel o biglietti da Spese con Aggiungi spesa e un conto dettagliato del ristorante da Conti con Aggiungi conto. Al termine archivia il viaggio ed esporta un riepilogo PDF. CheqSplit calcola i saldi, ma non trasferisce denaro e non converte valute.",
+  productBody: "Crea un gruppo dalla schermata iniziale, scegli la valuta e invita i partecipanti. Da Spese, Aggiungi spesa permette di registrare hotel, taxi o biglietti: importo, valuta, pagante e partecipanti tramite Tutti o Personalizzato; la categoria è facoltativa. Da Scontrini, Aggiungi scontrino apre scansione o caricamento. Verifica le voci, poi dividi per voce o in parti uguali. Per altre valute, usa tasso di riferimento e data, un tasso manuale o l’addebito bancario effettivo nella valuta del gruppo. Controlla i saldi, esporta un rapporto PDF o archivia il gruppo. CheqSplit non trasferisce denaro.",
   productCta: "Tieni sotto controllo le spese di gruppo e di viaggio con CheqSplit",
   receiptNoteBefore: "Se una spesa del viaggio è un conto del ristorante dettagliato, usa prima ",
   receiptNoteLabel: "il metodo di divisione per voce",
-  receiptNoteAfter: ", inclusi servizio e mancia. Poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
+  receiptNoteAfter: " direttamente dalla scheda Scontrini del gruppo con Aggiungi scontrino. Scansiona o carica lo scontrino, verifica voci e totale, poi dividi per voce o in parti uguali; viene collegato automaticamente al gruppo.",
   faqH2: "Domande frequenti sulla divisione delle spese di viaggio",
   faq: [
     {
@@ -66,11 +66,11 @@ export const tripExpensesGuideIt: TripExpensesGuideCopy = {
     },
     {
       q: "Come va gestito un conto del ristorante?",
-      a: "Usa il flusso per lo scontrino del ristorante per dividere le singole voci, comprese imposte e mancia. Poi apri la scheda Conti del viaggio e tocca Aggiungi conto.",
+      a: "Nel gruppo, apri Scontrini e tocca Aggiungi scontrino per scansionare o caricare uno scontrino. Verifica le voci e il totale rilevati; lo scontrino viene collegato automaticamente al gruppo. Poi dividi per voce o in parti uguali.",
     },
     {
       q: "CheqSplit converte le valute?",
-      a: "No. La conversione valutaria non è una funzionalità confermata di CheqSplit. Registra gli importi esattamente come compaiono nella spesa.",
+      a: "Sì. Le spese del gruppo possono essere in un’altra valuta. Controlla il tasso di riferimento e la data, inserisci un tasso manuale o l’addebito bancario effettivo nella valuta del gruppo. CheqSplit usa l’importo convertito per i saldi del gruppo; non trasferisce denaro.",
     },
   ],
   ctaTitle: "Tutte le spese del viaggio in un unico riepilogo condiviso",

@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const pl: Dictionary = {
   meta: {
-    title: "CheqSplit: dziel wydatki, skanuj paragony, śledź wspólne rachunki",
+    title: "Aplikacja do dzielenia wydatków ze znajomymi | CheqSplit",
     description:
-      "CheqSplit pomaga dzielić wydatki, skanować paragony, pilnować wspólnych kosztów i szybko zobaczyć, kto komu ile jest winien – po restauracji, w podróży, na zakupach, w gronie znajomych.",
+      "Skanuj paragony, zapisuj wspólne wydatki i sprawdzaj salda ze znajomymi.",
     ogDescription:
       "Dziel wydatki uczciwie: skanuj paragony, śledź wspólne koszty, miej jasne salda. Restauracje, wyjazdy, wspólne mieszkanie, rodzina.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const pl: Dictionary = {
   },
   header: { download: "Pobierz za darmo" },
   hero: {
-    title: "Dzielcie wydatki, skanujcie paragony i pozwólcie aplikacji zająć się resztą",
-    body: "CheqSplit ułatwia dzielenie wydatków, skanowanie paragonów, śledzenie wspólnych kosztów i rozliczanie, kto komu ile jest winien – w restauracji, na wyjeździe, na zakupach, w grupie. Aplikację pobierzesz bezpłatnie.",
+    title: "Dziel wydatki ze znajomymi i sprawdzaj, kto komu ile jest winien",
+    body: "Skanuj paragony, zapisuj wspólne wydatki i sprawdzaj salda ze znajomymi. Zapraszaj osoby z poprzednich grup i omawiaj koszty na czacie grupowym lub bezpośrednio ze znajomym.",
     alts: [
-      "CheqSplit: wspólna podróż, lista wydatków",
-      "Aplikacja CheqSplit: wspólne wydatki w grupie",
+      "Ekran główny CheqSplit z bieżącą grupą",
+      "Przegląd grupy z wpłatami uczestników",
       "CheqSplit: podział rachunku, pozycje z paragonu",
     ],
   },
@@ -44,7 +44,7 @@ export const pl: Dictionary = {
     restaurantCta: "Podziel rachunek z restauracji",
     groupTitle: "Wydatki grupowe lub wyjazdowe",
     groupText:
-      "Utwórz wyjazd dla grupy, zaproś uczestników i dodawaj wydatki na bieżąco. Użyj Dodaj Wydatek na taksówkę, hotel lub bilety. Użyj Add Bill w karcie Rachunki dla szczegółowego paragonu z restauracji. Zachowaj wspólną historię i sprawdzaj, kto komu ile jest winien.",
+      "Zbieraj wspólne wydatki w jednej grupie: zapisuj płatnika i uczestników, dodawaj paragony w zakładce Paragony i sprawdzaj w Podsumowaniu, kto komu jest winien. CheqSplit oblicza salda; nie przelewa pieniędzy.",
     groupCta: "Śledź wydatki grupy",
   },
   features: {
@@ -75,9 +75,9 @@ export const pl: Dictionary = {
     stepPill: (n) => `KROK ${n}`,
     steps: [
       {
-        label: "Utwórz wyjazd w kilka sekund",
-        body: "Daj nazwę, zaproś znajomych linkiem lub kodem QR i od razu dziel wspólne koszty.",
-        imageAlt: "CheqSplit: wyjazd grupowy",
+        label: "Utwórz grupę na wyjazd",
+        body: "Na ekranie głównym wybierz Utwórz grupę, nadaj jej nazwę, wybierz walutę i zaproś uczestników przez link lub kod QR.",
+        imageAlt: "Ekran główny CheqSplit z bieżącą grupą",
         bullets: [
           "Błyskawiczny start",
           "Zaproszenie linkiem albo QR",
@@ -96,7 +96,7 @@ export const pl: Dictionary = {
       },
       {
         label: "Dodawaj wspólne wydatki",
-        body: "Podawaj, kto zapłacił i pomiędzy kim mamy tę sumę podzielić.",
+        body: "Otwórz Wydatki i wybierz Dodaj wydatek. Wpisz opis, kwotę i walutę, opcjonalnie wybierz kategorię oraz płatnika, a następnie Wszyscy lub wybór własny dla uczestników. Każdy uczestnik może dodać wydatek.",
         imageAlt: "CheqSplit: lista wspólnych wydatków",
         bullets: [
           "Koszty wprowadzają uczestnicy",
@@ -152,7 +152,7 @@ export const pl: Dictionary = {
     items: [
       { q: "Co to CheqSplit?", a: "Bezpłatna aplikacja do dzielenia rachunków i wspólnych wydatków. Skanujesz, przypisujesz linie, widzisz, kto komu ile jest winien, w jednym miejscu." },
       { q: "Czy można podzielić rachunek według pozycji z paragonu?", a: "Tak. Każdą linię możesz dodać do właściwej osoby – płacisz tylko za to, z czego skorzystałeś." },
-      { q: "Czy aplikacja sprawdza się podczas wyjazdów grupowych?", a: "Tak. Utwórz wyjazd, dodawaj wydatki, wrzucaj zdjęcia paragonów, a na końcu wyciągnij z tego czytelną listę, kto komu ile jest winien." },
+      { q: "Czy aplikacja sprawdza się podczas wyjazdów grupowych?", a: "Zbieraj wspólne wydatki w jednej grupie: zapisuj płatnika i uczestników, dodawaj paragony w zakładce Paragony i sprawdzaj w Podsumowaniu, kto komu jest winien. CheqSplit oblicza salda; nie przelewa pieniędzy." },
       { q: "Czy działa tylko w restauracji?", a: "Nie, zawsze wtedy, gdy kilka osób łączy w jednym koszty – w barze, sklepie, w podróży, na wspólnym zamówieniu." },
       { q: "A bez internetu?", a: "Część danych możesz mieć lokalnie, ale wspólny wyjazd i sync z ekipą wymaga połączenia z siecią." },
       { q: "Jak zaprosić kogoś do wyjazdu?", a: "W CheqSplit utwórz wycieczkę, wprowadź wydatki, wyślij link do wyjazdu – osoba, która dołącza, też zobaczy, jak wyglądają wspólne sumy i jej udział." },

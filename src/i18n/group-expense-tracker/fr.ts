@@ -19,12 +19,12 @@ export const groupExpenseTrackerFr: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Invitez le groupe au voyage",
-      text: "Après avoir créé et nommé le voyage, invitez les participants à l'aide d'un lien ou d'un QR code.",
+      text: "Sur l’écran d’accueil, appuyez sur Créer un groupe, nommez-le, choisissez sa devise et invitez les participants par lien ou code QR.",
       imageAlt: "Invitez le groupe au voyage",
     },
     {
       title: "Ajoutez chaque dépense",
-      text: "Ouvrez l'onglet Dépenses et touchez Ajouter une dépense. Saisissez la description et le montant, indiquez qui a payé et sélectionnez les participants concernés.",
+      text: "Ouvrez Dépenses et appuyez sur Ajouter une dépense. Saisissez la description, le montant et la devise, choisissez éventuellement une catégorie et le payeur, puis Tous ou Personnalisé pour les participants. Chaque participant peut ajouter une dépense.",
       imageAlt: "Ajoutez chaque dépense",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerFr: GroupExpenseTrackerCopy = {
   subsetH2: "Utilisez le bon partage pour chaque dépense",
   subsetText: "Toutes les dépenses ne concernent pas forcément tout le monde. Attribuez le taxi uniquement à ceux qui l'ont pris, les billets aux participants concernés et les dépenses réellement communes à tout le groupe. Pour une addition détaillée au restaurant, utilisez l'onglet Additions puis Ajouter une addition.",
   receiptBridgeH2: "Ajoutez au voyage une addition de restaurant détaillée",
-  receiptBridgeText: "Si le groupe dispose d'une addition détaillée, utilisez d'abord le partage par article pour attribuer les plats et boissons, frais et pourboire compris. Ouvrez ensuite l'onglet Additions du voyage et touchez Ajouter une addition.",
+  receiptBridgeText: "Dans le groupe, ouvrez Tickets et appuyez sur Ajouter un ticket pour scanner ou importer un ticket. Vérifiez les articles détectés et le total ; le ticket est automatiquement associé au groupe. Répartissez ensuite par article ou à parts égales.",
   receiptBridgeCta: "Voir comment fonctionne le partage d'une addition",
   reportH2: "Terminez avec un historique que tout le groupe peut consulter",
   reportText: "Archivez le voyage et exportez un rapport PDF contenant les dépenses, les totaux, les tableaux et le graphique. Le résultat est bien plus facile à vérifier qu'un calcul final reconstitué de mémoire.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerFr: GroupExpenseTrackerCopy = {
     },
     {
       q: "Puis-je scanner un ticket pour une dépense de voyage ?",
-      a: "Utilisez le parcours prévu pour les tickets de restaurant afin de répartir les articles, taxes et pourboire compris. Ouvrez ensuite l'onglet Additions du voyage et touchez Ajouter une addition.",
+      a: "Dans le groupe, ouvrez Tickets et appuyez sur Ajouter un ticket pour scanner ou importer un ticket. Vérifiez les articles détectés et le total ; le ticket est automatiquement associé au groupe. Répartissez ensuite par article ou à parts égales.",
     },
     {
       q: "Comment savoir qui doit payer qui ?",

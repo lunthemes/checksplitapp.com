@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const de: Dictionary = {
   meta: {
-    title: "CheqSplit: Ausgaben teilen, Belege scannen, Gruppenkosten im Blick",
+    title: "App zum Teilen von Ausgaben mit Freunden | CheqSplit",
     description:
-      "Teile Ausgaben, scanne Kassenzettel, behalte geteilte Kosten im Blick und sieh schnell, wer wem wie viel schuldet – im Restaurant, auf Reisen, beim Einkauf oder in der Gruppe.",
+      "Scannt Restaurantbelege, erfasst gemeinsame Ausgaben und behaltet eure Salden im Blick.",
     ogDescription:
       "Ausgaben fair aufteilen: Belege scannen, gemeinsame Kosten verfolgen, Saldo kennen. Für Restaurants, Gruppenreisen, Wohngemeinschaft und Familie.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const de: Dictionary = {
   },
   header: { download: "Kostenlos herunterladen" },
   hero: {
-    title: "Teilt Ausgaben, scannt Belege und lasst die App den Rest erledigen",
-    body: "Teile Ausgaben, scanne Belege und behalte im Blick, wer wem was schuldet – nach dem Abendessen, auf dem Wochenend-Trip, beim Einkauf oder mit deiner Gruppe. Die App kannst du kostenlos herunterladen.",
+    title: "Teilt Ausgaben mit Freunden und seht, wer wem etwas schuldet",
+    body: "Scannt Restaurantbelege, erfasst gemeinsame Ausgaben und behaltet eure Salden im Blick. Ladet Freunde aus früheren Gruppen ein und besprecht Kosten im Gruppenchat oder direkt miteinander.",
     alts: [
-      "CheqSplit: Gruppenreise, gemeinsame Ausgaben",
-      "CheqSplit-App: geteilte Ausgaben im Überblick",
+      "CheqSplit-Startseite mit der aktuellen Gruppe",
+      "Gruppenübersicht mit den Beiträgen der Teilnehmer",
       "CheqSplit: Rechnung splitten, Kassenbon-Zeilen",
     ],
   },
@@ -44,7 +44,7 @@ export const de: Dictionary = {
     restaurantCta: "Restaurantrechnung aufteilen",
     groupTitle: "Gruppen- oder Reiseausgaben",
     groupText:
-      "Erstellt eine Reise für die Gruppe, ladet Teilnehmer ein und erfasst Ausgaben, sobald sie anfallen. Nutzt Ausgabe hinzufügen für Taxi, Hotel oder Tickets. Nutzt Rechnung Hinzufügen im Tab Rechnungen für einen detaillierten Restaurantbeleg. Behaltet eine gemeinsame Übersicht und seht, wer wem etwas schuldet.",
+      "Halte gemeinsame Ausgaben in einer Gruppe fest: Erfasse Zahler und Teilnehmer, füge Belege unter Belege hinzu und prüfe unter Übersicht, wer wem etwas schuldet. CheqSplit berechnet Salden; es überweist kein Geld.",
     groupCta: "Gruppenausgaben verfolgen",
   },
   features: {
@@ -75,9 +75,9 @@ export const de: Dictionary = {
     stepPill: (n) => `SCHRITT ${n}`,
     steps: [
       {
-        label: "Eine Reise in wenigen Sekunden anlegen",
-        body: "Namen wählen, Leute per Link oder QR-Code einladen und geteilte Kosten sofort richten.",
-        imageAlt: "CheqSplit: Gruppenreise, Übersicht",
+        label: "Erstelle eine Gruppe für deine Reise",
+        body: "Tippe auf der Startseite auf Gruppe erstellen, gib der Gruppe einen Namen, wähle ihre Währung und lade Teilnehmer per Link oder QR-Code ein.",
+        imageAlt: "CheqSplit-Startseite mit der aktuellen Gruppe",
         bullets: [
           "Ruckzuck eingerichtet",
           "Einladung per Link oder QR-Code",
@@ -96,7 +96,7 @@ export const de: Dictionary = {
       },
       {
         label: "Gemeinsame Ausgaben erfassen",
-        body: "Tragt ein, wer gezahlt hat und mit wem jeder Betrag geteilt werden soll.",
+        body: "Öffne Ausgaben und tippe auf Ausgabe hinzufügen. Gib Beschreibung, Betrag und Währung ein, wähle optional eine Kategorie und den Zahler. Wähle für die Teilnehmer Alle oder Benutzerdefiniert. Jeder Teilnehmer kann Ausgaben hinzufügen.",
         imageAlt: "CheqSplit: Handy, geteilte Gruppenausgaben",
         bullets: [
           "Einträge aller beteiligten Leute",
@@ -167,7 +167,7 @@ export const de: Dictionary = {
       },
       {
         q: "Eignet sich die App für Gruppenreisen?",
-        a: "Ja. Du legst eine Reise an, trägst geteilte Ausgaben ein, hängst Belegfotos daran und bekommst am Ende einen klaren Überblick, wer wem wie viel schuldet.",
+        a: "Halte gemeinsame Ausgaben in einer Gruppe fest: Erfasse Zahler und Teilnehmer, füge Belege unter Belege hinzu und prüfe unter Übersicht, wer wem etwas schuldet. CheqSplit berechnet Salden; es überweist kein Geld.",
       },
       {
         q: "Kann ich CheqSplit auch für Restaurant und Wocheneinkauf nutzen?",

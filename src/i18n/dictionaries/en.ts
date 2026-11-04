@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    title: "CheqSplit — Split Bills and Track Group Expenses",
+    title: "Bill splitting app for friends | CheqSplit",
     description:
-      "Scan a restaurant receipt and split by item, or track group expenses over time and see who owes whom with CheqSplit.",
+      "Scan restaurant receipts, track shared expenses, and keep clear balances with friends.",
     ogDescription:
       "Two clear paths: split one restaurant bill by item, or track shared group and trip expenses—and see who owes whom.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const en: Dictionary = {
   },
   header: { download: "Get the free app" },
   hero: {
-    title: "Split a bill or track group expenses—see who owes whom",
-    body: "CheqSplit covers two everyday situations: one restaurant receipt shared at the table, or ongoing group expenses recorded in a trip. Pick the path that matches what you need.",
+    title: "Split expenses with friends and see who owes whom",
+    body: "Scan restaurant receipts, track shared expenses, and keep clear balances with friends. Invite people from previous groups and discuss costs in the group chat or directly with a friend.",
     alts: [
-      "Trip overview with group participants and shared expenses",
-      "CheqSplit mobile app showing shared group expenses",
+      "CheqSplit home screen showing the current group",
+      "Group overview showing participant contributions",
       "CheqSplit: itemized restaurant bill split and receipt lines",
     ],
   },
@@ -45,7 +45,7 @@ export const en: Dictionary = {
     restaurantCta: "Split a restaurant bill",
     groupTitle: "Group or trip expenses",
     groupText:
-      "Create a trip for your group, invite participants, and add costs as they happen. Use Add Expense for a taxi, hotel, or tickets. Use Add Bill on the Bills tab for an itemized restaurant receipt. Keep one shared expense history and see who owes whom.",
+      "Keep shared expenses in one group: record the payer and participants, add receipts from Bills, and check who owes whom in Summary. CheqSplit calculates balances; it does not transfer money.",
     groupCta: "Track group expenses",
   },
   features: {
@@ -76,9 +76,9 @@ export const en: Dictionary = {
     stepPill: (n) => `STEP ${n}`,
     steps: [
       {
-        label: "Create a trip for your group",
-        body: "Give the trip a clear name, invite people with a link or QR code, and start recording shared costs.",
-        imageAlt: "Trip overview with group participants",
+        label: "Create a group for your trip",
+        body: "On the home screen, tap Create group, name the group, choose its currency, and invite participants by link or QR code.",
+        imageAlt: "CheqSplit home screen showing the current group",
         bullets: [
           "Clear trip name",
           "Invites by link or QR",
@@ -97,7 +97,7 @@ export const en: Dictionary = {
       },
       {
         label: "Add shared expenses",
-        body: "On the trip, open the Expenses tab and tap Add Expense. Enter the description, amount, who paid, and who shares it. Any participant can add an expense.",
+        body: "Open Expenses and tap Add Expense. Enter the description, amount and currency, optionally choose a category, select the payer, then choose Everyone or Custom for the participants. Any participant can add an expense.",
         imageAlt: "CheqSplit Add Expense screen with payer and participants",
         bullets: [
           "Add Expense on the Expenses tab",
@@ -174,7 +174,7 @@ export const en: Dictionary = {
       },
       {
         q: "Can I track expenses across a trip or group?",
-        a: "Yes. Create a trip for your group and invite people. Add a taxi, hotel, or tickets from the Expenses tab with Add Expense. Add an itemized restaurant receipt from the Bills tab with Add Bill. Any participant can add costs.",
+        a: "Keep shared expenses in one group: record the payer and participants, add receipts from Bills, and check who owes whom in Summary. CheqSplit calculates balances; it does not transfer money.",
       },
       {
         q: "Does CheqSplit transfer money?",

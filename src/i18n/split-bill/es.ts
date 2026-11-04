@@ -11,12 +11,12 @@ export const splitBillEs: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Una sola cuenta, compartida en la app o en el navegador",
   seoBlockP1: "Toda la cuenta queda reunida en un único sitio. Una persona escanea el ticket con CheqSplit y los demás entran mediante un enlace o código QR para seleccionar lo que han pedido directamente desde el navegador.",
-  seoBlockP2: "No hace falta que todos en la mesa instalen la aplicación. CheqSplit mantiene juntos los conceptos, participantes, pagos y el reparto final.",
+  seoBlockP2: "Selecciona los platos y bebidas consumidos. Si una línea contiene varias unidades, ábrela y elige las unidades que consumiste. Para un plato compartido, las personas implicadas seleccionan el artículo o las unidades compartidas; CheqSplit calcula las partes.",
   seoBlockP3: "",
   useCasesH2: "Un reparto basado en lo que realmente pidió cada persona",
   useCases: [
     { title: "Pedidos individuales", text: "Asigna a cada persona únicamente los platos y bebidas que pidió." },
-    { title: "Platos o consumiciones compartidos", text: "Reparte una botella, un plato para compartir o un postre solo entre quienes lo consumieron." },
+    { title: "Platos o consumiciones compartidos", text: "Una línea puede contener varias unidades, como dos pizzas. Elige las que consumiste; los artículos o unidades compartidos se reparten a partes iguales entre los participantes que los seleccionaron. Usa el reparto igual cuando se ofrezca y convenga al grupo." },
     { title: "Cargos y propina", text: "Añade cargos de servicio, impuestos y propina para que la suma del reparto coincida con el total del ticket." },
   ],
   howSectionH2: "Cómo dividir una cuenta de restaurante con CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillEs: SplitBillLocaleCopy = {
     { title: "Invita a tus amigos mediante QR o enlace", desc: "Comparte el código QR o el enlace de la cuenta. Todos podrán abrirla al instante." },
     { title: "Continúa desde el navegador sin instalar la app", desc: "Tus amigos pueden abrir el enlace directamente en el navegador. No necesitan instalar CheqSplit para participar." },
     { title: "Divide la cuenta del restaurante online", desc: "Todos trabajan sobre la misma cuenta. Las selecciones y los cambios quedan reunidos para que nadie tenga que calcular aparte quién tomó cada cosa." },
-    { title: "Cada persona selecciona lo que ha tomado", desc: "Cada participante marca sus propios platos o consumiciones. Los platos o bebidas compartidos se pueden repartir entre varias personas." },
+    { title: "Cada persona selecciona lo que ha tomado", desc: "Selecciona los platos y bebidas consumidos. Si una línea contiene varias unidades, ábrela y elige las unidades que consumiste. Para un plato compartido, las personas implicadas seleccionan el artículo o las unidades compartidas; CheqSplit calcula las partes." },
+    {
+      title: "Elige las porciones individuales",
+      desc: "Una línea puede contener varias unidades, como dos pizzas. Elige las que consumiste; los artículos o unidades compartidos se reparten a partes iguales entre los participantes que los seleccionaron. Usa el reparto igual cuando se ofrezca y convenga al grupo.",
+    },
     { title: "Comprueba quién debe cuánto y a quién", desc: "Una vez asignados los conceptos, CheqSplit calcula los importes y muestra claramente quién tiene que pagar a quién." },
-    { title: "Registra los pagos realizados", desc: "Marca los pagos ya hechos para mantener los saldos actualizados y saber qué cantidades siguen pendientes." },
-    { title: "Revisa cómo se ha dividido la cuenta", desc: "Puedes volver al resultado final cuando quieras para comprobar los conceptos, importes y pagos de cada persona." }
+    { title: "Registra los pagos realizados", desc: "Después de pagar a otro participante fuera de CheqSplit, abre Registrar un pago. Confirma el destinatario, introduce el importe y una nota opcional y guarda. El pago se registra de ti al destinatario elegido." },
+    { title: "Revisa cómo se ha dividido la cuenta", desc: "El detalle de cada participante muestra los artículos incluidos, las unidades seleccionadas y las partes calculadas para comprobar el reparto según el consumo." }
   ],
   ctaTitle: "Divide la cuenta aunque tus amigos no tengan la app",
   ctaBody: "Escanea el ticket, comparte el enlace o el código QR y deja que cada persona seleccione lo que ha tomado.",
-  groupBridgeBefore: "¿Necesitas guardar esta cuenta de restaurante junto con el hotel, el taxi o las actividades del mismo grupo? Añade la cuenta terminada desde la pestaña Cuentas del viaje con Agregar Factura y continúa con el ",
+  groupBridgeBefore: "Para reunir un recibo de restaurante con los gastos de hotel, taxi o actividades, abre Recibos en el grupo y toca Añadir recibo para escanearlo o subirlo. Tras revisarlo, divide por artículo o a partes iguales y continúa con ",
   groupBridgeLabel: "seguimiento de gastos de grupo",
   groupBridgeAfter: ".",
   guideBridgeBefore: "¿Prefieres primero el método paso a paso? Lee ",
@@ -66,7 +70,7 @@ export const splitBillEs: SplitBillLocaleCopy = {
     },
     {
       q: "¿Cómo se reparte una misma consumición entre varias personas?",
-      a: "Cada persona que haya compartido esa consumición lo selecciona. CheqSplit divide automáticamente el precio a partes iguales entre todos los participantes que lo hayan seleccionado.",
+      a: "Una línea puede contener varias unidades, como dos pizzas. Elige las que consumiste; los artículos o unidades compartidos se reparten a partes iguales entre los participantes que los seleccionaron. Usa el reparto igual cuando se ofrezca y convenga al grupo.",
     },
     {
       q: "¿Qué hago si el ticket se ha escaneado incorrectamente?",
@@ -86,7 +90,7 @@ export const splitBillEs: SplitBillLocaleCopy = {
     },
     {
       q: "¿Puedo añadir esta cuenta de restaurante a un viaje?",
-      a: "Sí. Completa primero el reparto por conceptos, después abre la pestaña Cuentas del viaje y pulsa Agregar Factura.",
+      a: "Para incluir un recibo en un grupo, empieza desde ese grupo: abre Recibos y toca Añadir recibo, después escanéalo o súbelo. Revisa los artículos y el total y divide por artículo o a partes iguales. El recibo se vincula automáticamente durante este proceso.",
     },
   ],
   a11y: {

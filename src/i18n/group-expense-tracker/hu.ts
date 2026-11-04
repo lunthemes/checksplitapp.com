@@ -19,12 +19,12 @@ export const groupExpenseTrackerHu: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Hívd meg a csoportot az utazásba",
-      text: "Az utazás létrehozása és elnevezése után hívd meg a résztvevőket linkkel vagy QR-kóddal.",
+      text: "A kezdőképernyőn koppints a Csoport létrehozása gombra, nevezd el a csoportot, válassz pénznemet, majd hívj meg résztvevőket hivatkozással vagy QR-kóddal.",
       imageAlt: "Hívd meg a csoportot az utazásba",
     },
     {
       title: "Adj hozzá minden kiadást",
-      text: "Nyisd meg az Kiadások fület, majd válaszd az Kiadás Hozzáadása lehetőséget. Add meg a leírást és az összeget, jelöld, ki fizetett, és válaszd ki a résztvevőket.",
+      text: "Nyisd meg a Kiadások lapot, és koppints a Kiadás hozzáadása gombra. Add meg a leírást, összeget és pénznemet, opcionálisan a kategóriát, válaszd ki a fizetőt, majd a Mindenki vagy Egyéni lehetőséget a résztvevőkhöz. Bárki hozzáadhat kiadást.",
       imageAlt: "Adj hozzá minden kiadást",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerHu: GroupExpenseTrackerCopy = {
   subsetH2: "Minden kiadást a megfelelő módon osszatok fel",
   subsetText: "Nem minden költség vonatkozik az egész csoportra. A taxit csak az utasokhoz, a jegyeket csak az érintettekhez, a valóban közös kiadásokat pedig az egész csoporthoz add hozzá. Tételes éttermi számlához használd a Számlák fület és az Add Bill lehetőséget.",
   receiptBridgeH2: "Adj tételes éttermi számlát az utazáshoz",
-  receiptBridgeText: "Ha a csoportnak tételes éttermi számlája van, először oszd fel a tételeket, a díjakat és a borravalót is beleértve. Ezután nyisd meg az utazás Számlák fülét, és válaszd az Add Bill lehetőséget.",
+  receiptBridgeText: "A csoportban nyisd meg a Nyugták lapot, és koppints a Nyugta hozzáadása gombra a beolvasáshoz vagy feltöltéshez. Ellenőrizd a felismert tételeket és a végösszeget; a nyugta automatikusan a csoporthoz kapcsolódik. Ezután oszd fel tételenként vagy egyenlően.",
   receiptBridgeCta: "Nézd meg, hogyan működik a számlamegosztás",
   reportH2: "Maradjon egy elszámolás, amelyhez később is visszatérhettek",
   reportText: "Archiváld az utazást, és exportálj PDF-jelentést a kiadásokról, összegekről, táblázatokról és diagramról. Ezt később sokkal könnyebb ellenőrizni, mint emlékezetből újraszámolni mindent.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerHu: GroupExpenseTrackerCopy = {
     },
     {
       q: "Beolvashatok egy nyugtát utazási kiadásként?",
-      a: "A tételes felosztáshoz használd az éttermi nyugtákhoz készült folyamatot, az adóval és borravalóval együtt. Ezután nyisd meg az utazás Számlák fülét, és válaszd az Add Bill lehetőséget.",
+      a: "A csoportban nyisd meg a Nyugták lapot, és koppints a Nyugta hozzáadása gombra a beolvasáshoz vagy feltöltéshez. Ellenőrizd a felismert tételeket és a végösszeget; a nyugta automatikusan a csoporthoz kapcsolódik. Ezután oszd fel tételenként vagy egyenlően.",
     },
     {
       q: "Honnan tudom, kinek kell kinek fizetnie?",

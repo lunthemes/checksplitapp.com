@@ -11,7 +11,7 @@ export const restaurantBillGuideHu: RestaurantBillGuideCopy = {
   steps: [
     { title: "Ellenőrizzétek a nyugtát", desc: "A felosztás előtt ellenőrizzetek minden tételt és a végösszeget." },
     { title: "Rendeljétek hozzá az egyéni rendeléseket", desc: "Mindenkihez csak azokat az ételeket és italokat rendeljétek, amelyeket ő rendelt. Kezdjétek az egyértelmű tételekkel." },
-    { title: "Osszátok fel a közös tételeket", desc: "Csak azok vegyenek részt egy közös tál vagy palack költségében, akik fogyasztottak belőle. Osszátok egyenlően vagy az előre megbeszélt arányban." },
+    { title: "Osszátok fel a közös tételeket", desc: "Egy sor több darabot is tartalmazhat, például két pizzát. Válaszd ki a saját darabjaidat; a közös tételek vagy darabok az azokat kiválasztó résztvevők között egyenlően oszlanak meg. Használd az egyenlő felosztást, ha elérhető és megfelel a csoportnak." },
     { title: "Ellenőrizzétek a fennmaradó összegeket", desc: "Keressetek hozzá nem rendelt tételeket, beolvasási hibákat, illetve még fel nem osztott adót vagy borravalót." },
     { title: "Mutassátok meg az eredményt", desc: "Mindenki lássa a saját részét és a végső egyenleget, hogy még az asztalnál ellenőrizni tudjátok az elszámolást." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideHu: RestaurantBillGuideCopy = {
     },
     {
       q: "Hogyan kell felosztani egy közös tételt?",
-      a: "Az érintett személyek között — egyenlően vagy az előre megbeszélt arányban, ha nem azonos részt fogyasztottak.",
+      a: "Egy sor több darabot is tartalmazhat, például két pizzát. Válaszd ki a saját darabjaidat; a közös tételek vagy darabok az azokat kiválasztó résztvevők között egyenlően oszlanak meg. Használd az egyenlő felosztást, ha elérhető és megfelel a csoportnak.",
     },
     {
       q: "Miért tér el néha a végösszeg?",

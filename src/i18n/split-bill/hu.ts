@@ -11,12 +11,12 @@ export const splitBillHu: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Egyetlen számla, megosztva az alkalmazásban vagy a böngészőben",
   seoBlockP1: "A teljes számla egy helyen marad. Egyvalaki beolvassa a nyugtát a CheqSplittel, a többiek pedig linken vagy QR-kódon keresztül csatlakoznak, és közvetlenül a böngészőben kiválasztják, mit fogyasztottak.",
-  seoBlockP2: "Nem kell mindenkinek telepítenie az alkalmazást. A CheqSplit egy helyen tartja a tételeket, résztvevőket, fizetéseket és a végső elszámolást.",
+  seoBlockP2: "Válaszd ki az elfogyasztott ételeket és italokat. Ha egy sor több darabot tartalmaz, nyisd meg, és válaszd ki az elfogyasztott darabokat. Közös ételnél az érintettek válasszák ki a tételt vagy a közös darabokat; a CheqSplit kiszámítja a részeket.",
   seoBlockP3: "",
   useCasesH2: "Számlamegosztás a valódi rendelések alapján",
   useCases: [
     { title: "Saját tételek", text: "Mindenkihez csak azokat az ételeket és italokat rendeld, amelyeket ő fogyasztott." },
-    { title: "Közös tételek", text: "Egy közösen rendelt palackot, tálat vagy desszertet csak azok között ossz fel, akik fogyasztottak belőle." },
+    { title: "Közös tételek", text: "Egy sor több darabot is tartalmazhat, például két pizzát. Válaszd ki a saját darabjaidat; a közös tételek vagy darabok az azokat kiválasztó résztvevők között egyenlően oszlanak meg. Használd az egyenlő felosztást, ha elérhető és megfelel a csoportnak." },
     { title: "Díjak és borravaló", text: "Add hozzá a szervizdíjat, adókat és borravalót úgy, hogy a felosztott összegek pontosan kiadják a számla végösszegét." },
   ],
   howSectionH2: "Így oszthatjátok fel az éttermi számlát a CheqSplittel",
@@ -34,14 +34,18 @@ export const splitBillHu: SplitBillLocaleCopy = {
     { title: "Hívd meg a többieket QR-kóddal vagy linkkel", desc: "Oszd meg a számla QR-kódját vagy linkjét. Mindenki azonnal meg tudja nyitni." },
     { title: "Folytassátok a böngészőben, telepítés nélkül", desc: "A többiek közvetlenül a böngészőben nyithatják meg a linket. A részvételhez nem kell telepíteniük a CheqSplitet." },
     { title: "Osszátok fel a számlát online", desc: "Mindenki ugyanazt a számlát használja. A kiválasztások és módosítások együtt maradnak, így nem kell külön számolgatni, ki mit fogyasztott." },
-    { title: "Mindenki kiválasztja, mit fogyasztott", desc: "Minden résztvevő megjelöli a saját tételeit. A közös ételek és italok több ember között is feloszthatók." },
+    { title: "Mindenki kiválasztja, mit fogyasztott", desc: "Válaszd ki az elfogyasztott ételeket és italokat. Ha egy sor több darabot tartalmaz, nyisd meg, és válaszd ki az elfogyasztott darabokat. Közös ételnél az érintettek válasszák ki a tételt vagy a közös darabokat; a CheqSplit kiszámítja a részeket." },
+    {
+      title: "Válaszd ki az egyes adagokat",
+      desc: "Egy sor több darabot is tartalmazhat, például két pizzát. Válaszd ki a saját darabjaidat; a közös tételek vagy darabok az azokat kiválasztó résztvevők között egyenlően oszlanak meg. Használd az egyenlő felosztást, ha elérhető és megfelel a csoportnak.",
+    },
     { title: "Nézd meg, ki kinek mennyivel tartozik", desc: "A tételek hozzárendelése után a CheqSplit kiszámolja az összegeket, és egyértelműen megmutatja, ki kinek mennyit fizessen." },
-    { title: "Rögzítsd a már teljesített fizetéseket", desc: "Jelöld a megtörtént fizetéseket, hogy mindig az aktuális egyenlegeket és fennmaradó tartozásokat lásd." },
-    { title: "Nézd meg, hogyan lett felosztva a számla", desc: "A végső elszámolást később is megnyithatod, és ellenőrizheted mindenki tételeit, összegeit és fizetéseit." }
+    { title: "Rögzítsd a már teljesített fizetéseket", desc: "Miután a CheqSpliten kívül fizettél egy másik résztvevőnek, nyisd meg a Fizetés rögzítése lehetőséget. Erősítsd meg a címzettet, add meg az összeget és egy opcionális megjegyzést, majd mentsd el. A fizetés tőled a kiválasztott címzettnek lesz rögzítve." },
+    { title: "Nézd meg, hogyan lett felosztva a számla", desc: "A résztvevő részleteinél láthatók a tételek, a kiválasztott darabok és a kiszámított részek, így ellenőrizhető a felosztás a fogyasztás alapján." }
   ],
   ctaTitle: "Osszátok fel a számlát akkor is, ha a többieknek nincs meg az app",
   ctaBody: "Olvasd be a nyugtát, oszd meg a linket vagy QR-kódot, és mindenki kiválaszthatja, mit fogyasztott.",
-  groupBridgeBefore: "Ezt az éttermi számlát ugyanazon csoport szállásával, taxijával vagy programjaival együtt akarod nyilvántartani? Add hozzá a kész számlát az utazás Számlák fülén az Add Bill lehetőséggel, majd folytasd a ",
+  groupBridgeBefore: "Ha az éttermi nyugtát a szállás, taxi vagy programok költségeivel együtt szeretnéd követni, nyisd meg a csoport Nyugták lapját, és a Nyugta hozzáadása gombbal olvasd be vagy töltsd fel. Ellenőrzés után oszd fel tételenként vagy egyenlően, majd folytasd itt: ",
   groupBridgeLabel: "csoportos kiadások követésével",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Előbb a lépésről lépésre módszert szeretnéd? Olvasd el: ",
@@ -66,7 +70,7 @@ export const splitBillHu: SplitBillLocaleCopy = {
     },
     {
       q: "Hogyan oszt fel több ember egy közösen fogyasztott tételt?",
-      a: "Mindenki kiválasztja a tételt, aki fogyasztott belőle. A CheqSplit automatikusan egyenlően osztja szét az árát az összes olyan résztvevő között, aki kijelölte.",
+      a: "Egy sor több darabot is tartalmazhat, például két pizzát. Válaszd ki a saját darabjaidat; a közös tételek vagy darabok az azokat kiválasztó résztvevők között egyenlően oszlanak meg. Használd az egyenlő felosztást, ha elérhető és megfelel a csoportnak.",
     },
     {
       q: "Mi történik, ha a nyugtát hibásan olvassa be az alkalmazás?",
@@ -86,7 +90,7 @@ export const splitBillHu: SplitBillLocaleCopy = {
     },
     {
       q: "Hozzáadhatom ezt az éttermi számlát egy utazáshoz?",
-      a: "Igen. Először fejezd be a tételes éttermi számlamegosztást, majd nyisd meg az utazás Számlák fülét, és válaszd az Add Bill lehetőséget.",
+      a: "Ha egy nyugtát a csoporthoz szeretnél kapcsolni, abból a csoportból indulj: nyisd meg a Nyugták lapot, koppints a Nyugta hozzáadása gombra, majd olvasd be vagy töltsd fel. Ellenőrizd a tételeket és a végösszeget, majd oszd fel tételenként vagy egyenlően. A nyugta a folyamat során automatikusan kapcsolódik a csoporthoz.",
     },
   ],
   a11y: {

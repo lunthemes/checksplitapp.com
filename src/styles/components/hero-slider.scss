@@ -63,6 +63,7 @@
 
 .hero-slider__slide {
   flex: 0 0 100%;
+  min-width: 0;
   scroll-snap-align: start;
   height: 100%;
 }
@@ -181,7 +182,7 @@
 
 @media (min-width: 768px) {
   .hero-slide2__grid {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 40px;
     padding: 80px 24px;
   }
@@ -241,3 +242,14 @@
   object-fit: cover;
 }
 
+
+/* Let long localized headings wrap within the existing slide columns. */
+.hero-slide2__grid > *,
+.hero__grid > * {
+  min-width: 0;
+}
+
+.hero-slider h1,
+.hero-slide2 .typ-h1 {
+  overflow-wrap: anywhere;
+}

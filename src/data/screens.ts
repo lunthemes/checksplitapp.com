@@ -8,6 +8,7 @@ const SCREENS = {
   homeTrip: "home-trip.webp",
   liveSplit: "live-split.webp",
   allExpenses: "all-expenses.webp",
+  addExpense: "add-expense.webp",
   whoOwes: "who-owes.webp",
   pdfReport: "pdf-report.webp",
   /** Ilustrație CTA (telefon deja compus / înclinat în asset). */
@@ -15,7 +16,7 @@ const SCREENS = {
 } as const;
 
 export function screenUrl(name: string): string {
-  return encodeURI(`/screens/${name}`);
+  return `${encodeURI(`/screens/${name}`)}?v=20261029-gap3`;
 }
 
 export const heroPhoneScreens: readonly [string, string, string] = [
@@ -31,7 +32,7 @@ export const ctaPhoneScreen = screenUrl(SCREENS.cta);
 export const howStepScreens = [
   screenUrl(SCREENS.home),
   screenUrl(SCREENS.liveSplit),
-  screenUrl(SCREENS.allExpenses),
+  screenUrl(SCREENS.addExpense),
   screenUrl(SCREENS.whoOwes),
   screenUrl(SCREENS.pdfReport),
 ] as const;

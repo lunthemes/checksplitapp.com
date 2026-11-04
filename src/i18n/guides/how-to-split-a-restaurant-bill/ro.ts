@@ -11,7 +11,7 @@ export const restaurantBillGuideRo: RestaurantBillGuideCopy = {
   steps: [
     { title: "Verifică bonul", desc: "Confirmă fiecare poziție și totalul final înainte ca cineva să înceapă împărțirea sumelor." },
     { title: "Atribuie comenzile individuale", desc: "Dă fiecărei persoane doar felurile de mâncare și băuturile pe care le-a comandat. Începe cu pozițiile evidente." },
-    { title: "Împarte produsele comune", desc: "Include doar persoanele care au împărțit un platou sau o sticlă. Împarte egal sau după un procent convenit dacă porțiile nu au fost egale." },
+    { title: "Împarte produsele comune", desc: "Un rând al bonului poate conține mai multe unități, de exemplu două pizza. Alege unitățile consumate; produsele sau unitățile comune se împart egal între participanții care le-au selectat. Folosește opțiunea de împărțire egală când este disponibilă și potrivită grupului." },
     { title: "Verifică sumele rămase", desc: "Caută produse neatribuite, erori de scanare și taxe sau bacșiș rămase în afara împărțirii." },
     { title: "Arată rezultatul", desc: "Fiecare persoană trebuie să-și poată vedea partea și soldul rezultat înainte ca grupul să plece de la masă." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideRo: RestaurantBillGuideCopy = {
     },
     {
       q: "Cum trebuie împărțit un produs consumat în comun?",
-      a: "Între persoanele care au participat — în mod egal sau după un procent convenit atunci când părțile nu sunt egale.",
+      a: "Un rând al bonului poate conține mai multe unități, de exemplu două pizza. Alege unitățile consumate; produsele sau unitățile comune se împart egal între participanții care le-au selectat. Folosește opțiunea de împărțire egală când este disponibilă și potrivită grupului.",
     },
     {
       q: "De ce uneori nu corespund totalurile?",

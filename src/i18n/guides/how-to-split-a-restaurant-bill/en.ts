@@ -22,7 +22,7 @@ export const restaurantBillGuideEn: RestaurantBillGuideCopy = {
     },
     {
       title: "Divide shared items",
-      desc: "Include only the people who shared a plate or bottle. Split equally, or by an agreed percentage when shares are uneven.",
+      desc: "A receipt line can contain several units, such as two pizzas. Choose the units you had; shared items or units are divided equally between the participants who selected them. Use the equal-split option when it is offered and suits the group.",
     },
     {
       title: "Check remaining amounts",
@@ -69,7 +69,7 @@ export const restaurantBillGuideEn: RestaurantBillGuideCopy = {
     },
     {
       q: "How should a shared item be divided?",
-      a: "Among the people involved—equally, or by an agreed percentage when shares are uneven.",
+      a: "A receipt line can contain several units, such as two pizzas. Choose the units you had; shared items or units are divided equally between the participants who selected them. Use the equal-split option when it is offered and suits the group.",
     },
     {
       q: "Why do totals sometimes differ?",

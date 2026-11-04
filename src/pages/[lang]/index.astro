@@ -1,4 +1,5 @@
 ---
+import ProductUpdate from "../../components/ProductUpdate.astro";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
@@ -78,6 +79,7 @@ const faqJsonLd = JSON.stringify(getFaqPageJsonLd(t.faq.items));
     <FeatureBar t={t} items={featureItems} lang={lang} />
     <HowItWorks t={t} howSteps={howSteps} lang={lang} />
     <UseCases t={t} items={useCaseItems} lang={lang} />
+    <ProductUpdate lang={lang} variant="home" />
     <CallToAction t={t} lang={lang} />
     <FAQ t={t} items={t.faq.items} lang={lang} />
   </main>

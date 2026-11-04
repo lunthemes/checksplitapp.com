@@ -11,7 +11,7 @@ export const restaurantBillGuideTr: RestaurantBillGuideCopy = {
   steps: [
     { title: "Fişi kontrol edin", desc: "Tutarları bölmeye başlamadan önce her kalemi ve son toplamı doğrulayın." },
     { title: "Kişisel siparişleri atayın", desc: "Her kişiye yalnızca kendi sipariş ettiği yemek ve içecekleri verin. Önce kime ait olduğu açık olan kalemlerden başlayın." },
-    { title: "Ortak kalemleri bölüştürün", desc: "Ortak tabağı veya şişeyi yalnızca paylaşan kişiler arasında bölün. Eşit veya üzerinde anlaşılan bir oranla paylaşın." },
+    { title: "Ortak kalemleri bölüştürün", desc: "Bir satır iki pizza gibi birden fazla adet içerebilir. Tükettiğiniz adetleri seçin; ortak kalemler veya adetler onları seçen katılımcılar arasında eşit bölünür. Eşit bölme seçeneğini sunulduğunda ve gruba uygun olduğunda kullanın." },
     { title: "Kalan tutarları kontrol edin", desc: "Atanmamış kalemleri, tarama hatalarını ve henüz hesaba katılmamış vergi veya bahşişi kontrol edin." },
     { title: "Sonucu gösterin", desc: "Masadan kalkmadan önce herkes kendi payını ve son bakiyesini görebilsin." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideTr: RestaurantBillGuideCopy = {
     },
     {
       q: "Ortak bir kalem nasıl bölüşülmeli?",
-      a: "O kalemi paylaşan kişiler arasında — eşit olarak veya paylar farklıysa üzerinde anlaşılmış bir yüzdeye göre.",
+      a: "Bir satır iki pizza gibi birden fazla adet içerebilir. Tükettiğiniz adetleri seçin; ortak kalemler veya adetler onları seçen katılımcılar arasında eşit bölünür. Eşit bölme seçeneğini sunulduğunda ve gruba uygun olduğunda kullanın.",
     },
     {
       q: "Toplamlar neden bazen uyuşmaz?",

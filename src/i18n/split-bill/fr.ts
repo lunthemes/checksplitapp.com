@@ -11,12 +11,12 @@ export const splitBillFr: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Une seule addition, partagée dans l'app ou dans le navigateur",
   seoBlockP1: "Toute l'addition reste au même endroit. Une personne scanne le ticket avec CheqSplit, puis les autres rejoignent le partage via un lien ou un QR code et sélectionnent ce qu'ils ont consommé directement dans leur navigateur.",
-  seoBlockP2: "Tout le monde n'a pas besoin d'installer l'application. CheqSplit conserve les articles, les participants, les paiements et le résultat final dans une seule addition partagée.",
+  seoBlockP2: "Sélectionnez les plats et boissons consommés. Si une ligne contient plusieurs unités, ouvrez-la et choisissez les unités consommées. Pour un plat partagé, les personnes concernées sélectionnent l’article ou les unités partagées ; CheqSplit calcule les parts.",
   seoBlockP3: "",
   useCasesH2: "Un partage qui tient compte de ce que chacun a réellement commandé",
   useCases: [
     { title: "Commandes individuelles", text: "Attribuez à chacun uniquement les plats et boissons qu'il a commandés." },
-    { title: "Articles partagés", text: "Répartissez une bouteille, un plat à partager ou un dessert uniquement entre les personnes concernées." },
+    { title: "Articles partagés", text: "Une ligne peut contenir plusieurs unités, comme deux pizzas. Choisissez celles consommées ; les articles ou unités partagés sont répartis à parts égales entre les participants qui les ont sélectionnés. Utilisez le partage égal lorsqu’il est proposé et convient au groupe." },
     { title: "Frais et pourboire", text: "Ajoutez les frais de service, taxes et pourboires afin que le total réparti corresponde exactement à l'addition." },
   ],
   howSectionH2: "Comment partager une addition au restaurant avec CheqSplit",
@@ -34,14 +34,18 @@ export const splitBillFr: SplitBillLocaleCopy = {
     { title: "Invitez vos amis avec un QR code ou un lien", desc: "Partagez le QR code ou le lien de l'addition. Chacun peut l'ouvrir immédiatement." },
     { title: "Continuez dans le navigateur, sans installer l'app", desc: "Vos amis ouvrent simplement le lien dans leur navigateur. Ils n'ont pas besoin d'installer CheqSplit pour participer." },
     { title: "Partagez l'addition en ligne", desc: "Tout le monde travaille sur la même addition. Les sélections et modifications restent regroupées, sans avoir à recalculer séparément qui a pris quoi." },
-    { title: "Chacun sélectionne ce qu'il a consommé", desc: "Chaque participant choisit ses propres articles. Les plats et boissons partagés peuvent être répartis entre plusieurs personnes." },
+    { title: "Chacun sélectionne ce qu'il a consommé", desc: "Sélectionnez les plats et boissons consommés. Si une ligne contient plusieurs unités, ouvrez-la et choisissez les unités consommées. Pour un plat partagé, les personnes concernées sélectionnent l’article ou les unités partagées ; CheqSplit calcule les parts." },
+    {
+      title: "Choisissez les portions individuelles",
+      desc: "Une ligne peut contenir plusieurs unités, comme deux pizzas. Choisissez celles consommées ; les articles ou unités partagés sont répartis à parts égales entre les participants qui les ont sélectionnés. Utilisez le partage égal lorsqu’il est proposé et convient au groupe.",
+    },
     { title: "Voyez qui doit combien à qui", desc: "Une fois les articles attribués, CheqSplit calcule les montants et indique clairement qui doit payer qui." },
-    { title: "Enregistrez les paiements effectués", desc: "Marquez les paiements déjà effectués afin de conserver des soldes à jour et de voir ce qu'il reste à régler." },
-    { title: "Vérifiez comment l'addition a été répartie", desc: "Vous pouvez revenir au résultat final et consulter les articles, montants et paiements de chacun." }
+    { title: "Enregistrez les paiements effectués", desc: "Après avoir payé un autre participant en dehors de CheqSplit, ouvrez Enregistrer un paiement. Confirmez le destinataire, saisissez le montant et une note facultative, puis enregistrez. Le paiement est enregistré de vous vers le destinataire choisi." },
+    { title: "Vérifiez comment l'addition a été répartie", desc: "Le détail de chaque participant présente les articles inclus, les unités sélectionnées et les parts calculées pour vérifier la répartition selon la consommation." }
   ],
   ctaTitle: "Partagez l'addition même si vos amis n'ont pas l'app",
   ctaBody: "Scannez le ticket, partagez un lien ou un QR code et laissez chacun sélectionner ce qu'il a consommé.",
-  groupBridgeBefore: "Besoin de garder cette addition avec l'hôtel, le taxi ou les activités du même groupe ? Ajoutez l'addition terminée depuis l'onglet Additions du voyage avec Ajouter une addition, puis continuez avec ",
+  groupBridgeBefore: "Pour réunir un ticket de restaurant et les frais d’hôtel, de taxi ou d’activités, ouvrez Tickets dans le groupe et appuyez sur Ajouter un ticket pour le scanner ou l’importer. Après vérification, répartissez par article ou à parts égales, puis poursuivez avec ",
   groupBridgeLabel: "le suivi des dépenses de groupe",
   groupBridgeAfter: ".",
   guideBridgeBefore: "Vous préférez d'abord une méthode pas à pas ? Lisez ",
@@ -66,7 +70,7 @@ export const splitBillFr: SplitBillLocaleCopy = {
     },
     {
       q: "Comment plusieurs personnes partagent-elles un même article ?",
-      a: "Chaque personne ayant partagé l'article le sélectionne. CheqSplit répartit automatiquement son prix à parts égales entre tous les participants qui l'ont sélectionné.",
+      a: "Une ligne peut contenir plusieurs unités, comme deux pizzas. Choisissez celles consommées ; les articles ou unités partagés sont répartis à parts égales entre les participants qui les ont sélectionnés. Utilisez le partage égal lorsqu’il est proposé et convient au groupe.",
     },
     {
       q: "Que faire si le ticket a été mal scanné ?",
@@ -86,7 +90,7 @@ export const splitBillFr: SplitBillLocaleCopy = {
     },
     {
       q: "Puis-je ajouter cette addition de restaurant à un voyage ?",
-      a: "Oui. Terminez d'abord le partage par article, puis ouvrez l'onglet Additions du voyage et touchez Ajouter une addition.",
+      a: "Pour inclure un ticket dans un groupe, commencez depuis ce groupe : ouvrez Tickets et appuyez sur Ajouter un ticket, puis scannez ou importez le ticket. Vérifiez les articles et le total, puis répartissez par article ou à parts égales. Le ticket est automatiquement associé au groupe pendant ce parcours.",
     },
   ],
   a11y: {

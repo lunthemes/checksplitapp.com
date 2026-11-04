@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const fr: Dictionary = {
   meta: {
-    title: "CheqSplit : partager les dépenses, scanner les tickets, suivre les comptes du groupe",
+    title: "Application de partage des dépenses entre amis | CheqSplit",
     description:
-      "Avec CheqSplit, partagez les dépenses, scannez les tickets de caisse, suivez ce que le groupe a payé en commun et voyez clairement qui doit combien à qui – au restaurant, en voyage, aux courses, entre amis ou en coloc.",
+      "Scannez les tickets de restaurant, suivez les dépenses communes et consultez vos soldes entre amis.",
     ogDescription:
       "Partagez les dépenses proprement : scan de ticket, suivi des dépenses communes, soldes clairs. Idéal pour les restos, les weekends à plusieurs, la coloc et la famille.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const fr: Dictionary = {
   },
   header: { download: "Télécharger gratuitement" },
   hero: {
-    title: "Partagez les dépenses, scannez les reçus et laissez l’application s’occuper du reste",
-    body: "Scannez le ticket, suivez les dépenses partagées et gardez une vision simple de qui doit combien à qui – sortie au resto, week-end, courses à plusieurs, soirée entre amis. L’application se télécharge gratuitement.",
+    title: "Partagez les dépenses entre amis et voyez qui doit combien",
+    body: "Scannez les tickets de restaurant, suivez les dépenses communes et consultez vos soldes entre amis. Invitez des personnes de groupes précédents et discutez des frais dans le chat du groupe ou en privé.",
     alts: [
-      "CheqSplit : suivi de dépenses pour un voyage de groupe",
-      "App CheqSplit : dépenses partagées",
+      "Écran d’accueil CheqSplit avec le groupe actuel",
+      "Vue d’ensemble du groupe avec les contributions des participants",
       "CheqSplit : écran de partage d'addition, lignes de ticket",
     ],
   },
@@ -44,7 +44,7 @@ export const fr: Dictionary = {
     restaurantCta: "Partager une addition",
     groupTitle: "Dépenses de groupe ou de voyage",
     groupText:
-      "Créez un voyage pour le groupe, invitez les participants et ajoutez les dépenses au fur et à mesure. Utilisez Ajouter une dépense pour un taxi, un hôtel ou des billets. Utilisez Ajouter une addition dans l'onglet Additions pour un ticket de restaurant détaillé. Conservez un historique partagé et voyez qui doit combien à qui.",
+      "Gardez les dépenses communes dans un groupe : indiquez le payeur et les participants, ajoutez les tickets depuis Tickets et consultez qui doit combien à qui dans Résumé. CheqSplit calcule les soldes ; l’application ne transfère pas d’argent.",
     groupCta: "Suivre les dépenses de groupe",
   },
   features: {
@@ -75,9 +75,9 @@ export const fr: Dictionary = {
     stepPill: (n) => `ÉTAPE ${n}`,
     steps: [
       {
-        label: "Créez un voyage en quelques secondes",
-        body: "Donnez un nom, invitez vos proches par lien ou QR code, et partagez tout de suite les dépenses communes.",
-        imageAlt: "CheqSplit : écran d'un voyage de groupe",
+        label: "Créez un groupe pour votre voyage",
+        body: "Sur l’écran d’accueil, appuyez sur Créer un groupe, nommez-le, choisissez sa devise et invitez les participants par lien ou code QR.",
+        imageAlt: "Écran d’accueil CheqSplit avec le groupe actuel",
         bullets: [
           "Démarrage immédiat",
           "Invitation par lien ou QR",
@@ -96,7 +96,7 @@ export const fr: Dictionary = {
       },
       {
         label: "Ajoutez les dépenses communes",
-        body: "Indiquez qui a payé et entre qui l’on doit partager chaque somme.",
+        body: "Ouvrez Dépenses et appuyez sur Ajouter une dépense. Saisissez la description, le montant et la devise, choisissez éventuellement une catégorie et le payeur, puis Tous ou Personnalisé pour les participants. Chaque participant peut ajouter une dépense.",
         imageAlt: "CheqSplit : mobile, dépenses partagées",
         bullets: [
           "Dépenses enregistrées par chacun",
@@ -167,7 +167,7 @@ export const fr: Dictionary = {
       },
       {
         q: "Est-ce adapté aux voyages à plusieurs ?",
-        a: "Oui. Vous ouvrez un voyage, y ajoutez les dépenses, invitez les participants, ajoutez les reçus, et vous exportez un bilan final avec les soldes entre personnes.",
+        a: "Gardez les dépenses communes dans un groupe : indiquez le payeur et les participants, ajoutez les tickets depuis Tickets et consultez qui doit combien à qui dans Résumé. CheqSplit calcule les soldes ; l’application ne transfère pas d’argent.",
       },
       {
         q: "Ça sert seulement au restaurant ?",

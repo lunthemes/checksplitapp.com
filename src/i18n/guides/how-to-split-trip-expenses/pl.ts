@@ -7,13 +7,13 @@ export const tripExpensesGuidePl: TripExpensesGuideCopy = {
   answer: "Utwórz jeden wyjazd, zapisuj, kto zapłacił i kto uczestniczył w każdym wydatku, a przed końcem wyjazdu sprawdź salda.",
   answerFollow: "Jeśli każdy wydatek zapiszecie na bieżąco, na koniec nie będzie trzeba odtwarzać całego rozliczenia od początku.",
   rulesH2: "Ustalcie zasady wydatków przed wyjazdem",
-  rulesBody: "Jeszcze przed pierwszą płatnością ustalcie, które koszty dzieli cała grupa, a które dotyczą tylko części osób. Nocleg często jest wspólny dla wszystkich, ale taksówka czy bilet do muzeum już niekoniecznie. Osobno zapisuj, kto zapłacił i kto uczestniczył w danym wydatku, ponieważ osoba wykładająca pieniądze nie zawsze należy do grupy dzielącej koszt. Dodawaj wydatki, dopóki kwota i uczestnicy są jeszcze świeżo w pamięci. Jeśli korzystacie z kilku walut, wcześniej ustalcie sposób ich zapisywania — CheqSplit nie przelicza walut. Jasne zasady od początku pomagają utrzymać spójne rozliczenie aż do końca.",
+  rulesBody: "Przed pierwszą płatnością ustalcie, które koszty dzielą wszyscy, a które tylko wybrane osoby. Zapisujcie płatnika oddzielnie od uczestników i dodawajcie wydatki na bieżąco. Wybierzcie walutę grupy dla sald. Przy innej walucie sprawdźcie kurs referencyjny i datę, wpiszcie kurs ręcznie lub rzeczywistą kwotę pobraną przez bank w walucie grupy. Jasne zasady zapewniają spójny zapis.",
   stepsH2: "Jak podzielić wydatki na wyjeździe w 5 krokach",
   steps: [
-    { title: "Utwórz wyjazd z wyprzedzeniem", desc: "Nadaj mu nazwę, dodaj uczestników i wpisz istniejące już koszty, aby cała grupa zaczynała od jednego wspólnego zestawienia." },
+    { title: "Utwórz grupę na wyjazd", desc: "Na ekranie głównym wybierz Utwórz grupę, nadaj jej nazwę, wybierz walutę i zaproś uczestników przez link lub kod QR." },
     { title: "Zapisuj, kto zapłacił", desc: "Przy każdym wydatku jasno wskaż płatnika — dotyczy to biletów, noclegu, transportu, restauracji czy aktywności opłaconej za grupę." },
     { title: "Wybierz uczestników", desc: "Uwzględniaj wszystkich tylko wtedy, gdy koszt naprawdę dotyczy całej grupy. Przy taksówce, aktywności czy restauracji wybierz tylko osoby uczestniczące." },
-    { title: "Dodawaj wydatki na bieżąco", desc: "Wpisuj kwoty, dopóki dobrze je pamiętasz. W CheqSplit otwórz kartę Wydatki i wybierz Dodaj Wydatek. Każdy uczestnik może dodać wydatek." },
+    { title: "Dodawaj wydatki na bieżąco", desc: "Otwórz Wydatki i wybierz Dodaj wydatek. Wpisz opis, kwotę i walutę, opcjonalnie wybierz kategorię oraz płatnika, a następnie Wszyscy lub wybór własny dla uczestników. Każdy uczestnik może dodać wydatek." },
     { title: "Sprawdź salda", desc: "Przed zakończeniem lub eksportem wyjazdu przejrzyj wspólną historię oraz sprawdź, kto komu ile jest winien. Najpierw uzupełnij brakujące wydatki." }
   ],
   exampleH2: "Przykład: podział kosztów weekendowego wyjazdu między cztery osoby",
@@ -49,11 +49,11 @@ export const tripExpensesGuidePl: TripExpensesGuideCopy = {
   exampleSettle: "Blair płaci Alexowi €90, Casey €135, a Dana €40. Te trzy płatności razem dają €265 — dokładnie tyle, ile Alex powinien otrzymać.",
   exampleNote: "Udziały: hotel €100 na osobę; taksówka €15 na osobę dla trzech pasażerów; bilety €20 na osobę. Dana nie jechała taksówką, dlatego jej udział wynosi €120 zamiast €135. CheqSplit oblicza te salda, ale nie wykonuje przelewów.",
   productH2: "Śledź wspólne wydatki na wyjeździe z CheqSplit",
-  productBody: "CheqSplit pozwala utworzyć wyjazd, zapisywać płatnika i uczestników każdego wydatku, zachować widoczną wspólną historię i sprawdzać, kto komu ile jest winien. Taksówkę, hotel i bilety dodasz w Wydatki przez Dodaj Wydatek, a szczegółowy rachunek z restauracji w Rachunki przez Add Bill. Po zakończeniu możesz zarchiwizować wyjazd i wyeksportować raport PDF. CheqSplit oblicza salda, ale nie wykonuje przelewów ani nie przelicza walut.",
+  productBody: "Utwórz grupę na ekranie głównym, wybierz walutę i zaproś uczestników. W Wydatkach wybierz Dodaj wydatek, aby zapisać hotel, taksówkę lub bilety: kwotę, walutę, płatnika i uczestników przez Wszyscy lub wybór własny; kategoria jest opcjonalna. W Paragonach opcja Dodaj paragon otwiera skanowanie lub przesyłanie. Sprawdź pozycje i podziel według pozycji lub po równo. Dla innych walut użyj kursu referencyjnego z datą, kursu ręcznego lub rzeczywistego obciążenia bankowego w walucie grupy. Sprawdź salda, wyeksportuj raport PDF lub zarchiwizuj grupę. CheqSplit nie przelewa pieniędzy.",
   productCta: "Śledź wydatki grupowe i wyjazdowe z CheqSplit",
   receiptNoteBefore: "Jeśli wydatkiem na wyjeździe jest szczegółowy rachunek z restauracji, najpierw użyj ",
   receiptNoteLabel: "podziału według pozycji",
-  receiptNoteAfter: ", w tym opłat i napiwku. Następnie otwórz kartę Rachunki w wyjeździe i wybierz Add Bill.",
+  receiptNoteAfter: " bezpośrednio z zakładki Paragony w grupie przez Dodaj paragon. Zeskanuj lub prześlij paragon, sprawdź pozycje i sumę, a następnie podziel według pozycji lub po równo; paragon automatycznie łączy się z grupą.",
   faqH2: "Najczęstsze pytania o dzielenie wydatków na wyjeździe",
   faq: [
     {
@@ -66,11 +66,11 @@ export const tripExpensesGuidePl: TripExpensesGuideCopy = {
     },
     {
       q: "Jak należy rozliczyć rachunek z restauracji?",
-      a: "Do podziału według pozycji użyj procesu dla paragonu z restauracji, uwzględniając podatek i napiwek. Następnie otwórz kartę Rachunki w wyjeździe i wybierz Add Bill.",
+      a: "W grupie otwórz Paragony i wybierz Dodaj paragon, aby go zeskanować lub przesłać. Sprawdź rozpoznane pozycje i sumę; paragon automatycznie łączy się z grupą. Następnie podziel go według pozycji lub po równo.",
     },
     {
       q: "Czy CheqSplit przelicza waluty?",
-      a: "Nie. Przeliczanie walut nie jest potwierdzoną funkcją CheqSplit. Zapisuj kwoty dokładnie tak, jak widnieją przy danym wydatku.",
+      a: "Tak. Wydatki grupy mogą być w innej walucie. Sprawdź kurs referencyjny i datę, wpisz kurs ręcznie lub rzeczywiste obciążenie bankowe w walucie grupy. CheqSplit używa przeliczonej kwoty do sald grupy; nie przelewa pieniędzy.",
     },
   ],
   ctaTitle: "Cały wyjazd w jednym wspólnym zestawieniu",

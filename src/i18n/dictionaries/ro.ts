@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const ro: Dictionary = {
   meta: {
-    title: "CheqSplit: împarte cheltuielile, scanează bonurile, urmărește cheltuielile de grup",
+    title: "Aplicație de împărțit cheltuieli cu prietenii | CheqSplit",
     description:
-      "CheqSplit te ajută să împarți cheltuielile, să scanezi bonurile, să urmărești cheltuielile comune plătite de grup și să vezi clar cine cui datorează bani – după restaurant, la călătorii, la cumpărături sau în orice plan cu prietenii.",
+      "Scanează bonuri, urmărește cheltuielile comune și verifică soldurile cu prietenii.",
     ogDescription:
       "Împarte cheltuielile echilibrat: scanează bonurile, urmărește cheltuielile comune, vezi cine cui datorează bani. Potrivit pentru restaurante, excursii, colegi de apartament și familii.",
     twitterDescription:
@@ -23,11 +23,11 @@ export const ro: Dictionary = {
   },
   header: { download: "Descarcă gratuit" },
   hero: {
-    title: "Împarte cheltuielile, scanează bonurile și lasă aplicația să facă restul",
-    body: "CheqSplit te ajută să împarți nota, să scanezi bonurile, să urmărești plățile făcute de grup și să vezi ușor cine cui datorează bani, după cină, la drum, la magazin sau când vă puneți banii la comun. Aplicația se descarcă gratuit.",
+    title: "Împarte cheltuielile cu prietenii și vezi cine cui datorează",
+    body: "Scanează bonuri, urmărește cheltuielile comune și verifică soldurile cu prietenii. Invită persoane din grupurile anterioare și discută costurile în chatul grupului sau direct cu un prieten.",
     alts: [
-      "CheqSplit: listă de cheltuieli la o călătorie de grup",
-      "CheqSplit: ecran aplicație cu plăți împărțite",
+      "Ecranul principal CheqSplit cu grupul curent",
+      "Prezentarea grupului cu contribuțiile participanților",
       "CheqSplit: notă de plată, împărțire pe articole",
     ],
   },
@@ -44,7 +44,7 @@ export const ro: Dictionary = {
     restaurantCta: "Împarte o notă de restaurant",
     groupTitle: "Cheltuieli de grup sau de călătorie",
     groupText:
-      "Creează o călătorie pentru grup, invită participanții și adaugă cheltuielile pe măsură ce apar. Folosește Adaugă Cheltuială pentru taxi, hotel sau bilete. Folosește Adaugă Notă din fila Note pentru un bon de restaurant detaliat. Păstrează un singur istoric comun și vezi cine cui datorează.",
+      "Păstrează cheltuielile comune într-un singur grup: înregistrează plătitorul și participanții, adaugă bonuri din Bonuri și verifică cine cui datorează în Rezumat. CheqSplit calculează soldurile; nu transferă bani.",
     groupCta: "Urmărește cheltuielile de grup",
   },
   features: {
@@ -75,9 +75,9 @@ export const ro: Dictionary = {
     stepPill: (n) => `PASUL ${n}`,
     steps: [
       {
-        label: "Creează o călătorie în câteva secunde",
-        body: "Dă-i un nume, invită-ți prietenii prin link sau cod QR și treci direct la împărțirea cheltuielilor comune.",
-        imageAlt: "CheqSplit: călătorie de grup",
+        label: "Creează un grup pentru călătorie",
+        body: "Pe ecranul principal, apasă Creează grup, denumește grupul, alege moneda și invită participanții prin link sau cod QR.",
+        imageAlt: "Ecranul principal CheqSplit cu grupul curent",
         bullets: [
           "Pornire rapidă",
           "Invitație prin link sau cod QR",
@@ -96,7 +96,7 @@ export const ro: Dictionary = {
       },
       {
         label: "Adaugă cheltuieli comune",
-        body: "Indică cine a plătit și cu cine vrei să împarți fiecare sumă.",
+        body: "Deschide Cheltuieli și apasă Adaugă cheltuială. Introdu descrierea, suma și moneda, alege opțional o categorie și plătitorul, apoi Toți sau Personalizat pentru participanți. Orice participant poate adăuga o cheltuială.",
         imageAlt: "CheqSplit: cheltuieli comune, ecran mobil",
         bullets: [
           "Cheltuieli trecute de fiecare",
@@ -167,7 +167,7 @@ export const ro: Dictionary = {
       },
       {
         q: "Este potrivită pentru călătorii de grup?",
-        a: "Da. Deschizi o călătorie, treci cheltuielile, inviți oamenii, atașezi bonurile (scanate sau importate), iar la final poți scoate un decont: cine a plătit cât.",
+        a: "Păstrează cheltuielile comune într-un singur grup: înregistrează plătitorul și participanții, adaugă bonuri din Bonuri și verifică cine cui datorează în Rezumat. CheqSplit calculează soldurile; nu transferă bani.",
       },
       {
         q: "Mă ajută doar la restaurant sau și în alte situații?",

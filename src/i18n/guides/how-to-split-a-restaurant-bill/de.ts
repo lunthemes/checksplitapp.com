@@ -11,7 +11,7 @@ export const restaurantBillGuideDe: RestaurantBillGuideCopy = {
   steps: [
     { title: "Beleg prüfen", desc: "Prüft jede Position und die Gesamtsumme, bevor ihr mit dem Aufteilen beginnt." },
     { title: "Eigene Bestellungen zuordnen", desc: "Ordnet jeder Person ausschließlich die Speisen und Getränke zu, die sie bestellt hat. Beginnt mit den eindeutigen Positionen." },
-    { title: "Gemeinsame Positionen aufteilen", desc: "Berücksichtigt nur die Personen, die eine Platte oder Flasche geteilt haben. Teilt gleichmäßig oder nach einem vereinbarten Anteil." },
+    { title: "Gemeinsame Positionen aufteilen", desc: "Eine Belegzeile kann mehrere Einheiten enthalten, etwa zwei Pizzen. Wähle deine Einheiten; gemeinsame Artikel oder Einheiten werden gleichmäßig unter den Personen aufgeteilt, die sie ausgewählt haben. Nutze die gleichmäßige Aufteilung, wenn sie angeboten wird und zur Gruppe passt." },
     { title: "Offene Beträge prüfen", desc: "Sucht nach nicht zugeordneten Positionen, Scanfehlern sowie Steuern oder Trinkgeld, die noch fehlen." },
     { title: "Ergebnis anzeigen", desc: "Jeder sollte seinen Anteil und den daraus entstehenden Saldo sehen können, damit die Aufteilung noch am Tisch nachvollziehbar ist." }
   ],
@@ -48,7 +48,7 @@ export const restaurantBillGuideDe: RestaurantBillGuideCopy = {
     },
     {
       q: "Wie sollte eine gemeinsame Position aufgeteilt werden?",
-      a: "Unter den beteiligten Personen – entweder gleichmäßig oder nach einem vereinbarten Prozentsatz, wenn die Anteile unterschiedlich waren.",
+      a: "Eine Belegzeile kann mehrere Einheiten enthalten, etwa zwei Pizzen. Wähle deine Einheiten; gemeinsame Artikel oder Einheiten werden gleichmäßig unter den Personen aufgeteilt, die sie ausgewählt haben. Nutze die gleichmäßige Aufteilung, wenn sie angeboten wird und zur Gruppe passt.",
     },
     {
       q: "Warum stimmen die Summen manchmal nicht überein?",

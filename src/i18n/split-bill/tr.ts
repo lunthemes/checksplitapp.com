@@ -11,12 +11,12 @@ export const splitBillTr: SplitBillLocaleCopy = {
   heroParagraph: "",
   seoBlockH2: "Tek bir restoran hesabını uygulamada veya tarayıcıda birlikte paylaşın",
   seoBlockP1: "Tüm hesap tek yerde kalır. Bir kişi fişi CheqSplit ile tarar; diğerleri bağlantı veya QR kod üzerinden katılıp kendi siparişlerini doğrudan tarayıcıdan seçer.",
-  seoBlockP2: "Masadaki herkesin uygulamayı yüklemesi gerekmez. CheqSplit kalemleri, katılımcıları, ödemeleri ve son hesabı tek yerde tutar.",
+  seoBlockP2: "Tükettiğiniz yemek ve içecekleri seçin. Bir satır birden fazla adet içeriyorsa açıp tükettiğiniz adetleri seçin. Ortak yemeklerde ilgili kişiler paylaşılan kalemi veya adetleri seçer; CheqSplit payları hesaplar.",
   seoBlockP3: "",
   useCasesH2: "Gerçekte kimin ne sipariş ettiğine göre hesap bölüşme",
   useCases: [
     { title: "Kişisel siparişler", text: "Her kişiye yalnızca kendi sipariş ettiği yemek ve içecekleri atayın." },
-    { title: "Paylaşılan kalemler", text: "Bir şişeyi, ortak tabağı veya tatlıyı yalnızca paylaşan kişiler arasında bölüştürün." },
+    { title: "Paylaşılan kalemler", text: "Bir satır iki pizza gibi birden fazla adet içerebilir. Tükettiğiniz adetleri seçin; ortak kalemler veya adetler onları seçen katılımcılar arasında eşit bölünür. Eşit bölme seçeneğini sunulduğunda ve gruba uygun olduğunda kullanın." },
     { title: "Ücretler ve bahşiş", text: "Servis ücreti, vergi ve bahşişi ekleyerek payların toplamının fişteki tutarla eşleşmesini sağlayın." },
   ],
   howSectionH2: "CheqSplit ile restoran hesabı nasıl bölüşülür?",
@@ -34,14 +34,18 @@ export const splitBillTr: SplitBillLocaleCopy = {
     { title: "Arkadaşlarını QR kod veya bağlantıyla davet et", desc: "Hesabın QR kodunu veya bağlantısını paylaşın. Herkes ortak hesabı hemen açabilir." },
     { title: "Uygulamayı yüklemeden tarayıcıdan devam et", desc: "Arkadaşlarınız bağlantıyı doğrudan tarayıcıda açabilir. Hesabı bölüşmek için CheqSplit'i yüklemeleri gerekmez." },
     { title: "Restoran hesabını online bölüş", desc: "Herkes aynı hesap üzerinde çalışır. Seçimler ve değişiklikler tek yerde tutulur; kimin ne yediğini ayrıca hesaplamanız gerekmez." },
-    { title: "Herkes ne yediğini seçsin", desc: "Her katılımcı kendi kalemlerini seçer. Ortak yemek ve içecekler birden fazla kişi arasında bölüştürülebilir." },
+    { title: "Herkes ne yediğini seçsin", desc: "Tükettiğiniz yemek ve içecekleri seçin. Bir satır birden fazla adet içeriyorsa açıp tükettiğiniz adetleri seçin. Ortak yemeklerde ilgili kişiler paylaşılan kalemi veya adetleri seçer; CheqSplit payları hesaplar." },
+    {
+      title: "Tek tek porsiyonları seçin",
+      desc: "Bir satır iki pizza gibi birden fazla adet içerebilir. Tükettiğiniz adetleri seçin; ortak kalemler veya adetler onları seçen katılımcılar arasında eşit bölünür. Eşit bölme seçeneğini sunulduğunda ve gruba uygun olduğunda kullanın.",
+    },
     { title: "Kimin kime ne kadar borcu olduğunu gör", desc: "Kalemler atandıktan sonra CheqSplit tutarları hesaplar ve kimin kime ne kadar ödemesi gerektiğini açıkça gösterir." },
-    { title: "Yapılan ödemeleri kaydet", desc: "Tamamlanan ödemeleri işaretleyerek bakiyeleri güncel tutun ve geriye hangi borçların kaldığını görün." },
-    { title: "Hesabın nasıl bölündüğünü incele", desc: "Daha sonra sonuca dönüp herkesin kalemlerini, tutarlarını ve ödemelerini kontrol edebilirsiniz." }
+    { title: "Yapılan ödemeleri kaydet", desc: "CheqSplit dışında başka bir katılımcıya ödeme yaptıktan sonra Ödeme kaydet seçeneğini açın. Alıcıyı onaylayın, tutarı ve isteğe bağlı notu girip kaydedin. Ödeme sizden seçilen alıcıya yapılmış olarak kaydedilir." },
+    { title: "Hesabın nasıl bölündüğünü incele", desc: "Katılımcı ayrıntılarında dahil edilen kalemler, seçilen adetler ve hesaplanan paylar görünür; böylece dağılımı tüketime göre kontrol edebilirsiniz." }
   ],
   ctaTitle: "Arkadaşlarında uygulama olmasa bile hesabı bölüş",
   ctaBody: "Fişi tara, bağlantıyı veya QR kodu paylaş ve herkes kendi siparişlerini seçsin.",
-  groupBridgeBefore: "Bu restoran hesabını aynı grubun otel, taksi veya aktiviteleriyle birlikte tutmanız mı gerekiyor? Tamamlanan hesabı seyahatin Faturalar sekmesinden Add Bill ile ekleyin, ardından ",
+  groupBridgeBefore: "Restoran fişini otel, taksi veya etkinlik harcamalarıyla birlikte tutmak için grupta Fişler sekmesini açıp Fiş ekle seçeneğiyle tarayın veya yükleyin. Kontrolden sonra kalemlere göre veya eşit bölün ve şununla devam edin: ",
   groupBridgeLabel: "grup harcamalarını takip",
   groupBridgeAfter: " etmeye devam edin.",
   guideBridgeBefore: "Önce adım adım yöntemi mi tercih edersiniz? Okuyun: ",
@@ -66,7 +70,7 @@ export const splitBillTr: SplitBillLocaleCopy = {
     },
     {
       q: "Bir ortak kalemi birkaç kişi nasıl bölüşür?",
-      a: "Kalemi paylaşan herkes onu seçer. CheqSplit fiyatı, o kalemi seçen tüm katılımcılar arasında otomatik olarak eşit bölüştürür.",
+      a: "Bir satır iki pizza gibi birden fazla adet içerebilir. Tükettiğiniz adetleri seçin; ortak kalemler veya adetler onları seçen katılımcılar arasında eşit bölünür. Eşit bölme seçeneğini sunulduğunda ve gruba uygun olduğunda kullanın.",
     },
     {
       q: "Fiş yanlış taranırsa ne yapmalıyım?",
@@ -86,7 +90,7 @@ export const splitBillTr: SplitBillLocaleCopy = {
     },
     {
       q: "Bu restoran hesabını bir seyahate ekleyebilir miyim?",
-      a: "Evet. Önce restoran hesabının kalemlere göre bölüşümünü tamamlayın, ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
+      a: "Bir fişi gruba dahil etmek için o gruptan başlayın: Fişler sekmesini açıp Fiş ekle seçeneğine dokunun, ardından fişi tarayın veya yükleyin. Kalemleri ve toplamı kontrol edip kalemlere göre veya eşit bölün. Fiş bu işlem sırasında gruba otomatik bağlanır.",
     },
   ],
   a11y: {

@@ -19,12 +19,12 @@ export const groupExpenseTrackerTr: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Grubu seyahate davet et",
-      text: "Seyahati oluşturup adlandırdıktan sonra katılımcıları bağlantı veya QR kod ile davet edin.",
+      text: "Ana ekranda Grup oluştur seçeneğine dokunun, gruba ad verin, para birimini seçin ve katılımcıları bağlantı veya QR koduyla davet edin.",
       imageAlt: "Grubu seyahate davet et",
     },
     {
       title: "Her harcamayı ekle",
-      text: "Masraflar sekmesini açıp Masraf Ekle'e dokunun. Açıklamayı ve tutarı girin, kimin ödediğini belirtin ve harcamaya katılan kişileri seçin.",
+      text: "Harcamalar sekmesini açıp Harcama ekle seçeneğine dokunun. Açıklama, tutar ve para birimini girin, isteğe bağlı kategori ve ödeyeni seçin; katılımcılar için Herkes veya Özel seçeneğini kullanın. Her katılımcı harcama ekleyebilir.",
       imageAlt: "Her harcamayı ekle",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerTr: GroupExpenseTrackerCopy = {
   subsetH2: "Her harcama için uygun paylaşım yöntemini seç",
   subsetText: "Her harcama tüm gruba ait değildir. Taksiyi yalnızca yolculuk edenlere, biletleri katılanlara ve gerçekten ortak giderleri tüm gruba ekleyin. Kalemlere ayrılmış restoran hesabı için Faturalar sekmesini ve Add Bill'i kullanın.",
   receiptBridgeH2: "Kalemlere ayrılmış restoran hesabını seyahate ekle",
-  receiptBridgeText: "Grubun ayrıntılı bir restoran hesabı varsa önce yiyecek ve içecek kalemlerini, ücretleri ve bahşişi bölüştürün. Ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
+  receiptBridgeText: "Grupta Fişler sekmesini açıp Fiş ekle seçeneğine dokunarak fişi tarayın veya yükleyin. Algılanan kalemleri ve toplamı kontrol edin; fiş gruba otomatik bağlanır. Ardından kalemlere göre veya eşit bölün.",
   receiptBridgeCta: "Fiş bölüşmenin nasıl çalıştığını gör",
   reportH2: "Grubun daha sonra dönebileceği bir kayıt bırak",
   reportText: "Seyahati arşivleyin ve harcamaları, toplamları, tabloları ve grafiği içeren bir PDF raporu dışa aktarın. Bu kayıt, sonradan her şeyi hafızadan yeniden hesaplamaktan çok daha kolay kontrol edilir.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerTr: GroupExpenseTrackerCopy = {
     },
     {
       q: "Bir seyahat harcaması için fiş tarayabilir miyim?",
-      a: "Kalemlere göre bölüşüm için restoran fişi akışını kullanın; vergi ve bahşişi de dahil edin. Ardından seyahatin Faturalar sekmesini açıp Add Bill'e dokunun.",
+      a: "Grupta Fişler sekmesini açıp Fiş ekle seçeneğine dokunarak fişi tarayın veya yükleyin. Algılanan kalemleri ve toplamı kontrol edin; fiş gruba otomatik bağlanır. Ardından kalemlere göre veya eşit bölün.",
     },
     {
       q: "Kimin kime ödeme yapması gerektiğini nasıl anlarım?",

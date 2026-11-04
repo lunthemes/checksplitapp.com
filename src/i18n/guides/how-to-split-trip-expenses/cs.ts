@@ -7,13 +7,13 @@ export const tripExpensesGuideCs: TripExpensesGuideCopy = {
   answer: "Vytvořte jednu cestu, u každého výdaje zaznamenejte, kdo zaplatil a kdo se na něm podílel, a před koncem cesty zkontrolujte zůstatky.",
   answerFollow: "Když budete výdaje zapisovat průběžně, skupina nebude muset na konci celé vyúčtování skládat zpětně.",
   rulesH2: "Dohodněte pravidla výdajů ještě před cestou",
-  rulesBody: "Ještě před první platbou si určete, které náklady sdílí celá skupina a které se týkají jen některých lidí. Ubytování často patří všem, taxi nebo vstupenka do muzea ale nemusí. Vždy zvlášť zaznamenejte, kdo zaplatil a kdo se na výdaji podílel — plátce nemusí být vždy součástí rozdělení. Výdaje přidávejte průběžně, dokud si částku i účastníky dobře pamatujete. Pokud používáte více měn, předem se dohodněte, jak je budete zapisovat; CheqSplit měny nepřevádí. Jasná pravidla od začátku udrží společný přehled konzistentní až do závěrečného vyúčtování.",
+  rulesBody: "Před první platbou se dohodněte, které náklady sdílejí všichni a které jen někteří. Plátce evidujte odděleně od účastníků a výdaje přidávejte průběžně. Pro zůstatky zvolte měnu skupiny. U jiné měny zkontrolujte referenční kurz a datum, zadejte vlastní kurz nebo částku skutečně strženou bankou v měně skupiny. Jasná pravidla udrží záznamy jednotné.",
   stepsH2: "Jak rozdělit výdaje na cestě v 5 krocích",
   steps: [
-    { title: "Vytvořte cestu včas", desc: "Pojmenujte cestu, přidejte účastníky a zapište už vzniklé náklady, aby skupina začínala s jedním společným přehledem." },
+    { title: "Vytvořte skupinu pro cestu", desc: "Na hlavní obrazovce klepněte na Vytvořit skupinu, pojmenujte ji, zvolte měnu a pozvěte účastníky odkazem nebo QR kódem." },
     { title: "Zaznamenejte, kdo zaplatil", desc: "U každého výdaje jasně uveďte plátce — u vstupenek, ubytování, dopravy, restaurace i aktivity zaplacené za skupinu." },
     { title: "Vyberte účastníky", desc: "Všechny zahrňte jen tehdy, když se na nákladu skutečně podíleli. U taxi, aktivity nebo restaurace vyberte jen dotčené osoby." },
-    { title: "Přidávejte výdaje průběžně", desc: "Částky zapisujte, dokud je máte v čerstvé paměti. V CheqSplit otevřete kartu Expenses a klepněte na Add Expense. Výdaj může přidat kterýkoli účastník." },
+    { title: "Přidávejte výdaje průběžně", desc: "Otevřete Výdaje a klepněte na Přidat výdaj. Zadejte popis, částku a měnu, případně kategorii, vyberte plátce a potom Všichni nebo Vlastní pro účastníky. Výdaj může přidat každý účastník." },
     { title: "Zkontrolujte zůstatky", desc: "Před uzavřením nebo exportem cesty projděte společnou historii a ověřte, kdo komu dluží. Nejdříve doplňte chybějící výdaje." }
   ],
   exampleH2: "Příklad: rozdělení víkendového výletu mezi čtyři přátele",
@@ -49,11 +49,11 @@ export const tripExpensesGuideCs: TripExpensesGuideCopy = {
   exampleSettle: "Blair zaplatí Alexovi €90, Casey €135 a Dana €40. Tyto tři platby dohromady dávají €265, tedy přesně částku, kterou má Alex dostat.",
   exampleNote: "Podíly: hotel €100 na osobu; taxi €15 na každého ze tří cestujících; vstupenky €20 na osobu. Dana taxi nejela, takže její podíl je €120 místo €135. CheqSplit tyto zůstatky vypočítá, ale peníze neposílá.",
   productH2: "Sledujte společné cestovní výdaje s CheqSplit",
-  productBody: "CheqSplit umožňuje vytvořit cestu, zaznamenat plátce a účastníky každého výdaje, sledovat společnou historii a kdykoli zjistit, kdo komu dluží. Taxi, hotel nebo vstupenky přidejte přes Expenses a Add Expense, podrobnou restauraci přes Bills a Add Bill. Po skončení cestu archivujte a exportujte PDF přehled. CheqSplit počítá zůstatky, ale neposílá peníze ani nepřevádí měny.",
+  productBody: "Na hlavní obrazovce vytvořte skupinu, zvolte měnu a pozvěte účastníky. Ve Výdajích přes Přidat výdaj zaznamenejte hotel, taxi či vstupenky: částku, měnu, plátce a účastníky přes Všichni nebo Vlastní; kategorie je volitelná. V Účtenkách otevře Přidat účtenku skenování nebo nahrání. Zkontrolujte položky a rozdělte je podle položek nebo rovným dílem. Pro jiné měny použijte referenční kurz s datem, vlastní kurz nebo skutečné bankovní stržení v měně skupiny. Zkontrolujte zůstatky, exportujte PDF zprávu nebo skupinu archivujte. CheqSplit nepřevádí peníze.",
   productCta: "Sledovat skupinové a cestovní výdaje s CheqSplit",
   receiptNoteBefore: "Pokud je výdaj na cestě podrobný účet z restaurace, použijte nejprve ",
   receiptNoteLabel: "rozdělení účtenky podle položek",
-  receiptNoteAfter: " včetně poplatků a spropitného. Poté otevřete kartu Bills v cestě a klepněte na Add Bill.",
+  receiptNoteAfter: " přímo ze záložky Účtenky ve skupině přes Přidat účtenku. Účtenku naskenujte nebo nahrajte, zkontrolujte položky a součet a rozdělte podle položek nebo rovným dílem; propojí se se skupinou automaticky.",
   faqH2: "Časté dotazy k rozdělení výdajů na cestě",
   faq: [
     {
@@ -66,11 +66,11 @@ export const tripExpensesGuideCs: TripExpensesGuideCopy = {
     },
     {
       q: "Jak postupovat u účtu z restaurace?",
-      a: "Pro podrobné rozdělení použijte postup pro restauranční účtenku včetně daně a spropitného. Potom v cestě otevřete kartu Bills a klepněte na Add Bill.",
+      a: "Ve skupině otevřete Účtenky a klepněte na Přidat účtenku pro skenování nebo nahrání. Zkontrolujte rozpoznané položky a celkovou částku; účtenka se automaticky propojí se skupinou. Potom ji rozdělte podle položek nebo rovným dílem.",
     },
     {
       q: "Převádí CheqSplit měny?",
-      a: "Ne. Převod měn není ověřenou funkcí CheqSplit. Částky zapisujte přesně tak, jak jsou uvedeny u daného výdaje.",
+      a: "Ano. Skupinové výdaje mohou být v jiné měně. Zkontrolujte referenční kurz a datum, zadejte vlastní kurz nebo skutečné bankovní stržení v měně skupiny. CheqSplit použije převedenou částku pro zůstatky skupiny; nepřevádí peníze.",
     },
   ],
   ctaTitle: "Všechny výdaje z cesty v jednom společném přehledu",

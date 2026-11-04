@@ -19,12 +19,12 @@ export const groupExpenseTrackerDe: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Gruppe zur Reise einladen",
-      text: "Nachdem ihr die Reise erstellt und benannt habt, ladet die Teilnehmer per Link oder QR-Code ein.",
+      text: "Tippe auf der Startseite auf Gruppe erstellen, gib der Gruppe einen Namen, wähle ihre Währung und lade Teilnehmer per Link oder QR-Code ein.",
       imageAlt: "Gruppe zur Reise einladen",
     },
     {
       title: "Jede Ausgabe hinzufügen",
-      text: "Öffnet den Tab Ausgaben und tippt auf Ausgabe hinzufügen. Gebt Beschreibung und Betrag ein, wählt aus, wer bezahlt hat, und markiert die beteiligten Personen.",
+      text: "Öffne Ausgaben und tippe auf Ausgabe hinzufügen. Gib Beschreibung, Betrag und Währung ein, wähle optional eine Kategorie und den Zahler. Wähle für die Teilnehmer Alle oder Benutzerdefiniert. Jeder Teilnehmer kann Ausgaben hinzufügen.",
       imageAlt: "Jede Ausgabe hinzufügen",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerDe: GroupExpenseTrackerCopy = {
   subsetH2: "Für jede Ausgabe die passende Aufteilung verwenden",
   subsetText: "Nicht jede Ausgabe betrifft die ganze Gruppe. Ein Taxi gehört nur zu den Mitfahrern, Tickets nur zu den jeweiligen Teilnehmern und echte Gemeinschaftskosten zur gesamten Gruppe. Für eine detaillierte Restaurantrechnung verwendet ihr den Tab Rechnungen und Rechnung Hinzufügen.",
   receiptBridgeH2: "Eine detaillierte Restaurantrechnung zur Reise hinzufügen",
-  receiptBridgeText: "Wenn ihr eine Restaurantrechnung mit einzelnen Positionen habt, teilt sie zunächst nach Positionen auf – einschließlich Gebühren und Trinkgeld. Öffnet danach den Tab Rechnungen der Reise und tippt auf Rechnung Hinzufügen.",
+  receiptBridgeText: "Öffne in der Gruppe Belege und tippe auf Beleg hinzufügen, um einen Beleg zu scannen oder hochzuladen. Prüfe erkannte Positionen und Gesamtbetrag; der Beleg wird automatisch mit der Gruppe verknüpft. Teile ihn anschließend nach Positionen oder gleichmäßig auf.",
   receiptBridgeCta: "So funktioniert das Aufteilen von Restaurantrechnungen",
   reportH2: "Eine Übersicht, die die Gruppe jederzeit wieder aufrufen kann",
   reportText: "Archiviert die Reise und exportiert einen PDF-Bericht mit Ausgaben, Summen, Tabellen und Diagramm. Das lässt sich später deutlich leichter nachvollziehen als eine Schlussrechnung aus dem Gedächtnis.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerDe: GroupExpenseTrackerCopy = {
     },
     {
       q: "Kann ich einen Beleg für eine Reiseausgabe scannen?",
-      a: "Verwendet für die detaillierte Aufteilung den Ablauf für Restaurantbelege, einschließlich Steuern und Trinkgeld. Öffnet danach in der Reise den Tab Rechnungen und tippt auf Rechnung Hinzufügen.",
+      a: "Öffne in der Gruppe Belege und tippe auf Beleg hinzufügen, um einen Beleg zu scannen oder hochzuladen. Prüfe erkannte Positionen und Gesamtbetrag; der Beleg wird automatisch mit der Gruppe verknüpft. Teile ihn anschließend nach Positionen oder gleichmäßig auf.",
     },
     {
       q: "Wie erfahre ich, wer wem etwas zahlen muss?",

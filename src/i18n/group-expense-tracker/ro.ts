@@ -19,12 +19,12 @@ export const groupExpenseTrackerRo: GroupExpenseTrackerCopy = {
   steps: [
     {
       title: "Invită grupul în călătorie",
-      text: "După ce creezi și denumești călătoria, invită participanții prin link sau cod QR.",
+      text: "Pe ecranul principal, apasă Creează grup, denumește grupul, alege moneda și invită participanții prin link sau cod QR.",
       imageAlt: "Invită grupul în călătorie",
     },
     {
       title: "Adaugă fiecare cheltuială",
-      text: "Deschide fila Cheltuieli și apasă Adaugă Cheltuială. Introdu descrierea și suma, alege cine a plătit și selectează cine a participat la cheltuială.",
+      text: "Deschide Cheltuieli și apasă Adaugă cheltuială. Introdu descrierea, suma și moneda, alege opțional o categorie și plătitorul, apoi Toți sau Personalizat pentru participanți. Orice participant poate adăuga o cheltuială.",
       imageAlt: "Adaugă fiecare cheltuială",
     },
     {
@@ -46,7 +46,7 @@ export const groupExpenseTrackerRo: GroupExpenseTrackerCopy = {
   subsetH2: "Folosește împărțirea potrivită pentru fiecare cheltuială",
   subsetText: "Nu orice cheltuială aparține tuturor. Adaugă taxiul doar persoanelor care au mers cu el, biletele doar celor care au participat și cheltuielile comune întregului grup. Pentru o notă detaliată de restaurant, folosește fila Note și Adaugă Notă.",
   receiptBridgeH2: "Adaugă în călătorie o notă de restaurant împărțită pe produse",
-  receiptBridgeText: "Când grupul are o notă detaliată de restaurant, folosește fluxul de împărțire a bonului pentru a atribui produsele, inclusiv taxele și bacșișul. Apoi deschide fila Note din călătorie și apasă Adaugă Notă.",
+  receiptBridgeText: "În grup, deschide Bonuri și apasă Adaugă bon pentru a scana sau încărca un bon. Verifică produsele și totalul detectat; bonul se asociază automat grupului. Apoi începe împărțirea pe produse sau alege Împarte egal.",
   receiptBridgeCta: "Vezi cum funcționează împărțirea bonului",
   reportH2: "Încheie cu un istoric la care grupul poate reveni",
   reportText: "Arhivează călătoria și exportă un raport PDF cu cheltuielile, totalurile, tabelele și graficul. Rezultatul este mai ușor de verificat decât un calcul final făcut doar din memorie.",
@@ -69,7 +69,7 @@ export const groupExpenseTrackerRo: GroupExpenseTrackerCopy = {
     },
     {
       q: "Pot scana un bon pentru o cheltuială din călătorie?",
-      a: "Folosește fluxul pentru bonul de restaurant ca să faci împărțirea pe produse, inclusiv taxele și bacșișul. Apoi deschide fila Note din călătorie și apasă Adaugă Notă.",
+      a: "În grup, deschide Bonuri și apasă Adaugă bon pentru a scana sau încărca un bon. Verifică produsele și totalul detectat; bonul se asociază automat grupului. Apoi începe împărțirea pe produse sau alege Împarte egal.",
     },
     {
       q: "Cum aflu cine trebuie să plătească și cui?",
